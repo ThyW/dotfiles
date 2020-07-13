@@ -90,16 +90,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" A.L.E. Confing part
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],}
-
-" ncm2 config
-" enable ncm2 for all buffers
-
-" IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-
 " When the <Enter> key is pressed while the popup menu is visible, it only
 " hides the menu. Use this mapping to close the menu and also start a new
 " line.
