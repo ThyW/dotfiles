@@ -20,7 +20,7 @@ alias sb='source ~/.bashrc'
 alias ac='nvim ~/.config/alacritty/alacritty.yml && ~/sync-config.sh'
 alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='~/sync-config.sh'
-
+alias term='$TERM'
 # alias peh='~/.sorter/peh'
 
 # Created by `userpath` on 2020-01-27 19:06:27
