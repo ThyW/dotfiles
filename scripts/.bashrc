@@ -19,7 +19,7 @@ alias i3c='nvim ~/.config/i3/config'
 alias sb='source ~/.bashrc'
 alias ac='vim /home/zir/.config/alacritty/alacritty.yml'
 alias mute='pactl set-sink-volume 0 0%'
-
+alias synccfg='~/sync-config.sh'
 
 # alias peh='~/.sorter/peh'
 
