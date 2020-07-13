@@ -7,7 +7,7 @@ set complete-=i
 set shortmess+=c
 let mapleader = " "
 set clipboard+=unnamedplus
-set timeoutlen 2000
+set timeoutlen=2000
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
