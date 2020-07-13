@@ -66,8 +66,9 @@ function! ShowSignColumn()
 endfunction
 
 " Pagejumping
-noremap <leader>J <PageDown><CR>
-noremap <leader>K <PageUp><CR>
+noremap <leader>H <PageDown><CR>
+noremap <leader>L <PageUp><CR>
+
 " Rebinding copy to paste to make them work with system clipboads
 " noremap <Leader>y "*y
 " noremap <Leader>p "*p
