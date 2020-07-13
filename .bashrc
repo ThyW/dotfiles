@@ -1,0 +1,38 @@
+alias ls='ls -a --color=auto'
+alias vykaz='python3 /home/zir/.mail.py'
+alias suspend='sudo systemctl start suspend.target && i3lock -c 2c2c2c'
+alias wgstart='sudo systemctl start wg-quick@wg0'
+alias use-nvidia='optimus-manager --switch nvidia'
+alias use-intel='optimus-manager --switch intel'
+alias use-hybrid='optimus-manager --switch hybrid'
+alias lanvidia='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia gamemoderun'
+alias technic='/mnt/data/graalvm-ce-19.2.0.1/bin/java -jar /home/zir/Downloads/TechnicLauncher.jar'
+alias spot='spotifyd && spt'
+alias autosort='~/.sorter/autosort'
+alias i3lock='i3lock -c 2c2c2c'
+# alias clion='/mnt/data/clion-2019.2.4/bin/clion.sh'
+alias vim='nvim'
+alias rs='cd /home/zir/programming/rust/'
+alias bc='nvim ~/.bashrc'
+alias vc='nvim ~/.config/nvim/init.vim'
+alias i3c='nvim ~/.config/i3/config'
+alias sb='source ~/.bashrc'
+alias ac='vim /home/zir/.config/alacritty/alacritty.yml'
+alias mute='pactl set-sink-volume 0 0%'
+
+
+# alias peh='~/.sorter/peh'
+
+# Created by `userpath` on 2020-01-27 19:06:27
+export PATH="$PATH:/home/zir/.local/bin"
+export PATH="${HOME}/.cargo/bin:${PATH}"
+export PATH="$PATH:/home/zir/ds-viewer/"
+export PATH="$PATH:/home/zir/appimages/"
+export PATH="$PATH:/mnt/data/clion-2019.2.4/bin/"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export PS1="\e[0;1;33m\]\u@\h:\e[2;32m\]\w\$\e[m\] "
+export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
+
+# eval "$(register-python-argcomplete pipx)"
+eval "$(starship init bash)"
+
