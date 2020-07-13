@@ -30,7 +30,7 @@ font pango:FontAwesome 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty in $ws3
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -107,7 +107,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # assigns
-assing [class="Alacritty"] $ws3
+assign [class="Alacritty"] $ws3
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
