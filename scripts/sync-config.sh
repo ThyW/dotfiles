@@ -7,6 +7,8 @@ cp -r ~/.config/nvim/init.vim ~/programming/dotfiles/nvim/
 cp -r ~/sync-config.sh ~/programming/dotfiles/scripts
 cp -r ~/.bashrc ~/programming/dotfiles/scripts/
 cp -r ~/sync-config.sh ~/programming/dotfiles/scripts/
+cp -r ~/.config/dunst/dunstrc ~/programming/dotfiles/dunst/
+cp -r ~/.config/redshift/redshift.conf ~/programming/dotfiles/redshift/
 
 temp="$PWD"
 
