@@ -107,3 +107,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap <silent><expr> <c-space> coc#refresh()
 
 inoremap jj <esc>
+
+" fzf config
+let g:fzf_preview_window = 'right:60%'
+let g:fzf_buffers_jump = 1
