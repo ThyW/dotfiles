@@ -22,7 +22,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'hugolgst/vimsence'
 Plugin 'ap/vim-css-color'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
