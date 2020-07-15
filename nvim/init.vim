@@ -5,7 +5,7 @@ set cmdheight=2
 set updatetime=500
 set complete-=i
 set shortmess+=c
-let mapleader = " "
+let mapleader = ";"
 set clipboard+=unnamedplus
 set timeoutlen=2000
 set wrap!
@@ -46,12 +46,12 @@ set tabstop=4
 colorscheme desert
 
 " Wincmd mappings
-map <leader>h :wincmd h<CR>
-map <leader>j :wincmd j<CR>
-map <leader>k :wincmd k<CR>
-map <leader>l :wincmd l<CR>
-map <leader>wv :sp <CR>
-map <leader>ws :vs <CR>
+map <silent><leader>h :wincmd h<CR>
+map <silent><leader>j :wincmd j<CR>
+map <silent><leader>k :wincmd k<CR>
+map <silent><leader>l :wincmd l<CR>
+map <silent><leader>wv :sp <CR>
+map <silent><leader>ws :vs <CR>
 
 " calls functions to hide and show numbers and signcolumn
 noremap <leader>cc :call HideSignColumn()<CR>
