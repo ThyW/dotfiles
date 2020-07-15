@@ -99,7 +99,7 @@ nmap <silent> gr <Plug>(coc-references)
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " Use <TAB> to select the popup menu:
- inoremap <silent><expr> <leader><TAB>
+ inoremap <silent><expr> <Space><Space>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
