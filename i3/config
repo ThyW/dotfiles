@@ -106,6 +106,7 @@ set $ws10 "10"
 
 # assigns
 assign [class="Alacritty"] $ws5
+assign [class="Discord"] $ws2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
