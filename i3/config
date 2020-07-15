@@ -30,7 +30,7 @@ font pango:FontAwesome 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty; workspace $ws5
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -67,8 +67,6 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
-
 # split in vertical orientation
 bindsym $mod+v split v
 
