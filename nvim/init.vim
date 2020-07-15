@@ -8,6 +8,7 @@ set shortmess+=c
 let mapleader = " "
 set clipboard+=unnamedplus
 set timeoutlen=2000
+set wrap!
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -98,7 +99,7 @@ nmap <silent> gr <Plug>(coc-references)
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " Use <TAB> to select the popup menu:
- inoremap <silent><expr> <Space><Space>
+ inoremap <silent><expr> <leader><TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
