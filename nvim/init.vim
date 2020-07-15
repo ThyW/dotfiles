@@ -5,7 +5,7 @@ set cmdheight=2
 set updatetime=500
 set complete-=i
 set shortmess+=c
-let mapleader = ";"
+let mapleader = " "
 set clipboard+=unnamedplus
 set timeoutlen=2000
 set wrap!
