@@ -1,4 +1,4 @@
-set hidden
+s set hidden
 set nocompatible " be iMproved, required
 filetype off                  " required
 set cmdheight=2
@@ -7,8 +7,7 @@ set complete-=i
 set shortmess+=c
 let mapleader = " "
 set clipboard+=unnamedplus
-set timeoutlen=2000
-set wrap!
+set timeoutlen=2000 set wrap!
 
 " set up hybrid line number
 set nu rnu
