@@ -1,4 +1,4 @@
-s set hidden
+set hidden
 set nocompatible " be iMproved, required
 filetype off                  " required
 set cmdheight=2
