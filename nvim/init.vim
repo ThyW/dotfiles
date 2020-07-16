@@ -62,12 +62,7 @@ noremap <leader>cb :call ShowSignColumn()<CR>
 
 " function to hide numbers and signcolumn
 function! HideSignColumn()
-		set nonumber		
-endfunction
-
-" function to show signcolumns and numbers
-function! ShowSignColumn()
-		set number
+		set nu! rnu!	
 endfunction
 
 " Pagejumping
