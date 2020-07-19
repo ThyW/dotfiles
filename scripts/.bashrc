@@ -9,7 +9,7 @@ alias lanvidia='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
 alias technic='/mnt/data/graalvm-ce-19.2.0.1/bin/java -jar ~/Downloads/TechnicLauncher.jar'
 alias spot='spotifyd && spt'
 alias autosort='~/.sorter/autosort'
-alias i3lock='i3lock -c 111111'
+alias i3lock='i3lock -c black'
 # alias clion='/mnt/data/clion-2019.2.4/bin/clion.sh'
 alias vim='nvim'
 alias rs='cd ~/programming/rust/'
