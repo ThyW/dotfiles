@@ -59,8 +59,9 @@ map <silent><leader>ws :vs <CR>
 " calls functions to hide and show numbers and signcolumn
 noremap <leader>cc :call HideSignColumn()<CR>
 
+" fzf binds
 noremap <leader>F :Files <CR>
-
+noremap <leader>f :Lines <CR>
 " function to hide numbers and signcolumn
 function! HideSignColumn()
 		set nu! rnu!	
