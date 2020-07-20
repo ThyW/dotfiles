@@ -1,4 +1,4 @@
-alias ls='ls -a --color=auto'
+alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
 alias suspend='sudo systemctl start suspend.target && i3lock -c 2c2c2c'
 alias wgstart='sudo systemctl start wg-quick@wg0'
