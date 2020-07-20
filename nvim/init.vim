@@ -62,6 +62,7 @@ noremap <leader>cc :call HideSignColumn()<CR>
 " jump between buffers quickly
 noremap <leader>b :bp <CR> 
 noremap <leader>B :bn <CR>
+noremap <leader><TAB> <c-^>
 
 " fzf binds
 noremap <leader>F :Files <CR>
