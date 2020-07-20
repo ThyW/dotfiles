@@ -59,6 +59,10 @@ map <silent><leader>ws :vs <CR>
 " calls functions to hide and show numbers and signcolumn
 noremap <leader>cc :call HideSignColumn()<CR>
 
+" jump between buffers quickly
+noremap <leader>b :bp <CR> 
+noremap <leader>B :bn <CR>
+
 " fzf binds
 noremap <leader>F :Files <CR>
 noremap <leader>f :Lines <CR>
