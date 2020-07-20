@@ -76,7 +76,7 @@ endfunction
 noremap <leader>H <PageDown><CR>
 noremap <leader>L <PageUp><CR>
 
-" Rebinding copy to paste to make them work with system clipboads
+" Rebinding copy to paste to make them work with system clipboards
 " noremap <Leader>y "*y
 " noremap <Leader>p "*p
 " noremap <Leader>Y "+y
