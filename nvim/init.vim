@@ -117,7 +117,7 @@ function! s:check_back_space() abort
 endfunction
 
 " c-space to trigger completion
-inoremap <silent><expr> <c-space> coc#refresh()
+noremap <silent><expr> <leader>R coc#refresh()
 
 inoremap jj <esc>
 
