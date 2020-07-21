@@ -2,7 +2,7 @@ set hidden
 set nocompatible " be iMproved, required
 filetype off                  " required
 set cmdheight=2
-set updatetime=500
+set updatetime=5000
 set complete-=i
 set shortmess+=c
 let mapleader = " "
