@@ -87,6 +87,9 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+noremap <Up> <C-u> <CR>
+noremap <Down> <C-d> <CR>
 " Racer config
 let g:racer_cmd = "/home/zir/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
