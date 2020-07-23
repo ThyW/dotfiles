@@ -47,7 +47,7 @@ set number
 syntax on
 set tabstop=4
 colorscheme desert
-set signcolumn = yes:5
+set signcolumn=yes:5
 
 " Wincmd mappings
 map <silent><leader>h :wincmd h<CR>
