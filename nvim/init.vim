@@ -65,8 +65,9 @@ noremap <leader>B :bn <CR>
 noremap <leader><TAB> <c-^>
 
 " fzf binds
-noremap <leader>F :Files <CR>
-noremap <leader>f :Lines <CR>
+noremap <leader>F :CocCommand fzf-preview.ProjectFiles <CR>
+noremap <leader>f :CocCommand fzf-preview.Lines <CR>
+
 " function to hide numbers and signcolumn
 function! HideSignColumn()
 		set nu! rnu!	
