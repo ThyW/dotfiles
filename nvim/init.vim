@@ -47,6 +47,7 @@ set number
 syntax on
 set tabstop=4
 colorscheme desert
+set signcolumn = yes:5
 
 " Wincmd mappings
 map <silent><leader>h :wincmd h<CR>
@@ -55,9 +56,6 @@ map <silent><leader>k :wincmd k<CR>
 map <silent><leader>l :wincmd l<CR>
 map <silent><leader>wv :sp <CR>
 map <silent><leader>ws :vs <CR>
-
-" calls functions to hide and show numbers and signcolumn
-noremap <leader>cc :call HideSignColumn()<CR>
 
 " jump between buffers quickly
 noremap <leader>b :bp <CR> 
