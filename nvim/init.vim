@@ -29,6 +29,7 @@ Plugin 'hugolgst/vimsence'
 Plugin 'ap/vim-css-color'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
