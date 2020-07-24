@@ -128,5 +128,3 @@ inoremap jj <esc>
 " fzf config
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
-
-let g:deoplete#enable_at_startup = 1
