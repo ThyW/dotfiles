@@ -9,7 +9,6 @@ let mapleader = " "
 set clipboard+=unnamedplus
 set timeoutlen=2000 
 set wrap!
-set termguicolors
 
 " set up hybrid line number
 set nu rnu
