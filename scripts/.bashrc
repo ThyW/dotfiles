@@ -33,7 +33,7 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export PS1="\e[0;1;33m\]\u@\h:\e[2;32m\]\w\$\e[m\] "
 export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
 export EDITOR="/usr/bin/nvim"
-export ATHAME_ENABLED="1"
+export ATHAME_ENABLED=1
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
