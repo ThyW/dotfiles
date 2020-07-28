@@ -88,6 +88,10 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+inoremap {; {<CR>};
+inoremap (; ();<left><left>
+
+();
 
 " disable arrows
 noremap <Up> <Nop>
