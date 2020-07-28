@@ -82,6 +82,13 @@ noremap <leader>L <PageUp><CR>
 " noremap <Leader>Y "+y
 " noremap <Leader>P "+p
 
+" autoinserting double parenthesees
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+
 " disable arrows
 noremap <Up> <Nop>
 noremap <Down> <Nop>
