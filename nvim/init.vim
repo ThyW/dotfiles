@@ -17,7 +17,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'racer-rust/vim-racer'
@@ -88,10 +87,8 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-inoremap {; {<CR>};
+inoremap {; {<CR>};<left><left>
 inoremap (; ();<left><left>
-
-();
 
 " disable arrows
 noremap <Up> <Nop>
