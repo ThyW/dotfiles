@@ -35,7 +35,7 @@ export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8f
 export EDITOR="/usr/bin/nvim"
 export ATHAME_ENABLED=0
 
-set -o vi
+set -o nvim
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
