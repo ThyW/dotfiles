@@ -93,8 +93,22 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" move up and down by 10 lines
 noremap <Up> <C-u> <CR>
 noremap <Down> <C-d> <CR>
+
+" comment and uncomment code, thx /u/ZySync
+function! ToggleComment(comment_char)
+	if getline(".") =~ "^" . a:comment_char
+		execute ".s/^" . a:comment_char . "//g"
+	else
+		execute ".s/^/" . a:comment_char . "/g"
+	endif
+endfunction
+
+autocmd FileType rust nnoremap <buffer> <leader>gc :call ToggleComment("\/\/")<CR>
+autocmd FileType vim nnoremap <buffer> <leader>gc :call ToggleComment('"')<CR>
+
 " Racer config
 let g:racer_cmd = "/home/zir/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
