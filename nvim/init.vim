@@ -106,7 +106,7 @@ function! ToggleComment(comment_char)
 	endif
 endfunction
 
-autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\/ ")<CR>
+autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 
 " Racer config
