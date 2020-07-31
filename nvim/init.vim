@@ -62,8 +62,8 @@ noremap <leader>B :bn <CR>
 noremap <leader><TAB> <c-^>
 
 " fzf binds
-noremap <leader>F fzf-preview.ProjectFiles <CR>
-noremap <leader>f CocCommand fzf-preview.BufferLines <CR>
+noremap <leader>F CocCommand :fzf-preview.ProjectFiles <CR>
+noremap <leader>f CocCommand :fzf-preview.BufferLines <CR>
 
 " function to hide numbers and signcolumn
 function! HideSignColumn()
