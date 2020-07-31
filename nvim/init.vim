@@ -27,7 +27,7 @@ Plugin 'hugolgst/vimsence'
 Plugin 'ap/vim-css-color'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-Plugin 'Shougo/deoplete.nvim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,7 +64,7 @@ noremap <leader><TAB> <c-^>
 
 " fzf binds
 noremap <leader>F :CocCommand fzf-preview.ProjectFiles <CR>
-noremap <leader>f :CocCommand fzf-preview.Lines <CR>
+noremap <leader>FF :CocCommand fzf-preview.Lines <CR>
 
 " function to hide numbers and signcolumn
 function! HideSignColumn()
