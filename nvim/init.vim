@@ -1,6 +1,5 @@
-set hidden
-set nocompatible " be iMproved, required
-filetype off                  " required
+set hidden	
+filetype off                  
 set cmdheight=2
 set updatetime=5000
 set complete-=i
