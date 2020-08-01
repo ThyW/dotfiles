@@ -58,8 +58,9 @@ map <silent><leader>wv :sp <CR>
 map <silent><leader>ws :vs <CR>
 
 " jump between buffers quickly
-noremap <leader>b :bp <CR> 
-noremap <leader>B :bn <CR>
+noremap <leader>h :bp <CR> 
+noremap <leader>l :bn <CR>
+noremap <leader>bd :bd <CR>
 noremap <leader><TAB> <c-^>
 
 " fzf binds
@@ -163,6 +164,4 @@ let g:fzf_buffers_jump = 1
 
 " bufferines
 let g:bufferline_active_buffer_right = ']'
-let g:bufferline_show_bufnr = 0
-let g:bufferline_active_highlight = 'StatusLine'
-
+let g:bufferline_show_bufnr = 1
