@@ -160,3 +160,9 @@ inoremap jj <esc>
 " fzf config
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
+
+" bufferines
+let g:bufferline_active_buffer_right = ']'
+let g:bufferline_show_bufnr = 0
+let g:bufferline_active_highlight = 'StatusLine'
+
