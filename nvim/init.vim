@@ -50,10 +50,10 @@ colorscheme desert
 set signcolumn=yes:2
 
 " Wincmd mappings
-map <silent><leader>h :wincmd h<CR>
-map <silent><leader>j :wincmd j<CR>
-map <silent><leader>k :wincmd k<CR>
-map <silent><leader>l :wincmd l<CR>
+map <silent><leader>wh :wincmd h<CR>
+map <silent><leader>wj :wincmd j<CR>
+map <silent><leader>wk :wincmd k<CR>
+map <silent><leader>wl :wincmd l<CR>
 map <silent><leader>wv :sp <CR>
 map <silent><leader>ws :vs <CR>
 
@@ -163,5 +163,6 @@ let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
 
 " bufferines
-let g:bufferline_active_buffer_right = ']'
+let g:bufferline_active_buffer_right = ' '
+let g:bufferline_active_buffer_left = ':'
 let g:bufferline_show_bufnr = 1
