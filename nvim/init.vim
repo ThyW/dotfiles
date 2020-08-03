@@ -79,10 +79,10 @@ noremap <leader>H <PageDown><CR>
 noremap <leader>L <PageUp><CR>
 
 " Rebinding copy to paste to make them work with system clipboards
-" noremap <Leader>y "*y
-" noremap <Leader>p "*p
-" noremap <Leader>Y "+y
-" noremap <Leader>P "+p
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
 " autoinserting double parenthesees
 inoremap " ""<left>
