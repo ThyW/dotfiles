@@ -48,7 +48,7 @@ filetype plugin indent on    " required
 syntax on
 set tabstop=4
 colorscheme desert
-set signcolumn=yes:2
+set signcolumn=yes
 
 " Wincmd mappings
 map <silent><leader>wh :wincmd h<CR>
