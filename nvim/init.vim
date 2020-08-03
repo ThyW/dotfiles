@@ -45,7 +45,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-set number
 syntax on
 set tabstop=4
 colorscheme desert
@@ -60,27 +59,27 @@ map <silent><leader>wv :sp <CR>
 map <silent><leader>ws :vs <CR>
 
 " jump between buffers quickly
-noremap <leader>h :bp <CR> 
-noremap <leader>l :bn <CR>
-noremap <leader>bd :bd <CR>
-noremap <leader><TAB> <c-^>
+noremap <silent><leader>h :bp <CR> 
+noremap <silent><leader>l :bn <CR>
+noremap <silent><leader>bd :bd <CR>
+noremap <silent><leader><TAB> <c-^>
 
 " fzf binds
-noremap <leader>F :CocCommand fzf-preview.ProjectFiles <CR>
-noremap <leader>f :CocCommand fzf-preview.BufferLines <CR>
+noremap <silent><leader>F :CocCommand fzf-preview.ProjectFiles <CR>
+noremap <silent><leader>f :CocCommand fzf-preview.BufferLines <CR>
 
 " function to hide numbers and signcolumn
 function! HideSignColumn()
-		set nu! rnu!	
+		set nu! rnu!
 endfunction
 
 " Pagejumping
-noremap <leader>H <PageDown><CR>
-noremap <leader>L <PageUp><CR>
+noremap <silent><leader>H <PageDown><CR>
+noremap <silent><leader>L <PageUp><CR>
 
 " Rebinding copy to paste to make them work with system clipboards
-noremap <Leader>y :'<,'>w !xclip -selection clipboard
-noremap <Leader>Y :call system('xclip -selection clipboard', @0)
+noremap <silent><Leader>y :'<,'>w !xclip -selection clipboard
+noremap <silent><Leader>Y :call system('xclip -selection clipboard', @0)
 
 " autoinserting double parenthesees
 inoremap " ""<left>
