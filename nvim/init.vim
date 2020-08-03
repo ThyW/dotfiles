@@ -111,9 +111,9 @@ autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 
 " Racer config
-let g:racer_cmd = "/home/zir/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-let g:racer_insert_paren = 1
+" let g:racer_cmd = "/home/zir/.cargo/bin/racer"
+" let g:racer_experimental_completer = 1
+" let g:racer_insert_paren = 1
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
