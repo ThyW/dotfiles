@@ -8,6 +8,7 @@ let mapleader = " "
 set clipboard+=unnamedplus
 set timeoutlen=2000 
 set wrap!
+set copyindent
 set expandtab
 
 " set up hybrid line number
