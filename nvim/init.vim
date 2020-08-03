@@ -6,6 +6,7 @@ set complete-=i
 set shortmess+=c
 let mapleader = " "
 set clipboard+=unnamedplus
+let g:clipboard = "xclip"
 set timeoutlen=2000 
 set wrap!
 set copyindent
