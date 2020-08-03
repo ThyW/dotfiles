@@ -2,9 +2,7 @@ set hidden
 filetype off                  
 set cmdheight=2
 set updatetime=5000
-set complete-=i
-set shortmess+=c
-let mapleader = " "
+set complete-=i set shortmess+=c let mapleader = " "
 set clipboard+=unnamedplus
 let g:clipboard = "xclip"
 set timeoutlen=2000 
@@ -172,6 +170,6 @@ let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
 
 " RustFmt on save or exit
-autocmd! FileType rust cnoremap:w :RustFmt|:w <CR>
-autocmd! FileType rust cnoremap:q :RustFmt|:q <CR>
-autocmd! FileType rust cnoremap:x :RustFmt|:wq <CR>
+autocmd! FileType rust cnoremap:w :RustFmt <bar> :w <CR>
+autocmd! FileType rust cnoremap:q :RustFmt <bar> :q <CR>
+autocmd! FileType rust cnoremap:x :RustFmt <bar>:wq <CR>
