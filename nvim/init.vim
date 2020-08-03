@@ -79,8 +79,8 @@ noremap <leader>H <PageDown><CR>
 noremap <leader>L <PageUp><CR>
 
 " Rebinding copy to paste to make them work with system clipboards
-noremap <Leader>y :'<,'>w !xclip -selection clipboard<CR>
-noremap <Leader>Y :call system('xclip', @0) <CR>
+noremap <Leader>y :'<,'>w !xclip -selection clipboard
+noremap <Leader>Y :call system('xclip -selection clipboard', @0)
 
 " autoinserting double parenthesees
 inoremap " ""<left>
