@@ -11,9 +11,17 @@ set timeoutlen=2000
 set wrap!
 set copyindent
 set expandtab
+syntax on
+set tabstop=4
+colorscheme desert
+set signcolumn=yes
+
+" line numbers
+highlight LineNr ctermfg=red ctermbg=grey
 
 " set up hybrid line number
 set nu rnu
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -45,10 +53,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-syntax on
-set tabstop=4
-colorscheme desert
-set signcolumn=yes
 
 " Wincmd mappings
 map <silent><leader>wh :wincmd h<CR>
