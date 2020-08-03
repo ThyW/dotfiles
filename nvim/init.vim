@@ -2,7 +2,9 @@ set hidden
 filetype off                  
 set cmdheight=2
 set updatetime=5000
-set complete-=i set shortmess+=c let mapleader = " "
+set complete-=i set 
+shortmess+=c 
+let mapleader = " "
 set clipboard+=unnamedplus
 let g:clipboard = "xclip"
 set timeoutlen=2000 
