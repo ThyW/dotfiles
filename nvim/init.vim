@@ -14,13 +14,13 @@ set expandtab
 syntax on
 set tabstop=4
 colorscheme desert
+set nu rnu
 set signcolumn=yes
 
 " line numbers
 highlight LineNr ctermfg=yellow ctermbg=darkgrey
 
 " set up hybrid line number
-set nu rnu
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
