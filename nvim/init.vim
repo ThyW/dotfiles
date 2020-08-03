@@ -174,4 +174,4 @@ let g:bufferline_modified = '*'
 " RustFmt on save or exit
 autocmd FileType rust cnoremap <buffer> w :RustFmt <bar>:w <CR>
 autocmd FileType rust cnoremap <buffer> q :RustFmt <bar>:q <CR>
-autocmd FileType rust cnoremap <buffer> x :RustFmt <bar>:wq <CR>
+autocmd FileType rust cnoremap <buffer> x :RustFmt <bar>:x <CR>
