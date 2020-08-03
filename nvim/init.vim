@@ -19,7 +19,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'racer-rust/vim-racer'
+" Plugin 'racer-rust/vim-racer'
 Plugin 'rust-lang/rust.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'neoclide/coc.nvim'
