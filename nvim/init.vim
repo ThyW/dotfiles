@@ -17,7 +17,7 @@ colorscheme desert
 set signcolumn=yes
 
 " line numbers
-highlight LineNr ctermfg=yellow ctermbg=darkgrey
+highlight LineNr ctermfg=darkyellow ctermbg=darkgrey
 
 " set up hybrid line number
 set nu rnu
