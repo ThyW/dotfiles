@@ -5,8 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4)
-#
+# i3 config file (v4) 
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id xrandr --output eDP-1 --off
@@ -86,13 +85,15 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# set tabbed layout 
+set layout tabbed
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# set tabbed layout 
-workspace_layout tabbed
+
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
