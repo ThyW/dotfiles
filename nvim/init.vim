@@ -172,4 +172,3 @@ let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
 
 " RustFmt on save or exit
-autocmd FileType rust cnoremap <buffer> w :RustFmt <bar>:w <CR>
