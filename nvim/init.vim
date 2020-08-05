@@ -20,6 +20,8 @@ set signcolumn=yes
 " line numbers
 highlight LineNr ctermfg=yellow ctermbg=19
 highlight SignColumn ctermfg=blue ctermbg=19
+highlight ModeMsg ctermfg=yellow ctermbg=19
+highlight CursorLineNr ctermfg=red ctermbg=19
 
 " set up hybrid line number
 
