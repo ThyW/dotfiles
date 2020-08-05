@@ -17,11 +17,12 @@ colorscheme desert
 set nu rnu
 set signcolumn=yes
 
-" line numbers
+" colors
 highlight LineNr ctermfg=yellow ctermbg=19
 highlight SignColumn ctermfg=blue ctermbg=19
 highlight ModeMsg ctermfg=yellow ctermbg=19
 highlight CursorLineNr ctermfg=red ctermbg=19
+highlight CocInfoSign ctermfg=yellow ctermbg=19
 
 " set up hybrid line number
 
