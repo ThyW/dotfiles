@@ -18,11 +18,10 @@ set nu rnu
 set signcolumn=yes
 
 " colors
-highlight LineNr ctermfg=yellow ctermbg=19
-highlight SignColumn ctermfg=blue ctermbg=19
-highlight ModeMsg ctermfg=yellow ctermbg=19
-highlight CursorLineNr ctermfg=red ctermbg=19
-highlight CocInfoSign ctermfg=yellow ctermbg=19
+highlight LineNr ctermfg=white ctermbg=22
+highlight SignColumn ctermfg=blue ctermbg=22
+highlight CursorLineNr ctermfg=green ctermbg=22
+highlight CocInfoSign ctermfg=white ctermbg=22
 
 " set up hybrid line number
 
