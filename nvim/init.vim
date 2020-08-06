@@ -18,9 +18,9 @@ set nu rnu
 set signcolumn=yes
 
 " colors
-highlight LineNr ctermfg=white ctermbg=22
+highlight LineNr ctermfg=lightgray ctermbg=22
 highlight SignColumn ctermfg=blue ctermbg=22
-highlight CursorLineNr ctermfg=green ctermbg=22
+highlight CursorLineNr ctermfg=150 ctermbg=22 
 highlight CocInfoSign ctermfg=white ctermbg=22
 
 " set up hybrid line number
