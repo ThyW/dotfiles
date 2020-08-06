@@ -220,6 +220,7 @@ colors:
     - { index: 19, color: '#504945' }
     - { index: 20, color: '#bdae93' }
     - { index: 21, color: '#ebdbb2' }
+    - { index: 22, color: '#2c2816'}
 
 
   # Visual Bell
