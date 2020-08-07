@@ -101,8 +101,8 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " move up and down by 10 lines
-noremap <Up> 10k <CR>
-noremap <Down> 10j <CR>
+noremap <Up> 9k <CR>
+noremap <Down> 9j <CR>
 
 " comment and uncomment code, thx /u/ZySync
 function! ToggleComment(comment_char)
