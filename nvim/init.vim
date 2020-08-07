@@ -11,13 +11,13 @@ set timeoutlen=2000
 set wrap!
 set copyindent
 set expandtab
-syntax on
 set tabstop=4
-colorscheme desert
 set nu rnu
 set signcolumn=yes
 
 " colors
+syntax on
+colorscheme desert
 highlight LineNr ctermfg=240 ctermbg=22 
 highlight SignColumn ctermfg=22 ctermbg=22
 highlight CursorLineNr ctermfg=254 ctermbg=22 cterm=bold 
