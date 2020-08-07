@@ -18,10 +18,10 @@ set nu rnu
 set signcolumn=yes
 
 " colors
-highlight LineNr ctermfg=240 ctermbg=22
-highlight SignColumn ctermfg=blue ctermbg=22
-highlight CursorLineNr ctermfg=254 ctermbg=22 
-highlight CocInfoSign ctermfg=247 ctermbg=22
+highlight LineNr ctermfg=240 ctermbg=22 
+highlight SignColumn ctermfg=22 ctermbg=22
+highlight CursorLineNr ctermfg=254 ctermbg=22 cterm=bold 
+highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
 
 " set up hybrid line number
 
@@ -101,8 +101,8 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " move up and down by 10 lines
-noremap <Up> <C-u> <CR>
-noremap <Down> <C-d> <CR>
+noremap <Up> 10k <CR>
+noremap <Down> 10j <CR>
 
 " comment and uncomment code, thx /u/ZySync
 function! ToggleComment(comment_char)
