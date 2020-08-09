@@ -7,9 +7,7 @@ alias use-intel='optimus-manager --switch intel'
 alias use-hybrid='optimus-manager --switch hybrid'
 alias lanvidia='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia gamemoderun'
 alias technic='/mnt/data/graalvm-ce-19.2.0.1/bin/java -jar ~/Downloads/TechnicLauncher.jar'
-alias spot='spotifyd && spt'
-alias autosort='~/.sorter/autosort'
-alias i3lock='i3lock -c 111111'
+alias spot='spotifyd && spt' alias autosort='~/.sorter/autosort' alias i3lock='i3lock -c 111111'
 # alias clion='/mnt/data/clion-2019.2.4/bin/clion.sh'
 alias vim='nvim'
 alias rs='cd ~/programming/rust/'
@@ -37,7 +35,7 @@ export ATHAME_ENABLED=0
 export ATHAME_VIM_BIN="/usr/bin/vim"
 
 set -o vi
-set show-mode-in-prompt on
+set show-mode on
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
