@@ -35,7 +35,6 @@ export ATHAME_ENABLED=0
 export ATHAME_VIM_BIN="/usr/bin/vim"
 
 set -o vi
-set show-mode on
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
