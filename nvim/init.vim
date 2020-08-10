@@ -24,16 +24,16 @@ highlight SignColumn ctermfg=22 ctermbg=22
 highlight CursorLineNr ctermfg=254 ctermbg=22 cterm=bold 
 highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
 
-" set up hybrid line number
+"splits?
+set splitright
+set splitbelow
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'racer-rust/vim-racer'
 Plugin 'rust-lang/rust.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'neoclide/coc.nvim'
@@ -43,7 +43,6 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'bling/vim-bufferline'
 
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -54,9 +53,6 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 " Wincmd mappings
 map <silent><leader>wh :wincmd h<CR>
@@ -102,8 +98,8 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " move up and down by 10 lines
-noremap <silent>zk 9k <CR>
-noremap <silent>zj 9j <CR>
+noremap <silent>zk <C-U> <CR>
+noremap <silent>zj <C-D><CR>
 
 " comment and uncomment code, thx /u/ZySync
 function! ToggleComment(comment_char)
