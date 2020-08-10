@@ -23,7 +23,8 @@ highlight LineNr ctermfg=240 ctermbg=22
 highlight SignColumn ctermfg=22 ctermbg=22
 highlight CursorLineNr ctermfg=254 ctermbg=22 cterm=bold 
 highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
-highlight C
+highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
+
 
 "splits?
 set splitright
