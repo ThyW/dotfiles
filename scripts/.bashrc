@@ -35,3 +35,4 @@ export EDITOR="/usr/bin/nvim"
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
 
+set -o vi
