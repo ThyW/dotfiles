@@ -82,8 +82,8 @@ function! HideSignColumn()
 endfunction
 
 " Pagejumping
-noremap <silent><leader>H <PageDown><CR>
-noremap <silent><leader>L <PageUp><CR>
+noremap <silent>zH <PageDown><CR>
+noremap <silent>zL <PageUp><CR>
 
 " Rebinding copy to paste to make them work with system clipboards
 noremap <silent><Leader>y :'<,'>w !xclip -selection clipboard
@@ -102,8 +102,8 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " move up and down by 10 lines
-noremap <Up> 9k <CR>
-noremap <Down> 9j <CR>
+noremap <silent>zk 9k <CR>
+noremap <silent>zj 9j <CR>
 
 " comment and uncomment code, thx /u/ZySync
 function! ToggleComment(comment_char)
