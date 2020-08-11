@@ -20,7 +20,7 @@ if !has('nvim')
   set viminfo+=n~/vim/.viminfo
 else
   " Do nothing here to use the neovim default
-  " or do soemething like:
+  " or do something like:
   set viminfo+=n~/.local/share/nvim/shada/main.shada
 endif
 
