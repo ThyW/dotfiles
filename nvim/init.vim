@@ -17,11 +17,11 @@ set noshowmode
 
 " possible fix
 if !has('nvim')
-  set viminfo+=n~/vim/viminfo
+  set viminfo+=n~/vim/.viminfo
 else
   " Do nothing here to use the neovim default
   " or do soemething like:
-  " set viminfo+=n~/.shada
+  set viminfo+=n~/.local/share/nvim/shada/main.shada
 endif
 
 " colors
