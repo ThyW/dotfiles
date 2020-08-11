@@ -5,7 +5,6 @@ set updatetime=5000
 set complete-=i
 set shortmess+=c 
 let mapleader = " "
-set clipboard+=unnamedplus
 let g:clipboard = "xclip"
 set timeoutlen=2000 
 set wrap!
@@ -84,8 +83,7 @@ noremap <silent>zH <PageDown><CR>
 noremap <silent>zL <PageUp><CR>
 
 " Rebinding copy to paste to make them work with system clipboards
-noremap <silent><Leader>y :'<,'>w !xclip -selection clipboard
-noremap <silent><Leader>Y :call system('xclip -selection clipboard', @0)
+noremap <silent><Leader>y :'<,'>w !xclip -selection clipboard <CR>
 
 " autoinserting double parenthesees
 inoremap " ""<left>
