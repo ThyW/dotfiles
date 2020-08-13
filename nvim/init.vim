@@ -35,7 +35,6 @@ highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 
-
 "splits?
 set splitright
 set splitbelow
@@ -73,6 +72,8 @@ map <silent><leader>wk :wincmd k<CR>
 map <silent><leader>wl :wincmd l<CR>
 map <silent><leader>wv :sp <CR>
 map <silent><leader>ws :vs <CR>
+map <silent><leader>w+ :resize +5 <CR>
+map <silent><leader>w- :resize -5 <CR>
 
 " jump between buffers quickly
 noremap <silent><leader>h :bp <CR> 
@@ -109,7 +110,7 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " move up and down by 10 lines
-noremap <silent>zk <C-U> <CR>
+noremap <silent>zk <C-U><CR>
 noremap <silent>zj <C-D><CR>
 
 " comment and uncomment code, thx /u/ZySync
@@ -123,11 +124,6 @@ endfunction
 
 autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
-
-" Racer config
-" let g:racer_cmd = "/home/zir/.cargo/bin/racer"
-" let g:racer_experimental_completer = 1
-" let g:racer_insert_paren = 1
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -181,5 +177,3 @@ let g:bufferline_active_buffer_right = ' '
 let g:bufferline_active_buffer_left = ' '
 let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
-
-" RustFmt on save or exit
