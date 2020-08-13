@@ -512,7 +512,7 @@ key_bindings:
   #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
   #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
   #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
-        - { key: Space,  mods: Control, mode: Vi, action: ScrollToBottom          }
+        - { key: Space,  mods: Control|Shift, mode: Vi, action: ToggleViMode          }
 
 #debug:
   # Display the time it takes to redraw each frame.
