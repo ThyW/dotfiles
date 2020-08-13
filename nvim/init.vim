@@ -33,7 +33,7 @@ highlight CursorLineNr ctermfg=254 ctermbg=22 cterm=bold
 highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
-highlight Pmenu ctermfg=0 ctermbg=22
+highlight Pmenu ctermfg=1 ctermbg=22
 
 
 "splits?
