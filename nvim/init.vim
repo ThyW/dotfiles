@@ -35,6 +35,7 @@ highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
+highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
 
 "splits?
 set splitright
@@ -178,3 +179,5 @@ let g:bufferline_active_buffer_right = ' '
 let g:bufferline_active_buffer_left = ' '
 let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
+
+"spell checking
