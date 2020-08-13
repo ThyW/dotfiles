@@ -98,7 +98,7 @@ noremap <silent>zL <PageUp><CR>
 " Rebinding copy to paste to make them work with system clipboards
 noremap <silent><Leader>y :'<,'>w !xclip -selection clipboard <CR>
 
-" autoinserting double parenthesees
+" autoinserting double parentheses
 inoremap " ""<left>
 inoremap ( ()<left>
 inoremap [ []<left>
@@ -126,7 +126,7 @@ endfunction
 autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 
-" GoTo code navigation.
+"coc definition
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
