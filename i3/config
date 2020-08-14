@@ -19,6 +19,7 @@ exec ~/Discord/Discord
 exec --no-startup-id volumeicon-alsa
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
 exec --no-startup-id dunst
+exec --no-startup-id picom --config ~/.config/picom/picom.conf 
 
 set $mod Mod4
 
