@@ -6,8 +6,8 @@
 #                                   /____/                           /____/     #
 #                                                                               #
 #################################################################################
-#env:
-  #TERM: alacritty
+env:
+  TERM: alacritty
 
 #window:
   #dimensions:
@@ -22,9 +22,9 @@
   #  x: 0
   #  y: 0
 
-  #startup_mode: Windowed
+  startup_mode: Windowed
 
-  #title: Alacritty
+  title: Alacritty
 
   #class:
     #instance: Alacritty
