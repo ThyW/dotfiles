@@ -217,8 +217,8 @@ client.placeholder      ##2c2c2c #111111 #ffffff #111111 #111111
 client.background       #111111
 
 # window border styles 
-default_border normal 
-#hide_edge_borders both
+default_border pixel 
+hide_edge_borders both
 
 # scrot & gimp - root
 bindsym $mod+p exec scrot --e 'mv $f /home/zir/Pictures && feh /home/zir/Pictures/$f'
