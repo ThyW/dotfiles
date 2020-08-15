@@ -175,7 +175,7 @@ font:
 # https://github.com/Xero/sourcerer
 colors:
   primary:
-    background: '#111114'
+    background: '#111121'
     foreground: '#c2c2b0'
 
   cursor:
