@@ -44,3 +44,5 @@ export EDITOR="/usr/bin/nvim"
 eval "$(starship init bash)"
 
 set -o vi
+
+clear

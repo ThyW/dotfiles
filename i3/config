@@ -45,8 +45,10 @@ font pango:FontAwesome 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# start a terminal and other app binds
 bindsym $mod+Return exec alacritty
+bindsym $mod+i exec chromium
+bindsym $mod+Shift+d exec ~/Discord/Discord
 
 # kill focused window
 bindsym $mod+Shift+q kill
