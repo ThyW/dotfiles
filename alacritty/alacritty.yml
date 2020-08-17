@@ -69,7 +69,7 @@ font:
 
 colors:
   primary:
-    background: '#111121'
+    background: '#131311'
     foreground: '#c2c2b0'
 
   cursor:
@@ -129,7 +129,7 @@ colors:
 
   #unfocused_hollow: true
 
-#live_config_reload: true
+live_config_reload: true
 
 #shell:
 #  program: /bin/bash
