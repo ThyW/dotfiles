@@ -81,23 +81,22 @@ colors:
     red:     '#990000'
     green:   '#006600'
     yellow:  '#cc8800'
-    blue:    '#4c4cff'
-    magenta: '#7d467d'
+    blue:    '#1919ff'
+    magenta: '#5d1dc1'
     cyan:    '#00666f'
     white:   '#bfbfbf'
-    lime:    '#bbaaff'
+    lime:    '#44bb44'
 
   bright:
     black:   '#181818'
     red:     '#990000'
     green:   '#006600'
     yellow:  '#cc8800'
-    blue:    '#1c1fff'
-    magenta: '#d4d4d4'
+    blue:    '#1fbbcc'
+    magenta: '#5d1df1'
     cyan:    '#01639f'
     white:   '#bfbfbf'
-    lime:    '#1fbbcc'
-    aqua:    '#ff0000'
+    lime:    '#55ff55'
 
   indexed_colors:
     - { index: 16, color: '#fe8019' }
