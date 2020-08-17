@@ -41,7 +41,7 @@ font:
   normal:
     family: "FreePixel" 
 
-    style: Bold 
+    style: Regular 
 
   #bold:
     #family: monospace
