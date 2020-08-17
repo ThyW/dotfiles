@@ -6,6 +6,7 @@
 #                                                  /____/       #
 #################################################################
 
+alias pfetch='clear && pfetch'
 alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
 alias suspend='sudo systemctl start suspend.target && i3lock -c 111111'
