@@ -179,4 +179,5 @@ let g:bufferline_active_buffer_left = ' '
 let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
 
-"spell checking
+"exit terminal emulator
+:tnoremap jj <C-\><C-n>
