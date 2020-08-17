@@ -13,9 +13,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Fix monitors 
-exec --no-startup-id xrandr --output eDP-1 --off
-exec --no-startup-id xrandr --output HDMI-1 --primary
-exec --no-startup-id xrandr --output DP-1 --right-of HDMI-1
+#exec --no-startup-id xrandr --output eDP-1 --off
+#exec --no-startup-id xrandr --output HDMI-1 --primary
+#exec --no-startup-id xrandr --output DP-1 --right-of HDMI-1
 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift
