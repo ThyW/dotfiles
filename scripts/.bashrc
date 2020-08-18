@@ -5,7 +5,6 @@
 #/_.___/\__,_/____/_/ /_/   \____/\____/_/ /_/_/ /_/\__, /      #
 #                                                  /____/       #
 #################################################################
-export TERM="xterm-256color"
 
 alias pfetch='clear && pfetch'
 alias ls='ls --color=auto'
@@ -28,17 +27,17 @@ alias sb='source ~/.bashrc'
 alias ac='nvim ~/.config/alacritty/alacritty.yml && ~/sync-config.sh'
 alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='~/sync-config.sh'
-alias term='$TERM'
 # alias peh='~/.sorter/peh'
 
 # Created by `userpath` on 2020-01-27 19:06:27
+export TERM="xterm-256color"
 export PATH="$PATH:~/.local/bin"
 export PATH="${HOME}/.cargo/bin:${PATH}"
 export PATH="$PATH:~/ds-viewer/"
 export PATH="$PATH:~/appimages/"
 export PATH="$PATH:/mnt/data/clion-2019.2.4/bin/"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-export PS1="\e[0;1;33m\]\u@\h:\e[2;32m\]\w\$\e[m\] "
+# not used currently export PS1="\e[0;1;33m\]\u@\h:\e[2;32m\]\w\$\e[m\] "
 export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
 export EDITOR="/usr/bin/nvim"
 
