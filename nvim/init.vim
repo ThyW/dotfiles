@@ -14,7 +14,6 @@ set tabstop=4
 set nu rnu
 set signcolumn=yes
 set noshowmode
-set switchbuf=usetab,newtab
 
 " possible fix
 if !has('nvim')
