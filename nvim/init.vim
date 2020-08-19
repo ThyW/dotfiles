@@ -98,7 +98,7 @@ noremap <silent>zL <PageUp><CR>
 " Rebinding copy to paste to make them work with system clipboards
 noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
 " Copy entire buffer
-noremap <silent><C-a> ggVG:'<,'>w !xclip -selection clipboard<CR><CR>
+noremap <silent><C-a> ggVG
 
 " autoinserting double parentheses
 inoremap " ""<left>
