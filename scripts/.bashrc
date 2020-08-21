@@ -41,9 +41,9 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
 export EDITOR="/usr/bin/nvim"
 
+set -o vi
+
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
-
-set -o vi
 
 clear
