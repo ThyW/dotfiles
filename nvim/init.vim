@@ -100,8 +100,7 @@ noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
 " Copy entire buffer
 noremap <silent><C-a> ggVG
 " Ctrl+Backspace deletes whole words 
-iunmap <C-BS>
-inoremap <silent><C-BS> <ESC>diwi
+inoremap <silent><C-Backspace> <ESC>diwi
 
 " autoinserting double parentheses
 inoremap " ""<left>
