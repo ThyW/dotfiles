@@ -182,3 +182,5 @@ let g:bufferline_modified = '*'
 "exit terminal emulator
 tnoremap jj <C-\><C-n>
 inoremap jj <esc>
+
+au VimLeave * set guicursor=a:ver100
