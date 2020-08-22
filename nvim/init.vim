@@ -99,6 +99,7 @@ noremap <silent>zL <PageUp><CR>
 noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
 " Copy entire buffer
 noremap <silent><C-a> ggVG
+inoremap <silent><C-BS> <ESC>diwi
 
 " autoinserting double parentheses
 inoremap " ""<left>
