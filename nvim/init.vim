@@ -114,8 +114,8 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " move up and down by 10 lines
-noremap <silent>zk <C-U><CR>
-noremap <silent>zj <C-D><CR>
+noremap <silent>zk 10k<CR>
+noremap <silent>zj 10j<CR>
 
 " comment and uncomment code, thx /u/ZySync
 function! ToggleComment(comment_char)
@@ -170,8 +170,6 @@ function! s:show_documentation()
   endif
 endfunction
 
-inoremap jj <esc>
-
 " fzf config
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
@@ -183,4 +181,5 @@ let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
 
 "exit terminal emulator
-:tnoremap jj <C-\><C-n>
+tnoremap jj <C-\><C-n>
+inoremap jj <esc>
