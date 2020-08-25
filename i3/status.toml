@@ -18,9 +18,8 @@ format_swap = "{SUp}%"
 
 [[block]]
 block = "nvidia_gpu"
-label = "GTX 1050"
-show_memory = true
-show_clocks = true
+label = "GPU"
+show_memory = false
 interval = 1
 
 [[block]]
