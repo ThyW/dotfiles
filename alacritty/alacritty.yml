@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-    family: "AcPlus IBM EGA 8x8" 
+    family: "AcPlus IBM VGA 9x8" 
 
     style: Regular 
 
@@ -55,7 +55,7 @@ font:
     #family: monospace
     #style: Bold Italic
 
-    size: 22.0
+    size: 18.0
 
   #offset:
   #  x: 0
