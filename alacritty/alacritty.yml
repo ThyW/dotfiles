@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-    family: "Ac437 NEC APC3 8x8" 
+    family: "Ac437 Acer710 CGA" 
 
     style: Regular 
 
