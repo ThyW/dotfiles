@@ -39,9 +39,10 @@ env:
 
 font:
   normal:
-    family: "Ac437 Trident 8x8" 
+    family: "Ac437 NEC APC3 8x8" 
 
     style: Regular 
+
   #bold:
     #family: monospace
     #style: Bold
