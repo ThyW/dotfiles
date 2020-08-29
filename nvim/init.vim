@@ -105,7 +105,7 @@ noremap <silent><C-a> ggVG
 "inoremap " ""<left>
 "inoremap ( ()<left>
 "inoremap [ []<left>
-autocmd filetype rust inoremap { {}<left>o
+autocmd filetype rust inoremap { {}<left><ESC>o
 
 " disable arrows
 noremap <Up> <Nop>
