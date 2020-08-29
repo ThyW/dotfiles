@@ -68,7 +68,7 @@ font:
 
 colors:
   primary:
-    background: '#131311'
+    background: '#111211'
     foreground: '#c2c2b0'
 
   cursor:
