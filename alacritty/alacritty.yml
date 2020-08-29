@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-    family: "AcPlus IBM VGA 9x8" 
+    family: "Ac437 Model3x Alt1" 
 
     style: Regular 
 
