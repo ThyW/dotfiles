@@ -198,7 +198,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     font pango:FreePixel Bold 10
-    position bottom
+    position top
     status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
     colors {
         separator #666666
