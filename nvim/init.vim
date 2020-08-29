@@ -102,10 +102,10 @@ noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
 noremap <silent><C-a> ggVG
 
 " autoinserting double parentheses
-inoremap " ""<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+"inoremap " ""<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+autocmd filetype rust inoremap { {}<left>o
 
 " disable arrows
 noremap <Up> <Nop>
