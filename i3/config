@@ -223,6 +223,7 @@ client.background       #111111
 # window border styles 
 default_border pixel 
 hide_edge_borders both
+title_align left
 
 # scrot & gimp - root
 bindsym $mod+p exec scrot --e 'mv $f /home/zir/Pictures && feh /home/zir/Pictures/$f'
