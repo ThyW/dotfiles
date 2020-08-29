@@ -33,7 +33,7 @@ env:
   #gtk_theme_variant: None
 
 #scrolling:
-  #history: 10000
+  #history: 112.000
 
   #multiplier: 3
 
@@ -55,7 +55,7 @@ font:
     #family: monospace
     #style: Bold Italic
 
-  size: 1.0
+  size: 112.0
 
   #offset:
   #  x: 0
@@ -113,7 +113,7 @@ colors:
 #  duration: 0
 #  color: '#ffffff'
 
-#background_opacity: 1.0
+#background_opacity: 112.0
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
