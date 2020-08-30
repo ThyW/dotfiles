@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-    family: "D" 
+    family: "Ac437 PhoenixEGA 8x8" 
 
     style: Regular 
 
@@ -54,7 +54,7 @@ font:
     #family: monospace
     #style: Bold Italic
 
-  size: 15.0
+  size: 13.0
 
   #offset:
   #  x: 0
