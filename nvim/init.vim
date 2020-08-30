@@ -101,9 +101,6 @@ noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
 " Copy entire buffer
 noremap <silent><C-a> ggVG
 
-" autoinserting double parentheses
-autocmd filetype rust inoremap { {}<left><CR><CR><up><TAB>
-
 " disable arrows
 noremap <Up> <Nop>
 noremap <Down> <Nop>
