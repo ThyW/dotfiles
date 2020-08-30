@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-    family: "Terminus (TTF)" 
+    family: "Perfect DOS VGA 437 Win" 
 
     style: Regular 
 
