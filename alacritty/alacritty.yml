@@ -95,7 +95,7 @@ colors:
     magenta: '#d4d4d4'
     cyan:    '#01639f'
     white:   '#bfbfbf'
-    lime:    '#1fbbcc'
+    lime:    '#bfff00'
 
   indexed_colors:
     - { index: 16, color: '#fe8019' }
