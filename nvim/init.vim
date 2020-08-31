@@ -37,7 +37,7 @@ highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
 highlight Function ctermfg=99
-highlight Operator ctermfg=142
+highlight Operator ctermfg=112
 
 "splits?
 set splitright
