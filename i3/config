@@ -118,15 +118,15 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:>>"
-set $ws2 "2:</>"
+set $ws2 "2:main"
 set $ws3 "3:Discord"
-set $ws4 "4:four"
-set $ws5 "5:five"
-set $ws6 "6:six"
-set $ws7 "7:seven"
-set $ws8 "8:eight"
-set $ws9 "9:nine"
-set $ws10 "10:ten"
+set $ws4 "4:IV"
+set $ws5 "5:V"
+set $ws6 "6:VI"
+set $ws7 "7:VII"
+set $ws8 "8:VIII"
+set $ws9 "9:IX"
+set $ws10 "10:X"
 
 # assigns
 
@@ -200,11 +200,8 @@ bar {
     font pango:Perfect DOS VGA 437 Win 11
     position top
     mode dock
-    hidden_state hide
-    modifier $mod
     status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
     strip_workspace_numbers yes
-    strip_workspace_name no
     colors {
         separator #666666
         background #131313
