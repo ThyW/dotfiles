@@ -1,5 +1,5 @@
-theme = "modern"
-icons = "awesome5"
+theme = "gruvbox-dark"
+icons = "material"
 
 [[block]]
 block = "battery"
@@ -18,7 +18,7 @@ format_swap = "{SUp}%"
 
 [[block]]
 block = "nvidia_gpu"
-label = "GPU"
+label = ""
 show_memory = false
 interval = 1
 
