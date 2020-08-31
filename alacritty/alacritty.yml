@@ -88,8 +88,8 @@ colors:
 
   bright:
     black:   '#181818'
-    red:     '#990000'
-    green:   '#006600'
+    red:     '#9f0000'
+    green:   '#00cc00'
     yellow:  '#cc8800'
     blue:    '#1c1fff'
     magenta: '#ec88ea'
