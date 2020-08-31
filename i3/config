@@ -228,9 +228,9 @@ hide_edge_borders both
 title_align left
 
 # scrot & gimp - root
-bindsym $mod+p exec scrot --e 'mv $f /home/zir/Pictures && feh /home/zir/Pictures/$f'
+bindsym $mod+p exec scrot --e 'mv $f /home/zir/Pictures && gimp /home/zir/Pictures/$f'
 # scrot & gimp - select window or rectangle
-bindsym $mod+Shift+p exec scrot --focused --border --e 'mv $f /home/zir/Pictures && feh /home/zir/Pictures/$f'
+bindsym $mod+Shift+p exec scrot --focused --border --e 'mv $f /home/zir/Pictures && gimp /home/zir/Pictures/$f'
 
 # back and forth
 workspace_auto_back_and_forth no
