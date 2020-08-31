@@ -2,8 +2,8 @@ set hidden
 filetype off                  
 set cmdheight=2
 set updatetime=500
-set complete-=i
-set shortmess+=c 
+set complete -= i
+set shortmess += c 
 let mapleader = " "
 let g:clipboard = "xclip"
 set timeoutlen=2000 
@@ -36,6 +36,7 @@ highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
+highlight Operator ctermfg=82 
 
 "splits?
 set splitright
