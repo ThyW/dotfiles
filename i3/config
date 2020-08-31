@@ -203,7 +203,7 @@ bar {
     hidden_state hide
     modifier $mod
     status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
-    workspace_min_width 20
+    workspace_min_width 25
     colors {
         separator #666666
         background #131313
