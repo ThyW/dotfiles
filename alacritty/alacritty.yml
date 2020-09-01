@@ -84,7 +84,7 @@ colors:
     magenta: '#af5faf'
     cyan:    '#00766f'
     white:   '#bfbfbf'
-    lime:    '#bbaaff'
+    lime:    '#bbaa0f'
 
   bright:
     black:   '#181818'
@@ -93,7 +93,7 @@ colors:
     yellow:  '#efa822'
     blue:    '#1cffff'
     magenta: '#ec88ea'
-    cyan:    '#01639f'
+    cyan:    '#2d13ef'
     white:   '#bfbfbf'
     lime:    '#bfff00'
 
