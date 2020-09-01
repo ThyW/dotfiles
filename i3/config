@@ -200,7 +200,7 @@ bar {
     font pango:Perfect DOS VGA 437 Win 11
     position top
     mode dock
-    #status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
+    status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
     strip_workspace_numbers yes
     colors {
         separator #666666
