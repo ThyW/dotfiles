@@ -82,7 +82,7 @@ colors:
     yellow:  '#bc8800'
     blue:    '#1c4cff'
     magenta: '#af5faf'
-    cyan:    '#227a7a'
+    cyan:    '#225c4f'
     white:   '#bfbfbf'
 
   bright:
@@ -92,7 +92,7 @@ colors:
     yellow:  '#efa822'
     blue:    '#1cffff'
     magenta: '#ec88ea'
-    cyan:    '#bfff00'
+    cyan:    '#19ffff'
     white:   '#bfbfbf'
         
 
