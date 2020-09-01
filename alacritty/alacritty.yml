@@ -82,9 +82,8 @@ colors:
     yellow:  '#bc8800'
     blue:    '#1c4cff'
     magenta: '#af5faf'
-    cyan:    '#00766f'
+    cyan:    '#bbaa0f'
     white:   '#bfbfbf'
-    lime:    '#bbaa0f'
 
   bright:
     black:   '#181818'
@@ -93,9 +92,9 @@ colors:
     yellow:  '#efa822'
     blue:    '#1cffff'
     magenta: '#ec88ea'
-    cyan:    '#2d13ef'
+    cyan:    '#bfff00'
     white:   '#bfbfbf'
-    lime:    '#bfff00'
+        
 
   indexed_colors:
     - { index: 16, color: '#fe8019' }
