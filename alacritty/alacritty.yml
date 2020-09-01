@@ -81,8 +81,8 @@ colors:
     green:   '#006600'
     yellow:  '#bc8800'
     blue:    '#1c4cff'
-    magenta: '#af5faf'
-    cyan:    '#225c4f'
+    magenta: '#e244e2'
+    cyan:    '#007c7c'
     white:   '#bfbfbf'
 
   bright:
