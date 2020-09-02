@@ -81,7 +81,7 @@ map <silent><leader>w- :resize -5 <CR>
 " jump between buffers quickly
 noremap <silent><leader>h :bp <CR> 
 noremap <silent><leader>l :bn <CR>
-noremap <silent><leader>bd :bd <CR>
+noremap <silent><leader>bd :bd! <CR>
 noremap <silent><leader><TAB> <c-^>
 
 " fzf binds
