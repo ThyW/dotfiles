@@ -96,7 +96,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # set tabbed layout 
-workspace_layout tabbed
+workspace_layout toggle split
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
