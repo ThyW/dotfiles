@@ -202,6 +202,7 @@ bar {
     mode dock
     status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
     strip_workspace_numbers yes
+    i3bar_command i3bar -t 
     colors {
         separator #666666
         background #131313
