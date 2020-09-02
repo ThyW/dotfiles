@@ -175,6 +175,8 @@ let g:bufferline_active_buffer_left = ' '
 let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
 
+let g:rustfmt_autosave = 1
+
 "exit terminal emulator
 tnoremap jj <C-\><C-n>
 inoremap jj <esc>
