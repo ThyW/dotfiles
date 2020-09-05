@@ -205,6 +205,12 @@ mode "moveit" {
     bindsym l move right 20px
     bindsym Mod4+m mode "default"
 
+    # move by a larger margin
+    bindsym Shift+k move up 50px
+    bindsym Shift+h move left 50px
+    bindsym Shift+j  move down 50px
+    bindsym Shift+l move right 50px
+
     # back to normal: Enter or Escape or $mod+r
     bindsym Return mode "default"
     bindsym Escape mode "default"
