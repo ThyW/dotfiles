@@ -8,7 +8,7 @@
 
 # Welcome message
 cal
-date
+date +"%Y %X"
 HOST=$(hostnamectl | awk 'NR==1{print $3}')
 echo "Welcome, $USER, to $HOST"
 
