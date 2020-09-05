@@ -6,6 +6,12 @@
 #                                                  /____/       #
 #################################################################
 
+# Welcome message
+cal
+date
+host=hostname
+echo "Welcome, $USER, to $host"
+
 alias pfetch='clear && pfetch'
 alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
