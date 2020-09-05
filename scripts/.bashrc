@@ -9,7 +9,7 @@
 # Welcome message
 cal
 date
-HOST=$(hostnamectl)
+HOST=$(hostnamectl | awk `NR==1{'print $1'}`)
 echo "Welcome, $USER, to $HOST"
 
 alias ls='ls --color=auto'
