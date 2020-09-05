@@ -17,8 +17,7 @@ alias use-hybrid='optimus-manager --switch hybrid'
 alias lanvidia='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia gamemoderun'
 alias technic='/mnt/data/graalvm-ce-19.2.0.1/bin/java -jar ~/Downloads/TechnicLauncher.jar'
 alias spot='spotifyd && spt' alias autosort='~/.sorter/autosort' alias i3lock='i3lock -c 111111'
-# alias clion='/mnt/data/clion-2019.2.4/bin/clion.sh'
-alias e='nvim'
+alias vim='nvim'
 alias E='sudo nvim'
 alias rs='cd ~/programming/rust/'
 alias bc='nvim ~/.bashrc && ~/sync-config.sh'
@@ -28,8 +27,6 @@ alias sb='source ~/.bashrc'
 alias ac='nvim ~/.config/alacritty/alacritty.yml && ~/sync-config.sh'
 alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='~/sync-config.sh'
-# alias peh='~/.sorter/peh'
-alias vim='echo "use e."'
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
