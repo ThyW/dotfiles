@@ -204,7 +204,13 @@ mode "moveit" {
     bindsym j  move down 20px
     bindsym l move right 20px
     bindsym Mod4+m mode "default"
+
+    # back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
+
 bindsym Mod4+m focus floating; mode "moveit"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
