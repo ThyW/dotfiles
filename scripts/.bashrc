@@ -10,7 +10,7 @@
 cal
 date +"%Y %X"
 HOST=$(hostnamectl | awk 'NR==1{print $3}')
-echo "Welcome, $USER, to $HOST"
+echo "Welcome, \e[1;32m$USER\e[0m, to \e[1;33m$HOST\e[0m"
 
 alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
