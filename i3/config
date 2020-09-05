@@ -51,6 +51,8 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+i exec firefox
 bindsym $mod+Shift+d exec ~/Lightcord/Lightcor
+bindsym $mod+Alt+r exec alacritty -e cd ~/programming/rust/
+bindsym $mod+Alt+f exec alacritty -e vifm ~
 
 # kill focused window
 bindsym $mod+Shift+q kill
