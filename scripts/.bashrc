@@ -9,7 +9,7 @@
 # Welcome message
 cal
 date
-HOST=$(hostname)
+HOST=$(pfetch)
 echo "Welcome, $USER, to $HOST"
 
 alias pfetch='clear && pfetch'
