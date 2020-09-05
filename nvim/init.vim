@@ -187,3 +187,8 @@ inoremap jj <esc>
 map <silent><F3> :set hlsearch!<CR> 
 
 au VimLeave * set guicursor=a:ver100
+
+recirere
+
+nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
+nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
