@@ -53,5 +53,3 @@ set -o vi
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
-
-clear
