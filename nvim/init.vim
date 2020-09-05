@@ -79,10 +79,10 @@ map <silent><leader>w+ :resize +5 <CR>
 map <silent><leader>w- :resize -5 <CR>
 
 " jump between buffers quickly
-noremap <silent><leader>h :bp <CR> 
-noremap <silent><leader>l :bn <CR>
-noremap <silent><leader>bd :bd! <CR>
-noremap <silent><leader><TAB> <c-^>
+map <silent><leader>h :bp <CR> 
+map <silent><leader>l :bn <CR>
+map <silent><leader>bd :bd! <CR>
+map <silent><leader><TAB> <c-^>
 
 " fzf binds
 noremap <silent><leader>F :CocCommand fzf-preview.ProjectFiles <CR>
@@ -176,10 +176,14 @@ let g:bufferline_active_buffer_left = ' '
 let g:bufferline_show_bufnr = 1
 let g:bufferline_modified = '*'
 
+" auto format rust files on save
 let g:rustfmt_autosave = 1
 
 "exit terminal emulator
 tnoremap jj <C-\><C-n>
 inoremap jj <esc>
+
+" turn of highlight
+map <silent><F3> :set hlsearch!<CR> 
 
 au VimLeave * set guicursor=a:ver100
