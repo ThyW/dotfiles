@@ -15,6 +15,7 @@ set nu rnu
 set signcolumn=yes
 set noshowmode
 set nocompatible
+set spell
 
 " possible fix
 if !has('nvim')
