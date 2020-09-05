@@ -9,7 +9,7 @@
 # Welcome message
 cal
 date
-HOST=$(pfetch)
+HOST=$(hostnamectl)
 echo "Welcome, $USER, to $HOST"
 
 alias ls='ls --color=auto'
