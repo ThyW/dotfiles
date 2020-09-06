@@ -199,7 +199,6 @@ set statusline=
 set statusline+=\ <<
 set statusline+=\ %f
 set statusline+=\ >>
-set statusline+=\ %T
 set statusline+=%=
 set statusline+=\ %m
 set statusline+=\ %Y
