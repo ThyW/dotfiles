@@ -202,4 +202,3 @@ set statusline+=%=
 set statusline+=\ %m
 set statusline+=\ %y
 set statusline+=\ Line:\ %l\ of\ %L
-
