@@ -36,6 +36,7 @@ highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
+highlight StatusLIne ctermfg=22 ctermbg=gray
 
 "splits?
 set splitright
@@ -198,7 +199,8 @@ set statusline=
 set statusline+=\ <<
 set statusline+=\ %f
 set statusline+=\ >>
+set statusline+=\ %T
 set statusline+=%=
 set statusline+=\ %m
-set statusline+=\ %y
-set statusline+=\ Line:\ %l\ of\ %L
+set statusline+=\ %Y
+set statusline+=\ %c\ %l\/\%L
