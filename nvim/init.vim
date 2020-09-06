@@ -48,7 +48,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'itchyny/lightline.vim'
+"Plugin 'itchyny/lightline.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'hugolgst/vimsence'
 Plugin 'ap/vim-css-color'
@@ -191,3 +191,15 @@ au VimLeave * set guicursor=a:ver100
 " toggle wrap and spell, thanks github.com/ralismark/ 
 nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
 nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
+
+" custom status line 
+set laststatus=2 
+set statusline=
+set statusline+=\ <<
+set statusline+=\ %f
+set statusline+=\ >>
+set statusline+=%=
+set statusline+=\ %m
+set statusline+=\ %y
+set statusline+=\ Line:\ %l\ of\ %L
+
