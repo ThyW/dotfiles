@@ -49,7 +49,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
-"Plugin 'itchyny/lightline.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'hugolgst/vimsence'
 Plugin 'ap/vim-css-color'
