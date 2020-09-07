@@ -260,8 +260,8 @@ mode "screenshot" {
     bindsym s exec "screenshot focused"
     bindsym c exec "screenshot select"
 
-    bind Escape mode "default"
-    bind Retrun mdoe "default"
+    bindsym Escape mode "default"
+    bindsym Retrun mdoe "default"
 }
 
 # toggle compositor
