@@ -258,7 +258,7 @@ bindsym $mod+p mode "screenshot"
 mode "screenshot" {
     bindsym a exec "screenshot screen"
     bindsym s exec "screenshot focused"
-    bindsym c exec "screenshot select"
+    bindsym c exec ""
 
     bindsym Escape mode "default"
     bindsym Retrun mdoe "default"
