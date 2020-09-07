@@ -206,7 +206,7 @@ set statusline+=\ %c\ %l\/\%L
 "
 function! Preview()
 		:call Compile()<CR><CR>
-		execute "!zathura /tmp/op.pdf"
+		execute "!zathura /tmp/op.pdf &"
 endfunction
 
 function! Compile()
