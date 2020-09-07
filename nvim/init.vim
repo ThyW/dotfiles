@@ -204,3 +204,24 @@ set statusline+=\ %Y
 set statusline+=\ %c\ %l\/\%L
 
 autocmd FileType markdown nnoremap <buffer> <leader>op :!zathura\ %f<CR>
+
+function! Preview()
+		:call Compile()<CR><CR>
+		execute "! zathura /tmp/op.pdf &"
+endfunction
+
+function! Compile()
+		let extension = expand('%:e')
+		if extension == "ms"
+				execute "! groff -ms % -T pdf > /tmp/op.pdf"
+		elseif extension == "tex"
+				execute "! pandoc -f latex -t latex % -o /tmp/op.pdf"
+		elseif extension == "md"
+				execute "! pandoc % -s -o /tmp/op.pdf"
+		endif
+endfunction
+
+
+noremap <leader>op :call Preview()<CR><CR><CR>
+noremap <leader>oc :call Compile()<CR><CR>
+
