@@ -203,8 +203,6 @@ set statusline+=\ %m
 set statusline+=\ %Y
 set statusline+=\ %c\ %l\/\%L
 
-autocmd FileType markdown nnoremap <buffer> <leader>op :!zathura\ %f<CR>
-
 function! Preview()
 		:call Compile()<CR><CR>
 		execute "! zathura /tmp/op.pdf &"
