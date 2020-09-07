@@ -31,7 +31,6 @@ set $mod2 Mod1
 # is used in the bar {} block below.
 font pango:Perfect DOS VGA 437 Win 10
 
-bindsym $mod+Shift+o exec --no-startup-id xrandr --output eDP-1 --off && xrandr --output HDMI-1 --primary  && xrandr --output DP-1 --right-of HDMI-1 move $ws1 to output HDMI-1 move $ws2 to output DP-1 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -132,7 +131,6 @@ workspace 1 output primary
 workspace 2 output DP1
 
 # assigns
-assign [class="Discord"] -> number 3
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -208,8 +206,8 @@ mode "moveit" {
     # move by a larger margin
     bindsym Shift+k move up 100px
     bindsym Shift+h move left 100px
-    bindsym Shift+j  move down 100px
-    bindsym Shift+l move right 100px
+    bindsym Shift+j  move dow10050px
+    bindsym Shift+l move right 50px
 
     # back to normal: Enter or Escape or $mod+r
     bindsym Return mode "default"
@@ -267,4 +265,4 @@ bindsym $mod+Shift+n exec killall picom
 # back and forth
 workspace_auto_back_and_forth no
 
-
+bindsym $mod+Shift+o exec --no-startup-id xrandr --output eDP-1 --off && xrandr --output HDMI-1 --primary  && xrandr --output DP-1 --right-of HDMI-1 move $ws1 to output HDMI-1 move $ws2 to output DP-1 
