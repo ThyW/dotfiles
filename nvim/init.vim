@@ -215,7 +215,7 @@ function! Compile()
 		elseif extension == "tex"
 				execute "! pandoc -f latex -t latex % -o /tmp/op.pdf"
 		elseif extension == "md"
-				execute "! pandoc -s % -o /tmp/op.pdf"
+				execute "! pandoc % --pdf-engine=xetex -o /tmp/op.pdf"
 		endif
 endfunction
 
