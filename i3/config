@@ -208,8 +208,8 @@ mode "moveit" {
     # move by a larger margin
     bindsym Shift+k move up 100px
     bindsym Shift+h move left 100px
-    bindsym Shift+j  move dow10050px
-    bindsym Shift+l move right 50px
+    bindsym Shift+j  move down 100px
+    bindsym Shift+l move right 100px
 
     # back to normal: Enter or Escape or $mod+r
     bindsym Return mode "default"
