@@ -56,6 +56,7 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'bling/vim-bufferline'
 Plugin 'morhetz/gruvbox'
+Plugin 'L04DB4L4NC3R / texgroff.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
