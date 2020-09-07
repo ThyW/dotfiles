@@ -253,9 +253,15 @@ hide_edge_borders both
 title_align left
 
 # screenshots
-bindsym $mod+p exec screenshot screen
-bindsym $mod+Shift+p exec screenshot focused
-bindsym $mod+Ctr+p exec screenshot select
+
+bindsym $mod+p mode "screenshot"
+mode "screenshot" {
+    bindsym a exec "screenshot screen"
+    bindsym s exec "screenshot focused"
+    bindsym c exec "screenshot select"
+
+    bind Escape mode "default"
+}
 
 # toggle compositor
 bindsym $mod+n exec picom --config ~/.config/picom/picom.conf
