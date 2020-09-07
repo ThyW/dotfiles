@@ -255,8 +255,8 @@ title_align left
 
 # scrot & gimp - root
 bindsym $mod+p exec screenshot screen
-bindsym $mod+Shift+p exec screenshot select
-bindsym $mod+Ctrl+p exec screenshot focused
+bindsym $mod+Shift+p exec screenshot focused
+bindsym $mod+Ctrl+p exec screenshot select
 #
 #
 bindsym $mod+n exec picom --config ~/.config/picom/picom.conf
