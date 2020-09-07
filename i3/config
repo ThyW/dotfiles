@@ -54,7 +54,7 @@ bindsym $mod+Shift+d exec ~/Lightcord/Lightcor
 bindsym $mod2+f exec alacritty -e vifm ~
 
 # open floating terminal
-bindsym $mod+Shift+Return exec --no-startup-id alacritty --role floating_term mode "moveit" 
+bindsym $mod+Shift+Return exec alacritty --role floating_term; mode "moveit" 
 for_window [window_role=floating_term] floating enable
 
 # kill focused window
