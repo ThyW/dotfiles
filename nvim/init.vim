@@ -202,3 +202,5 @@ set statusline+=%=
 set statusline+=\ %m
 set statusline+=\ %Y
 set statusline+=\ %c\ %l\/\%L
+
+autocmd FileType markdown nnoremap <buffer> <leader>op :!zathura\ %f<CR>
