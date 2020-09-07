@@ -53,10 +53,6 @@ bindsym $mod+i exec firefox
 bindsym $mod+Shift+d exec ~/Lightcord/Lightcor
 bindsym $mod2+f exec alacritty -e vifm ~
 
-# open floating terminal
-bindsym $mod+Shift+Return exec alacritty --class floating_term 
-for_window [window_role=floating_term] floating enable
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
