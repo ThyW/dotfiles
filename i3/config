@@ -258,7 +258,7 @@ bindsym $mod+p mode "screenshot"
 mode "screenshot" {
     bindsym a exec "screenshot screen"
     bindsym s exec "screenshot focused"
-    bindsym c exec ""
+    bindsym c exec "scrot -s -e 'mkdir -p ~/screenshot/ ; mv $f ~/screenshot ; xclip -selection clipboard -target image/png -i ~/screenshot/`basename $f`'"
 
     bindsym Escape mode "default"
     bindsym Retrun mdoe "default"
