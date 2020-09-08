@@ -14,7 +14,6 @@ set tabstop=4
 set nu rnu
 set signcolumn=yes
 set noshowmode
-set nocompatible
 
 " possible fix
 if !has('nvim')
@@ -96,8 +95,6 @@ endfunction
 
 " Rebinding copy to paste to make them work with system clipboards
 noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
-" Copy entire buffer
-noremap <silent><C-a> ggVG
 
 " disable arrows
 noremap <Up> <Nop>
