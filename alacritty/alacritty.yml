@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-    family: "Perfect DOS 437 Win" 
+    family: "Perfect DOS VGA 437 Win" 
 
     style: Regular 
 
