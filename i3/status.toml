@@ -1,5 +1,5 @@
-theme = "gruvbox-dark"
-icons = "material"
+theme = "plain"
+icons = "none"
 
 [[block]]
 block = "battery"
