@@ -1,5 +1,4 @@
 set hidden	
-filetype off                  
 set cmdheight=2
 set updatetime=500
 set complete-=i
@@ -8,12 +7,17 @@ let mapleader = " "
 let g:clipboard = "xclip"
 set timeoutlen=2000 
 set wrap!
-set copyindent
-set expandtab
-set tabstop=4
 set nu rnu
 set signcolumn=yes
 set noshowmode
+set autoindent
+set smartindent
+set copyindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set colorcolumn=80
 
 " possible fix
 if !has('nvim')
@@ -36,6 +40,7 @@ highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
 highlight StatusLIne ctermfg=22 ctermbg=gray
+highlight ColorColumn ctermbg=22
 
 "splits?
 set splitright
