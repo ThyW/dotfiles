@@ -45,10 +45,11 @@ bindsym $mod+Shift+o exec --no-startup-id xrandr --output eDP-1 --off && xrandr 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+for_window [ title="floating"] floating enable
 
 # start a terminal and other app binds
 bindsym $mod+Return exec alacritty
-bindsym $mod2+Return floating enable; exec alacritty
+bindsym $mod2+Return exec alacritty -t "floating" 
 bindsym $mod+i exec firefox
 bindsym $mod+Shift+d exec ~/Lightcord/Lightcor
 bindsym $mod2+f exec alacritty -e vifm ~
