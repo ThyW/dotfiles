@@ -15,8 +15,6 @@ set smartindent
 set copyindent
 set expandtab
 set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 set colorcolumn=80
 
 " possible fix
@@ -227,3 +225,5 @@ noremap <leader>op :call Preview()<CR><CR><CR>
 noremap <leader>oc :call Compile()<CR><CR>
 
 autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+
+noremap <leader>t :terminal<CR>a
