@@ -48,7 +48,7 @@ floating_modifier $mod
 
 # start a terminal and other app binds
 bindsym $mod+Return exec alacritty
-bindsym $mod2+Return exec alacritty 
+bindsym $mod2+Return floating enable; exec alacritty
 bindsym $mod+i exec firefox
 bindsym $mod+Shift+d exec ~/Lightcord/Lightcor
 bindsym $mod2+f exec alacritty -e vifm ~
