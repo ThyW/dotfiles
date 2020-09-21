@@ -224,6 +224,6 @@ endfunction
 noremap <leader>op :call Preview()<CR><CR><CR>
 noremap <leader>oc :call Compile()<CR><CR>
 
-autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+autocmd FileType rmd map <silent><F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
 
 noremap <leader>t :terminal<CR>a
