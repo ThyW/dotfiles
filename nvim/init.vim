@@ -17,7 +17,6 @@ set expandtab
 set tabstop=4
 set colorcolumn=80
 set foldmethod=indent
-set foldlevel=3
 set foldlevelstart=20
 
 " possible fix
