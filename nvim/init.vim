@@ -16,7 +16,7 @@ set copyindent
 set expandtab
 set tabstop=4
 set colorcolumn=80
-set foldmethod=syntax
+set foldmethod=indent
 
 " possible fix
 if !has('nvim')
