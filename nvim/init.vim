@@ -17,6 +17,7 @@ set expandtab
 set tabstop=4
 set colorcolumn=80
 set foldmethod=indent
+let g:foldstart=20
 
 " possible fix
 if !has('nvim')
