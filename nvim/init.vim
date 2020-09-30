@@ -16,7 +16,7 @@ set copyindent
 set expandtab
 set tabstop=4
 set colorcolumn=80
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevelstart=20
 
 " possible fix
