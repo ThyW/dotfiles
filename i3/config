@@ -17,7 +17,7 @@
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/wp-legions.jpg 
+exec --no-startup-id feh --bg-scale Pictures/wallpapers/wp-forestofliars.jpg 
 exec ~/Lightcord/Lightcord
 exec --no-startup-id volumeicon-alsa
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
