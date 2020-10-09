@@ -41,6 +41,7 @@ highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
 highlight StatusLIne ctermfg=22 ctermbg=gray
 highlight ColorColumn ctermbg=22
+highlight Coceal ctermbg=black ctermbg=white
 
 "splits?
 set splitright
