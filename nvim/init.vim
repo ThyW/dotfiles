@@ -64,6 +64,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-rmarkdown'
+Plugin 'vim-latex/vim-latex'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
