@@ -231,7 +231,7 @@ endfunction
 noremap <leader>op :call Preview()<CR><CR><CR>
 noremap <leader>oc :call Compile()<CR><CR>
 
-autocmd FileType rmd map <silent><F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
+autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
 autocmd FileType python map <silent><F5> :vertical termianl ./%<CR>
 
 noremap <leader>t :terminal<CR>a
