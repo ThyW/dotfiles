@@ -18,7 +18,7 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-scale Pictures/wallpapers/wp-mt-pinatubo.jpg 
-exec ~/Lightcord/Lightcord
+exec --no-startup-id discord
 exec --no-startup-id volumeicon-alsa
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
 exec --no-startup-id dunst
