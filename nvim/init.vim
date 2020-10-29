@@ -14,7 +14,10 @@ set autoindent
 set smartindent
 set copyindent
 set expandtab
-set tabstop=4
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
 set colorcolumn=80
 set foldmethod=indent
 set foldlevelstart=20
