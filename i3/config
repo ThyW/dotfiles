@@ -263,19 +263,19 @@ mode "screenshot" {
     bindsym --release f exec "screenshot select"
 
     bindsym Escape mode "default"
-    bindsym Retrun mode "default"
+    bindsym Return mode "default"
 }
 
-bindsym $mod+s mode "settings"
 mode "settings" {
     bindsym a exec pavucontrol
-    bindsym i exec "alacritty -e i3c"
-    bindsym v exec "alacritty -e vc"
-    bindsym b exec "alacritty -e bc"
+    bindsym i exec "alacritty -e nvim ~/.config/i3/config"
+    bindsym v exec "alacritty -e nvim ~/.config/nvim/init.vim"
+    bindsym b exec "alacritty -e nvim ~/.bashrc && source"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
+bindsym $mod+$mod2+s mode "settings"
 
 # toggle compositor
 bindsym $mod+n exec picom --config ~/.config/picom/picom.conf
