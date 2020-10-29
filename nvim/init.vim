@@ -106,7 +106,7 @@ endfunction
 
 
 " Rebinding copy to paste to make them work with system clipboards
-noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
+noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR>
 
 " disable arrows
 noremap <Up> <Nop>
