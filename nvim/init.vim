@@ -1,17 +1,44 @@
-set hidden	
+" Command-line (:) height
 set cmdheight=2
-set updatetime=500
+
+" after this time in (ms) this a .swp file will be written to disc
+set updatetime=400
+
+" stuff with built in completion
 set complete-=i
+
+" Ignore completion errors
 set shortmess+=c 
+
+" Mapping of a leader key: <Space>
 let mapleader = " "
+
+" Setting the clipboard manager tow which to copy
 let g:clipboard = "xclip"
+
+" Time for a mapped key sequence to wait(leader + o + s)
 set timeoutlen=2000 
+
+" No text wrapping by default
 set wrap!
+
+" Line numbers and relative line numbers
 set nu rnu
+
+" Sign column next to line numbers; useful for error messages with linters
 set signcolumn=yes
+
+" Don't put a message about a mode you are in
 set noshowmode
+
+" Automatically indent new lines
 set autoindent
+
+set cinwords+="-"
+
+" 
 set smartindent
+
 set copyindent
 set expandtab
 set tabstop=8
