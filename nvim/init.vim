@@ -34,22 +34,29 @@ set noshowmode
 " Automatically indent new lines
 set autoindent
 
-set cinwords+="-"
-
-" 
+" Autoindent for C-like langauges(such as Rust) 
 set smartindent
 
+" Copy indent structure
 set copyindent
+
+" Tab options
 set expandtab
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
+
+" Highlight 80th colum 
 set colorcolumn=80
+
+" For code and text folding
 set foldmethod=indent
+
+" How deep to fold 
 set foldlevelstart=20
 
-" possible fix
+" A fix for swap files
 if !has('nvim')
   set viminfo+=n~/vim/.viminfo
 else
@@ -58,9 +65,16 @@ else
   set viminfo+=n~/.local/share/nvim/shada/main.shada
 endif
 
-" colors
+" Custom color editing
+" This color scheme is a modification of gruvbox-dark
+"
+" Syntax highlighting on by default
 syntax on
+
+" Color scheme
 colorscheme desert
+
+" Custom color changes
 highlight LineNr ctermfg=240 ctermbg=22
 highlight SignColumn ctermfg=22 ctermbg=22
 highlight CursorLineNr ctermfg=254 ctermbg=22 cterm=bold 
@@ -73,7 +87,7 @@ highlight StatusLIne ctermfg=22 ctermbg=gray
 highlight ColorColumn ctermbg=22
 highlight Conceal ctermbg=white ctermbg=black
 
-"splits?
+" Normal window splitting
 set splitright
 set splitbelow
 
@@ -109,7 +123,7 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-" Wincmd mappings
+" Mappings for Window manipulation
 map <silent><leader>wh :wincmd h<CR>
 map <silent><leader>wj :wincmd j<CR>
 map <silent><leader>wk :wincmd k<CR>
@@ -129,12 +143,6 @@ map <silent><leader><TAB> <c-^>
 noremap <silent><leader>F :CocCommand fzf-preview.ProjectFiles <CR>
 noremap <silent><leader>f :CocCommand fzf-preview.BufferLines <CR>
 
-" function to hide numbers and signcolumn
-function! HideSignColumn()
-		set nu! rnu!
-endfunction
-
-
 " Rebinding copy to paste to make them work with system clipboards
 noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
 
@@ -148,7 +156,8 @@ noremap <Right> <Nop>
 noremap <silent>zk 10kzz<CR>
 noremap <silent>zj 10jzz<CR>
 
-" Pagejumping
+" Page jumping
+" TODO: Consider removing; not used that much
 noremap <silent>zH <PageDown>zz<CR>
 noremap <silent>zL <PageUp>zz<CR>
 
