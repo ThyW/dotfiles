@@ -263,7 +263,18 @@ mode "screenshot" {
     bindsym --release f exec "screenshot select"
 
     bindsym Escape mode "default"
-    bindsym Retrun mdoe "default"
+    bindsym Retrun mode "default"
+}
+
+bindsym $mod+s mode "settings"
+mode "settings" {
+    bindsym a exec pavucontrol
+    bindsym i exec "alacritty -e i3c"
+    bindsym v exec "alacritty -e vc"
+    bindsym b exec "alacritty -e bc"
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
 }
 
 # toggle compositor
