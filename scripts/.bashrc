@@ -33,7 +33,7 @@ alias sb='source ~/.bashrc'
 alias ac='nvim ~/.config/alacritty/alacritty.yml && ~/sync-config.sh'
 alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='~/sync-config.sh'
-alias scl='cd ~/school/school20-21'
+alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
 
 # Created by `userpath` on 2020-01-27 19:06:27
