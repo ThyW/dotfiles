@@ -275,3 +275,8 @@ autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>re
 autocmd FileType python map <silent><F5> :!./%<CR>
 
 noremap <leader>t :terminal<CR>a
+
+" Digraph settings
+inoremap \ <C-k>
+Ahoj:x
+
