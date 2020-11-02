@@ -24,7 +24,7 @@ alias technic='/mnt/data/graalvm-ce-19.2.0.1/bin/java -jar ~/Downloads/TechnicLa
 alias spot='spotifyd && spt' 
 alias autosort='~/.sorter/autosort' 
 alias i3lock='i3lock -c 111111'
-#alias vim='nvim'
+alias vim='nvim'
 alias rs='cd ~/programming/rust/'
 alias bc='nvim ~/.bashrc && ~/sync-config.sh && clear && source ~/.bashrc'
 alias vc='nvim ~/.config/nvim/init.vim && ~/sync-config.sh'
@@ -35,6 +35,7 @@ alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='~/sync-config.sh'
 alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
+alias cat='bat'
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
