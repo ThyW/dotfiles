@@ -41,7 +41,6 @@ set smartindent
 set copyindent
 
 " Tab options
-set expandtab
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -275,7 +274,7 @@ autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>re
 autocmd FileType python map <silent><F5> :!./%<CR>
 
 noremap <leader>t :vs +terminal<CR>
-noremap <leader>T :s +terminal<CR>
+noremap <leader>T :sp +terminal<CR>
 
 " Digraph settings
 inoremap \ <C-k>
