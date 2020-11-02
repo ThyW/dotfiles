@@ -274,9 +274,8 @@ noremap <leader>oc :call Compile()<CR><CR>
 autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
 autocmd FileType python map <silent><F5> :!./%<CR>
 
-noremap <leader>t :terminal<CR>a
+noremap <leader>t :vs +terminal<CR>a
+noremap <leader>ht :s +terminal<CR>a
 
 " Digraph settings
 inoremap \ <C-k>
-Ahoj:x
-
