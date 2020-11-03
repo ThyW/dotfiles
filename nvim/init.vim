@@ -10,6 +10,9 @@ set complete-=i
 " Ignore completion errors
 set shortmess+=c 
 
+" Better completion experience
+set completeopt=menuone,noinsert,noselect
+
 " Mapping of a leader key: <Space>
 let mapleader = " "
 
@@ -128,6 +131,24 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
+" Configuring lsp for rust-alnalyzer
+lua <<EOF
+
+-- nvim_lsp object
+local nvim_lsp = require'nvim_lsp'
+
+-- function to attach completion and diagnostics
+-- when setting up lsp
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+    require'diagnostic'.on_attach(client)
+end
+
+-- Enable rust_analyzer
+nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
+
+EOF
+
 " Mappings for Window manipulation
 map <silent><leader>wh :wincmd h<CR>
 map <silent><leader>wj :wincmd j<CR>
@@ -208,16 +229,31 @@ else
   inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" nvim-lsp stuff
+nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> ga	<cmd>lua vim.lsp.buf.code_action()<CR>
 
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+" Visualize diagnostics
+let g:diagnostic_enable_virtual_text = 1
+let g:diagnostic_trimmed_virtual_text = '40'
+
+" Don't show diagnostics while in insert mode
+let g:diagnostic_insert_delay = 1
+
+" Show diagnostic popup on cursor hold
+autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+
+" INLAY HINTS FINALLY
+autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+\ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
 
 " fzf config
 let g:fzf_preview_window = 'right:60%'
@@ -282,3 +318,4 @@ autocmd FileType python map <silent><F5> :!./%<CR>
 
 noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
+
