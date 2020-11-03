@@ -88,8 +88,9 @@ highlight SpellBad ctermfg=red ctermbg=black cterm=underline
 highlight StatusLIne ctermfg=22 ctermbg=gray
 highlight ColorColumn ctermbg=22
 highlight Conceal ctermbg=none
-highlight LspDiagnosticsError ctermbg=red
-highlight LspDiagnosticsWarning ctermbg=yellow
+highlight LspDiagnosticsError ctermfg=red
+highlight LspDiagnosticsWarning ctermfg=cyan
+highlight LspDiagnosticsInformation ctermfg=grey
 
 " Normal window splitting
 set splitright
