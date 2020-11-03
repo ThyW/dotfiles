@@ -132,6 +132,7 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " Configuring lsp for rust-alnalyzer
+lua <<EOF
 -- nvim_lsp object
 local nvim_lsp = require'nvim_lsp'
 
@@ -144,6 +145,8 @@ end
 
 -- Enable rust_analyzer
 nvim_lsp.rust_analyzer.setup({ on_attach=on_attach }, {filtypes={"rust"}})
+
+EOF
 
 " Mappings for Window manipulation
 map <silent><leader>wh :wincmd h<CR>
