@@ -278,4 +278,4 @@ noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
 
 " Digraph settings
-inoremap ' <C-k> 
+inoremap <C-Space> <C-k> 
