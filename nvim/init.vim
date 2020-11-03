@@ -2,7 +2,7 @@
 set cmdheight=2
 
 " after this time in (ms) this a .swp file will be written to disc
-set updatetime=400
+set updatetime=2000
 
 " stuff with built in completion
 set complete-=i
@@ -87,7 +87,9 @@ highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
 highlight StatusLIne ctermfg=22 ctermbg=gray
 highlight ColorColumn ctermbg=22
-highlight Conceal ctermbg=white ctermbg=none
+highlight Conceal ctermbg=none
+highlight LspDiagnosticsError ctermbg=red
+highlight LspDiagnosticsWarning ctermbg=yellow
 
 " Normal window splitting
 set splitright
@@ -230,7 +232,7 @@ endif
 
 " nvim-lsp stuff
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+"nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
