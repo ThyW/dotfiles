@@ -49,6 +49,7 @@ export PATH="$PATH:/mnt/data/clion-2019.2.4/bin/"
 export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
 export EDITOR="/usr/bin/nvim"
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
+export READER='zathura'
 
 set -o vi
 
