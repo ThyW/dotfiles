@@ -36,6 +36,8 @@ alias synccfg='~/sync-config.sh'
 alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
 alias cat='bat'
+alias fzf='sk'
+
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
@@ -50,8 +52,6 @@ export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8f
 export EDITOR="/usr/bin/nvim"
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export READER='zathura'
-
-set -o vi
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
