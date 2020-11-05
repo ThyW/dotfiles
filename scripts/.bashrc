@@ -53,7 +53,7 @@ export EDITOR="/usr/bin/nvim"
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export READER='zathura'
 
-set -o v
+set -o vi
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
