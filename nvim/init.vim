@@ -2,7 +2,7 @@
 set cmdheight=2
 
 " after this time in (ms) this a .swp file will be written to disc
-set updatetime=2000
+set updatetime=500
 
 " stuff with built in completion
 set complete-=i
@@ -108,7 +108,6 @@ Plugin 'hugolgst/vimsence'
 Plugin 'ap/vim-css-color'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-Plugin 'bling/vim-bufferline'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
@@ -262,13 +261,10 @@ let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
 
 " bufferines
-let g:bufferline_active_buffer_right = ' '
-let g:bufferline_active_buffer_left = ' '
-let g:bufferline_show_bufnr = 1
-let g:bufferline_modified = '*'
-
-" auto format rust files on save
-let g:rustfmt_autosave = 1
+" let g:bufferline_active_buffer_right = ' '
+" let g:bufferline_active_buffer_left = ' '
+" let g:bufferline_show_bufnr = 1
+" let g:bufferline_modified = '*'
 
 "exit terminal emulator
 tnoremap jj <C-\><C-n>
