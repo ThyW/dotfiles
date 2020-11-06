@@ -254,8 +254,8 @@ let g:diagnostic_insert_delay = 1
 autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
 
 " INLAY HINTS FINALLY
-autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-\ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
+" autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+" \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
 
 " fzf config
 let g:fzf_preview_window = 'right:60%'
