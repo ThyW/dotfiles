@@ -1,5 +1,5 @@
 " Command-line (:) height
-set cmdheight=2
+set cmdheight=1
 
 " after this time in (ms) this a .swp file will be written to disc
 set updatetime=500
@@ -318,4 +318,4 @@ autocmd FileType python map <silent><F5> :!./%<CR>
 
 noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
-
+inoremap <silent>: q:<CR>
