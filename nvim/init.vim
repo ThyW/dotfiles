@@ -255,7 +255,7 @@ let g:diagnostic_insert_delay = 1
 " autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
 
 " INLAY HINTS FINALLY
-autocmd CursorHold, CursorHoldI *
+autocmd CursorHold *
 \ lua require'lsp_extensions'.inlay_hints{ only_current_line = true, highlight = "NonText" }
 
 " fzf config
