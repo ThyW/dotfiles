@@ -243,8 +243,8 @@ bar {
 #client.background       #689d6a
 
 # window border styles 
-default_border pixel 3
-default_floating_border pixel 3
+default_border pixel 5
+default_floating_border pixel 5
 title_align left
 
 # screenshots
