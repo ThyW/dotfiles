@@ -95,6 +95,9 @@ bindsym $mod+t split toggle
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# enable sticky windows
+bindsym $mod+e sticky toggle
+
 # set tabbed layout 
 workspace_layout default
 
