@@ -245,7 +245,7 @@ client.unfocused        #689d6a #111111 #3e3e3e #111111 #111111
 # window border styles 
 default_border pixel 6
 default_floating_border pixel 5
-hide_edge_borders vertical
+hide_edge_borders smart
 title_align left
 
 # screenshots
@@ -277,5 +277,3 @@ bindsym $mod+Shift+n exec killall picom
 
 # back and forth
 workspace_auto_back_and_forth no
-
-
