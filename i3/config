@@ -100,8 +100,8 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+e sticky toggle
 
 # show/hide window border
-bindsym $mod+Shift+b border 0
-bindsym $mod+b border $border
+bindsym $mod+Shift+b border pixel 0
+bindsym $mod+b border pixel $border
 
 # set tabbed layout 
 workspace_layout default
