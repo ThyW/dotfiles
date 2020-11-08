@@ -318,4 +318,3 @@ autocmd FileType python map <silent><F5> :!./%<CR>
 
 noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
-noremap <silent>: q:
