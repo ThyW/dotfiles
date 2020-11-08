@@ -232,10 +232,11 @@ else
 endif
 
 " nvim-lsp stuff
-nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.show_line_diagnostics()<CR>
+nnoremap <silent> gR    <cmd>lua vim.lsp.rename()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> gk <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> gk	<cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
@@ -251,11 +252,11 @@ let g:diagnostic_trimmed_virtual_text = '40'
 let g:diagnostic_insert_delay = 1
 
 " Show diagnostic popup on cursor hold
-autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+" autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
 
 " INLAY HINTS FINALLY
-" autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-" \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
+autocmd CursorHold, CursorHoldI *
+\ lua require'lsp_extensions'.inlay_hints{ only_current_line = true, highlight = "NonText" }
 
 " fzf config
 let g:fzf_preview_window = 'right:60%'
