@@ -34,6 +34,8 @@ gaps outer 6
 
 bindsym $mod+g gaps top all set 0; gaps bottom all set 0; gaps left all set 0; gaps right all set 0; gaps inner all set 0;gaps outer all set 0;
 bindsym $mod+Shift+g gaps top all set 10; gaps bottom all set 10; gaps left all set 6; gaps right all set 6; gaps inner all set 6; gaps outer all set 6;
+
+bindsym $mod2+- gaps top all plus 15; gaps bottom all plus 15; gaps left all plus 15; gaps right all plus 15; gaps inner all plus 15; gaps outer all plus 15; 
  
 set $mod Mod4
 set $mod2 Mod1
