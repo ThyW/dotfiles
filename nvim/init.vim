@@ -292,26 +292,12 @@ set statusline+=\ %m
 set statusline+=\ %Y
 set statusline+=\ %c\ %l\/\%L
 
-"
-function! Preview()
-		:call Compile()<CR><CR>
-		execute "!sw zathura /tmp/op.pdf"
-endfunction
+" process and output mathematical expression in visual mode
+" ---- cmd output ----
+" 10 + 10
+" 20
 
-function! Compile()
-		let extension = expand('%:e')
-		if extension == "ms"
-				execute "!groff -ms % -T pdf > /tmp/op.pdf"
-		elseif extension == "tex"
-				execute "!pandoc -f latex -t latex % -o /tmp/op.pdf"
-		elseif extension == "md"
-				execute "!pandoc % --pdf-engine=context -o /tmp/op.pdf"
-		endif
-endfunction
-
-
-noremap <leader>op :call Preview()<CR><CR><CR>
-noremap <leader>oc :call Compile()<CR><CR>
+noremap <leader>m "yy:r!echo<space><C-r>y<space>\|<space>bc<enter>
 
 autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
 autocmd FileType python map <silent><F5> :!./%<CR>
