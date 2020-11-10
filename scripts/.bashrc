@@ -35,7 +35,6 @@ alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='~/sync-config.sh'
 alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
-alias cat='bat'
 alias fzf='sk'
 
 
