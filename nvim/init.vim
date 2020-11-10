@@ -306,5 +306,5 @@ autocmd FileType python map <silent><F5> :!./%<CR>
 noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
 
-autocmd FileType rust noremap <silent><F5> :sp<CR> :resize -10<CR> :!cargo run<CR>
-autocmd FileType rust noremap <silent><F6> :sp<CR> :resize -10<CR> :!cargo build<CR>
+autocmd FileType rust noremap <silent><F5> :sp<CR> :resize -20<CR> :!cargo run<CR> :q!<CR>
+autocmd FileType rust noremap <silent><F6> :sp<CR> :resize -20<CR> :!cargo build<CR> :q!<CR>
