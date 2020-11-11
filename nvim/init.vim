@@ -115,6 +115,7 @@ Plugin 'vim-pandoc/vim-rmarkdown'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-surround'
 Plugin 'vifm/vifm.vim'
+Plugin 'Yggdroot/indentLine'
 
 " Nvim-lsp
 Plugin 'neovim/nvim-lspconfig'
