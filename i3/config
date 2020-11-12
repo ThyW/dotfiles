@@ -23,6 +23,7 @@ exec --no-startup-id volumeicon-alsa
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
 exec --no-startup-id dunst
 exec --no-startup-id picom --config ~/.config/picom/picom.conf 
+exec --no-startup-id fireshot
 
 # setting up i3-gaps
 gaps top 10
@@ -269,7 +270,7 @@ title_align left
 
 # screenshots
 
-bindsym $mod+p mode "screenshot"
+#bindsym $mod+p mode "screenshot"
 mode "screenshot" {
     bindsym --release a exec "screenshot screen"
     bindsym --release s exec "screenshot focused"
@@ -296,4 +297,3 @@ bindsym $mod+Shift+n exec killall picom
 
 # back and forth
 workspace_auto_back_and_forth no
-
