@@ -74,7 +74,7 @@ colors:
     foreground: '#ebdbb2'
 
   # Normal colors
-  normal:
+ normal:
     black:   '#292929'
     red:     '#cc241d'
     green:   '#98971a'
