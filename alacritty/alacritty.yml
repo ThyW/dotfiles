@@ -67,7 +67,7 @@ font:
 #draw_bold_text_with_bright_colors: false
 colors:
   # Default colors
-  primary:
+ primary:
     # hard contrast: background = '#1d2021'
     background: '#212121'
     # soft contrast: background = '#32302f'
