@@ -59,7 +59,7 @@ set foldmethod=indent
 set foldlevelstart=20
 
 " set a special GUI font
-set guifont=
+set guifont=Cousine:h17
 
 " A fix for swap files
 if !has('nvim')
