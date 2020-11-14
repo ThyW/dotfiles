@@ -58,6 +58,9 @@ set foldmethod=indent
 " How deep to fold 
 set foldlevelstart=20
 
+" set a special GUI font
+set guifont=
+
 " A fix for swap files
 if !has('nvim')
   set viminfo+=n~/vim/.viminfo
