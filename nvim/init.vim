@@ -74,7 +74,7 @@ endif
 syntax on
 
 " Color scheme
-colorscheme desert
+colorscheme gruvbox 
 
 " Custom color changes
 highlight LineNr ctermfg=240 ctermbg=22
