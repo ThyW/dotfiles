@@ -75,7 +75,6 @@ syntax on
 
 " Color scheme
 colorscheme desert 
-let g:gruvbox_termcolors = 16
 
 " Custom color changes
 " highlight LineNr ctermfg=240 ctermbg=22
