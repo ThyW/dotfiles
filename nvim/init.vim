@@ -73,9 +73,6 @@ endif
 " Syntax highlighting on by default
 syntax on
 
-" Color scheme
-colorscheme gruvbox 
-
 " Custom color changes
 " highlight LineNr ctermfg=240 ctermbg=22
 highlight SignColumn ctermfg=none ctermbg=none
@@ -308,3 +305,5 @@ noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
 
 autocmd FileType rust noremap <silent><F5> :sp<CR> :resize -20<CR> :term<CR>i
+
+colorscheme gruvbox
