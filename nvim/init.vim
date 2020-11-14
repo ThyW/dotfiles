@@ -148,8 +148,8 @@ end
 
 -- Enable rust_analyzer
 nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
-nvim_lsp.pyls.setup{}
-nvim_lsp.ccls.setup{}
+nvim_lsp.pyls.setup({ on_attach=on_attach })
+nvim_lsp.ccls.setup({ on_attach=on_attach })
 
 EOF
 
