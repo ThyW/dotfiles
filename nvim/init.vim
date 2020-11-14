@@ -74,7 +74,7 @@ endif
 syntax on
 
 " Color scheme
-colorscheme gruvbox 
+colorscheme desert 
 
 " Custom color changes
 highlight LineNr ctermfg=240 ctermbg=22
@@ -116,7 +116,7 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-surround'
 Plugin 'vifm/vifm.vim'
 Plugin 'Yggdroot/indentLine'
-Plugin 'morhetz/gruvbox'
+Plugin 'gruvbox'
 
 " Nvim-lsp
 Plugin 'neovim/nvim-lspconfig'
