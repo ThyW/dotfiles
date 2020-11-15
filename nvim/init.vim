@@ -12,6 +12,7 @@ set shortmess+=c
 
 " Better completion experience
 set completeopt=menuone,noinsert,noselect
+set complete+=k
 
 " Mapping of a leader key: <Space>
 let mapleader = " "
