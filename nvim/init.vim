@@ -213,6 +213,9 @@ nmap <silent> gr <Plug>(coc-references)
 
 nmap <silent> K :call <SID>show_documentation()<CR>
 
+function! s:show_documentation()
+    if (index(['vim', 'help'], &filetype) >= 0)
+
 " When the <Enter> key is pressed while the popup menu is visible, it only
 " hides the menu. Use this mapping to close the menu and also start a new
 " line.
