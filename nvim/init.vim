@@ -311,3 +311,6 @@ noremap <leader>T :sp +terminal<CR>
 autocmd FileType rust noremap <silent><F5> :sp<CR> :resize -20<CR> :term<CR>i
 
 colorscheme gruvbox
+
+let g:showing = false
+map <silent> <C-Tab> :Lex!<CR><C-w>70< showing=true
