@@ -137,23 +137,23 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " Configuring lsp for rust-alnalyzer
-" lua <<EOF
-" -- nvim_lsp object
-" local nvim_lsp = require'nvim_lsp'
-" 
-" -- function to attach completion and diagnostics
-" -- when setting up lsp
-" local on_attach = function(client)
-"     require'completion'.on_attach(client)
-"     require'diagnostic'.on_attach(client)
-" end
-" 
-" -- Enable rust_analyzer
-" nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
-" nvim_lsp.pyls.setup({ on_attach=on_attach })
-" nvim_lsp.ccls.setup({ on_attach=on_attach })
-" 
-" EOF
+lua <<EOF
+-- nvim_lsp object
+local nvim_lsp = require'nvim_lsp'
+
+-- function to attach completion and diagnostics
+-- when setting up lsp
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+    require'diagnostic'.on_attach(client)
+end
+
+-- Enable rust_analyzer
+nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
+nvim_lsp.pyls.setup({ on_attach=on_attach })
+nvim_lsp.ccls.setup({ on_attach=on_attach })
+
+EOF
 
 " Mappings for Window manipulation
 map <silent><leader>wh :wincmd h<CR>
@@ -206,22 +206,22 @@ autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 
 "coc definition
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-nmap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
+" 
+" nmap <silent> K :call <SID>show_documentation()<CR>
+" 
+" function! s:show_documentation()
+"   if (index(['vim','help'], &filetype) >= 0)
+"     execute 'h '.expand('<cword>')
+"   elseif (coc#rpc#ready())
+"     call CocActionAsync('doHover')
+"   else
+"     execute '!' . &keywordprg . " " . expand('<cword>')
+"   endif
+" endfunction
 
 " When the <Enter> key is pressed while the popup menu is visible, it only
 " hides the menu. Use this mapping to close the menu and also start a new
@@ -248,17 +248,17 @@ else
 endif
 
 " nvim-lsp stuff
-" nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
-" nnoremap <silent> K     <cmd>lua vim.lsp.show_line_diagnostics()<CR>
-" nnoremap <silent> gR    <cmd>lua vim.lsp.rename()<CR>
-" nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-" nnoremap <silent> gk	<cmd>lua vim.lsp.buf.signature_help()<CR>
-" nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-" nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-" nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-" nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-" nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-" nnoremap <silent> ga	<cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.show_line_diagnostics()<CR>
+nnoremap <silent> gR    <cmd>lua vim.lsp.rename()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> gk	<cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> ga	<cmd>lua vim.lsp.buf.code_action()<CR>
 
 " Visualize diagnostics
 let g:diagnostic_enable_virtual_text = 1
