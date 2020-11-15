@@ -12,13 +12,14 @@ set shortmess+=c
 
 " Better completion experience
 set completeopt=menuone,noinsert,noselect
-set complete+=k
+set complete+=kspell
 
 " Mapping of a leader key: <Space>
 let mapleader = " "
 
 " Setting the clipboard manager tow which to copy
 let g:clipboard = "xclip"
+set clipboard=unnamedplus
 
 " Time for a mapped key sequence to wait(leader + o + s)
 set timeoutlen=2000 
@@ -209,6 +210,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+
 
 " When the <Enter> key is pressed while the popup menu is visible, it only
 " hides the menu. Use this mapping to close the menu and also start a new
