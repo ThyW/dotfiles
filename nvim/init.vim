@@ -80,7 +80,7 @@ syntax on
 
 " Custom color changes
 " highlight LineNr ctermfg=240 ctermbg=22
-highlight SignColumn ctermfg=none ctermbg=none
+highlight SignColumn ctermfg=gray ctermbg=none
 " highlight CursorLineNr ctermfg=254 ctermbg=22 cterm=bold 
 " highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
 " highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
@@ -88,7 +88,7 @@ highlight SignColumn ctermfg=none ctermbg=none
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 " highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
 " highlight StatusLIne ctermfg=22 ctermbg=gray
-" highlight ColorColumn ctermbg=22
+highlight ColorColumn ctermbg=gray
 " highlight Conceal ctermbg=none
 " highlight LspDiagnosticsError ctermfg=red
 " highlight LspDiagnosticsWarning ctermfg=cyan
