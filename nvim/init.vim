@@ -139,7 +139,7 @@ filetype plugin indent on    " required
 " Configuring lsp for rust-alnalyzer
 lua <<EOF
 -- nvim_lsp object
-local nvim_lsp = require'nvim_lsp'
+local nvim_lsp = require'lspconfig'
 
 -- function to attach completion and diagnostics
 -- when setting up lsp
