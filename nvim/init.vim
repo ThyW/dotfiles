@@ -83,5 +83,5 @@ let g:pandoc#module#enable = ["command", "menu", "keyboard", "completion"]
 
 colorscheme gruvbox
 
-source settings.vim
-source binds.vim
+source ~/.config/nvim/settings.vim
+source ~/.config/nvim/binds.vim
