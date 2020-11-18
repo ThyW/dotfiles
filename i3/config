@@ -269,7 +269,7 @@ title_align left
 
 # screenshots
 
-#bindsym $mod+p mode "screenshot"
+bindsym $mod+p mode "screenshot"
 mode "screenshot" {
     bindsym --release a exec "screenshot screen"
     bindsym --release s exec "screenshot focused"
