@@ -34,7 +34,7 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " Configuring lsp
-" let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua <<EOF
 -- nvim_lsp object
 local nvim_lsp = require'lspconfig'
@@ -53,7 +53,7 @@ nvim_lsp.ccls.setup({ on_attach=on_attach })
 
 EOF
 
-autocmd BufEnter * lua require'completion'.on_attach()
+" autocmd BufEnter * lua require'completion'.on_attach()
 
 " Visualize diagnostics
 let g:diagnostic_enable_virtual_text = 1
