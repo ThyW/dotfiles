@@ -33,7 +33,8 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-" Configuring lsp for rust-alnalyzer
+" Configuring lsp
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua <<EOF
 -- nvim_lsp object
 local nvim_lsp = require'lspconfig'
@@ -51,6 +52,8 @@ nvim_lsp.pyls.setup({ on_attach=on_attach })
 nvim_lsp.ccls.setup({ on_attach=on_attach })
 
 EOF
+
+autocmd BufEnter * lua require'completion'.on_attach()
 
 " Visualize diagnostics
 let g:diagnostic_enable_virtual_text = 1
@@ -75,8 +78,6 @@ let g:fzf_buffers_jump = 1
 " let g:bufferline_active_buffer_left = ' '
 " let g:bufferline_show_bufnr = 1
 " let g:bufferline_modified = '*'
-
-let g:pandoc#module#enable = ["command", "menu", "keyboard", "completion"]
 
 colorscheme gruvbox
 
