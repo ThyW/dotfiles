@@ -34,25 +34,24 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " Configuring lsp
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-lua require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
-" lua <<EOF
-" -- nvim_lsp object
-" local nvim_lsp = require'lspconfig'
-" 
-" -- function to attach completion and diagnostics
-" -- when setting up lsp
-" local on_attach = function(client)
-"     require'completion'.on_attach(client)
-"     require'diagnostic'.on_attach(client)
-" end
-" 
-" -- Enable rust_analyzer
-" nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
-" nvim_lsp.pyls.setup({ on_attach=on_attach })
-" nvim_lsp.ccls.setup({ on_attach=on_attach })
+" let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+lua <<EOF
+-- nvim_lsp object
+local nvim_lsp = require'lspconfig'
 
-" EOF
+-- function to attach completion and diagnostics
+-- when setting up lsp
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+    require'diagnostic'.on_attach(client)
+end
+
+-- Enable rust_analyzer
+nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
+nvim_lsp.pyls.setup({ on_attach=on_attach })
+nvim_lsp.ccls.setup({ on_attach=on_attach })
+
+EOF
 
 autocmd BufEnter * lua require'completion'.on_attach()
 
