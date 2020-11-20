@@ -47,14 +47,11 @@ end
 nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
 nvim_lsp.pyls.setup({ on_attach=on_attach })
 nvim_lsp.ccls.setup({ on_attach=on_attach })
-EOF
+nvim_lsp.bashls.setup({ on_attach=on_attach })
 
-lua << EOF
+-- nvim built in diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-    -- This will disable virtual text, like doing:
-    -- let g:diagnostic_enable_virtual_text = 0
-    virtual_text = false,
 
     -- This is similar to:
     -- let g:diagnostic_show_sign = 1
@@ -85,7 +82,7 @@ let g:diagnostic_insert_delay = 1
 
 " INLAY HINTS FINALLY
 autocmd CursorHold *
-\ lua require'lsp_extensions'.inlay_hints{ only_current_line = false, highlight = "Comment" }
+\ lua require'lsp_extensions'.inlay_hints{ only_current_line = false, highlight = "NonText" }
 
 " fzf config
 let g:fzf_preview_window = 'right:60%'
