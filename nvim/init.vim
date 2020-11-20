@@ -42,7 +42,6 @@ local nvim_lsp = require'lspconfig'
 -- when setting up lsp
 local on_attach = function(client)
     require'completion'.on_attach(client)
-    require'diagnostic'.on_attach(client)
 end
 
 -- Enable rust_analyzer
@@ -55,6 +54,7 @@ EOF
 autocmd BufEnter * lua require'completion'.on_attach()
 
 " Visualize diagnostics
+let g:completion_enable_auto_popup = 1
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_trimmed_virtual_text = '40'
 
