@@ -12,6 +12,9 @@ date +"%Y %X"
 HOST=$(hostnamectl | awk 'NR==1{print $3}')
 echo -e "Welcome, \e[1;32m$USER\e[0m, to \e[1;33m$HOST\e[0m"
 
+PREVIOUS = "{$PWD}"
+
+alias cd='$PREVIOUS={"$PWD" && cd}'
 alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
 alias suspend='sudo systemctl start suspend.target && i3lock -c 111111'
@@ -28,7 +31,7 @@ alias rs='cd ~/programming/rust/'
 # alias vim='_run_vim() { sw neovide "$@"; }; _run_vim'
 alias vim='nvim'
 alias bconf='vim ~/.bashrc && ~/sync-config.sh && clear && source ~/.bashrc'
-alias vc='cd ~/.config/nvim && vim ./ && ~/sync-config.sh && cd "{$PWD}"'
+alias vc='cd ~/.config/nvim && vim ./ && ~/sync-config.sh && cd $PREVIOUS'
 alias i3c='vim ~/.config/i3/config && ~/sync-config.sh'
 alias sb='source ~/.bashrc'
 alias ac='vim ~/.config/alacritty/alacritty.yml && ~/sync-config.sh'
