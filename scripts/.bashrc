@@ -12,7 +12,9 @@ date +"%Y %X"
 HOST=$(hostnamectl | awk 'NR==1{print $3}')
 echo -e "Welcome, \e[1;32m$USER\e[0m, to \e[1;33m$HOST\e[0m"
 
-alias cd='$PREVIOUS=$PWD && cd $1}'
+local PREVIOUS=""
+
+alias cd='PREVIOUS="{$PWD}" && cd $@}'
 alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
 alias suspend='sudo systemctl start suspend.target && i3lock -c 111111'
