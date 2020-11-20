@@ -28,7 +28,7 @@ alias rs='cd ~/programming/rust/'
 # alias vim='_run_vim() { sw neovide "$@"; }; _run_vim'
 alias vim='nvim'
 alias bconf='vim ~/.bashrc && ~/sync-config.sh && clear && source ~/.bashrc'
-alias vc='vim ~/.config/nvim/ && ~/sync-config.sh'
+alias vc='cd ~/.config/nvim && vim ./ && ~/sync-config.sh && cd "{$PWD}"'
 alias i3c='vim ~/.config/i3/config && ~/sync-config.sh'
 alias sb='source ~/.bashrc'
 alias ac='vim ~/.config/alacritty/alacritty.yml && ~/sync-config.sh'
@@ -37,7 +37,6 @@ alias synccfg='~/sync-config.sh'
 alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
 alias fzf='sk'
-
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
