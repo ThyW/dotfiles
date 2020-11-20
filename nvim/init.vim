@@ -20,7 +20,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'tjdevries/lsp_extensions.nvim'
 Plugin 'nvim-lua/completion-nvim'
-Plugin 'nvim-lua/diagnostic-nvim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
