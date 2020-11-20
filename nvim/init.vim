@@ -53,7 +53,7 @@ nvim_lsp.ccls.setup({ on_attach=on_attach })
 
 EOF
 
-autocmd BufEnter * lua require'completion'.on_attach()
+" autocmd BufEnter * lua require'completion'.on_attach()
 
 " Visualize diagnostics
 let g:diagnostic_enable_virtual_text = 1
