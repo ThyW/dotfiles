@@ -47,13 +47,32 @@ end
 nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
 nvim_lsp.pyls.setup({ on_attach=on_attach })
 nvim_lsp.ccls.setup({ on_attach=on_attach })
+EOF
 
+lua << EOF
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- This will disable virtual text, like doing:
+    -- let g:diagnostic_enable_virtual_text = 0
+    virtual_text = false,
+
+    -- This is similar to:
+    -- let g:diagnostic_show_sign = 1
+    -- To configure sign display,
+    --  see: ":help vim.lsp.diagnostic.set_signs()"
+    signs = true,
+
+    -- This is similar to:
+    -- "let g:diagnostic_insert_delay = 1"
+    update_in_insert = false,
+  }
+)
 EOF
 
 autocmd BufEnter * lua require'completion'.on_attach()
 
 " Visualize diagnostics
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
+let g:completion_matching_strategy_list = ['all']
 let g:completion_enable_auto_popup = 1
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_trimmed_virtual_text = '40'
@@ -66,7 +85,7 @@ let g:diagnostic_insert_delay = 1
 
 " INLAY HINTS FINALLY
 autocmd CursorHold *
-\ lua require'lsp_extensions'.inlay_hints{ only_current_line = true, highlight = "NonText" }
+\ lua require'lsp_extensions'.inlay_hints{ only_current_line = false, highlight = "Comment" }
 
 " fzf config
 let g:fzf_preview_window = 'right:60%'
