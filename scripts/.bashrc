@@ -12,7 +12,7 @@ date +"%Y %X"
 HOST=$(hostnamectl | awk 'NR==1{print $3}')
 echo -e "Welcome, \e[1;32m$USER\e[0m, to \e[1;33m$HOST\e[0m"
 
-local PREVIOUS=""
+PREVIOUS=""
 
 alias cd='PREVIOUS="{$PWD}" && cd $@}'
 alias ls='ls --color=auto'
