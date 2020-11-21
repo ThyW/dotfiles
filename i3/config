@@ -17,8 +17,7 @@
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
 exec --no-startup-id nm-applet
-#exec --no-startup-id feh --bg-scale Pictures/wallpapers/wp-cabin-on-the-snow.jpg 
-exec --no-startup-id xsetroot -solid "#282828"
+exec --no-startup-id feh --bg-scale Pictures/wallpapers/wp-awesome.jpg 
 exec --no-startup-id discord-canary
 exec --no-startup-id volumeicon-alsa
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
