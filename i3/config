@@ -247,9 +247,9 @@ bar {
         separator #666666
         background #282828
         statusline #dddddd
-        focused_workspace #555555 #555555 #ffffff
-        active_workspace #151515 #151515 #ffffff
-        inactive_workspace #151515 #151515 #888888
+        focused_workspace #282828 #555555 #ffffff
+        active_workspace #282828 #151515 #ffffff
+        inactive_workspace #282828 #151515 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
