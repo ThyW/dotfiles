@@ -40,7 +40,7 @@ alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
 alias fzf='sk'
 alias cdf='cd $HOME && cd "$(fd -u | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"'
-alias screencapture='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i ~/Videos/recording.mp4'
+alias screencapture='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 recording.mp4'
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
