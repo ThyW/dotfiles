@@ -39,7 +39,7 @@ alias synccfg='~/sync-config.sh'
 alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
 alias fzf='sk'
-alias cdf='cdf() {cd $HOME && cd "$(find -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)")"} cdf()'
+alias cdf='cdf() { cd $HOME && cd "$(find -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)")" }; cdf()'
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
