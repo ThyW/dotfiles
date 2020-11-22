@@ -39,7 +39,7 @@ alias synccfg='~/sync-config.sh'
 alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
 alias fzf='sk'
-alias cdf='cd $HOME && cd "$(fd -tu d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"'
+alias cdf='cd $HOME && cd "$(fd -u | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"'
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
