@@ -67,7 +67,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 EOF
 
 autocmd BufEnter * lua require'completion'.on_attach()
-autocmd BufEnter * set conceallevel=0
 
 " Visualize diagnostics
 let g:completion_matching_strategy_list = ['all']
