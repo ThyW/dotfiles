@@ -78,8 +78,6 @@ endif
 " Syntax highlighting on by default
 syntax on
 
-colorscheme gruvbox
-
 " Custom color changes
 highlight LineNr ctermfg=240
 highlight SignColumn ctermbg=none
@@ -131,6 +129,9 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+colorscheme gruvbox
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
