@@ -119,7 +119,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme gruvbox
-set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 highlight SignColumn ctermbg=none
 highlight LineNr ctermfg=240
