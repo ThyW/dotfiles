@@ -95,14 +95,14 @@ colors:
     cyan:    '#8ec07c'
     white:   '#ebdbb2' 
 
-  indexed_colors:
-    - { index: 16, color: '#fe8019' }
-    - { index: 17, color: '#d65d0e' }
-    - { index: 18, color: '#3c3836' }
-    - { index: 19, color: '#504945' }
-    - { index: 20, color: '#bdae93' }
-    - { index: 21, color: '#ebdbb2' }
-    - { index: 22, color: '#2e2e2e'}
+# indexed_colors:
+#   - { index: 16, color: '#fe8019' }
+#   - { index: 17, color: '#d65d0e' }
+#   - { index: 18, color: '#3c3836' }
+#   - { index: 19, color: '#504945' }
+#   - { index: 20, color: '#bdae93' }
+#   - { index: 21, color: '#ebdbb2' }
+#   - { index: 22, color: '#2e2e2e'}
 
 
 #visual_bell:
