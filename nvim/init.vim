@@ -118,7 +118,7 @@ Plugin 'tjdevries/lsp_extensions.nvim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme gruvbox
+set background=dark colorscheme gruvbox
 highlight SignColumn ctermbg=none
 highlight LineNr ctermfg=240
 highlight CursorLineNr ctermfg=254 ctermbg=none cterm=bold
