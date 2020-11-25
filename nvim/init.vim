@@ -172,7 +172,7 @@ map <silent><leader><TAB> <c-^>
 
 " fzf binds
 noremap <silent><leader>F :Files<CR>
-noremap <silent><leader>f :CocCommand fzf-preview.BufferLines <CR>
+noremap <silent><leader>f :Lines <CR>
 
 " Rebinding copy to paste to make them work with system clipboards
 noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
