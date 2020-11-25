@@ -189,7 +189,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     -- This will disable virtual text, like doing:
     -- let g:diagnostic_enable_virtual_text = 0
-    virtual_text = false,
+    virtual_text = true,
 
     -- This is similar to:
     -- let g:diagnostic_show_sign = 1
@@ -212,8 +212,8 @@ imap <s-tab> <Plug>(completion_smart_s_tab)
  
 " nvim-lsp stuff
 nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.show_line_diagnostics()<CR>
-nnoremap <silent> gR    <cmd>lua vim.lsp.rename()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.diagnostic.get_line_diagnostic()<CR>
+nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> gk	<cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
