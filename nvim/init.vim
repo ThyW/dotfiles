@@ -112,7 +112,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 
 Plugin 'neovim/nvim-lspconfig'
-Plugin 'neovim/completion-nvim'
+Plugin 'nvim-lua/completion-nvim'
 Plugin 'tjdevries/lsp_extensions.nvim'
 
 call vundle#end()            " required
