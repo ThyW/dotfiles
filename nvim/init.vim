@@ -78,22 +78,6 @@ endif
 " Syntax highlighting on by default
 syntax on
 
-" Custom color changes
-highlight LineNr ctermfg=240
-highlight SignColumn ctermbg=none
-highlight CursorLineNr ctermfg=254 ctermbg=none cterm=bold
-highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
-highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
-highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
-highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
-highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
-highlight StatusLine ctermfg=22 ctermbg=gray guibg=#efc169
-highlight ColorColumn ctermbg=gray
-highlight Conceal ctermbg=none
-highlight LspDiagnosticsError ctermfg=red
-highlight LspDiagnosticsWarning ctermfg=cyan
-highlight LspDiagnosticsInformation ctermfg=grey
-
 " Normal window splitting
 set splitright
 set splitbelow
@@ -131,6 +115,20 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme gruvbox
+highlight SignColumn ctermbg=none
+highlight LineNr ctermfg=240
+highlight CursorLineNr ctermfg=254 ctermbg=none cterm=bold
+highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
+highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
+highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
+highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
+highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
+highlight StatusLine ctermfg=22 ctermbg=gray guibg=#efc169
+highlight ColorColumn ctermbg=gray
+highlight Conceal ctermbg=none
+highlight LspDiagnosticsError ctermfg=red
+highlight LspDiagnosticsWarning ctermfg=cyan
+highlight LspDiagnosticsInformation ctermfg=grey
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
