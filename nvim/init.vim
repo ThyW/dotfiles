@@ -52,7 +52,7 @@ set shiftwidth=4
 set noexpandtab
 
 " Highlight 80th colum 
-set colorcolumn=80
+" set colorcolumn=80
 
 " For code and text folding
 set foldmethod=indent
