@@ -119,6 +119,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme gruvbox
+set termguicolors
 
 highlight SignColumn ctermbg=none
 highlight LineNr ctermfg=240
