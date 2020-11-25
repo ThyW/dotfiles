@@ -78,6 +78,8 @@ endif
 " Syntax highlighting on by default
 syntax on
 
+colorscheme gruvbox
+
 " Custom color changes
 highlight LineNr ctermfg=240
 highlight SignColumn ctermbg=none
@@ -148,7 +150,6 @@ let g:fzf_buffers_jump = 1
 " let g:bufferline_show_bufnr = 1
 " let g:bufferline_modified = '*'
 
-colorscheme gruvbox
 
 " Mappings for Window manipulation
 " map <silent><leader>wh :wincmd h<CR>
