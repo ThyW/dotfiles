@@ -80,8 +80,8 @@ syntax on
 
 " Custom color changes
 highlight LineNr ctermfg=240
-highlight SignColumn ctermfg=gray ctermbg=none guibg=#282828
-highlight CursorLineNr ctermfg=254 ctermbg=none cterm=bold guibg=#282828
+highlight SignColumn ctermbg=none
+highlight CursorLineNr ctermfg=254 ctermbg=none cterm=bold
 highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
 highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
