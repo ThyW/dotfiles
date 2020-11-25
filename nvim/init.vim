@@ -118,19 +118,16 @@ Plugin 'tjdevries/lsp_extensions.nvim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme gruvbox
 set termguicolors
+colorscheme gruvbox
 
-highlight SignColumn ctermbg=none
+highlight SignColumn guibg=none
 highlight LineNr ctermfg=240
-highlight CursorLineNr ctermfg=254 ctermbg=none cterm=bold
-highlight CocInfoSign ctermfg=247 ctermbg=22 cterm=bold
-highlight CocWarningSign ctermfg=247 ctermbg=22 cterm=bold
-highlight CocErrorSign ctermfg=red ctermbg=22 cterm=bold
+highlight CursorLineNr cterm=bold gui=bold guibg=none
 highlight Pmenu ctermfg=white ctermbg=22 cterm=bold
 highlight SpellBad ctermfg=red ctermbg=black cterm=underline 
 highlight StatusLine ctermfg=black ctermbg=gray guibg=#efc169
-highlight ColorColumn ctermbg=gray
+highlight ColorColumn ctermbg=none
 highlight Conceal ctermbg=none
 highlight LspDiagnosticsError ctermfg=red
 highlight LspDiagnosticsWarning ctermfg=cyan
