@@ -64,5 +64,5 @@ eval "$(starship init bash)"
 bind '"jk":vi-movement-mode'
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  exec tmux -u
 fi
