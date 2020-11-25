@@ -62,3 +62,5 @@ set -o vi
 eval "$(starship init bash)"
 
 bind '"jk":vi-movement-mode'
+
+tmux
