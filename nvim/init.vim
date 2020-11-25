@@ -101,7 +101,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'neoclide/coc.nvim'
 Plugin 'hugolgst/vimsence'
 Plugin 'ap/vim-css-color'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -111,6 +110,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'vifm/vifm.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
+
+Plugin 'neovim/nvim-lspconfig'
+Plugin 'neovim/completion-nvim'
+Plugin 'tjdevries/lsp_extensions.nvim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
