@@ -183,9 +183,10 @@ autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 lua << EOF
 require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
-
 EOF
 
+imap <tab> <Plug>(completion_smart_tab)
+imap <s-tab> <Plug>(completion_smart_s_tab)
  
 " nvim-lsp stuff
 nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
