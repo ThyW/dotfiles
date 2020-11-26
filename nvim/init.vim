@@ -114,6 +114,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'vifm/vifm.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
 
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'nvim-lua/completion-nvim'
@@ -206,7 +208,10 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 EOF
 
-let g:enable_snippet="vim-snip"
+
+let g:completion_enable_snippet="Neosnippet"
+let g:completion_matching_strategy=['exact', 'substring']
+let g:completion_sorting="alphabet"
 let g:completion_auto_change_source = 1
 let g:completion_chain_complete_list = [
     \{'complete_items': ['lsp', 'snippet']},
@@ -218,7 +223,6 @@ let g:completion_chain_complete_list = [
     \{'mode': 'defs'},
     \{'mode': 'keyp'},
     \]
-
 
 autocmd BufEnter * lua require'completion'.on_attach()
 
