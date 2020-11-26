@@ -210,10 +210,9 @@ let g:completion_chain_complete_list = [
     \{'mode': 'cmd'},
     \{'mode': 'dict'},
     \{'mode': 'file'},
-    \{'mode': 'incl'},
     \{'mode': 'keyn'},
     \{'mode': 'keyp'},
-    \{'mode': 'omni'},
+    "\{'mode': 'omni'},
     \{'mode': 'spel'},
     \{'mode': 'user'},
     \]
