@@ -1,3 +1,7 @@
+" spelling language
+set spell
+set spelllang=en
+
 " Command-line (:) height
 set cmdheight=1
 
@@ -211,9 +215,7 @@ let g:completion_chain_complete_list = [
     \{'mode': 'dict'},
     \{'mode': 'file'},
     \{'mode': 'keyn'},
-    \{'mode': 'keyp'},
     \{'mode': 'spel'},
-    \{'mode': 'user'},
     \]
 
 autocmd BufEnter * lua require'completion'.on_attach()
