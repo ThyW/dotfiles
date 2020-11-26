@@ -214,7 +214,7 @@ let g:completion_matching_strategy=['exact', 'substring']
 let g:completion_sorting="alphabet"
 let g:completion_auto_change_source = 1
 let g:completion_chain_complete_list = [
-    \{'complete_items': ['lsp', 'snippet']},
+    \{'complete_items': ['lsp', 'snippet', 'path']},
     \{'mode': '<c-p>'},
     \{'mode': '<c-n>'},
     \{'mode': 'file'},
