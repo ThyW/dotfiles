@@ -124,7 +124,6 @@ filetype plugin indent on    " required
 
 set termguicolors
 set background=dark
-let g:gruvbox_contrast_dark=""
 
 colorscheme gruvbox
 
