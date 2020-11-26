@@ -124,6 +124,7 @@ filetype plugin indent on    " required
 
 set termguicolors
 colorscheme gruvbox
+let g:gruvbox_contrast_dark='dark'
 
 highlight SignColumn guibg=none
 highlight LineNr ctermfg=240
