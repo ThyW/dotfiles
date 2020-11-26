@@ -212,7 +212,6 @@ let g:completion_chain_complete_list = [
     \{'mode': 'file'},
     \{'mode': 'keyn'},
     \{'mode': 'keyp'},
-    "\{'mode': 'omni'},
     \{'mode': 'spel'},
     \{'mode': 'user'},
     \]
