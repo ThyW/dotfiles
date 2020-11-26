@@ -222,6 +222,8 @@ let g:completion_chain_complete_list = [
     \{'mode': 'user'},
     \]
 
+autocmd BufEnter * lua require'completion'.on_attach()
+
 autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
 \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
 
