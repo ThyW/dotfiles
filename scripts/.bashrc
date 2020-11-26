@@ -42,6 +42,10 @@ alias fzf='sk'
 alias cdf='cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"'
 alias screencapture='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 recording.mp4'
 
+## Tmux aliases
+alias splith='tmux splitw -h -p 50'
+alias splitv='tmux splitw -v -p 50'
+
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
 export PATH="$PATH:~/.local/bin"
