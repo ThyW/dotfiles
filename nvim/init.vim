@@ -206,17 +206,20 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 EOF
 
+let g:enable_snippet="vim-snip"
 let g:completion_auto_change_source = 1
 let g:completion_chain_complete_list = [
-    \{'complete_items': ['lsp', 'snipet']},
+    \{'complete_items': ['lsp', 'snippet']},
     \{'mode': '<c-p>'},
     \{'mode': '<c-n>'},
-    \{'mode': 'cmd'},
-    \{'mode': 'dict'},
     \{'mode': 'file'},
     \{'mode': 'keyn'},
     \{'mode': 'spel'},
+    \{'mode': 'omni'},
+    \{'mode': 'defs'},
+    \{'mode': 'keyp'},
     \]
+
 
 autocmd BufEnter * lua require'completion'.on_attach()
 
