@@ -121,7 +121,6 @@ Plugin 'tjdevries/lsp_extensions.nvim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-set background=dark
 
 set termguicolors
 colorscheme gruvbox
