@@ -205,22 +205,22 @@ EOF
 let g:completion_auto_change_source = 1
 let g:completion_chain_complete_list = [
     \{'complete_items': ['lsp', 'snipet']},
-    \{'mode': '<c-p>'}
-    \{'mode': '<c-n>'}
-    \{'mode': 'cmd'}
-    \{'mode': 'defs'}
-    \{'mode': 'dict'}
-    \{'mode': 'file'}
-    \{'mode': 'incl'}
-    \{'mode': 'keyn'}
-    \{'mode': 'keyp'}
-    \{'mode': 'omni'}
-    \{'mode': 'line'}
-    \{'mode': 'spel'}
-    \{'mode': 'tags'}
-    \{'mode': 'thes'}
-    \{'mode': 'user'}
-]
+    \{'mode': '<c-p>'},
+    \{'mode': '<c-n>'},
+    \{'mode': 'cmd'},
+    \{'mode': 'defs'},
+    \{'mode': 'dict'},
+    \{'mode': 'file'},
+    \{'mode': 'incl'},
+    \{'mode': 'keyn'},
+    \{'mode': 'keyp'},
+    \{'mode': 'omni'},
+    \{'mode': 'line'},
+    \{'mode': 'spel'},
+    \{'mode': 'tags'},
+    \{'mode': 'thes'},
+    \{'mode': 'user'},
+    \]
 
 autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
 \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
