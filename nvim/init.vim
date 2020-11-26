@@ -208,17 +208,13 @@ let g:completion_chain_complete_list = [
     \{'mode': '<c-p>'},
     \{'mode': '<c-n>'},
     \{'mode': 'cmd'},
-    \{'mode': 'defs'},
     \{'mode': 'dict'},
     \{'mode': 'file'},
     \{'mode': 'incl'},
     \{'mode': 'keyn'},
     \{'mode': 'keyp'},
     \{'mode': 'omni'},
-    \{'mode': 'line'},
     \{'mode': 'spel'},
-    \{'mode': 'tags'},
-    \{'mode': 'thes'},
     \{'mode': 'user'},
     \]
 
