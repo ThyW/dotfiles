@@ -215,7 +215,6 @@ let g:completion_chain_complete_list = [
     \{'mode': 'file'},
     \{'mode': 'keyn'},
     \{'mode': 'spel'},
-    \{'mode': 'omni'},
     \{'mode': 'defs'},
     \{'mode': 'keyp'},
     \]
