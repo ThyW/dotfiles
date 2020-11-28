@@ -112,6 +112,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}'
 
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'nvim-lua/completion-nvim'
@@ -181,54 +182,54 @@ autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 
 " nvim-lsp config
-lua << EOF
-local on_attach = function(client)
-    require'completion'.on_attach(client)
-end
+" lua << EOF
+" local on_attach = function(client)
+"     require'completion'.on_attach(client)
+" end
+" 
+" require'lspconfig'.rust_analyzer.setup{on_attach=on_attach}
+" require'lspconfig'.pyls.setup{on_attach=on_attach}
+" 
+" vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+"   vim.lsp.diagnostic.on_publish_diagnostics()
+" )
+" EOF
 
-require'lspconfig'.rust_analyzer.setup{on_attach=on_attach}
-require'lspconfig'.pyls.setup{on_attach=on_attach}
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics()
-)
-EOF
-
-
-let g:completion_enable_snippet="Neosnippet"
-let g:completion_matching_strategy=['exact', 'substring']
-let g:completion_sorting="alphabet"
-let g:completion_auto_change_source = 1
-let g:completion_chain_complete_list = [
-    \{'complete_items': ['lsp', 'snippet', 'path']},
-    \{'mode': '<c-p>'},
-    \{'mode': '<c-n>'},
-    \{'mode': 'file'},
-    \{'mode': 'keyn'},
-    \{'mode': 'defs'},
-    \{'mode': 'keyp'},
-    \]
-
-autocmd BufEnter * lua require'completion'.on_attach()
-
-autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-\ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
-
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
+" let g:completion_enable_snippet="Neosnippet"
+" let g:completion_matching_strategy=['exact', 'substring']
+" let g:completion_sorting="alphabet"
+" let g:completion_auto_change_source = 1
+" let g:completion_chain_complete_list = [
+"     \{'complete_items': ['lsp', 'snippet', 'path']},
+"     \{'mode': '<c-p>'},
+"     \{'mode': '<c-n>'},
+"     \{'mode': 'file'},
+"     \{'mode': 'keyn'},
+"     \{'mode': 'defs'},
+"     \{'mode': 'keyp'},
+"     \]
+" 
+" autocmd BufEnter * lua require'completion'.on_attach()
+" 
+" autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+" \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
+" 
+" imap <tab> <Plug>(completion_smart_tab)
+" imap <s-tab> <Plug>(completion_smart_s_tab)
  
 " nvim-lsp stuff
-nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.diagnostic.get_line_diagnostic()<CR>
-nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> gk	<cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> ga	<cmd>lua vim.lsp.buf.code_action()<CR>
+" nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
+" nnoremap <silent> K     <cmd>lua vim.lsp.diagnostic.get_line_diagnostic()<CR>
+" nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
+" nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+" nnoremap <silent> gk	<cmd>lua vim.lsp.buf.signature_help()<CR>
+" nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+" nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+" nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+" nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+" nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+" nnoremap <silent> ga	<cmd>lua vim.lsp.buf.code_action()<CR>
 
 "exit terminal emulator
 tnoremap jj <C-\><C-n>
