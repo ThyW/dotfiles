@@ -182,7 +182,6 @@ autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 
 " nvim-lsp config
 lua << EOF
-
 local on_attach = function(client)
     require'completion'.on_attach(client)
 end
@@ -191,11 +190,7 @@ require'lspconfig'.rust_analyzer.setup{on_attach=on_attach}
 require'lspconfig'.pyls.setup{on_attach=on_attach}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    -- This will disable virtual text, like doing:
-    -- let g:diagnostic_enable_virtual_text = 0
-    virtual_text = true,
-  }
+  vim.lsp.diagnostic.on_publish_diagnostics()
 )
 EOF
 
