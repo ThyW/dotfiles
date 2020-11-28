@@ -112,6 +112,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
+Plugin 'neoclide/coc.nvim'
 
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'nvim-lua/completion-nvim'
