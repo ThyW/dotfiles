@@ -185,6 +185,11 @@ lua << EOF
 require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
 
+local on_attach = {
+    require'completion'.on_attach
+    require'diagnostic'.on_attach
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     -- This will disable virtual text, like doing:
