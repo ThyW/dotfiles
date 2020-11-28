@@ -190,16 +190,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     -- This will disable virtual text, like doing:
     -- let g:diagnostic_enable_virtual_text = 0
     virtual_text = true,
-
-    -- This is similar to:
-    -- let g:diagnostic_show_sign = 1
-    -- To configure sign display,
-    --  see: ":help vim.lsp.diagnostic.set_signs()"
-    signs = true,
-
-    -- This is similar to:
-    -- "let g:diagnostic_insert_delay = 1"
-    update_in_insert = false,
   }
 )
 EOF
@@ -210,7 +200,7 @@ let g:completion_matching_strategy=['exact', 'substring']
 let g:completion_sorting="alphabet"
 let g:completion_auto_change_source = 1
 let g:completion_chain_complete_list = [
-    \{'complete_items': ['lsp', 'snippet', 'path', 'buffers']},
+    \{'complete_items': ['lsp', 'snippet', 'path']},
     \{'mode': '<c-p>'},
     \{'mode': '<c-n>'},
     \{'mode': 'file'},
