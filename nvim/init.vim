@@ -1,7 +1,3 @@
-" spelling language
-set spell
-set spelllang=en
-
 " Command-line (:) height
 set cmdheight=1
 
@@ -219,7 +215,6 @@ let g:completion_chain_complete_list = [
     \{'mode': '<c-n>'},
     \{'mode': 'file'},
     \{'mode': 'keyn'},
-    \{'mode': 'spel'},
     \{'mode': 'defs'},
     \{'mode': 'keyp'},
     \]
