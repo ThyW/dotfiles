@@ -1,3 +1,5 @@
+" Add mouse to vim
+set mouse=a
 " Command-line (:) height
 set cmdheight=1
 
