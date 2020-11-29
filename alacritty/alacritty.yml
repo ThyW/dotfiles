@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-    family: "Roboto Mono" 
+    family: "Input" 
 
     style: Regular 
 
