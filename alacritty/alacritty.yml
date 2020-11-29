@@ -39,9 +39,9 @@ env:
 
 font:
   normal:
-    family: "Input" 
+      family: "input" 
 
-    style: Regular 
+  style: Regular 
 
   #bold:
     #family: monospace
