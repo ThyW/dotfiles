@@ -15,7 +15,7 @@
 # Startup
 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
+exec --no-startup-id redshift -l 48:17 -t 3900:3900
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-scale Pictures/wallpapers/wp-awesome.png
 exec --no-startup-id discord-canary
