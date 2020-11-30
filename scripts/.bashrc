@@ -54,6 +54,7 @@ export PATH="${HOME}/.cargo/bin:${PATH}"
 export PATH="$PATH:~/ds-viewer/"
 export PATH="$PATH:~/appimages/"
 export PATH="$PATH:/mnt/data/clion-2019.2.4/bin/"
+
 #export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/library/"
 # not used currently export PS1="\e[0;1;33m\]\u@\h:\e[2;32m\]\w\$\e[m\] "
 export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
@@ -68,6 +69,8 @@ eval "$(starship init bash)"
 
 bind '"jk":vi-movement-mode'
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux -u
+if [[! "$(tty)" = "/dev/tty1"]]; then 
+    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+      exec tmux -u
+    fi 
 fi
