@@ -69,7 +69,7 @@ eval "$(starship init bash)"
 
 bind '"jk":vi-movement-mode'
 
-if [[! "$(tty)" = "/dev/tty1"]]; then 
+if [[ ! "$(tty)" = "/dev/tty1"]]; then 
     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
       exec tmux -u
     fi 
