@@ -113,8 +113,9 @@ Plugin 'vifm/vifm.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/neosnippet-snipjkjkjkpets'
 Plugin 'neoclide/coc.nvim'
+Bundle "daylerees/colour-schemes", { "rtp": "vim/" }
 
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'nvim-lua/completion-nvim'
