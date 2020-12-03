@@ -113,7 +113,7 @@ Plugin 'vifm/vifm.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snipjkjkjkpets'
+Plugin 'Shougo/neosnippet-snippets'
 Plugin 'neoclide/coc.nvim'
 Bundle "daylerees/colour-schemes", { "rtp": "vim/" }
 
