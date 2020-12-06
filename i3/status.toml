@@ -1,14 +1,10 @@
 theme = "gruvbox-dark"
-icons = "material"
+icons = "awesome5"
 
 [[block]]
 block = "battery"
 interval = 30
 format = "{percentage}% {time} {power}W"
-
-[[block]]
-block = "networkmanager"
-on_click = "nm-connection-editor"
 
 [[block]]
 block = "memory"
