@@ -1,0 +1,15 @@
+add_newline = false
+format = "$git_branch$directory$character"
+
+[directory]
+tranctuation_lenght = 3
+truncate_to_repo = true
+style = "bold yellow"
+
+[character]
+success_symbol = "[>](bold cyan)"
+error_symbol = "[X](bold red)"
+
+[git_branch]
+format = "[$symbol]($style)"
+style = "bold purple"
