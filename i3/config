@@ -22,7 +22,7 @@ exec --no-startup-id discord-canary
 exec --no-startup-id volumeicon-alsa
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
 exec --no-startup-id dunst
-exec fireshot
+exec flameshot
 
 # setting up i3-gaps
 gaps top 10
