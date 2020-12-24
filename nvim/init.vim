@@ -119,7 +119,7 @@ Plugin 'neoclide/coc.nvim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme desert
+colorscheme gruvbox
 set termguicolors
 
 highlight SignColumn guibg=none
