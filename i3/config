@@ -235,7 +235,7 @@ bindsym Mod4+m focus floating; mode "moveit"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font pango:Cousine 11
+    font pango:Cousine Bold 11
     position top
     mode dock
     status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
