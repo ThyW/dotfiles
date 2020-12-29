@@ -74,9 +74,6 @@ else
   set viminfo+=n~/.local/share/nvim/shada/main.shada
 endif
 
-" Custom color editing
-" This color scheme is a modification of gruvbox-dark
-"
 " Syntax highlighting on by default
 syntax on
 
@@ -87,15 +84,18 @@ set splitbelow
 " custom status line 
 set laststatus=2 
 set statusline=
+" shows path to config file, relative to home
 set statusline+=\ <<
 set statusline+=\ %f
 set statusline+=\ >>
+" switches to the other side
 set statusline+=%=
 set statusline+=\ %m
+" shows filetype
 set statusline+=\ %Y
+" current_column, current_line/max_lines
 set statusline+=\ %c\ %l\/\%L
 
-let g:indentLine_setConceal=0
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -110,7 +110,6 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-surround'
 Plugin 'vifm/vifm.vim'
-Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
@@ -119,6 +118,7 @@ Plugin 'neoclide/coc.nvim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" setting colorscheme and colors
 colorscheme gruvbox
 set termguicolors
 
@@ -138,15 +138,17 @@ highlight LspDiagnosticsInformation ctermfg=grey
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
 
-
 " jump between buffers quickly
+" very useful
 map <silent><leader>h :bp <CR> 
 map <silent><leader>l :bn <CR>
 map <silent><leader>bd :bd! <CR>
 map <silent><leader><TAB> <c-^>
 
 " fzf binds
+" search for files
 noremap <silent><leader>F :Files<CR>
+" search lines in open buffer
 noremap <silent><leader>f :Lines <CR>
 
 " Rebinding copy to paste to make them work with system clipboards
@@ -176,58 +178,9 @@ function! ToggleComment(comment_char)
 	endif
 endfunction
 
+" Commenting for vim and rust
 autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
-
-" nvim-lsp config
-" lua << EOF
-" local on_attach = function(client)
-"     require'completion'.on_attach(client)
-" end
-" 
-" require'lspconfig'.rust_analyzer.setup{on_attach=on_attach}
-" require'lspconfig'.pyls.setup{on_attach=on_attach}
-" 
-" vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-"   vim.lsp.diagnostic.on_publish_diagnostics()
-" )
-" EOF
-
-
-" let g:completion_enable_snippet="Neosnippet"
-" let g:completion_matching_strategy=['exact', 'substring']
-" let g:completion_sorting="alphabet"
-" let g:completion_auto_change_source = 1
-" let g:completion_chain_complete_list = [
-"     \{'complete_items': ['lsp', 'snippet', 'path']},
-"     \{'mode': '<c-p>'},
-"     \{'mode': '<c-n>'},
-"     \{'mode': 'file'},
-"     \{'mode': 'keyn'},
-"     \{'mode': 'defs'},
-"     \{'mode': 'keyp'},
-"     \]
-" 
-" autocmd BufEnter * lua require'completion'.on_attach()
-" 
-" autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-" \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
-" 
-" imap <tab> <Plug>(completion_smart_tab)
-" imap <s-tab> <Plug>(completion_smart_s_tab)
- 
-" nvim-lsp stuff
-" nnoremap <silent> <c-d> <cmd>lua vim.lsp.buf.definition()<CR>
-" nnoremap <silent> K     <cmd>lua vim.lsp.diagnostic.get_line_diagnostic()<CR>
-" nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
-" nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-" nnoremap <silent> gk	<cmd>lua vim.lsp.buf.signature_help()<CR>
-" nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-" nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-" nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-" nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-" nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-" nnoremap <silent> ga	<cmd>lua vim.lsp.buf.code_action()<CR>
 
 "exit terminal emulator
 tnoremap jj <C-\><C-n>
@@ -236,26 +189,31 @@ inoremap jj <esc>
 " turn of highlight
 map <silent><F3> :set hlsearch!<CR> 
 
+" return my cursor back to what it is in alacritty
 au VimLeave * set guicursor=a:ver100
 
 " toggle wrap and spell, thanks github.com/ralismark/ 
 nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
 nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
 
+" Evaluate mathematical expression under cursor with *bc*
 noremap <leader>m "yy:r!echo<space><C-r>y<space>\|<space>bc<enter>
 
+" binds for compiling RMarkDown and running python
 autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
 autocmd FileType python map <silent><F5> :!./%<CR>
 
+" terminals 
 noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
 
-autocmd FileType rust noremap <silent><F5> :sp<CR> :resize -20<CR> :term<CR>i
-
+" Trigger Lex
 noremap <silent> <C-l> :Lex!<CR>
 
+" replace all occurances of a word on cursor
+noremap <leader>r :%s/<C-r><C-w>/gc<left><left><left>
 
-" _--------------------------------------------COC------------------------------------
+" ---------------------------------------------COC------------------------------------
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
