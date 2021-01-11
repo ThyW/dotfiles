@@ -114,6 +114,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'neoclide/coc.nvim'
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call vundle#end()            " required
 filetype plugin indent on    " required
