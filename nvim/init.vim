@@ -67,11 +67,11 @@ set guifont=Cousine:h18
 
 " A fix for swap files
 if !has('nvim')
-  set viminfo+=n~/vim/.viminfo
+    set viminfo+=n~/vim/.viminfo
 else
-  " Do nothing here to use the neovim default
-  " or do something like:
-  set viminfo+=n~/.local/share/nvim/shada/main.shada
+    " Do nothing here to use the neovim default
+    " or do something like:
+    set viminfo+=n~/.local/share/nvim/shada/main.shada
 endif
 
 " Syntax highlighting on by default
@@ -172,11 +172,11 @@ noremap <silent>zL <PageUp>zz<CR>
 
 " comment and uncomment code, thx /u/ZySync
 function! ToggleComment(comment_char)
-	if getline(".") =~ "^" . a:comment_char
-		execute ".s/^" . a:comment_char . "//g"
-	else
-		execute ".s/^/" . a:comment_char . "/g"
-	endif
+    if getline(".") =~ "^" . a:comment_char
+	execute ".s/^" . a:comment_char . "//g"
+    else
+	execute ".s/^/" . a:comment_char . "/g"
+    endif
 endfunction
 
 " Commenting for vim and rust
@@ -216,27 +216,27 @@ noremap <leader>r :%s/<C-r><C-w>/gc<left><left><left>
 
 " ---------------------------------------------COC------------------------------------
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+	    \ pumvisible() ? "\<C-n>" :
+	    \ <SID>check_back_space() ? "\<TAB>" :
+	    \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+    inoremap <silent><expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+    inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+	    \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -253,12 +253,24 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+	execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+	call CocActionAsync('doHover')
+    else
+	execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
 endfunction
 
+" nvim-tree-sitter configuration
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    highlight = {
+	enable = true,              -- false will disable the whole extension
+    },
+    indent = {
+	enable = true
+    },
+}
+EOF
