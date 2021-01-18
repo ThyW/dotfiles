@@ -117,6 +117,11 @@ Plugin 'neoclide/coc.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'ThyW/elvish.vim'
 
+" Stuff for Rmarkdown, which I use for notetaking
+Plugin 'vim-pandoc/vim-rmarkdown'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
