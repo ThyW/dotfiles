@@ -191,7 +191,7 @@ autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
 autocmd FileType python nnoremap <buffer> gc :call ToggleComment('#')<CR>
 
-"exit terminal emulator
+" exit terminal emulator
 tnoremap jj <C-\><C-n>
 inoremap jj <esc>
 
@@ -215,9 +215,6 @@ autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>re
 " terminals 
 noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
-
-" Trigger Lex
-noremap <silent> <C-l> :Lex!<CR>
 
 " replace all occurances of a word on cursor
 noremap <leader>r :%s/<C-r><C-w>/gc<left><left><left>
@@ -295,4 +292,3 @@ endfunction
 
 " Bind it to <space>-o-f for toggling
 nnoremap <silent><leader>of :call ToggleLex()<CR>
-
