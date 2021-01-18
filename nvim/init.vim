@@ -125,7 +125,6 @@ Plugin 'ThyW/elvish.vim'
 Plugin 'vim-pandoc/vim-rmarkdown'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'vim-latex/vim-latex'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -205,9 +204,12 @@ map <silent><F3> :set hlsearch!<CR>
 " return my cursor back to what it is in alacritty
 au VimLeave * set guicursor=a:ver100
 
+" ------------------------------ COMMANDS AND OPTIONS BINDS ------------------------
 " toggle wrap and spell, thanks github.com/ralismark/ 
 nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
 nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
+
+nnoremap <silent> <leader>cs <cmd>source %<cr>
 
 " Evaluate simple mathematical expression under cursor with *bc*
 noremap <leader>m "yy:r!echo<space><C-r>y<space>\|<space>bc<enter>
