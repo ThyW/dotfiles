@@ -46,7 +46,7 @@ set autoindent
 " Autoindent for C-like langauges(such as Rust) 
 set smartindent
 
-" Copy indent structure
+ Copy indent structure
 set copyindent
 
 " Tab options
@@ -280,15 +280,15 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-let g:lex_open = false
+let g:lex_open = "false"
 
 function! ToggleLex()
     if g:lex_open
 	execute 'Lex!'
-	let g:lex_open = false
+	let g:lex_open = "false"
     else
     	execute 'Lex'
-    	let g:lex_open = true
+    	let g:lex_open = "true"
     endif
 endfunction
 
