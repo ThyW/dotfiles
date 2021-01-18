@@ -280,10 +280,11 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-let g:lex_open = "false"
 
+" Toggle Leftexplore for moving through files
+let g:lex_open = "false"
 function! ToggleLex()
-    if g:lex_open
+    if (g:lex_open == "true")
 	execute 'Lex!'
 	let g:lex_open = "false"
     else
@@ -292,4 +293,6 @@ function! ToggleLex()
     endif
 endfunction
 
-nnoremap <silent><leader>fm ToggleLex()<CR>
+" Bind it to <space>-o-f for toggling
+nnoremap <silent><leader>of :call ToggleLex()<CR>
+
