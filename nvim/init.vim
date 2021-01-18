@@ -111,7 +111,6 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-surround'
-Plugin 'vifm/vifm.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
@@ -280,6 +279,3 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 EOF
-
-" Vifm binds
-nnoremap <silent><leader>fm :Vifm<CR>
