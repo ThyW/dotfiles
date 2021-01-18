@@ -46,7 +46,7 @@ set autoindent
 " Autoindent for C-like langauges(such as Rust) 
 set smartindent
 
- Copy indent structure
+" Copy indent structure
 set copyindent
 
 " Tab options
