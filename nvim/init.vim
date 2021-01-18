@@ -1,3 +1,6 @@
+" Do not try to be vi compatible
+set nocompatible
+
 " Add mouse to vim, scrolling, clicking highlighting
 set mouse=a
 
