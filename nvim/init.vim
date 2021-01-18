@@ -1,5 +1,6 @@
-" Add mouse to vim
+" Add mouse to vim, scrolling, clicking highlighting
 set mouse=a
+
 " Command-line (:) height
 set cmdheight=1
 
@@ -20,6 +21,7 @@ set complete+=kspell
 let mapleader = " "
 
 " Setting the clipboard manager tow which to copy
+" Does not work, because nvim is not complied with clipboard option
 let g:clipboard = "xclip"
 set clipboard=unnamedplus
 
@@ -35,7 +37,7 @@ set nu rnu
 " Sign column next to line numbers; useful for error messages with linters
 set signcolumn=yes
 
-" Don't put a message about a mode you are in
+" Don't put a message about a mode you are in, in the command line
 set noshowmode
 
 " Automatically indent new lines
@@ -53,7 +55,7 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 
-" Highlight 80th colum 
+" Highlight 80th colum, to see if you went past it, currently disabled
 " set colorcolumn=80
 
 " For code and text folding
@@ -62,7 +64,7 @@ set foldmethod=indent
 " How deep to fold 
 set foldlevelstart=20
 
-" set a special GUI font
+" set a special GUI font, I used this when I used a graphical nvim client
 set guifont=Cousine:h18
 
 " A fix for swap files
@@ -84,7 +86,7 @@ set splitbelow
 " custom status line 
 set laststatus=2 
 set statusline=
-" shows path to config file, relative to home
+" shows path to current file, relative to home
 set statusline+=\ <<
 set statusline+=\ %f
 set statusline+=\ >>
@@ -188,6 +190,7 @@ endfunction
 " Commenting for vim and rust
 autocmd FileType rust nnoremap <buffer> gc :call ToggleComment("\\/\\/ ")<CR>
 autocmd FileType vim nnoremap <buffer> gc :call ToggleComment('" ')<CR>
+autocmd FileType python nnoremap <buffer> gc :call ToggleComment('#')<CR>
 
 "exit terminal emulator
 tnoremap jj <C-\><C-n>
@@ -203,12 +206,12 @@ au VimLeave * set guicursor=a:ver100
 nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
 nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
 
-" Evaluate mathematical expression under cursor with *bc*
+" Evaluate simple mathematical expression under cursor with *bc*
 noremap <leader>m "yy:r!echo<space><C-r>y<space>\|<space>bc<enter>
 
-" binds for compiling RMarkDown and running python
+" binds for compiling RMarkDown, TODO: see if rmarkdown plugin does this
+" better
 autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
-autocmd FileType python map <silent><F5> :!./%<CR>
 
 " terminals 
 noremap <leader>t :vs +terminal<CR>
