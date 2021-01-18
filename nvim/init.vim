@@ -279,3 +279,17 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 EOF
+
+let g:lex_open = false
+
+function! ToggleLex()
+    if g:lex_open
+	execute 'Lex!'
+	let g:lex_open = false
+    else
+    	execute 'Lex'
+    	let g:lex_open = true
+    endif
+endfunction
+
+nnoremap <silent><leader>fm ToggleLex()<CR>
