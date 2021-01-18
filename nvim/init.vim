@@ -280,3 +280,6 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 EOF
+
+" Vifm binds
+nnoremap <silent><leader>fm :Vifm<CR>
