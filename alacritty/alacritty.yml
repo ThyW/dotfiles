@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-      family: "Ac437 IBM DOS ISO8" 
+      family: "Perfect DOS VGA 437" 
 
   style: Regular 
 
