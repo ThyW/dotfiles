@@ -41,7 +41,7 @@ font:
   normal:
       family: "Noto Sans Mono" 
 
-  style: Regular 
+  style: Regular
 
   #bold:
     #family: monospace
