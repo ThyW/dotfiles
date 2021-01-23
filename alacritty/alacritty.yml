@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-      family: "monospace" 
+      family: "SF Mono" 
 
   style: Regular 
 
