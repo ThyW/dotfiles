@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-      family: "Noto Sans Mono" 
+      family: "SF Mono Powerline" 
 
   style: Regular 
 
