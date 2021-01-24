@@ -226,7 +226,7 @@ noremap <leader>T :sp +terminal<CR>
 noremap <leader>r :%s/<C-r><C-w>/gc<left><left><left>
 
 " better go to end of line and go to the beginning of line
-noremap H 0
+noremap H ^
 noremap L $
 
 " ---------------------------------------------COC------------------------------------
