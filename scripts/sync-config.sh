@@ -9,6 +9,7 @@ cp -r ~/.bashrc ~/programming/dotfiles/scripts/
 cp -r ~/sync-config.sh ~/programming/dotfiles/scripts/
 cp -r ~/.config/dunst/dunstrc ~/programming/dotfiles/dunst/
 cp -r ~/.config/redshift/redshift.conf ~/programming/dotfiles/redshift/
+cp ~/.xmonad/xmonad.hs ~/.xmonad/xmobarrc1* ~/programming/dotfiles/xmonad
 
 temp="$PWD"
 

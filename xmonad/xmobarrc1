@@ -1,0 +1,17 @@
+Config { font = "xft:Noto Sans Mono:weight=regular:pixelsize=11:antialias=true:hinting=true"
+       , bgColor = "#282828"
+       , fgColor = "#ebdbb2"
+       , position = TopW L 95
+       , lowerOnStart = True
+       , commands = [ Run Cpu ["-L","3","-H","50","--normal","b8bb26","--high","fb4934"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Swap [] 10
+                    , Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run Battery [ "-t" , "<acstatus>: <left>%","-h","#98971a","-l", "#cc241d"] 10
+                    , Run StdinReader
+	]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ | %battery% | %cpu% | %memory% | <fc=#fe8019>%date%</fc> | "
+       }
+       --"--",--"-c","charge full","-O","C","-o","B","-h","#98971a","-l", "#cc241d"

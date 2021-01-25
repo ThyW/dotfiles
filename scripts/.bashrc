@@ -43,6 +43,7 @@ alias cdf='cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="spac
 alias screencapture='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 recording.mp4'
 alias startx='startx'
 alias mmc='lanvidia multimc 2>/dev/null'
+alias xmc='nvim ~/.xmonad/xmonad.hs && ~/sync-config.sh'
 
 ## Tmux aliases
 alias splith='tmux splitw -h -p 50'
