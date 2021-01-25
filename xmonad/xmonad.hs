@@ -78,6 +78,7 @@ binds c =
     , ("M-S-x", spawn "killall xmonad-x86_64-linux")
     , ("M-i", spawn browser)
     , ("M-g", sendMessage $ ToggleGaps)
+    , ("M-S-s" spawn "pavucontrol")
     ]
     ++
 
