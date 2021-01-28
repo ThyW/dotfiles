@@ -44,6 +44,7 @@ alias screencapture='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0
 alias startx='startx'
 alias mmc='lanvidia multimc 2>/dev/null'
 alias xmc='nvim ~/.xmonad/xmonad.hs && ~/sync-config.sh'
+alias rend='echo "require('rmarkdown'); render($1)" | R'
 
 ## Tmux aliases
 alias splith='tmux splitw -h -p 50'
