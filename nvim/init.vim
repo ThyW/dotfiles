@@ -223,7 +223,7 @@ noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
 
 " replace all occurances of a word on cursor
-noremap <leader>r :%s/<C-r><C-w>/gc<left><left><left>
+noremap <leader>r :%s/<C-r><C-w>//gc<left><left><left><left>
 
 " better go to end of line and go to the beginning of line
 noremap H ^
