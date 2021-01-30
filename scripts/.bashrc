@@ -65,6 +65,7 @@ export BLUDAT="NzQwNDU1ODYzNjA0NzQwMDk3.XypRQg.fUs7-73KimwR1cOGBxdg5bVTS_w"
 export EDITOR="/usr/bin/nvim"
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export READER='zathura'
+export DISPLAY=:0.0;
 
 set -o vi
 
