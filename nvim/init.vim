@@ -163,7 +163,7 @@ noremap <silent><leader>F :Files<CR>
 noremap <silent><leader>f :Lines <CR>
 
 " Rebinding copy to paste to make them work with system clipboards
-noremap <silent><C-c> :'<,'>w !xclip -selection clipboard<CR><CR>
+noremap <silent><C-c> y:call system('xclip', @0)<CR>
 
 " disable arrows
 noremap <Up> <Nop>
