@@ -26,7 +26,7 @@ let mapleader = " "
 " Setting the clipboard manager tow which to copy
 " Does not work, because nvim is not complied with clipboard option
 let g:clipboard = "xclip"
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 " Time for a mapped key sequence to wait(leader + o + s)
 set timeoutlen=2000 
