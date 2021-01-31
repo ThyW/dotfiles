@@ -119,6 +119,7 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'neoclide/coc.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'ThyW/elvish.vim'
+Plugin 'jalvesaq/Nvim-R'
 
 " Stuff for Rmarkdown, which I use for notetaking
 Plugin 'vim-pandoc/vim-rmarkdown'
