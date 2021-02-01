@@ -45,6 +45,7 @@ alias startx='startx'
 alias mmc='lanvidia multimc 2>/dev/null'
 alias xmc='nvim ~/.xmonad/xmonad.hs && ~/sync-config.sh'
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
+alias love='love-git'
 
 ## Tmux aliases
 alias splith='tmux splitw -h -p 50'
