@@ -40,7 +40,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-      family: "Custom font ttf 12"
+      family: "Custom font ttf 12h a"
 
   style: Regular
 
