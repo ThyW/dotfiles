@@ -40,7 +40,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-      family: "Custom Font ttf 12h 1.0"
+      family: "creep2"
 
   style: Regular
 
