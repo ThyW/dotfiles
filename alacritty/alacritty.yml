@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-      family: "Dina" 
+      family: "DinaTTF" 
 
   style: Regular
 
