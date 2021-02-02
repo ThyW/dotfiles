@@ -40,7 +40,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-      family: "Triskweline"
+      family: "Custom font ttf 12"
 
   style: Regular
 
