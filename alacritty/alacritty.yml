@@ -39,7 +39,8 @@ env:
 
 font:
   normal:
-      family: "Dina ttf 10px"
+      #family: "Dina ttf 10px"
+      family: "ProFontWindows"
 
   style: Regular
 
