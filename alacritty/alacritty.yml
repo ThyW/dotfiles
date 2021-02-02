@@ -39,7 +39,7 @@ env:
 
 font:
   normal:
-      family: "monospace"
+      family: "Dina ttf 10px"
 
   style: Regular
 
