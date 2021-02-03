@@ -209,6 +209,7 @@ au VimLeave * set guicursor=a:ver100
 " toggle wrap and spell, thanks github.com/ralismark/ 
 nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
 nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
+nnoremap <silent> <leader>oc :execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>
 
 nnoremap <silent> <leader>cs <cmd>source %<cr>
 
