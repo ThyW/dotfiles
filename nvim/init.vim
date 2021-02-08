@@ -323,9 +323,9 @@ nnoremap <silent><leader>of :call ToggleLex()<CR>
 "==============================================================================
 "				file specific options
 "==============================================================================
-autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> { {}<left>
-autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> ( ()<left>
-autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> < <><left>
-autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> " ""<left>
-autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> ' ''<left>
-autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> [ []<left>
+autocmd FileType rust inoremap <buffer> { {}<left>
+autocmd FileType rust inoremap <buffer> ( ()<left>
+autocmd FileType rust inoremap <buffer> < <><left>
+autocmd FileType rust inoremap <buffer> " ""<left>
+autocmd FileType rust inoremap <buffer> ' ''<left>
+autocmd FileType rust inoremap <buffer> [ []<left>
