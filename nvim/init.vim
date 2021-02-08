@@ -1,3 +1,6 @@
+"==============================================================================
+"				Settings
+"==============================================================================
 " Do not try to be vi compatible
 set nocompatible
 
@@ -100,6 +103,9 @@ set statusline+=\ %Y
 " current_column, current_line/max_lines
 set statusline+=\ %c\ %l\/\%L
 
+"==============================================================================
+"				Plugin Manager
+"==============================================================================
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -130,6 +136,10 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"
+"==============================================================================
+"				    Color Settings
+"==============================================================================
 " setting colorscheme and colors
 colorscheme gruvbox
 set termguicolors
@@ -146,6 +156,10 @@ highlight LspDiagnosticsError ctermfg=red
 highlight LspDiagnosticsWarning ctermfg=cyan
 highlight LspDiagnosticsInformation ctermfg=grey
 
+
+"==============================================================================
+"				    Binds
+"==============================================================================
 " fzf config
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
@@ -205,7 +219,7 @@ map <silent><F3> :set hlsearch!<CR>
 " return my cursor back to what it is in alacritty
 au VimLeave * set guicursor=a:ver100
 
-" ------------------------------ COMMANDS AND OPTIONS BINDS ------------------------
+" ------------------------------ COMMANDS AND OPTION BINDS ------------------------
 " toggle wrap and spell, thanks github.com/ralismark/ 
 nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
 nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
@@ -304,3 +318,13 @@ endfunction
 
 " Bind it to <space>-o-f for toggling
 nnoremap <silent><leader>of :call ToggleLex()<CR>
+
+
+"==============================================================================
+"				file specific options
+"==============================================================================
+autocmd FileType rust, python, vim, lua, c, bash  inoremap <silent> { {}<left>
+autocmd FileType rust, python, vim, lua, c, bash  inoremap <silent> ( ()<left>
+autocmd FileType rust, python, vim, lua, c, bash  inoremap <silent> < <><left>
+autocmd FileType rust, python, vim, lua, c, bash  inoremap <silent> " ""<left>
+autocmd FileType rust, python, vim, lua, c, bash  inoremap <silent> ' ''<left>
