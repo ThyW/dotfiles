@@ -328,3 +328,4 @@ autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> ( ()<left>
 autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> < <><left>
 autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> " ""<left>
 autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> ' ''<left>
+autocmd FileType rust, python, vim, lua, c, bash  inoremap <buffer> [ []<left>
