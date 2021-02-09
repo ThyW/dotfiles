@@ -326,27 +326,20 @@ nnoremap <silent><leader>of :call ToggleLex()<CR>
 " didn't find a better solution
 autocmd FileType rust inoremap <buffer> { {}<left>
 autocmd FileType rust inoremap <buffer> ( ()<left>
-autocmd FileType rust inoremap <buffer> < <><left>
 autocmd FileType rust inoremap <buffer> " ""<left>
-autocmd FileType rust inoremap <buffer> ' ''<left>
 autocmd FileType rust inoremap <buffer> [ []<left>
 
 autocmd FileType python inoremap <buffer> { {}<left>
 autocmd FileType python inoremap <buffer> ( ()<left>
-autocmd FileType python inoremap <buffer> < <><left>
 autocmd FileType python inoremap <buffer> " ""<left>
-autocmd FileType python inoremap <buffer> ' ''<left>
 autocmd FileType python inoremap <buffer> [ []<left>
 
 autocmd FileType lua inoremap <buffer> { {}<left>
 autocmd FileType lua inoremap <buffer> ( ()<left>
-autocmd FileType lua inoremap <buffer> < <><left>
 autocmd FileType lua inoremap <buffer> " ""<left>
-autocmd FileType lua inoremap <buffer> ' ''<left>
 autocmd FileType lua inoremap <buffer> [ []<left>
 
 autocmd FileType c inoremap <buffer> { {}<left>
-autocmd FileType c inoremap <buffer> < <><left>
+autocmd FileType c inoremap <buffer> ( ()<left>
 autocmd FileType c inoremap <buffer> " ""<left>
-autocmd FileType c inoremap <buffer> ' ''<left>
 autocmd FileType c inoremap <buffer> [ []<left>
