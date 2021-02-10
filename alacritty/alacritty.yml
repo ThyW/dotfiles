@@ -40,7 +40,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-      family: "Fira Code"
+      family: "SF Mono Powerline"
 
   style: Regular
 
