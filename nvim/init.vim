@@ -245,11 +245,6 @@ noremap <leader>r :%s/<C-r><C-w>//gc<left><left><left>
 noremap H ^
 noremap L $
 
-inoremap <silent><C-'> <C-k>'
-inoremap <silent><C-;> <C-k>:
-inoremap <silent><C-,> <C-k><
-inoremap <silent><C-.> <C-k>>
-
 " ---------------------------------------------COC------------------------------------
 inoremap <silent><expr> <TAB>
 	    \ pumvisible() ? "\<C-n>" :
