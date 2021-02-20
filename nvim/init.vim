@@ -127,6 +127,7 @@ Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'ThyW/elvish.vim'
 Plugin 'jalvesaq/Nvim-R'
 Plugin 'glacambre/firenvim'
+Plugin 'raimondi/delimitmate'
 
 " Stuff for Rmarkdown, which I use for notetaking
 Plugin 'vim-pandoc/vim-rmarkdown'
