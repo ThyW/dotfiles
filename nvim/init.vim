@@ -233,7 +233,7 @@ noremap <leader>m "yy:r!echo<space><C-r>y<space>\|<space>bc<enter>
 
 " binds for compiling RMarkDown, TODO: see if rmarkdown plugin does this
 " better
-autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter><CR>
+autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
 " terminals 
 noremap <leader>t :vs +terminal<CR>
