@@ -70,7 +70,7 @@ set foldmethod=indent
 set foldlevelstart=20
 
 " set a special GUI font, I used this when I used a graphical nvim client
-set guifont=Cousine:h18
+set guifont=FiraCode:h14
 
 " A fix for swap files
 if !has('nvim')
