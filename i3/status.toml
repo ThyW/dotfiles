@@ -19,6 +19,11 @@ show_memory = false
 interval = 1
 
 [[block]]
+block = "btc"
+interval = 5
+currency = "EUR"
+
+[[block]]
 block = "cpu"
 interval = 1
 

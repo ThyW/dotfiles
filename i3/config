@@ -238,7 +238,7 @@ bar {
     font pango:GohuNew 10
     position top
     mode dock
-    status_command /usr/bin/i3status-rs /home/zir/.config/i3/status.toml 
+    status_command /home/zir/programming/git_clones/i3status-rust/target/debug/i3status-rs /home/zir/.config/i3status-rust/config.toml 
     strip_workspace_numbers yes
     i3bar_command i3bar -t 
     height 19
