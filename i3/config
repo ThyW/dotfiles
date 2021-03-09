@@ -75,6 +75,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+shift+d exec --no-startup-id dmconf
 
 # change focus
 bindsym $mod+h focus left

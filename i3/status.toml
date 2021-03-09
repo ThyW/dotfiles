@@ -20,8 +20,9 @@ interval = 1
 
 [[block]]
 block = "btc"
-interval = 5
+interval = 10
 currency = "EUR"
+currency_list = ["EUR", "USD", "RUB", "AUD", "BRL", "CAD"]
 
 [[block]]
 block = "cpu"
