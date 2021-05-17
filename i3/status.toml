@@ -9,20 +9,20 @@ format = "{percentage}% {time} {power}W"
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mup}%"
-format_swap = "{SUp}%"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
 
-[[block]]
-block = "nvidia_gpu"
-label = ""
-show_memory = false
-interval = 1
+# [[block]]
+# block = "nvidia_gpu"
+# label = ""
+# show_memory = false
+# interval = 1
 
-[[block]]
-block = "btc"
-interval = 10
-currency = "EUR"
-currency_list = ["EUR", "USD", "RUB", "AUD", "BRL", "CAD"]
+# [[block]]
+# block = "btc"
+# interval = 10
+# currency = "EUR"
+# currency_list = ["EUR", "USD", "RUB", "AUD", "BRL", "CAD"]
 
 [[block]]
 block = "cpu"

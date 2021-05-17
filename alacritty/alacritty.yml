@@ -40,7 +40,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-      family: "Cousine"
+      family: "Iosevka"
 
   style: Regular
 
