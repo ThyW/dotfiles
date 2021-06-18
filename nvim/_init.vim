@@ -60,6 +60,9 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 
+" better line wrapping
+set linebreak
+set breakindent 
 " Highlight 80th colum, to see if you went past it, currently disabled
 " set colorcolumn=80
 
@@ -129,6 +132,8 @@ Plugin 'jalvesaq/Nvim-R'
 Plugin 'glacambre/firenvim'
 Plugin 'raimondi/delimitmate'
 Plugin 'LnL7/vim-nix'
+Plugin 'tpope/vim-fugitive'
+Plugin 'sainnhe/gruvbox-material'
 
 " Stuff for Rmarkdown, which I use for notetaking
 Plugin 'vim-pandoc/vim-rmarkdown'
@@ -162,6 +167,34 @@ highlight LspDiagnosticsInformation ctermfg=grey
 "==============================================================================
 "				    Binds
 "==============================================================================
+lua <<EOF
+-- LUA FUNCTIONS
+function switch_spelling()
+    local langs = {"sk", "en"}
+    if vim.o.spelllang == "en" then
+    	vim.o.spelllang = langs[1]
+    	print("sk")
+    else
+    	vim.o.spelllang = langs[2]
+    	print("en")
+    end 
+end
+
+function switch_wrap()
+    if vim.o.wrap then
+	vim.o.wrap = false
+	vim.api.nvim_set_keymap("n", "j", "j", {noremap = true, silent = true})
+	vim.api.nvim_set_keymap("n", "k", "k", {noremap = true, silent = true})
+	print("Wrap off")
+    else 
+    	vim.o.wrap = true
+	vim.api.nvim_set_keymap("n", "j", "gj", {noremap = true, silent = true})
+	vim.api.nvim_set_keymap("n", "k", "gk", {noremap = true, silent = true})
+	print("Wrap on")
+    end
+end
+EOF
+
 " fzf config
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_buffers_jump = 1
@@ -223,7 +256,8 @@ au VimLeave * set guicursor=a:ver100
 
 " ------------------------------ COMMANDS AND OPTION BINDS ------------------------
 " toggle wrap and spell, thanks github.com/ralismark/ 
-nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr>
+" nnoremap <silent> <leader>ow <cmd>set wrap! <bar> set wrap?<cr> :lua switch_wrap() <cr>
+nnoremap <silent> <leader>ow :lua switch_wrap()<cr>
 nnoremap <silent> <leader>os <cmd>set spell! <bar> set spell?<cr>
 nnoremap <silent> <leader>oc :execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>
 
@@ -318,30 +352,9 @@ function! ToggleLex()
     endif
 endfunction
 
+
 " Bind it to <space>-o-f for toggling
 nnoremap <silent><leader>of :call ToggleLex()<CR>
+" Switch spelllangs
+nnoremap <silent><leader>oS :lua switch_spelling()<CR><CR>
 
-
-"==============================================================================
-"				file specific options
-"==============================================================================
-" didn't find a better solution
-" autocmd FileType rust inoremap <buffer> { {}<left>
-" autocmd FileType rust inoremap <buffer> ( ()<left>
-" autocmd FileType rust inoremap <buffer> \" \""<left>
-" autocmd FileType rust inoremap <buffer> [ []<left>
-" 
-" autocmd FileType python inoremap <buffer> { {}<left>
-" autocmd FileType python inoremap <buffer> ( ()<left>
-" autocmd FileType python inoremap <buffer> \" \""<left>
-" autocmd FileType python inoremap <buffer> [ []<left>
-" 
-" autocmd FileType lua inoremap <buffer> { {}<left>
-" autocmd FileType lua inoremap <buffer> ( ()<left>
-" autocmd FileType lua inoremap <buffer> \" \""<left>
-" autocmd FileType lua inoremap <buffer> [ []<left>
-" 
-" autocmd FileType c inoremap <buffer> { {}<left>
-" autocmd FileType c inoremap <buffer> ( ()<left>
-" autocmd FileType c inoremap <buffer> \" \""<left>
-" autocmd FileType c inoremap <buffer> [ []<left>
