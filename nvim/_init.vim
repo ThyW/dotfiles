@@ -208,9 +208,9 @@ map <silent><leader><TAB> <c-^>
 
 " fzf binds
 " search for files
-noremap <silent><leader>F :Files<CR>
+noremap <silent><leader>f :Files<CR>
 " search lines in open buffer
-noremap <silent><leader>f :Lines <CR>
+noremap <silent><leader>F :Lines <CR>
 
 " Rebinding copy to paste to make them work with system clipboards
 noremap <silent><C-c> y:call system('xclip', @+)<CR>
