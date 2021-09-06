@@ -17,8 +17,8 @@
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -l 48:17 -t 3900:3900
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-scale ~/Downloads/doom_gruvbox-dark-soft.png
-exec --no-startup-id discord-canary
+exec --no-startup-id feh --bg-scale ~/pictures/wps/doom_gruvbox-dark-soft.png
+exec --no-startup-id discord
 exec --no-startup-id volumeicon-alsa
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
 exec --no-startup-id dunst
@@ -62,7 +62,7 @@ for_window [ title="floating"] floating enable; mode "moveit"
 # start a terminal and other app binds
 bindsym $mod+Return exec alacritty
 bindsym $mod2+Return exec alacritty -t "floating" 
-bindsym $mod+i exec firefox
+bindsym $mod+i exec firefox-nightly
 bindsym $mod+Shift+d exec ~/Lightcord/Lightcor
 bindsym $mod2+f exec alacritty -e vifm ~
 
