@@ -40,7 +40,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-    family: "Mx437 HP 150 re."
+      family: "Mx437 IBM VGA 8x14"  
 
   style: Regular
 
@@ -55,7 +55,7 @@ font:
     #family: monospace
     #style: Bold Italic
 
-  size: 12.0
+  size: 13.0
 
   #offset:
   #  x: 0
