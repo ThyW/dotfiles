@@ -42,3 +42,5 @@ exec([[
 nnoremap <silent><leader>of :call ToggleLex()<CR>
 nnoremap <silent><leader>oS :lua switch_spelling()<CR><CR>
 ]])
+
+print('this is print')
