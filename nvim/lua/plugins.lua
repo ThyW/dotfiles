@@ -1,32 +1,32 @@
-vim.o.rtp = "~/.config/nvim/bundle/Vundle.vim"
+vim.cmd [[packadd packer.nvim]]
 
-vim.api.nvim_exec([[
-call vundle#begin()
+return require("packer").startup(function ()
+    use 'wbthomason/packer.nvim'
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'hugolgst/vimsence'
-Plugin 'ap/vim-css-color'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/tabular'
-Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'neoclide/coc.nvim'
-Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plugin 'ThyW/elvish.vim'
-Plugin 'jalvesaq/Nvim-R'
-Plugin 'glacambre/firenvim'
-Plugin 'raimondi/delimitmate'
-Plugin 'LnL7/vim-nix'
-Plugin 'tpope/vim-fugitive'
-Plugin 'sainnhe/gruvbox-material'
-Plugin 'vim-pandoc/vim-rmarkdown'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
+    use 'rust-lang/rust.vim'
 
-call vundle#end()
-filetype plugin indent on
-]], false) -- don't return output
+    use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
+
+    use 'morhetz/gruvbox'
+    
+    use 'tpope/vim-surround'
+
+    use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+
+    use 'neovim/nvim-lspconfig'
+
+    use 'nvim-lua/lsp_extensions.nvim'
+
+    use 'vim-pandoc/vim-rmarkdown'
+    use 'vim-pandoc/vim-pandoc'
+    use 'vim-pandoc/vim-pandoc-syntax'
+
+    use {'ms-jpq/coq_nvim', branch = 'coq'}
+    use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+    use {'ms-jpq/coq.thirdparty', branch = '3p'}
+
+    use 'simrat39/rust-tools.nvim'
+
+    use 'windwp/nvim-autopairs'
+end)
