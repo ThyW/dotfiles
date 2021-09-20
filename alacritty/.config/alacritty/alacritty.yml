@@ -9,6 +9,8 @@
 env:
   TERM: alacritty
 
+# changing this so i know it changed
+
 #window:
   #dimensions:
   #  columns: 0
