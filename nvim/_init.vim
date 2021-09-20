@@ -146,6 +146,8 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plugin 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
+Plugin 'simrat39/rust-tools.nvim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -347,6 +349,106 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 
+local rust_tools_opts = {
+    tools = { -- rust-tools options
+        -- Automatically set inlay hints (type hints)
+        autoSetHints = true,
+
+        -- Whether to show hover actions inside the hover window
+        -- This overrides the default hover handler 
+        hover_with_actions = true,
+
+        runnables = {
+            -- whether to use telescope for selection menu or not
+            use_telescope = false -- don't have telescope
+
+            -- rest of the opts are forwarded to telescope
+        },
+
+        debuggables = {
+            -- whether to use telescope for selection menu or not
+            use_telescope = false -- don't have telescope
+
+            -- rest of the opts are forwarded to telescope
+        },
+
+        -- These apply to the default RustSetInlayHints command
+        inlay_hints = {
+
+            -- Only show inlay hints for the current line
+            only_current_line = true,
+
+            -- Event which triggers a refersh of the inlay hints.
+            -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
+            -- not that this may cause  higher CPU usage.
+            -- This option is only respected when only_current_line and
+            -- autoSetHints both are true.
+            only_current_line_autocmd = "CursorHold",
+
+            -- wheter to show parameter hints with the inlay hints or not
+            show_parameter_hints = true,
+
+            -- prefix for parameter hints
+            parameter_hints_prefix = "<- ",
+
+            -- prefix for all the other hints (type, chaining)
+            other_hints_prefix = "=> ",
+
+            -- whether to align to the length of the longest line in the file
+            max_len_align = false,
+
+            -- padding from the left if max_len_align is true
+            max_len_align_padding = 1,
+
+            -- whether to align to the extreme right or not
+            right_align = false,
+
+            -- padding from the right if right_align is true
+            right_align_padding = 7,
+
+            -- The color of the hints
+            highlight = "Comment",
+        },
+
+        hover_actions = {
+            -- the border that is used for the hover window
+            -- see vim.api.nvim_open_win()
+            border = {
+                {"╭", "FloatBorder"}, {"─", "FloatBorder"},
+                {"╮", "FloatBorder"}, {"│", "FloatBorder"},
+                {"╯", "FloatBorder"}, {"─", "FloatBorder"},
+                {"╰", "FloatBorder"}, {"│", "FloatBorder"}
+            },
+
+            -- whether the hover action window gets automatically focused
+            auto_focus = false
+        },
+
+        -- settings for showing the crate graph based on graphviz and the dot
+        -- command
+        crate_graph = {
+            -- Backend used for displaying the graph
+            -- see: https://graphviz.org/docs/outputs/
+            -- default: x11
+            backend = "x11",
+            -- where to store the output, nil for no output stored (relative
+            -- path from pwd)
+            -- default: nil
+            output = nil,
+            -- true for all crates.io and external crates, false only the local
+            -- crates
+            -- default: true
+            full = true,
+        }
+    },
+
+    -- all the opts to send to nvim-lspconfig
+    -- these override the defaults set by rust-tools.nvim
+    -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
+    server = {} -- rust-analyer options
+}
+
+require('rust-tools').setup(rust_tools_opts)
 
 local nvim_lsp = require'lspconfig'
 
@@ -365,7 +467,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<C-K>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -410,6 +512,7 @@ require'compe'.setup {
   };
 }
 
+
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
@@ -453,10 +556,6 @@ end
 --vim.api.nvim_set_keymap('i', '<c-space>', 'compe#complete()', { expr = true })
 EOF
 
-" Enable type inlay hints
-autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-\ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
-
 " Toggle Leftexplore for moving through files
 let g:lex_open = "false"
 function! ToggleLex()
@@ -475,3 +574,4 @@ nnoremap <silent><leader>of :call ToggleLex()<CR>
 " Switch spelllangs
 nnoremap <silent><leader>oS :lua switch_spelling()<CR><CR>
 
+nnoremap <silent><leader>oh :RustToggleInlayHints<CR><CR>
