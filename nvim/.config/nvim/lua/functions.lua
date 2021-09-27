@@ -28,19 +28,19 @@ end
 g.lex_open = 0
 local exec = vim.cmd
 
+-- toggle Lexplore
 function togglelex()
     if g.lex_open == 1 then
 	 exec'Lex!'
 	 g.lex_open = 0
     else
 	exec'Lex'
+	exec'vertical resize 20'
 	g.lex_open = 1
     end
 end
 
 exec([[
-nnoremap <silent><leader>of :call ToggleLex()<CR>
+nnoremap <silent><leader>of :lua togglelex()<CR>
 nnoremap <silent><leader>oS :lua switch_spelling()<CR><CR>
 ]])
-
-print('this is print')
