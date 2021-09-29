@@ -41,6 +41,6 @@ function togglelex()
 end
 
 exec([[
-nnoremap <silent><leader>of :lua togglelex()<CR>
+nnoremap <silent><leader>of :NvimTreeToggle<CR>
 nnoremap <silent><leader>oS :lua switch_spelling()<CR><CR>
 ]])

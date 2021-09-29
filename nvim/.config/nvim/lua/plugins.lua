@@ -29,4 +29,6 @@ return require("packer").startup(function ()
     use 'simrat39/rust-tools.nvim'
 
     use 'windwp/nvim-autopairs'
+    
+    use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
 end)

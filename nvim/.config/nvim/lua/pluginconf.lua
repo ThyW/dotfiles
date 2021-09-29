@@ -1,5 +1,29 @@
+local g = vim.g
+
 require'nvim-autopairs'.setup{
     check_ts = true,
+}
+
+-- show indent markers when folders are open
+g.nvim_tree_indent_markers = 1
+-- add a slash to folder names
+g.nvim_tree_addtrailing = 1
+
+local tree_callback = require'nvim-tree.config'.nvim_tree_callback
+
+local list = {
+    {key = "+", cb = tree_callback("cd")}
+}
+
+require'nvim-tree'.setup {
+    -- this is false by default:
+    lsp_diagnostics = true,
+
+    view = {
+    	mappings = {
+    	    list = list
+    	}
+    }
 }
 
 require'nvim-treesitter.configs'.setup {
@@ -92,7 +116,7 @@ local on_attach = function(client, bufnr)
 
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'phpactor' }
+local servers = { 'pyright', 'rust_analyzer', 'phpactor', 'html' }
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
@@ -134,3 +158,4 @@ for _, lsp in ipairs(servers) do
       }
     }
 end
+

@@ -5,7 +5,8 @@ map <silent><leader>bd :bd! <CR>
 map <silent><leader><TAB> <c-^>
 
 noremap <silent><leader>f :Files<CR>
-noremap <silent><leader>F :Lines <CR>
+noremap <silent><leader>F :Lines<CR>
+noremap <silent><leader>b :Buffers<CR>
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
