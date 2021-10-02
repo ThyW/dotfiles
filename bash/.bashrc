@@ -60,11 +60,13 @@ export PATH="$PATH:~/ds-viewer/"
 export PATH="$PATH:~/appimages/"
 export PATH="$PATH:/mnt/data/clion-2019.2.4/bin/"
 
+alias Vi='sudoedit'
+
 #export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/library/"
 # not used currently export PS1="\e[0;1;33m\]\u@\h:\e[2;32m\]\w\$\e[m\] "
 export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
 export BLUDAT="NzQwNDU1ODYzNjA0NzQwMDk3.XypRQg.fUs7-73KimwR1cOGBxdg5bVTS_w"
-export EDITOR="/usr/bin/nvim"
+export EDITOR="nvim"
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export READER='zathura'
 export DISPLAY=:0.0;
