@@ -9,19 +9,21 @@ g.nvim_tree_indent_markers = 1
 -- add a slash to folder names
 g.nvim_tree_addtrailing = 1
 
-local tree_callback = require'nvim-tree.config'.nvim_tree_callback
+local nvim_tree_callback = require'nvim-tree.config'.nvim_tree_callback
 
-local list = {
-    {key = "+", cb = tree_callback("cd")}
+local nvim_tree_list = {
+    {key = "+", cb = nvim_tree_callback("cd")}
 }
 
 require'nvim-tree'.setup {
     -- this is false by default:
-    lsp_diagnostics = true,
+    diagnostics = {
+    	enable = true,
+    },
 
     view = {
     	mappings = {
-    	    list = list
+    	    list = nvim_tree_list
     	}
     }
 }
@@ -34,9 +36,11 @@ require'nvim-treesitter.configs'.setup {
     autopairs = {enable = true}
 }
 
-vim.g.coq_settings = {
-    auto_start = 'shut-up',
-}
+-- vim.g.coq_settings = {
+    -- auto_start = 'shut-up',
+-- }
+-- autostart only on certain filetypes
+vim.cmd([[autocmd FileType rust,python,c,bash,vim,lua COQnow --shut-up]])
 
 local rust_tools_opts = {
     tools = { -- rust-tools options
@@ -116,7 +120,7 @@ local on_attach = function(client, bufnr)
 
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'phpactor', 'html' }
+local servers = { 'pyright', 'rust_analyzer', 'phpactor', 'html', 'ccls' }
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
@@ -124,6 +128,7 @@ local rtp = vim.split(package.path, ';')
 
 table.insert(rtp ,"lua/?.lua")
 table.insert(rtp, "lua/?/init.lua")
+
 
 nvim_lsp['sumneko_lua']. setup {
     on_attach = on_attach,
@@ -147,7 +152,7 @@ nvim_lsp['sumneko_lua']. setup {
 		enable = false
 	    }
 	}
-    }
+   }
 }
 
 for _, lsp in ipairs(servers) do

@@ -1,6 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require("packer").startup(function ()
+return require("packer").startup(function (use)
     use 'wbthomason/packer.nvim'
 
     use 'rust-lang/rust.vim'
@@ -9,7 +9,7 @@ return require("packer").startup(function ()
     use 'junegunn/fzf.vim'
 
     use 'morhetz/gruvbox'
-    
+
     use 'tpope/vim-surround'
 
     use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
@@ -29,6 +29,8 @@ return require("packer").startup(function ()
     use 'simrat39/rust-tools.nvim'
 
     use 'windwp/nvim-autopairs'
-    
+
     use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
+
+    use 'folke/lua-dev.nvim'
 end)

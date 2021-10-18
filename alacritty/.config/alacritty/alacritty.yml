@@ -43,7 +43,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-      family: "Iosevka"  
+      family: "Iosevka Term"  
 
   style: Regular
 

@@ -6,7 +6,7 @@ local c = vim.cmd
 o.mouse = "a"
 o.cmdheight = 1
 o.updatetime = 500
-o.complete:remove({"i"})
+o.complete:remove({'i'})
 o.complete:append('kspell')
 o.shortmess:append('c')
 o.completeopt:append('menuone,noinsert,noselect')
