@@ -1,9 +1,11 @@
 local g = vim.g
 
+-- ===Nvim-Autopair===
 require'nvim-autopairs'.setup{
     check_ts = true,
 }
 
+-- ===Nvim-Tree===
 -- show indent markers when folders are open
 g.nvim_tree_indent_markers = 1
 -- add a slash to folder names
@@ -28,6 +30,7 @@ require'nvim-tree'.setup {
     }
 }
 
+-- ===Treesitter===
 require'nvim-treesitter.configs'.setup {
     ensure_installed = "maintained",
     highlight = {
@@ -36,11 +39,8 @@ require'nvim-treesitter.configs'.setup {
     autopairs = {enable = true}
 }
 
--- vim.g.coq_settings = {
-    -- auto_start = 'shut-up',
--- }
 -- autostart only on certain filetypes
-vim.cmd([[autocmd FileType rust,python,c,bash,vim,lua COQnow --shut-up]])
+-- vim.cmd([[autocmd FileType rust,python,c,bash,vim,lua COQnow --shut-up]])
 
 local rust_tools_opts = {
     tools = { -- rust-tools options
