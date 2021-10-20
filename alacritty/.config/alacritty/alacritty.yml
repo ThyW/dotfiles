@@ -43,7 +43,7 @@ env:
 font:
   normal:
       #family: "Dina ttf 10px"
-      family: "Iosevka Term"  
+      family: "Iosevka Term"
 
   style: Regular
 
@@ -58,7 +58,7 @@ font:
     #family: monospace
     #style: Bold Italic
 
-  size: 11.0
+  size: 10.0
 
   #offset:
   #  x: 0
