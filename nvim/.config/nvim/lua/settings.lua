@@ -36,9 +36,9 @@ o.foldlevelstart = 20
 
 o.guifont = "FiraCode:h14"
 
-if vim.fn.has("nvim") == 1 then 
-   -- o.viminfo:append({'n~/.local/share/nvim/shada/main.shada'})
-end
+--[[ if vim.fn.has("nvim") == 1 then
+   o.viminfo:append({'n~/.local/share/nvim/shada/main.shada'})
+end ]]
 
 o.splitright = true
 o.splitbelow = true
@@ -66,8 +66,10 @@ local highlights = {
     "highlight LspDiagnosticsInformation ctermfg=grey"
 }
 
-for _, v in ipairs(highlights) do 
+for _, v in ipairs(highlights) do
     c(v)
 end
 
 g.mapleader = ' '
+
+c[[autocmd Filetype php set filetype=html]]
