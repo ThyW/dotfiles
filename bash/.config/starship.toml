@@ -1,5 +1,5 @@
 add_newline = false
-format = "$git_branch$git_status$lua$rust$directory$character"
+format = "$git_branch$git_status$lua$rust $directory$character"
 
 [directory]
 truncation_length = 3
@@ -15,13 +15,13 @@ format = " [$symbol]($style)"
 style = "bold purple"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([\[$all_status$ahead_behind\]]($style))'
 style = "bold red"
 
 [rust]
-format = 'rust [$version]($style) '
+format = ' rust [$version]($style)'
 style = "bold cyan"
 
 [lua]
-format = 'lua [$version]($style) '
+format = ' lua [$version]($style)'
 style = "bold cyan"
