@@ -42,7 +42,7 @@ set $border 4
 # is used in the bar {} block below.
 font pango:Iosevka 8
 
-bindsym $mod+Shift+o exec --no-startup-id xrandr --output eDP-1-1 --off && xrandr --output HDMI-1-1 --primary  && xrandr --output DP-1-1 --right-of HDMI-1-1 move $ws1 to output HDMI-1-1 move $ws2 to output DP-1-1 
+bindsym $mod+Shift+o exec --no-startup-id xrandr --output eDP-1 --off && xrandr --output HDMI-1 --primary  && xrandr --output DP-1 --right-of HDMI-1 move $ws1 to output HDMI-1-1 move $ws2 to output DP-1-1 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).

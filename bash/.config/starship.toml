@@ -11,11 +11,11 @@ success_symbol = "[→](bold cyan)"
 error_symbol = "[✗](bold red)"
 
 [git_branch]
-format = " [$symbol]($style)"
+format = " [$symbol$branch]($style)"
 style = "bold purple"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
+format = '([ \[$all_status$ahead_behind\]]($style))'
 style = "bold red"
 
 [rust]
