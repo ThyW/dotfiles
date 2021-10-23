@@ -20,13 +20,13 @@ local nvim_tree_list = {
 require'nvim-tree'.setup {
     -- this is false by default:
     diagnostics = {
-    	enable = true,
+	enable = true,
     },
 
     view = {
-    	mappings = {
-    	    list = nvim_tree_list
-    	}
+	mappings = {
+	    list = nvim_tree_list
+	}
     }
 }
 
@@ -34,112 +34,125 @@ require'nvim-tree'.setup {
 require'nvim-treesitter.configs'.setup {
     ensure_installed = "maintained",
     highlight = {
-    	enable = true,
+	enable = true,
     },
     autopairs = {enable = true}
 }
 
--- autostart only on certain filetypes
--- vim.cmd([[autocmd FileType rust,python,c,bash,vim,lua COQnow --shut-up]])
-
 local rust_tools_opts = {
     tools = { -- rust-tools options
-        autoSetHints = true,
-        hover_with_actions = true,
-        runnables = {
-            use_telescope = false -- don't have telescope
-        },
-
-        debuggables = {
-            use_telescope = false -- don't have telescope
-        },
-
-        inlay_hints = {
-            only_current_line = true,
-            only_current_line_autocmd = "CursorHold",
-            show_parameter_hints = true,
-            parameter_hints_prefix = "<- ",
-            other_hints_prefix = "=> ",
-            max_len_align = false,
-            max_len_align_padding = 1,
-            right_align = false,
-            right_align_padding = 7,
-            highlight = "Comment",
-        },
-
-        hover_actions = {
-            border = {
-                {"╭", "FloatBorder"}, {"─", "FloatBorder"},
-                {"╮", "FloatBorder"}, {"│", "FloatBorder"},
-                {"╯", "FloatBorder"}, {"─", "FloatBorder"},
-                {"╰", "FloatBorder"}, {"│", "FloatBorder"}
-            },
-            auto_focus = false
-        },
-        crate_graph = {
-            backend = "x11",
-            output = nil,
-            full = true,
-        }
+    autoSetHints = true,
+    hover_with_actions = true,
+    runnables = {
+	use_telescope = false -- don't have telescope
     },
-    server = {} -- rust-analyer options
+
+    debuggables = {
+	use_telescope = false -- don't have telescope
+    },
+
+    inlay_hints = {
+	only_current_line = true,
+	only_current_line_autocmd = "CursorHold",
+	show_parameter_hints = true,
+	parameter_hints_prefix = "<- ",
+	other_hints_prefix = "=> ",
+	max_len_align = false,
+	max_len_align_padding = 1,
+	right_align = false,
+	right_align_padding = 7,
+	highlight = "Comment",
+    },
+
+    hover_actions = {
+	border = {
+	    {"╭", "FloatBorder"}, {"─", "FloatBorder"},
+	    {"╮", "FloatBorder"}, {"│", "FloatBorder"},
+	    {"╯", "FloatBorder"}, {"─", "FloatBorder"},
+	    {"╰", "FloatBorder"}, {"│", "FloatBorder"}
+	},
+	auto_focus = false
+    },
+    crate_graph = {
+	backend = "x11",
+	output = nil,
+	full = true,
+    }
+},
+server = {} -- rust-analyer options
 }
 
 require('rust-tools').setup(rust_tools_opts)
 
+local has_words_before = function()
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
+
 local nvim_cmp = require'cmp'
+local luasnip = require'luasnip'
 
 nvim_cmp.setup {
     mapping = {
-    	["<c-u>"] = nvim_cmp.mapping.scroll_docs(-4),
-    	["<c-d>"] = nvim_cmp.mapping.scroll_docs(4),
+	["<c-u>"] = nvim_cmp.mapping.scroll_docs(-4),
+	["<c-d>"] = nvim_cmp.mapping.scroll_docs(4),
 	["<Cr>"] = nvim_cmp.mapping.confirm(),
+	["<c-space>"] = nvim_cmp.mapping.confirm(),
 	["<c-e>"] = nvim_cmp.mapping.close(),
-	["<Tab>"] = function(fallback)
+	["<Tab>"] = nvim_cmp.mapping(function(fallback)
 	    if nvim_cmp.visible() then
-	    	nvim_cmp.select_next_item()
+		nvim_cmp.select_next_item()
+	    elseif luasnip.expand_or_jumpable() then
+		luasnip.expand_or_jump()
+	    elseif has_words_before() then
+		nvim_cmp.complete()
 	    else
-	    	fallback()
+		fallback()
 	    end
-	end,
-	["<S-Tab>"] = function(fallback)
+	end, { "i", "s" }),
+
+	["<S-Tab>"] = nvim_cmp.mapping(function(fallback)
 	    if nvim_cmp.visible() then
-	    	nvim_cmp.select_prev_item()
+		nvim_cmp.select_prev_item()
+	    elseif luasnip.jumpable(-1) then
+		luasnip.jump(-1)
 	    else
-	    	fallback()
+		fallback()
 	    end
-	end,
+	end, { "i", "s" }),
     },
+
     sources = {
-	{name = "gh_issues"},
+	{name = "luasnip"},
 	{name = "nvim_lua"},
 	{name = "nvim_lsp"},
+	{name = "gh_issues"},
 	{name = "path"},
 	{name = "buffer"}
     },
 
     snippet = {
-    	exapnd = function(args)
-    	    require'luasnip'.lsp_expand(args.body)
-    	end,
+	expand = function(args)
+	    luasnip.lsp_expand(args.body)
+	end,
     },
 
     formatting = {
-    	format = require'lspkind'.cmp_format{
-    	    with_text = true,
-    	    menu = {
-    	    	buffer = "[BUF]",
-    	    	nvim_lsp = "[LSP]",
-    	    	nvim_lua = "[LUA]",
-    	    	path = "[PATH]",
-    	    	gh_issues = "[Issue]",
-    	    }
-    	}
+	format = require'lspkind'.cmp_format{
+	    with_text = true,
+	    menu = {
+		buffer = "[BUF]",
+		nvim_lsp = "[LSP]",
+		nvim_lua = "[LUA]",
+		path = "[PATH]",
+		gh_issues = "[Issue]",
+	    }
+	}
     },
 
     experimental = {
-    	native_menu = false,
-    	ghost_text = true
+	native_menu = false,
+	ghost_text = true
     },
 
 }
@@ -148,33 +161,33 @@ nvim_cmp.setup {
 local nvim_lsp = require'lspconfig'
 
 local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-  --Enable completion triggered by <c-x><c-o>
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+    --Enable completion triggered by <c-x><c-o>
+    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  -- Mappings.
-  local opts = { noremap=true, silent=true }
+    -- Mappings.
+    local opts = { noremap=true, silent=true }
 
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-K>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-  buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', '<space>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+    buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+    buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+    buf_set_keymap('n', '<C-K>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+    buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+    buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+    buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+    buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+    buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+    buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+    buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+    buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+    buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+    buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+    buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+    buf_set_keymap('n', '<space>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end
 
@@ -210,14 +223,16 @@ nvim_lsp['sumneko_lua']. setup {
 		enable = false
 	    }
 	}
-   }
+    }
 }
 
 for _, lsp in ipairs(servers) do
+    local capabilities = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities())
     nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      flags = {
-	debounce_text_changes = 150,
-      }
+	on_attach = on_attach,
+	flags = {
+	    debounce_text_changes = 150,
+	},
+	capabilities = capabilities,
     }
 end
