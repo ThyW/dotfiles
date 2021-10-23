@@ -22,10 +22,6 @@ return require("packer").startup(function (use)
     use 'vim-pandoc/vim-pandoc'
     use 'vim-pandoc/vim-pandoc-syntax'
 
-    use {'ms-jpq/coq_nvim', branch = 'coq'}
-    use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
-    use {'ms-jpq/coq.thirdparty', branch = '3p'}
-
     use 'simrat39/rust-tools.nvim'
 
     use 'windwp/nvim-autopairs'
@@ -35,4 +31,13 @@ return require("packer").startup(function (use)
     use 'folke/lua-dev.nvim'
 
     use 'b3nj5m1n/kommentary'
+
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/cmp-nvim-lsp'
+
+    use "onsails/lspkind-nvim"
+    use "L3MON4D3/LuaSnip"
 end)

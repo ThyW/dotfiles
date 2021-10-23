@@ -87,6 +87,64 @@ local rust_tools_opts = {
 
 require('rust-tools').setup(rust_tools_opts)
 
+local nvim_cmp = require'cmp'
+
+nvim_cmp.setup {
+    mapping = {
+    	["<c-u>"] = nvim_cmp.mapping.scroll_docs(-4),
+    	["<c-d>"] = nvim_cmp.mapping.scroll_docs(4),
+	["<Cr>"] = nvim_cmp.mapping.confirm(),
+	["<c-e>"] = nvim_cmp.mapping.close(),
+	["<Tab>"] = function(fallback)
+	    if nvim_cmp.visible() then
+	    	nvim_cmp.select_next_item()
+	    else
+	    	fallback()
+	    end
+	end,
+	["<S-Tab>"] = function(fallback)
+	    if nvim_cmp.visible() then
+	    	nvim_cmp.select_prev_item()
+	    else
+	    	fallback()
+	    end
+	end,
+    },
+    sources = {
+	{name = "gh_issues"},
+	{name = "nvim_lua"},
+	{name = "nvim_lsp"},
+	{name = "path"},
+	{name = "buffer"}
+    },
+
+    snippet = {
+    	exapnd = function(args)
+    	    require'luasnip'.lsp_expand(args.body)
+    	end,
+    },
+
+    formatting = {
+    	format = require'lspkind'.cmp_format{
+    	    with_text = true,
+    	    menu = {
+    	    	buffer = "[BUF]",
+    	    	nvim_lsp = "[LSP]",
+    	    	nvim_lua = "[LUA]",
+    	    	path = "[PATH]",
+    	    	gh_issues = "[Issue]",
+    	    }
+    	}
+    },
+
+    experimental = {
+    	native_menu = false,
+    	ghost_text = true
+    },
+
+}
+
+
 local nvim_lsp = require'lspconfig'
 
 local on_attach = function(client, bufnr)
@@ -163,4 +221,3 @@ for _, lsp in ipairs(servers) do
       }
     }
 end
-
