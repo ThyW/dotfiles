@@ -32,12 +32,15 @@ return require("packer").startup(function (use)
 
     use 'b3nj5m1n/kommentary'
 
+    use "L3MON4D3/LuaSnip"
+
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp'
 
+    use 'saadparwaiz1/cmp_luasnip'
+
     use "onsails/lspkind-nvim"
-    use "L3MON4D3/LuaSnip"
 end)
