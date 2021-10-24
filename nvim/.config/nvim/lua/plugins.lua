@@ -39,6 +39,7 @@ return require("packer").startup(function (use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp'
+    use {'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'}
     use 'saadparwaiz1/cmp_luasnip'
 
     use "onsails/lspkind-nvim"
