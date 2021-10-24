@@ -99,7 +99,7 @@ nvim_cmp.setup {
 	["<Cr>"] = nvim_cmp.mapping.confirm(),
 	["<c-space>"] = nvim_cmp.mapping.confirm(),
 	["<c-e>"] = nvim_cmp.mapping.close(),
-	["<Tab>"] = nvim_cmp.mapping(function(fallback)
+	["<c-n>"] = nvim_cmp.mapping(function(fallback)
 	    if nvim_cmp.visible() then
 		nvim_cmp.select_next_item()
 	    elseif luasnip.expand_or_jumpable() then
@@ -111,7 +111,7 @@ nvim_cmp.setup {
 	    end
 	end, { "i", "s" }),
 
-	["<S-Tab>"] = nvim_cmp.mapping(function(fallback)
+	["<c-p>"] = nvim_cmp.mapping(function(fallback)
 	    if nvim_cmp.visible() then
 		nvim_cmp.select_prev_item()
 	    elseif luasnip.jumpable(-1) then
@@ -160,7 +160,7 @@ nvim_cmp.setup {
 
 local nvim_lsp = require'lspconfig'
 
-local on_attach = function(client, bufnr)
+local on_attach = function(bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
