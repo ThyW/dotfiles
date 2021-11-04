@@ -42,20 +42,32 @@ end
 
 -- create slovak specific keybinds
 g.using_langmap = 0
-function Toggle_langmap()
+function ToggleKbLang()
     if g.using_langmap == 1 then
-	exec'set langmap='
-	print("nolangmap")
+	exec
+	[[
+	augroup kbmap 
+	    au!
+	augroup END
+	]]
+	print("using us")
 	g.using_langmap = 0
     else
-	-- exec'set langmap=+1,ľ2,š3,č4,ť5,ž6,ý7,á8,í9,é0,1!,2@, 3#, 4$, 5%,6^,7&,8*,(9,0),=-,%_,´=,ˇ+,ú[,ä],ô\\;;,":,§\',!",?<,:>'
-	print("langmap")
+	print("using sk")
+    	exec[[
+    	augroup kbmap
+	    au!
+	    autocmd InsertEnter * silent! :!setxkbmap sk
+	    autocmd InsertLeave * silent! :!setxkbmap us
+	augroup END
+    	]]
 	g.using_langmap = 1
     end
 end
 
+
 exec([[
 nnoremap <silent><leader>of :NvimTreeToggle<CR>
 nnoremap <silent><leader>oS :lua Switch_spelling()<CR><CR>
-nnoremap <silent><leader>oL :lua Toggle_langmap()<CR><CR>
+nnoremap <silent><leader>oL :lua ToggleKbLang()<CR><CR>
 ]])

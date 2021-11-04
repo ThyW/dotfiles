@@ -2,6 +2,7 @@ local o = vim.opt
 local g = vim.g
 local f = vim.fn
 local c = vim.cmd
+local oo = vim.o
 
 o.mouse = "a"
 o.cmdheight = 1
@@ -43,8 +44,17 @@ end ]]
 o.splitright = true
 o.splitbelow = true
 
+function GetCurrentLang()
+    if g.using_langmap == 1 then
+	return "SK"
+    else
+    	return "US"
+    end
+end
+
 o.laststatus = 2
-o.statusline = "<< %f >>%= %m %Y %c %l/%L"
+oo.statusline = "<< %f >>%= %m %Y %c %l/%L"
+oo.statusline = oo.statusline .. "  LANG:" .. "%{luaeval('GetCurrentLang()')}"
 
 o.termguicolors = true
 
