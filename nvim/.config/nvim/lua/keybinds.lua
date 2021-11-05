@@ -39,3 +39,6 @@ noremap L $
 
 nnoremap <silent><leader>oh :RustToggleInlayHints<CR><CR>
 ]], false)
+
+--[[ local ft = require("float_term")
+ft.setup() ]]
