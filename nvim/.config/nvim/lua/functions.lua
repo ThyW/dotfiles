@@ -57,7 +57,7 @@ function ToggleKbLang()
     	exec[[
     	augroup kbmap
 	    au!
-	    autocmd InsertEnter * silent! :!setxkbmap sk
+	    autocmd InsertEnter * silent! :!setxkbmap sk -variant qwerty
 	    autocmd InsertLeave * silent! :!setxkbmap us
 	augroup END
     	]]
