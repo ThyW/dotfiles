@@ -16,18 +16,20 @@ local nvim_tree_callback = require'nvim-tree.config'.nvim_tree_callback
 local nvim_tree_list = {
     {key = "+", cb = nvim_tree_callback("cd")}
 }
-
 require'nvim-tree'.setup {
     -- this is false by default:
     diagnostics = {
 	enable = true,
     },
-
     view = {
+    	width = 30,
+    	height = 30,
+    	auto_resize = true,
 	mappings = {
 	    list = nvim_tree_list
 	}
-    }
+    },
+    auto_close = true,
 }
 
 -- ===Treesitter===
@@ -39,6 +41,7 @@ require'nvim-treesitter.configs'.setup {
     autopairs = {enable = true}
 }
 
+-- === Rust Tools ===
 local rust_tools_opts = {
     tools = { -- rust-tools options
     autoSetHints = true,
@@ -84,6 +87,7 @@ server = {} -- rust-analyer options
 
 require('rust-tools').setup(rust_tools_opts)
 
+-- ===nvim_cmp===
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
@@ -169,6 +173,7 @@ nvim_cmp.setup {
 }
 
 
+-- ===Lsp Config===
 local nvim_lsp = require'lspconfig'
 
 local on_attach = function(bufnr)

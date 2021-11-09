@@ -13,6 +13,7 @@
 # echo -e "Welcome, \e[1;32m$USER\e[0m, to \e[1;33m$HOST\e[0m"
 
 PREVIOUS=""
+export HOSTNAME
 
 alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
