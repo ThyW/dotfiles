@@ -1,6 +1,5 @@
 local o = vim.opt
 local g = vim.g
-local f = vim.fn
 local c = vim.cmd
 local oo = vim.o
 
@@ -26,6 +25,9 @@ o.tabstop = 8
 o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = false
+
+o.listchars:append("space:•")
+o.list = true
 
 o.linebreak = true
 o.breakindent = true
@@ -73,7 +75,7 @@ local highlights = {
     "highlight Conceal ctermbg=none",
     "highlight LspDiagnosticsError ctermfg=red",
     "highlight LspDiagnosticsWarning ctermfg=cyan",
-    "highlight LspDiagnosticsInformation ctermfg=grey"
+    "highlight LspDiagnosticsInformation ctermfg=grey",
 }
 
 for _, v in ipairs(highlights) do

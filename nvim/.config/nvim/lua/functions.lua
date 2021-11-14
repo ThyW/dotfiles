@@ -65,7 +65,6 @@ function ToggleKbLang()
     end
 end
 
-
 exec([[
 nnoremap <silent><leader>of :NvimTreeToggle<CR>
 nnoremap <silent><leader>oS :lua Switch_spelling()<CR><CR>
