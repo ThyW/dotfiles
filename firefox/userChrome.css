@@ -1,0 +1,24 @@
+#urlbar, #searchbar, #main-window, .toolbarbutton-text {
+    font-family: Iosevka;
+}
+
+.tabbrowser-tab[visuallyselected="true"] {
+    font-family: Iosevka;
+}
+
+.tabbrowser-tab {
+    font-family: Iosevka;
+}
+
+.tab-background[selected=true] {
+    font-family: Iosevka;
+}
+
+.tab-line {
+    font-family: Iosevka;
+}
+
+.tab-line[selected=true] {
+    background-color: white !important; /* Make the line white, remove this for default color */
+    font-family: Iosevka;
+}

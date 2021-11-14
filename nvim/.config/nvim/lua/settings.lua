@@ -33,7 +33,7 @@ o.breakindent = true
 -- o.colorcolumn = 80
 
 o.foldmethod = "indent"
-o.foldlevelstart = 20
+o.foldlevelstart = 0
 
 o.guifont = "FiraCode:h14"
 

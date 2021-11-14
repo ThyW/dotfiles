@@ -5,6 +5,20 @@ require'nvim-autopairs'.setup{
     check_ts = true,
 }
 
+-- === bufferline.nvim ===
+require'bufferline'.setup{
+    options = {
+    	numbers = "buffer_id",
+	close_command = "bdelete! %d",
+	left_mouse_command = "buffer %d",
+	diagnostics = "nvim_lsp",
+	show_buffer_icons = true,
+	always_show_bufferline = true,
+	separator_style = "slant",
+	offsets = {{filetype = "NvimTree"}}
+    }
+}
+
 -- ===Nvim-Tree===
 -- show indent markers when folders are open
 g.nvim_tree_indent_markers = 1
@@ -31,7 +45,6 @@ require'nvim-tree'.setup {
     },
     auto_close = true,
 }
-
 -- ===Treesitter===
 require'nvim-treesitter.configs'.setup {
     ensure_installed = "maintained",
@@ -40,7 +53,6 @@ require'nvim-treesitter.configs'.setup {
     },
     autopairs = {enable = true}
 }
-
 -- === Rust Tools ===
 local rust_tools_opts = {
     tools = { -- rust-tools options
@@ -86,7 +98,6 @@ server = {} -- rust-analyer options
 }
 
 require('rust-tools').setup(rust_tools_opts)
-
 -- ===nvim_cmp===
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))

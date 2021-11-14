@@ -1,7 +1,8 @@
 vim.api.nvim_exec([[
-map <silent><leader>h :bp <CR> 
-map <silent><leader>l :bn <CR>
-map <silent><leader>bd :bd! <CR>
+nnoremap <silent><leader>l :BufferLineCycleNext<CR>
+nnoremap <silent><leader>h :BufferLineCyclePrev<CR>
+nnoremap <silent><leader><leader>l :BufferLineMoveNext<CR>
+nnoremap <silent><leader><leader>h :BufferLineMovePrev<CR>
 map <silent><leader><TAB> <c-^>
 
 noremap <silent><leader>f :Files<CR>
