@@ -13,7 +13,6 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!  
 # Fix monitors 
 # Startup
-
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift -l 48:17 -t 3900:3900
 exec --no-startup-id nm-applet
@@ -43,17 +42,6 @@ set $border 4
 font pango:Terminus 8
 
 bindsym $mod+Shift+o exec --no-startup-id xrandr --output eDP-1 --off && xrandr --output HDMI-1 --primary  && xrandr --output DP-1 --right-of HDMI-1 move $ws1 to output HDMI-1 move $ws2 to output DP-1
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -256,7 +244,7 @@ bar {
 
 # window color settings
 # class                  border  backgr. text indicator child_border
-client.focused		 #111111 #111111 #ffffff #d79921 #d79921 
+client.focused		 #d79921 #d79921 #ffffff #d79921 #d79921 
 client.focused_inactive  #111111 #111111 #ffffff #111111 #111111 
 client.unfocused	 #111111 #111111 #ffffff #111111 #111111 
 #client.urgent           #689d6a #111111 #ffffff #111111 #111111 
