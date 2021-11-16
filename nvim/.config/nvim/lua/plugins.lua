@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function (use)
     use 'wbthomason/packer.nvim'
+    use "nvim-lua/plenary.nvim"
 
     use 'rust-lang/rust.vim'
 
@@ -45,4 +46,6 @@ return require("packer").startup(function (use)
     use "onsails/lspkind-nvim"
 
     use "akinsho/bufferline.nvim"
+    
+    use "nvim-neorg/neorg"
 end)

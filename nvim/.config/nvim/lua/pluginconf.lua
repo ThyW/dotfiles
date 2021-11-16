@@ -46,8 +46,18 @@ require'nvim-tree'.setup {
     auto_close = true,
 }
 -- ===Treesitter===
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained",
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+
+parser_configs.norg = {
+    install_info = {
+        url = "https://github.com/nvim-neorg/tree-sitter-norg",
+        files = { "src/parser.c", "src/scanner.cc" },
+        branch = "main"
+    },
+}
+
+require('nvim-treesitter.configs').setup {
+    ensure_installed = {"rust", "c", "cpp", "python", "php", "css", "html", "norg", "latex", "bash", "lua", "vim"},
     highlight = {
 	enable = true,
     },
@@ -147,6 +157,7 @@ nvim_cmp.setup {
     },
 
     sources = {
+	{name = "neorg"},
 	{name = "cmp_tabnine"},
 	{name = "luasnip"},
 	{name = "nvim_lua"},
@@ -263,3 +274,56 @@ for _, lsp in ipairs(servers) do
 	capabilities = capabilities,
     }
 end
+
+-- === Neorg ===
+require"neorg".setup{
+    load = {
+	["core.defaults"] = {},
+	["core.keybinds"] = {
+	    config = {
+	    	default_keybinds = true,
+	    	neorg_leader = "<Leader>i"
+	    }
+	},
+	["core.norg.completion"] = {
+	    config = {
+		engine = "nvim-cmp"
+	    }
+	},
+	["core.norg.concealer"] = {},
+	["core.norg.dirman"] = {
+	    config = {
+	    	workspaces = {
+	    	    my_workspace = "~/neorg"
+		}
+	    }
+	},
+    },
+    logger = {
+	-- Should print the output to neovim while running
+	  use_console = true,
+
+	  -- Should highlighting be used in console (using echohl)
+	  highlights = true,
+
+	  -- Should write to a file
+	  use_file = true,
+
+	  -- Any messages above this level will be logged.
+	  level = "warn",
+
+	  -- Level configuration
+	  modes = {
+		{ name = "trace", hl = "Comment", },
+		{ name = "debug", hl = "Comment", },
+		{ name = "info",  hl = "None", },
+		{ name = "warn",  hl = "WarningMsg", },
+		{ name = "error", hl = "ErrorMsg", },
+		{ name = "fatal", hl = "ErrorMsg", },
+	  },
+
+	  -- Can limit the number of decimals displayed for floats
+	  float_precision = 0.01,
+    },
+    requires = "nvim-lua/plenary.nvim"
+}
