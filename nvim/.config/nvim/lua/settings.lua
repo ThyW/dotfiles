@@ -84,4 +84,4 @@ end
 
 g.mapleader = ' '
 
-c[[autocmd Filetype php set filetype=html]]
+-- c[[autocmd Filetype php set filetype=html]]
