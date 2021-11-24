@@ -1,5 +1,5 @@
-require("settings")
 require("plugins")
+require("settings")
 require("functions")
 require("pluginconf")
 require("keybinds")

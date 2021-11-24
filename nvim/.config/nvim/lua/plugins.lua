@@ -9,7 +9,7 @@ return require("packer").startup(function (use)
     use 'junegunn/fzf'
     use 'junegunn/fzf.vim'
 
-    use 'morhetz/gruvbox'
+    use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
     use 'tpope/vim-surround'
 
@@ -46,6 +46,6 @@ return require("packer").startup(function (use)
     use "onsails/lspkind-nvim"
 
     use "akinsho/bufferline.nvim"
-    
+
     use "nvim-neorg/neorg"
 end)
