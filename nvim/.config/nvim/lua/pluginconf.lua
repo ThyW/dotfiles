@@ -238,7 +238,7 @@ local on_attach = function(bufnr)
 
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'phpactor', 'html', 'ccls', 'clangd'}
+local servers = { 'pyright', 'rust_analyzer', 'phpactor', 'html', 'clangd'}
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
