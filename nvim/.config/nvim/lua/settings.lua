@@ -11,7 +11,7 @@ o.complete:append('kspell')
 o.shortmess:append('c')
 o.completeopt:append('menuone,noinsert,noselect')
 o.clipboard = 'unnamedplus'
-o.timeoutlen = 2000
+o.timeoutlen = 500
 o.wrap = false
 o.nu = true
 o.rnu = true
@@ -20,6 +20,7 @@ o.showmode = false
 o.autoindent = true
 o.smartindent = true
 o.copyindent = true
+o.hlsearch = false
 
 o.tabstop = 8
 o.softtabstop = 4

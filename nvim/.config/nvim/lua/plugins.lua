@@ -14,6 +14,8 @@ return require("packer").startup(function (use)
     use 'tpope/vim-surround'
 
     use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+    use 'nvim-treesitter/nvim-treesitter-refactor'
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
 
     use 'neovim/nvim-lspconfig'
 
