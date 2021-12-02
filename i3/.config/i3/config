@@ -62,7 +62,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Terminus'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Iosevka:8'
 bindsym $mod+c exec --no-startup-id dmconf
 
 # change focus
@@ -235,9 +235,9 @@ bar {
         separator #666666
         background #303030
         statusline #dddddd
-        focused_workspace #303030 #303030 #d79921
-        active_workspace #303030 #303030 #888888
-        inactive_workspace #303030 #303030 #888888
+        focused_workspace #272727 #272727 #d79921
+        active_workspace #272727 #272727 #888888
+        inactive_workspace #272727 #272727 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
