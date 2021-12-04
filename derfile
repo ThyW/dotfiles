@@ -37,12 +37,6 @@ hostnames = $hosts
 final_name = dunstrc
 apply_path = $outdir:/.config/dunst/
 
-# skip firefox for now
-# [firefox/userChrome.css]
-# hostnames = $hosts
-# final_name = userChrome.css
-# apply_path = $outdir/.mozilla/
-
 [i3/config.t]
 hostnames = $hosts
 final_name = config
