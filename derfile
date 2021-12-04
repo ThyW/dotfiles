@@ -44,7 +44,7 @@ apply_path = $outdir:/.config/i3/
 
 [i3status-rust/config.toml]
 hostnames = $hosts
-final_name = config
+final_name = config.toml
 apply_path = $outdir:/.config/i3status-rust/
 
 [nvim]
