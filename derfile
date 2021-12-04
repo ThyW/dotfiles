@@ -1,3 +1,4 @@
+# [https://github.com/ThyW/der/]
 $hosts = legionnaire, terminator
 $outdir = env`HOME`
 
@@ -32,7 +33,7 @@ final_name = starship.toml
 apply_path = $outdir:/.config/
 
 # dunstrc
-[dunst/dunstrc.t]
+[dunst/dunstrc]
 hostnames = $hosts
 final_name = dunstrc
 apply_path = $outdir:/.config/dunst/
