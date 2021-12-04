@@ -15,7 +15,7 @@
 PREVIOUS=""
 export HOSTNAME
 
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
 alias suspend='sudo systemctl start suspend.target && i3lock -c 111111'
 alias wgstart='sudo systemctl start wg-quick@wg0'
@@ -29,6 +29,7 @@ alias autosort='~/.sorter/autosort'
 alias i3lock='i3lock -c 111111'
 alias rs='cd ~/programming/rust/'
 # alias vim='_run_vim() { sw neovide "$@"; }; _run_vim'
+alias ls='exa'
 alias vi='nvim'
 alias fzf='sk'
 alias bconf='vi ~/.bashrc  && clear && source ~/.bashrc'
