@@ -41,7 +41,9 @@ set $border 4
 # is used in the bar {} block below.
 font pango:Iosevka 9
 
-bindsym $mod+Shift+o exec --no-startup-id xrandr --output eDP-1 --off && xrandr --output HDMI-1 --primary  && xrandr --output DP-1 --right-of HDMI-1 move $ws1 to output HDMI-1 move $ws2 to output DP-1
+@@ legionnaire
+exec --no-startup-id xrandr --output eDP-1 --off && xrandr --output HDMI-1 --primary  && xrandr --output DP-1 --right-of HDMI-1 move $ws1 to output HDMI-1 move $ws2 to output DP-1
+@!
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

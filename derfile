@@ -1,0 +1,67 @@
+$hosts = legionnaire, terminator
+$outdir = env`HOME`
+
+# alacritty
+[alacritty/alacritty.yml.t]
+hostnames = $hosts
+final_name = alacritty.yml
+apply_path = $outdir:/.config/alacritty/
+
+# .bashrc
+[bash/.bashrc.t]
+hostnames = $hosts
+final_name = .bashrc
+apply_path = $outdir
+
+# .tmux.conf
+[bash/.tmux.conf.t]
+hostnames = $hosts
+final_name = .tmux.conf
+apply_path = $outdir
+
+# .gitignore
+[bash/.gitignore]
+hostnames = $hosts
+final_name = .gitignore
+apply_path = $outdir
+
+# starship.toml
+[bash/starship.toml]
+hostnames = $hosts
+final_name = starship.toml
+apply_path = $outdir:/.config/
+
+# dunstrc
+[dunst/dunstrc.t]
+hostnames = $hosts
+final_name = dunstrc
+apply_path = $outdir:/.config/dunst/
+
+# skip firefox for now
+# [firefox/userChrome.css]
+# hostnames = $hosts
+# final_name = userChrome.css
+# apply_path = $outdir/.mozilla/
+
+[i3/config.t]
+hostnames = $hosts
+final_name = config
+apply_path = $outdir:/.config/i3/
+
+[i3status-rust/config.toml]
+hostnames = $hosts
+final_name = config
+apply_path = $outdir:/.config/i3status-rust/
+
+[nvim]
+hostnames = $host
+final_name = nvim
+apply_path = $outdir:/.config/
+parse_files = false
+recursive = true
+extensions = t
+
+[redshift/redshift.conf]
+hostnames = $hosts
+final_name = redshift.conf
+apply_path = $outdir:/.config/redshift/
