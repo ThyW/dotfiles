@@ -166,6 +166,19 @@ tabnine:setup({
     snippet_placeholder = '..';
 })
 
+-- ===dressing.nvim===
+require('dressing').setup({
+    input = {
+	insert_only = false,
+	default_prompt = "-> ",
+	border = "rounded"
+    },
+    select = {
+    	backed = {"fzf"}
+    },
+    get_config = nil
+})
+
 local nvim_cmp = require'cmp'
 local luasnip = require'luasnip'
 
