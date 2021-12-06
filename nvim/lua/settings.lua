@@ -20,7 +20,7 @@ o.showmode = false
 o.autoindent = true
 o.smartindent = true
 o.copyindent = true
-o.hlsearch = false
+o.hlsearch = true
 
 o.tabstop = 8
 o.softtabstop = 4
@@ -36,7 +36,7 @@ o.breakindent = true
 -- o.colorcolumn = 80
 
 o.foldmethod = "indent"
-o.foldlevelstart = 0
+o.foldlevelstart = 50
 
 o.guifont = "FiraCode:h14"
 
