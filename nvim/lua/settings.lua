@@ -38,7 +38,7 @@ o.breakindent = true
 o.foldmethod = "indent"
 o.foldlevelstart = 50
 
-o.guifont = "FiraCode:h14"
+o.guifont = "Iosevka:h14"
 
 --[[ if vim.fn.has("nvim") == 1 then
    o.viminfo:append({'n~/.local/share/nvim/shada/main.shada'})
