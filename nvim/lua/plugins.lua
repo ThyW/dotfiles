@@ -51,4 +51,6 @@ return require("packer").startup(function (use)
     use "akinsho/bufferline.nvim"
 
     use "nvim-neorg/neorg"
+
+    use {"TimUntersberger/neogit", requires = 'nvim-lua/plenary.nvim'}
 end)

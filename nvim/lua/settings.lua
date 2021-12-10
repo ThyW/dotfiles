@@ -85,4 +85,8 @@ end
 
 g.mapleader = ' '
 
+g.neovide_cursor_vfx_mode = "ripple"
+g.neovide_cursor_animation_length = 0
+g.neovide_cursor_trail_length = 0
+
 -- c[[autocmd Filetype php set filetype=html]]
