@@ -53,8 +53,13 @@ for_window [ title="floating"] floating enable; mode "moveit"
 # start a terminal and other app binds
 bindsym $mod+Return exec alacritty
 bindsym $mod2+Return exec alacritty -t "floating" 
+@@ legionnaire
 bindsym $mod+i exec firefox-nightly
-bindsym $mod+Shift+d exec ~/Lightcord/Lightcor
+@!
+@@ terminator
+bindsym $mod+i exec firefox
+@!
+bindsym $mod+Shift+d exec ~/Lightcord/Lightcord
 bindsym $mod2+f exec alacritty -e vifm ~
 
 # kill focused window
