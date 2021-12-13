@@ -252,7 +252,7 @@ bar {
 
 # window color settings
 # class                  border  backgr. text indicator child_border
-client.focused		 #d79921 #d79921 #ffffff #d79921 #d79921 
+client.focused		 #d79921 #d79921 #111111 #d79921 #d79921 
 client.focused_inactive  #111111 #111111 #ffffff #111111 #111111 
 client.unfocused	 #111111 #111111 #ffffff #111111 #111111 
 #client.urgent           #689d6a #111111 #ffffff #111111 #111111 
