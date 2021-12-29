@@ -16,7 +16,7 @@ require'bufferline'.setup{
 	always_show_bufferline = true,
 	separator_style = "slant",
 	offsets = {{filetype = "NvimTree"}}
-    }
+    },
 }
 
 -- ===Nvim-Tree===
@@ -277,10 +277,11 @@ local on_attach = function(bufnr)
     buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
     buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-    buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-    buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-    buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+    buf_set_keymap('n', '<space>e', '<cmd>lua require"diagnostics".line_diagnostics()<CR>', opts)
+    buf_set_keymap('n', '[d', '<cmd>lua require"diagnostics".goto_prev()<CR>', opts)
+    buf_set_keymap('n', ']d', '<cmd>lua require"diagnostics".goto_next()<CR>', opts)
+    buf_set_keymap('n', '<space>q', '<cmd>lua require"diagnostics".location_list()<CR>', opts)
+    buf_set_keymap('n', '<space>qf', '<cmd>lua require"diagnostics".quickfix_list()<CR>', opts)
     buf_set_keymap('n', '<space>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end

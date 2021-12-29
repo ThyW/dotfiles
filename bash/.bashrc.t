@@ -49,6 +49,10 @@ alias xmc='nvim ~/.xmonad/xmonad.hs'
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias love='love-git'
 alias cswp='rm /home/zir/.local/share/nvim/swap/* && rm ~/.cache/nvim/log'
+@@ legionnaire
+alias nv='neovide'
+alias todo='vi ~/neorg/todo.norg'
+@!
 
 ## Tmux aliases
 alias splith='tmux splitw -h -p 50'
@@ -66,8 +70,6 @@ alias Vi='sudoedit'
 
 #export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/library/"
 # not used currently export PS1="\e[0;1;33m\]\u@\h:\e[2;32m\]\w\$\e[m\] "
-export DISCORD_TOKEN="NjgyMTc5MTIzOTI5NDE1Njg1.XlZPKA.dYRhi3PeL268BZNmaE0AD7fb8fQ"
-export BLUDAT="NzQwNDU1ODYzNjA0NzQwMDk3.XypRQg.fUs7-73KimwR1cOGBxdg5bVTS_w"
 export EDITOR="nvim"
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export READER='zathura'
