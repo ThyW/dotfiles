@@ -1,35 +1,36 @@
-local g = vim.g
+M = {}
 
-function Switch_spelling()
-    local langs = {"sk", "en"}
+local g = vim.g
+local exec = vim.cmd
+local o = vim.o
+
+function M.switch_spelling()
     if vim.o.spelllang == "en" then
-    	vim.o.spelllang = langs[1]
-    	print("sk")
+    	vim.o.spelllang = "sk"
+    	print("Current spell lang: [sk]")
     else
-    	vim.o.spelllang = langs[2]
-    	print("en")
+    	vim.o.spelllang = "en"
+    	print("Current spell lang: [en]")
     end
 end
 
-function Switch_wrap()
-    if vim.o.wrap then
-	vim.o.wrap = false
+function M.switch_wrap()
+    if o.wrap then
+	o.wrap = false
 	vim.api.nvim_set_keymap("n", "j", "j", {noremap = true, silent = true})
 	vim.api.nvim_set_keymap("n", "k", "k", {noremap = true, silent = true})
-	print("Wrap off")
+	print("Wrap: [OFF]")
     else
-    	vim.o.wrap = true
+    	o.wrap = true
 	vim.api.nvim_set_keymap("n", "j", "gj", {noremap = true, silent = true})
 	vim.api.nvim_set_keymap("n", "k", "gk", {noremap = true, silent = true})
-	print("Wrap on")
+	print("Wrap: [ON]")
     end
 end
 
-g.lex_open = 0
-local exec = vim.cmd
 
 -- toggle Lexplore
-function Togglelex()
+function M._toggle_lex()
     if g.lex_open == 1 then
 	 exec'Lex!'
 	 g.lex_open = 0
@@ -41,8 +42,7 @@ function Togglelex()
 end
 
 -- create slovak specific keybinds
-g.using_langmap = 0
-function ToggleKbLang()
+function M.toggle_kb_lang()
     if g.using_langmap == 1 then
 	exec
 	[[
@@ -65,8 +65,4 @@ function ToggleKbLang()
     end
 end
 
-exec([[
-nnoremap <silent><leader>of :NvimTreeToggle<CR>
-nnoremap <silent><leader>oS :lua Switch_spelling()<CR><CR>
-nnoremap <silent><leader>oL :lua ToggleKbLang()<CR><CR>
-]])
+return M
