@@ -40,6 +40,7 @@ end
 function M.goto_prev()
     d.goto_prev({})
 end
+
 function M.goto_next()
     d.goto_prev({})
 end
