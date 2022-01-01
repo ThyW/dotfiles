@@ -29,6 +29,7 @@ nnoremap <silent> <leader>oc :execute "set colorcolumn=" . (&colorcolumn == "" ?
 nnoremap <silent> <leader>cs <cmd>source %<cr>
 
 autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+autocmd FileType py map <silent><F5> :!python3 <c-r>%<CR>
 
 noremap <leader>t :vs +terminal<CR>
 noremap <leader>T :sp +terminal<CR>
