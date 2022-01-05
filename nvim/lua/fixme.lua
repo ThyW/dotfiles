@@ -23,7 +23,7 @@ function M.search_buffer()
     local buffer_lines = a.nvim_buf_get_lines(0, 0, -1, false)
     -- check, if conversion to lower case should be executed
     local words = {}
-    if M.config.ignore_case then 
+    if M.config.ignore_case then
 	for _, each in ipairs(M.config.words) do
 	    table.insert(words, string.lower(each))
 	end

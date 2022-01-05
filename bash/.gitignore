@@ -4,3 +4,5 @@ notes.org
 notes.md
 .ccls-cache/
 taget/
+__pycache__/*
+*/pycache/*
