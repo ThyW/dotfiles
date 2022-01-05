@@ -8,8 +8,24 @@ parser_configs.norg = {
     },
 }
 
+parser_configs.norg_meta = {
+    install_info = {
+        url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
+        files = { "src/parser.c" },
+        branch = "main"
+    },
+}
+
+parser_configs.norg_table = {
+    install_info = {
+        url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
+        files = { "src/parser.c" },
+        branch = "main"
+    },
+}
+
 require('nvim-treesitter.configs').setup {
-    ensure_installed = {"rust", "c", "cpp", "python", "php", "css", "html", "norg", "latex", "bash", "lua", "vim"},
+    ensure_installed = {"rust", "c", "cpp", "python", "php", "css", "html", "norg", "norg_meta", "norg_table", "latex", "bash", "lua", "vim"},
     highlight = {
 	enable = true,
     },
