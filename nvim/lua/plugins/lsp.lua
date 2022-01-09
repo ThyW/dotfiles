@@ -1,6 +1,6 @@
 local nvim_lsp = require'lspconfig'
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     -- local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -29,7 +29,6 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<space>q', '<cmd>lua require"diagnostics".location_list()<CR>', opts)
     buf_set_keymap('n', '<space>qf', '<cmd>lua require"diagnostics".quickfix_list()<CR>', opts)
     buf_set_keymap('n', '<space>af', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-    print(client)
 
 end
 

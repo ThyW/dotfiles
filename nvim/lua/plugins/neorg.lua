@@ -20,8 +20,22 @@ require"neorg".setup{
 		}
 	    }
 	},
+	["core.gtd.base"] = {
+	    config = {
+	    	workspace = "my_workspace",
+	    	default_lists = {
+	    	    inbox = "inbox.norg",
+	    	},
+	    	syntax = {
+		    context = "#contexts",
+		    start = "#time.start",
+		    due = "#time.due",
+		    waiting = "#waiting.for",
+	    	}
+	    }
+	}
     },
-    logger = {
+    --[[ logger = {
 	-- Should print the output to neovim while running
 	  use_console = true,
 
@@ -29,7 +43,7 @@ require"neorg".setup{
 	  highlights = true,
 
 	  -- Should write to a file
-	  use_file = true,
+	  use_file = false,
 
 	  -- Any messages above this level will be logged.
 	  level = "warn",
@@ -46,6 +60,6 @@ require"neorg".setup{
 
 	  -- Can limit the number of decimals displayed for floats
 	  float_precision = 0.01,
-    },
+    }, ]]
     requires = "nvim-lua/plenary.nvim"
 }

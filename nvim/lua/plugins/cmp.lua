@@ -15,7 +15,7 @@ tabnine:setup({
 local nvim_cmp = require'cmp'
 local luasnip = require'luasnip'
 
-nvim_cmp.setup = function() return {
+nvim_cmp.setup{
     mapping = {
 	["<c-u>"] = nvim_cmp.mapping.scroll_docs(-4),
 	["<c-d>"] = nvim_cmp.mapping.scroll_docs(4),
@@ -81,4 +81,4 @@ nvim_cmp.setup = function() return {
 	ghost_text = true
     },
 
-} end
+}
