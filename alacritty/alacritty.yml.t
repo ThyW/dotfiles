@@ -59,7 +59,12 @@ font:
     #family: monospace
     #style: Bold Italic
 
+@@ legionnaire
   size: 12.0
+@!
+@@ terminator
+  size: 9.0
+@!
 
   #offset:
   #  x: 0
