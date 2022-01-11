@@ -127,16 +127,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:I"
-set $ws2 "2:II"
-set $ws3 "3:III"
-set $ws4 "4:IV"
-set $ws5 "5:V"
-set $ws6 "6:VI"
-set $ws7 "7:VII"
-set $ws8 "8:VIII"
-set $ws9 "9:IX"
-set $ws10 "10:X"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 workspace 1 output primary
 workspace 2 output DP1
@@ -180,6 +180,16 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -241,20 +251,20 @@ bar {
     height 19
     colors {
         separator #666666
-        background #282828
+        background $bg
         statusline #dddddd
-        focused_workspace #272727 #272727 #d79921
-        active_workspace #272727 #272727 #888888
-        inactive_workspace #272727 #272727 #888888
-        urgent_workspace #2f343a #900000 #ffffff
+        focused_workspace $bg $bg $yellow
+        active_workspace $bg $bg #888888
+        inactive_workspace $bg $bg #888888
+        urgent_workspace $red #900000 #ffffff
     }
 }
 
 # window color settings
 # class                  border  backgr. text indicator child_border
-client.focused		 #d79921 #d79921 #111111 #d79921 #d79921 
-client.focused_inactive  #111111 #111111 #ffffff #111111 #111111 
-client.unfocused	 #111111 #111111 #ffffff #111111 #111111 
+client.focused		 $purple $purple #111111 $purple $purple 
+client.focused_inactive  $bg bg #ffffff $bg $bg 
+client.unfocused	 $bg $bg #ffffff $bg $bg
 #client.urgent           #689d6a #111111 #ffffff #111111 #111111 
 #client.placeholder      #689d6a #111111 #ffffff #111111 #111111
 #client.background       #689d6a
