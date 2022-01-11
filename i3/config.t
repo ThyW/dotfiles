@@ -142,7 +142,7 @@ workspace 1 output primary
 workspace 2 output DP1
 
 # assigns
-assign [class="Discord"] -> number 3
+assign [class="Discord"] -> number 2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -262,12 +262,12 @@ bar {
 
 # window color settings
 # class                  border  backgr. text indicator child_border
-client.focused		 $purple $purple #111111 $purple $purple 
-client.focused_inactive  $bg bg #ffffff $bg $bg 
-client.unfocused	 $bg $bg #ffffff $bg $bg
-#client.urgent           #689d6a #111111 #ffffff #111111 #111111 
-#client.placeholder      #689d6a #111111 #ffffff #111111 #111111
-#client.background       #689d6a
+client.focused		 $purple $purple $bg $purple $purple 
+client.focused_inactive  $bg $bg $cyan $bg $bg
+client.unfocused	 $bg $bg $cyan $bg $bg
+client.urgent            $bg $bg $cyan $bg $bg
+client.placeholder       $bg $bg $cyan $bg $bg
+client.background        $bg
 
 # window border styles 
 default_border pixel $border
