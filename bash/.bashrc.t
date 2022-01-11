@@ -51,7 +51,7 @@ alias love='love-git'
 alias cswp='rm /home/zir/.local/share/nvim/swap/* && rm ~/.cache/nvim/log'
 @@ legionnaire
 alias nv='neovide'
-alias todo='vi ~/neorg/todo.norg'
+alias todo='vi ~/dashboard/index.norg'
 @!
 
 ## Tmux aliases

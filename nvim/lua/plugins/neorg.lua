@@ -16,13 +16,14 @@ require"neorg".setup{
 	["core.norg.dirman"] = {
 	    config = {
 	    	workspaces = {
-	    	    my_workspace = "~/neorg"
+	    	    my_workspace = "~/neorg",
+	    	    dashboard = "~/dashboard"
 		}
 	    }
 	},
 	["core.gtd.base"] = {
 	    config = {
-	    	workspace = "my_workspace",
+	    	workspace = "dashboard",
 	    	default_lists = {
 	    	    inbox = "inbox.norg",
 	    	},
@@ -33,7 +34,9 @@ require"neorg".setup{
 		    waiting = "#waiting.for",
 	    	}
 	    }
-	}
+	},
+	["core.esupports"] = { },
+	["core.esupports.hop"] = { },
     },
     --[[ logger = {
 	-- Should print the output to neovim while running
