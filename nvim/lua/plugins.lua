@@ -54,4 +54,5 @@ return require("packer").startup(function (use)
 
     use {"TimUntersberger/neogit", requires = 'nvim-lua/plenary.nvim'}
     use 'ggandor/lightspeed.nvim'
+    use 'captbaritone/better-indent-support-for-php-with-html'
 end)
