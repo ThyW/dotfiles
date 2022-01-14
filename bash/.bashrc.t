@@ -49,8 +49,8 @@ alias xmc='nvim ~/.xmonad/xmonad.hs'
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias love='love-git'
 alias cswp='rm /home/zir/.local/share/nvim/swap/* && rm ~/.cache/nvim/log'
-@@ legionnaire
 alias nv='neovide'
+@@ legionnaire
 alias todo='vi ~/dashboard/index.norg'
 @!
 
