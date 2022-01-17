@@ -50,8 +50,9 @@ alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias love='love-git'
 alias cswp='rm /home/zir/.local/share/nvim/swap/* && rm ~/.cache/nvim/log'
 alias nv='neovide'
+<<<<<<< Updated upstream
 @@ legionnaire
-alias todo='vi ~/dashboard/index.norg'
+alias todo='vi ~/neorg/todo.norg'
 @!
 
 ## Tmux aliases
