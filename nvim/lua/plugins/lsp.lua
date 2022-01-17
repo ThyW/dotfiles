@@ -32,7 +32,7 @@ local on_attach = function(_client, bufnr)
 
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'phpactor', 'html', 'clangd'}
+local servers = { 'pyright', 'rust_analyzer', 'clangd'}
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
@@ -42,7 +42,7 @@ table.insert(rtp ,"lua/?.lua")
 table.insert(rtp, "lua/?/init.lua")
 
 
-nvim_lsp['sumneko_lua']. setup {
+nvim_lsp['sumneko_lua'].setup {
     on_attach = on_attach,
     flags = {
 	debounce_text_changes = 150,
@@ -65,6 +65,12 @@ nvim_lsp['sumneko_lua']. setup {
 	    }
 	}
     }
+}
+
+nvim_lsp["phpactor"].setup {
+    on_attach = on_attach,
+    cmd = {"phpactor", "language-server"},
+    filetypes = {"php", "html"},
 }
 
 for _, lsp in ipairs(servers) do
