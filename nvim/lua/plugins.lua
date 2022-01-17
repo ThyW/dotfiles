@@ -38,6 +38,7 @@ return require("packer").startup(function (use)
     use 'b3nj5m1n/kommentary'
 
     use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
 
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -54,4 +55,6 @@ return require("packer").startup(function (use)
 
     use {"TimUntersberger/neogit", requires = 'nvim-lua/plenary.nvim'}
     use 'ggandor/lightspeed.nvim'
+
+    use 'akinsho/toggleterm.nvim'
 end)

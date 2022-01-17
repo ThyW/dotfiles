@@ -35,8 +35,9 @@ require"neorg".setup{
 	    	}
 	    }
 	},
-	["core.esupports"] = { },
-	["core.esupports.hop"] = { },
+	-- These two modules are not supported yet.
+	-- ["core.esupports"] = { },
+	-- ["core.esupports.hop"] = { },
     },
     --[[ logger = {
 	-- Should print the output to neovim while running

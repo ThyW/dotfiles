@@ -16,3 +16,5 @@ require('plugins.dressing')
 require('plugins.lsp')
 -- === Neorg ===
 require('plugins.neorg')
+-- === ToggleTerm ===
+require('plugins.toggleterm')

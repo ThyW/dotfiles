@@ -32,8 +32,11 @@ autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>re
 autocmd FileType py map <silent><F5> :!python3 <c-r>%<CR>
 autocmd FileType lua map <silent><F5> :luafile %<CR><CR>
 
-noremap <leader>t :vs +terminal<CR>
-noremap <leader>T :sp +terminal<CR>
+" noremap <leader>t :vs +terminal<CR>
+" noremap <leader>T :sp +terminal<CR>
+noremap <leader>t :ToggleTerm<CR>
+noremap <leader>tv :ToggleTerm direction=vertical<CR>
+noremap <leader>T :ToggleTerm size=20 direction=float shade_terminals=false<CR>
 
 noremap <leader>r :%s/<C-r><C-w>//gc<left><left><left>
 
