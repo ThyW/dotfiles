@@ -32,7 +32,7 @@ local on_attach = function(_client, bufnr)
 
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'clangd'}
+local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor'}
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
@@ -67,12 +67,6 @@ nvim_lsp['sumneko_lua'].setup {
     }
 }
 
-nvim_lsp["phpactor"].setup {
-    on_attach = on_attach,
-    cmd = {"phpactor", "language-server"},
-    filetypes = {"php", "html"},
-}
-
 for _, lsp in ipairs(servers) do
     local capabilities = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities())
     if lsp == "html" then
@@ -90,6 +84,12 @@ for _, lsp in ipairs(servers) do
     	    },
     	    single_file_support = true,
     	}
+    elseif lsp == "phpactor" then
+    	nvim_lsp["phpactor"].setup {
+	    on_attach = on_attach,
+	    cmd = {"phpactor", "language-server"},
+	    filetypes = {"php", "html"},
+	}
     else
 	nvim_lsp[lsp].setup {
 	    on_attach = on_attach,
