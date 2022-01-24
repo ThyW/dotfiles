@@ -70,9 +70,11 @@ nvim_lsp['sumneko_lua'].setup {
 for _, lsp in ipairs(servers) do
     local capabilities = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities())
     if lsp == "html" then
+    	local cps = capabilities
+    	cps.textDocument.completion.completionItem.snippetSupport = true
     	nvim_lsp[lsp].setup {
     	    on_attach = on_attach,
-	    capabilities = capabilities,
+	    capabilities = cps,
     	    cmd = {"vscode-html-language-server", "--stdio"},
     	    filetypes = {"html", "htmldjango"},
     	    init_options = {
