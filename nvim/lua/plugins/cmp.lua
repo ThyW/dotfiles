@@ -3,6 +3,9 @@ local has_words_before = function()
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
+-- load friendly snippets
+require"luasnip.loaders.from_vscode".load()
+
 local tabnine = require'cmp_tabnine.config'
 tabnine:setup({
     max_lines = 1000;
