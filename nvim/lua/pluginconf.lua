@@ -18,3 +18,5 @@ require('plugins.lsp')
 require('plugins.neorg')
 -- === ToggleTerm ===
 require('plugins.toggleterm')
+-- === Fidget.nvim ===
+require('plugins.fidget')

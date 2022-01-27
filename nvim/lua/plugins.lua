@@ -57,4 +57,6 @@ return require("packer").startup(function (use)
     use 'ggandor/lightspeed.nvim'
 
     use 'akinsho/toggleterm.nvim'
+
+    use 'j-hui/fidget.nvim'
 end)
