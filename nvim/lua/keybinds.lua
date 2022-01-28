@@ -6,11 +6,6 @@ nnoremap <silent> <leader><leader>h :BufferLineMovePrev<CR>
 map <silent> <leader>bd :bd<CR>
 map <silent> <leader><TAB> <c-^>
 
-noremap <silent> <leader>f :Files<CR>
-noremap <silent> <leader>F :Lines<CR>
-noremap <silent> <leader>B :Buffers<CR>
-noremap <silent> <leader>W :Windows<CR>
-
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>

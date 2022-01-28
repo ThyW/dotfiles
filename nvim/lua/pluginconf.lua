@@ -20,3 +20,7 @@ require('plugins.neorg')
 require('plugins.toggleterm')
 -- === Fidget.nvim ===
 require('plugins.fidget')
+-- === Presence.nvim ===
+require("plugins.presence")
+-- === Telescope.nvim ===
+require("plugins.telescope")
