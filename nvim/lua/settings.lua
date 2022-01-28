@@ -33,16 +33,10 @@ o.list = true
 o.linebreak = true
 o.breakindent = true
 
--- o.colorcolumn = 80
-
 o.foldmethod = "indent"
 o.foldlevelstart = 50
 
 o.guifont = "Iosevka:h14"
-
---[[ if vim.fn.has("nvim") == 1 then
-   o.viminfo:append({'n~/.local/share/nvim/shada/main.shada'})
-end ]]
 
 o.splitright = true
 o.splitbelow = true
