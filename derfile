@@ -38,10 +38,13 @@ hostnames = $hosts
 final_name = dunstrc
 apply_path = $outdir:/.config/dunst/
 
-[i3/config.t]
+[i3]
 hostnames = $hosts
-final_name = config
-apply_path = $outdir:/.config/i3/
+final_name = i3
+apply_path = $outdir:/.config/
+parse_files = true
+recursive = true
+extensions = t
 
 [i3status-rust/config.toml]
 hostnames = $hosts
