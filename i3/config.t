@@ -48,7 +48,6 @@ exec --no-startup-id xrandr --output eDP-1-1 --off && xrandr --output HDMI-1-1 -
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-for_window [ title="floating"] floating enable; mode "moveit"
 
 # start a terminal and other app binds
 bindsym $mod+Return exec alacritty
@@ -59,8 +58,6 @@ bindsym $mod+i exec firefox-nightly
 @@ terminator
 bindsym $mod+i exec firefox
 @!
-bindsym $mod+Shift+d exec ~/Lightcord/Lightcord
-bindsym $mod2+f exec alacritty -e vifm ~
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -71,7 +68,9 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Iosevka:8'
-bindsym $mod+c exec --no-startup-id dmconf
+
+# flameshot screenshotting utility
+bindsym Print exec --no-startup-id flameshot gui
 
 # change focus
 bindsym $mod+h focus left
