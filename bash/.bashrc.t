@@ -34,7 +34,7 @@ alias vi='nvim'
 alias fzf='sk'
 alias bconf='vi ~/clones/dotfiles/bash/.bashrc.t && der -f ~/clones/dotfiles/derfile -a && clear && source ~/.bashrc'
 alias vc=' vi ~/clones/dotfiles/nvim && der -f ~/clones/dotfiles/derfile -a'
-alias i3c='vi ~/clones/dotfiles/i3/config.t && der -f ~/clones/dotfiles/derfile -a'
+alias i3c='vi ~/clones/dotfiles/i3 && der -f ~/clones/dotfiles/derfile -a'
 alias ac='vi ~/clones/dotfiles/alacritty/alacritty.yml.t && der -f ~/clones/dotfiles/derfile -a'
 alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='~/sync-config.sh'
@@ -75,6 +75,7 @@ export EDITOR="nvim"
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export READER='zathura'
 export DISPLAY=:0.0;
+export I3SOCK="$XDG_RUNTIME_DIR/i3/ipc-socket.sock"
 
 set -o vi
 
