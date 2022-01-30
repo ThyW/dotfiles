@@ -7,7 +7,7 @@ exec --no-startup-id redshift -l 48:17 -t 3900:3900
 exec --no-startup-id nm-applet
 
 # Set the X background to solid gruvbox background color. Gruvbox rocks!
-exec --no-startup-id xsetroot -solid '#282828'
+exec --no-startup-id xsetroot -solid '$bg'
 
 # Always startup Discord :-).
 exec --no-startup-id discord
@@ -53,13 +53,13 @@ title_align left
 workspace_auto_back_and_forth no
 
 # Colors for different parts of windows.
-# class                  border  backgr. text	indicator   child_border
-client.focused		 $purple $purple $bg	$purple	    $purple 
-client.focused_inactive  $bg	 $bg	 $aqua	$bg	    $bg
-client.unfocused	 $bg	 $bg	 $aqua	$bg	    $bg
-client.urgent            $bg	 $bg	 $aqua	$bg	    $bg
-client.placeholder       $bg	 $bg	 $aqua	$bg	    $bg
-client.background        $bg
+# class			     border		backgr.		text		indicator	child_border
+client.focused		     $purple		$purple		$bg1		$purple		$purple
+client.focused_inactive	     $bg		$bg		$fg3		$bg		$bg
+client.unfocused	     $bg		$bg		$fg3		$bg		$bg
+client.urgent		     $bg		$bg		$fg3		$bg		$bg
+client.placeholder	     $bg		$bg		$fg3		$bg		$bg
+client.background	     $bg
 
 @@ legionnaire
 # Monitor and workspace setup.

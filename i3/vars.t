@@ -1,13 +1,41 @@
 # Colors for the gruvbox theme: https://github.com/morhetz/gruvbox
 set $bg #282828
+set $bg0_h #1d2021
+set $bg0_s #32302f
+set $bg1 #3c3836
+set $bg2 #504945
+set $bg3 #665c54
+set $bg4 #7c6f64
+
+set $fg #ebdbb2
+set $fg0 #fbf1c7
+set $fg2 #d5c4a1
+set $fg3 #bdae93
+set $gg4 #a89984
+
+set $gray #928374
+set $lightgray #a89984
+
 set $red #cc241d
+set $lightred #fb4934
+
 set $green #98971a
+set $lightgreen #b8bb26
+
 set $yellow #d79921
+set $lightyellow #fabd2f
+
 set $blue #458588
+set $lightblue #83a598
+
 set $purple #b16286
+set $lightpurple #d3869b
+
 set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
+set $lightaqua #8ec07c
+
+set $orange #d65d0e
+set $lightorange #fe8019
 
 # Default modifier: Windows key
 set $mod Mod4

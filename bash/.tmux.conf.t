@@ -20,12 +20,12 @@ bind-key M-l resize-pane -L 5
 
 set-option -g default-shell /bin/bash 
 set -g default-terminal "xterm-256color"
-set -g status-style fg=colour1,bold,bg=0
+set -g status-style fg=colour8,bold,bg=0
 set -g status-left " "
 set -g status-right "%R"
 set -g window-status-format "[#W]" 
 set -g window-status-separator " "
-set -g window-status-current-format "#[fg=yellow,bold][#W]"
+set -g window-status-current-format "#[fg=colour5,bold][#W]"
 
 bind-key r source-file ~/.tmux.conf\; display-message "reloaded tmux config"
 
