@@ -100,7 +100,13 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Reload the configuration file.
 bindsym $mod+Shift+c reload
+
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # Exit i3 (logs you out of your X session).
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Handle bar:
+bindsym $mod+o			bar mode toggle
+bindsym $mod+Shift+o		bar hidden_state toggle
