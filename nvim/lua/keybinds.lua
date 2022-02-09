@@ -14,7 +14,6 @@ noremap <Right> <Nop>
 noremap <silent> zk 10kzz<CR>
 noremap <silent> zj 10jzz<CR>
 
-tnoremap jj <C-\><C-n>
 inoremap jj <esc>
 
 nnoremap <silent> <leader>ow :lua require"functions".switch_wrap()<cr>
@@ -27,11 +26,10 @@ autocmd FileType rmd map <silent><F4> :!echo<space>"require(rmarkdown);<space>re
 autocmd FileType py map <silent><F5> :!python3 <c-r>%<CR>
 autocmd FileType lua map <silent><F5> :luafile %<CR><CR>
 
-" noremap <leader>t :vs +terminal<CR>
-" noremap <leader>T :sp +terminal<CR>
-noremap <leader>t :ToggleTerm<CR>
-noremap <leader>tv :ToggleTerm direction=vertical<CR>
-noremap <leader>T :ToggleTerm size=20 direction=float shade_terminals=false<CR>
+noremap <C-t><C-t> :ToggleTerm<CR>
+noremap <C-t><C-v> :ToggleTerm direction=vertical<CR>
+noremap <C-t><C-f> :ToggleTerm size=20 direction=float shade_terminals=false<CR>
+tnoremap <C-t><C-c> <C-\><C-n>:ToggleTerm<CR>
 
 noremap <leader>r :%s/<C-r><C-w>//gc<left><left><left>
 

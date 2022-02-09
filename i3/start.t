@@ -68,7 +68,7 @@ workspace $ws2 output DP-1
 @!
 
 # Assign windows to specific workspaces.
-assign [class="^Discord$"] number 2
+assign [class="^discord$"] number 2
 
 # When a windows is activated, it request focus. We should comply with the
 # windows focus.
