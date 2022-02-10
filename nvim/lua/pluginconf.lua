@@ -24,3 +24,5 @@ require('plugins.fidget')
 require("plugins.presence")
 -- === Telescope.nvim ===
 require("plugins.telescope")
+-- == Snippets ==
+require("plugins.snippets")
