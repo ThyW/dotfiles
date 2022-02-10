@@ -19,7 +19,7 @@ bind-key M-k resize-pane -U 5
 bind-key M-l resize-pane -L 5
 
 set-option -g default-shell /bin/bash 
-set -g default-terminal "screen-256color"
+set -g default-terminal "xterm-256color"
 set -g status-style fg=colour8,bold,bg=0
 set -g status-left " "
 set -g status-right "%R"

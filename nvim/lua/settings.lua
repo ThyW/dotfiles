@@ -27,6 +27,8 @@ o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = false
 
+oo.runtimepath = oo.runtimepath .. ",~/.vim/"
+
 o.listchars:append("space:•")
 o.list = true
 
@@ -36,7 +38,7 @@ o.breakindent = true
 o.foldmethod = "indent"
 o.foldlevelstart = 50
 
-o.guifont = "Iosevka:h14"
+o.guifont = "Iosevka:h12"
 
 o.splitright = true
 o.splitbelow = true
