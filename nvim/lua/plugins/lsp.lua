@@ -32,7 +32,7 @@ local on_attach = function(_client, bufnr)
 
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor'}
+local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls' }
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
@@ -92,6 +92,13 @@ for _, lsp in ipairs(servers) do
 	    cmd = {"phpactor", "language-server"},
 	    filetypes = {"php", "html"},
 	}
+    elseif lsp == "nickel_ls" then
+	nvim_lsp[lsp].setup {
+	    on_attach = on_attach,
+	    capabilities = capabilities,
+	    filetypes = {"ncl", "nickel"},
+	}
+
     else
 	nvim_lsp[lsp].setup {
 	    on_attach = on_attach,

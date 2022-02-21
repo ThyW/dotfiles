@@ -15,6 +15,11 @@
 PREVIOUS=""
 export HOSTNAME
 
+export PATH="$PATH:~/.local/bin"
+export PATH="${HOME}/.cargo/bin:${PATH}"
+export PATH="$PATH:~/ds-viewer/"
+export PATH="$PATH:~/appimages/"
+
 # alias ls='ls --color=auto'
 alias vykaz='python3 ~/.mail.py'
 alias suspend='sudo systemctl start suspend.target && i3lock -c 111111'
@@ -49,7 +54,7 @@ alias xmc='nvim ~/.xmonad/xmonad.hs'
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias love='love-git'
 alias cswp='rm /home/zir/.local/share/nvim/swap/* && rm ~/.cache/nvim/log'
-alias nv='neovide'
+alias nv='devour ~/.local/bin/neovide'
 alias ngit='nvim +Neogit'
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'
@@ -61,11 +66,6 @@ alias splitv='tmux splitw -v -p 50'
 
 # Created by `userpath` on 2020-01-27 19:06:27
 export TERM="xterm-256color"
-export PATH="$PATH:~/.local/bin"
-export PATH="${HOME}/.cargo/bin:${PATH}"
-export PATH="$PATH:~/ds-viewer/"
-export PATH="$PATH:~/appimages/"
-export PATH="$PATH:/mnt/data/clion-2019.2.4/bin/"
 
 alias Vi='sudoedit'
 

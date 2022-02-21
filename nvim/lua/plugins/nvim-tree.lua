@@ -23,6 +23,6 @@ require'nvim-tree'.setup {
 	}
     },
     auto_close = true,
-    disable_netrw = false,
+    disable_netrw = true,
     hijack_netrw = true,
 }

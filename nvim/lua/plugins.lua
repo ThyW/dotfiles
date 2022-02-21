@@ -100,4 +100,7 @@ return require("packer").startup(function (use)
 
     --[[ Discrod Rich Presence for Neovim, written and configured using Lua.]]
     use 'andweeb/presence.nvim'
+
+    --[[ Syntax highlighting for the Nickel configuration language. ]]
+    use 'nickel-lang/vim-nickel'
 end)
