@@ -32,7 +32,7 @@ local on_attach = function(_client, bufnr)
 
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls' }
+local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls', 'r_language_server' }
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
