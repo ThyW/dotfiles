@@ -54,7 +54,7 @@ alias xmc='nvim ~/.xmonad/xmonad.hs'
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias love='love-git'
 alias cswp='rm /home/zir/.local/share/nvim/swap/* && rm ~/.cache/nvim/log'
-alias nv='devour ~/.local/bin/neovide'
+alias nv='neovide'
 alias ngit='nvim +Neogit'
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'
