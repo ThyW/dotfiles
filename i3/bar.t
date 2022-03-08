@@ -5,7 +5,7 @@ bar {
 
     position top
 
-    mode hide
+    mode dock
     hidden_state hide
 
     status_command i3status-rs

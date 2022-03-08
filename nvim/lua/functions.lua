@@ -1,9 +1,11 @@
 M = {}
 
-local g = vim.g
-local exec = vim.cmd
 local o = vim.o
 
+-- Function to switch the vim spellchecker spelling language.
+-- This however has a simple caveat, where if the spell language is not downloaded, Vim asks you if you want to download it.
+-- This however won't show up, if you have NetRW disabled, for example if you use NvimTree or some different file manager or file viewer.
+-- This can be easily fixed by first enabling NetRW and then running this function again.
 function M.switch_spelling()
     if vim.o.spelllang == "en" then
     	vim.o.spelllang = "sk"
@@ -14,6 +16,7 @@ function M.switch_spelling()
     end
 end
 
+-- Switch the current text wrap, as well as maps j and k for better movement through the wrapped lines(see 'gj, gk').
 function M.switch_wrap()
     if o.wrap then
 	o.wrap = false
@@ -25,43 +28,6 @@ function M.switch_wrap()
 	vim.api.nvim_set_keymap("n", "j", "gj", {noremap = true, silent = true})
 	vim.api.nvim_set_keymap("n", "k", "gk", {noremap = true, silent = true})
 	print("Wrap: [ON]")
-    end
-end
-
-
--- toggle Lexplore
-function M._toggle_lex()
-    if g.lex_open == 1 then
-	 exec'Lex!'
-	 g.lex_open = 0
-    else
-	exec'Lex'
-	exec'vertical resize 20'
-	g.lex_open = 1
-    end
-end
-
--- create slovak specific keybinds
-function M.toggle_kb_lang()
-    if g.using_langmap == 1 then
-	exec
-	[[
-	augroup kbmap 
-	    au!
-	augroup END
-	]]
-	print("using us")
-	g.using_langmap = 0
-    else
-	print("using sk")
-    	exec[[
-    	augroup kbmap
-	    au!
-	    autocmd InsertEnter * silent! :!setxkbmap sk -variant qwerty
-	    autocmd InsertLeave * silent! :!setxkbmap us
-	augroup END
-    	]]
-	g.using_langmap = 1
     end
 end
 

@@ -14,7 +14,7 @@ o.clipboard = 'unnamedplus'
 o.timeoutlen = 500
 o.wrap = false
 o.nu = true
-o.rnu = true
+o.rnu = false
 o.signcolumn = 'yes'
 o.showmode = false
 o.autoindent = true
@@ -44,15 +44,20 @@ o.splitright = true
 o.splitbelow = true
 
 function GetCurrentLang()
-    if g.using_langmap == 1 then
-	return "SK"
-    else
-    	return "US"
-    end
+    return o.spelllang
 end
 
 o.laststatus = 2
+-- Custom status line:
+-- (from the right):
+--   * %f: relative filename.
+--   * %=: move over to the other side(right side) of the status bar.
+--   * %m: is the buffer modified?
+--   * %Y: language
+--   * %c: column
+--   * %l/%L: current line number / out of all lines
 oo.statusline = "<< %f >>%= %m %Y %c %l/%L"
+-- append the current spell checker language onto the end of status line.
 oo.statusline = oo.statusline .. "  LANG:" .. "%{luaeval('GetCurrentLang()')}"
 
 o.termguicolors = true
@@ -84,5 +89,3 @@ g.mapleader = ' '
 g.neovide_cursor_vfx_mode = "ripple"
 g.neovide_cursor_animation_length = 0
 g.neovide_cursor_trail_length = 0
-
--- c[[autocmd Filetype php set filetype=html]]
