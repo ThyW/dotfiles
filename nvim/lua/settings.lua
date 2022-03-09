@@ -44,7 +44,7 @@ o.splitright = true
 o.splitbelow = true
 
 function GetCurrentLang()
-    return o.spelllang
+    return oo.spelllang
 end
 
 o.laststatus = 2

@@ -87,8 +87,8 @@ tmap("<C-t><C-c>", "<C-\\><C-n>:ToggleTerm<CR>", {noremap = true})
 nmap("<leader>r", ":%s/<C-r><C-w>//gc<left><left><left>", {noremap = true})
 
 -- Better line moving.
-nmap("H", "^", {noremap = true})
-nmap("L", "$", {noremap = true})
+map("H", "^", {noremap = true})
+map("L", "$", {noremap = true})
 
 -- NvimTree toggle.
 nmap("<leader>of", ":NvimTreeToggle<CR>", {silent = true, noremap = true})
