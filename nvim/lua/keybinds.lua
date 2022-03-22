@@ -23,9 +23,8 @@ local tmap = function(keys, action, opts)
 end
 
 -- create a single autocommand
-local au = function(event, cmd, opts)
-    opts = opts or {}
-    vim.api.nvim_add_user_command(event, cmd, opts)
+local au = function(event, opts)
+    vim.api.nvim_create_autocmd(event, opts)
 end
 
 -- Buffer manipulation:
@@ -67,15 +66,27 @@ nmap("<leader>oc", ':execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "
 nmap("<leader>cs", "<cmd>source %<cr>", {noremap = true})
 
 -- Three autocommands for quick execution in rmarkdown, python and lua files.
-au("FileType rmd", function()
-    map("<F4>", ":!echo<space>\"require(rmarkdown);<space>render(\'<c-r>%\')\"<space>|<space>R<space>--vanilla<enter>", {silent = true})
-end, {})
-au("FileType py", function()
-    map("<F5>", ":!python3 <c-r>%<CR>", {silent = true})
-end)
-au("FileType lua", function()
-    map("<F5>", ":luafile %<CR><CR>", {silent = true})
-end)
+au("FileType", {
+    pattern = "rmd",
+    callback = function()
+    	vim.schedule(function()
+	    map("<f4>", ":!echo<space>\"require(rmarkdown);<space>render(\'<c-r>%\')\"<space>|<space>R<space>--vanilla<enter>", {silent = true})
+    end)
+end})
+au("FileType",
+    {pattern = "python",
+    callback = function()
+    	vim.schedule(function()
+	    map("<f5>", ":!python3 <c-r>%<CR>", {silent = true})
+    end)
+end})
+au("FileType", {
+    pattern = "lua",
+    callback = function()
+    	vim.schedule(function()
+	    nmap("<f5>", ":luafile %<CR>", {silent = true})
+    end)
+end})
 
 -- ToggleTerm manipulation.
 nmap("<C-t><C-t>", ":ToggleTerm<CR>", {noremap = true})

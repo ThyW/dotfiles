@@ -4,7 +4,7 @@ local has_words_before = function()
 end
 
 -- load friendly snippets
-require"luasnip.loaders.from_vscode".load()
+require("luasnip.loaders.from_vscode").lazy_load()
 
 local tabnine = require'cmp_tabnine.config'
 tabnine:setup({
