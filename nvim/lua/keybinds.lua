@@ -102,6 +102,6 @@ map("H", "^", {noremap = true})
 map("L", "$", {noremap = true})
 
 -- NvimTree toggle.
-nmap("<leader>of", ":NvimTreeToggle<CR>", {silent = true, noremap = true})
+nmap("<leader>of", ':lua require"nvim-tree".toggle(false, false)<CR>', {silent = true, noremap = true})
 -- Switch spelling language.
 nmap("<leader>oS", ':lua require"functions".switch_spelling()<CR>', {silent = true, noremap = true})
