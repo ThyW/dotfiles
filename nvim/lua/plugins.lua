@@ -66,12 +66,14 @@ return require("packer").startup(function (use)
     use "rafamadriz/friendly-snippets"
 
     --[[ Completion framework written in Lua for Neovim.]]
+    use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp'
     --[[ Tabnine AI completion for the `cmp` completion framework.]]
-    use {'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'}
+    -- removed for now due to not being used
+    -- use {'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'}
     use 'saadparwaiz1/cmp_luasnip'
     --[[ Vscode-like pictograms for the completion windows.]]
     use "onsails/lspkind-nvim"
