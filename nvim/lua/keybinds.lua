@@ -107,3 +107,6 @@ nmap("<leader>of", ':lua require"nvim-tree".toggle(false, false)<CR>', {silent =
 -- Switch spelling language.
 nmap("<leader>oS", ':lua require"functions".switch_spelling()<CR>', {silent = true, noremap = true})
 nmap("<leader>td", ':lua require"functions".toggle_treesitter_debug()<CR>', {silent = true, noremap = false})
+
+-- LazyGit
+nmap("<leader>gg", ':LazyGit<CR>', {silent = true, noremap = true})
