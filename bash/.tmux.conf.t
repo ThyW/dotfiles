@@ -12,7 +12,8 @@ bind -n M-p previous-window
 
 bind-key v splitw -v -c "#{pane_current_path}"
 bind-key h splitw -h -c "#{pane_current_path}"
-bind-key enter new-window
+bind-key c new-window -c "#{pane_current_path}"
+bind-key C new-window
 bind-key M-j resize-pane -D 5
 bind-key M-h resize-pane -R 5
 bind-key M-k resize-pane -U 5
