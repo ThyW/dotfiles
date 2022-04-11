@@ -105,4 +105,7 @@ return require("packer").startup(function (use)
 
     --[[ Syntax highlighting for the Nickel configuration language. ]]
     use 'nickel-lang/vim-nickel'
+
+    --[[Plugin for calling lazygit from within neovim]]
+    use 'kdheepak/lazygit.nvim'
 end)
