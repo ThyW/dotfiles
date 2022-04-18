@@ -72,7 +72,7 @@ local highlights = {
     "highlight CursorLineNr cterm=bold gui=bold guibg=none",
     "highlight Pmenu ctermfg=red ctermbg=red cterm=bold guifg=GruvboxYellow guibg=#292929",
     "highlight SpellBad ctermfg=red ctermbg=black cterm=underline ",
-    "highlight StatusLine ctermfg=black ctermbg=gray guibg=#efc169",
+    "highlight StatusLine ctermfg=black ctermbg=gray guifg=#efc169 guibg=#504945",
     "highlight ColorColumn ctermbg=none",
     "highlight Conceal ctermbg=none",
     "highlight LspDiagnosticsError ctermfg=red",
