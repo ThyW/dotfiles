@@ -1,25 +1,25 @@
 -- mapping for all modes
 local map = function(keys, action, opts)
     opts = opts or {}
-    vim.api.nvim_set_keymap("", keys, action, opts)
+    vim.keymap.set("", keys, action, opts)
 end
 
 -- normal mode mapping
 local nmap = function(keys, action, opts)
     opts = opts or {}
-    vim.api.nvim_set_keymap("n", keys, action, opts)
+    vim.keymap.set("n", keys, action, opts)
 end
 
 -- insert mode mapping
 local imap = function(keys, action, opts)
     opts = opts or {}
-    vim.api.nvim_set_keymap("i", keys, action, opts)
+    vim.keymap.set("i", keys, action, opts)
 end
 
 -- terminal mode mapping
 local tmap = function(keys, action, opts)
     opts = opts or {}
-    vim.api.nvim_set_keymap("t", keys, action, opts)
+    vim.keymap.set("t", keys, action, opts)
 end
 
 -- create a single autocommand
@@ -57,7 +57,7 @@ nmap("zj", "10jzz<CR>", {silent = true})
 imap("jj", "<esc>")
 
 -- Toggle wrapping.
-nmap("<leader>ow", ":lua require'functions'.switch_wrap()<cr>", {silent = true, noremap = true})
+nmap("<leader>ow", function() require'functions'.switch_wrap() end, {silent = true, noremap = true})
 -- Toggle spellcheck.
 nmap("<leader>os", "<cmd>set spell! <bar> set spell?<cr>", {silent = true, noremap = true})
 -- Toggle 80 character colorcolumn.
@@ -102,11 +102,11 @@ map("H", "^", {noremap = true})
 map("L", "$", {noremap = true})
 
 -- NvimTree toggle.
-nmap("<leader>of", ':lua require"nvim-tree".toggle(false, false)<CR>', {silent = true, noremap = true})
+nmap("<leader>of",  function() require"nvim-tree".toggle(false, false) end, {silent = true, noremap = true})
 
 -- Switch spelling language.
-nmap("<leader>oS", ':lua require"functions".switch_spelling()<CR>', {silent = true, noremap = true})
-nmap("<leader>td", ':lua require"functions".toggle_treesitter_debug()<CR>', {silent = true, noremap = false})
+nmap("<leader>oS", function() require"functions".switch_spelling() end, {silent = true, noremap = true})
+nmap("<leader>td", function() require"functions".toggle_treesitter_debug() end, {silent = true, noremap = false})
 
 -- LazyGit
 nmap("<leader>gg", ':LazyGit<CR>', {silent = true, noremap = true})
