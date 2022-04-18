@@ -73,6 +73,7 @@ local highlights = {
     "highlight Pmenu ctermfg=red ctermbg=red cterm=bold guifg=GruvboxYellow guibg=#292929",
     "highlight SpellBad ctermfg=red ctermbg=black cterm=underline ",
     "highlight StatusLine ctermfg=black ctermbg=gray guifg=#efc169 guibg=#504945",
+    "highlight StatusLineNC guifg=#efc169 guibg=#3c3836",
     "highlight ColorColumn ctermbg=none",
     "highlight Conceal ctermbg=none",
     "highlight LspDiagnosticsError ctermfg=red",
