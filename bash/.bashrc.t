@@ -59,6 +59,7 @@ alias ngit='nvim +Neogit'
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'
 @!
+alias lg='lazygit'
 
 ## Tmux aliases
 alias splith='tmux splitw -h -p 50'
