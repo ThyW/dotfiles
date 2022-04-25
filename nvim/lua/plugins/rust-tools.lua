@@ -2,14 +2,6 @@ require('rust-tools').setup {
     tools = { -- rust-tools options
 	autoSetHints = true,
 	hover_with_actions = true,
-	runnables = {
-	    use_telescope = false -- don't have telescope
-	},
-
-	debuggables = {
-	    use_telescope = false -- don't have telescope
-	},
-
 	inlay_hints = {
 	    only_current_line = true,
 	    only_current_line_autocmd = "CursorHold",
