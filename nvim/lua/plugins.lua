@@ -80,7 +80,7 @@ return require("packer").startup(function (use)
 
     --[[ Better way to show buffers and be able to click them and switch to
     them.]]
-    use "akinsho/bufferline.nvim"
+    use {"akinsho/bufferline.nvim", branch = "main"}
 
     --[[ Neorg a new org-mode like document editing, writing and organising
     mode for Noevim written in Lua.]]
@@ -94,7 +94,7 @@ return require("packer").startup(function (use)
     use 'ggandor/lightspeed.nvim'
 
     --[[ Create and manage floating terminals in Neovim.]]
-    use 'akinsho/toggleterm.nvim'
+    use {'akinsho/toggleterm.nvim', branch = "main"}
 
     --[[ Preview for language server which support the lsp-progress
     specification.]]
