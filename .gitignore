@@ -2,3 +2,4 @@ nvim/.config/nvim/plugin
 nvim/.config/nvim/lua/fixme.lua
 nvim/.config/nvim/lua/float_term.lua
 new
+.luarc.json

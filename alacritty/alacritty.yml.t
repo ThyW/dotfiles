@@ -42,8 +42,6 @@ env:
 
 font:
   normal:
-      #family: "Dina ttf 10px"
-      #family: "Mx437 IBM VGA 9x16"
       family: "Iosevka Term"
 
   style: Regular
