@@ -20,9 +20,7 @@ local nvim_cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
 nvim_cmp.setup {
-	completion = {
-	    autocomplete = false,
-	},
+	completion = {},
 	mapping = {
 		["<c-u>"] = nvim_cmp.mapping.scroll_docs(-4),
 		["<c-d>"] = nvim_cmp.mapping.scroll_docs(4),
