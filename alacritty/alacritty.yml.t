@@ -61,7 +61,7 @@ font:
   size: 12.0
 @!
 @@ terminator
-  size: 9.0
+  size: 8.0
 @!
 
   #offset:
