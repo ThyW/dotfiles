@@ -29,7 +29,7 @@ o.expandtab = false
 
 oo.runtimepath = oo.runtimepath .. ",~/.vim/"
 
-o.listchars:append("space:·")
+o.listchars:append("space:·,eol:↵")
 o.list = true
 
 o.linebreak = true
@@ -38,7 +38,7 @@ o.breakindent = true
 o.foldmethod = "indent"
 o.foldlevelstart = 50
 
-o.guifont = "Iosevka:h12"
+o.guifont = "SFMono Nerd Font Mono:h11"
 
 o.splitright = true
 o.splitbelow = true
