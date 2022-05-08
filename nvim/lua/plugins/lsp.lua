@@ -23,7 +23,6 @@ local on_attach = function(_, bufnr)
 	buf_set_keymap('n', '[d', '<cmd>lua require"diagnostics".goto_prev()<CR>', opts)
 	buf_set_keymap('n', ']d', '<cmd>lua require"diagnostics".goto_next()<CR>', opts)
 	buf_set_keymap('n', '<space>q', '<cmd>lua require"diagnostics".location_list()<CR>', opts)
-	buf_set_keymap('n', '<space>qf', '<cmd>lua require"diagnostics".quickfix_list()<CR>', opts)
 	buf_set_keymap('n', '<space>af', '<cmd>lua vim.lsp.buf.format( { async = true } )<CR>', opts)
 end
 
