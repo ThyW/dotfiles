@@ -86,9 +86,6 @@ return require("packer").startup(function(use)
     mode for Noevim written in Lua.]]
 	use { "nvim-neorg/neorg", branch = "main" }
 
-	--[[ Magit clone written in Lua. Still a work in progress.]]
-	use { "TimUntersberger/neogit", requires = 'nvim-lua/plenary.nvim' }
-
 	--[[ Fastest way to move through files with Noevim. Intuitive and simple to
     use.]]
 	use 'ggandor/lightspeed.nvim'
