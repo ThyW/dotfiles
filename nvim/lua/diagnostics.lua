@@ -30,8 +30,9 @@ function M.location_list()
 	d.setloclist({})
 end
 
-function M.quickfix_list()
+function M.quickfix_list(open)
 	local opts = {
+		open = open or false,
 		title = "Quickfix list:"
 	}
 	d.setqflist(opts)
