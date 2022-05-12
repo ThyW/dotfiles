@@ -41,9 +41,16 @@ nvim_lsp['sumneko_lua'].setup {
 	flags = {
 		debounce_text_changes = 150,
 	},
-	cmd = { sumneko_path };
+	cmd = { sumneko_path, "--logpath=~/sumneko.log", "--rpclog=true" };
 	settings = {
 		Lua = {
+			format = {
+				enable = true,
+				defaultConfig = {
+					indent_style = "space",
+					indent_size = "2",
+				}
+			},
 			runtime = {
 				version = 'LuaJIT',
 				path = rtp,
@@ -56,7 +63,7 @@ nvim_lsp['sumneko_lua'].setup {
 			},
 			telemetry = {
 				enable = false
-			}
+			},
 		}
 	}
 }
@@ -92,7 +99,6 @@ for _, lsp in ipairs(servers) do
 			capabilities = capabilities,
 			filetypes = { "ncl", "nickel" },
 		}
-
 	else
 		nvim_lsp[lsp].setup {
 			on_attach = on_attach,
