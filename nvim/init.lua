@@ -1,3 +1,4 @@
+require("autocmds")
 require("plugins")
 require("settings")
 require("functions")
