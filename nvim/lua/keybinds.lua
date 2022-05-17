@@ -49,8 +49,8 @@ map("<Left>", "<Nop>")
 map("<Right>", "<Nop>")
 
 -- Move up and down 10 lines. This is something similar to <C-u> and <C-d>
-nmap("zk", "10kzz<CR>", { silent = true })
-nmap("zj", "10jzz<CR>", { silent = true })
+map("zk", "10kzz<CR>", { silent = true })
+map("zj", "10jzz<CR>", { silent = true })
 
 -- 'jj' is just a have to
 -- 'jk' is used with bash and its vi mode

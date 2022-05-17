@@ -63,3 +63,11 @@ extensions = t
 hostnames = $hosts
 final_name = redshift.conf
 apply_path = $outdir:/.config/redshift/
+
+[eww]
+hostnames = $hosts
+final_name = eww
+apply_path = $outdir:/.config/
+parse_files = true
+recursive = true
+extensions = t

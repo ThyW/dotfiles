@@ -105,4 +105,7 @@ return require("packer").startup(function(use)
 
   --[[Plugin for calling lazygit from within neovim]]
   use 'kdheepak/lazygit.nvim'
+
+  use 'elkowar/yuck.vim'
+  use {'eraserhd/parinfer-rust', run = 'cargo build --release'}
 end)

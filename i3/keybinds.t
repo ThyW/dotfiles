@@ -60,7 +60,7 @@ bindsym $mod+b border pixel $border
 bindsym $mod+s layout toggle
 
 # Toggle tiling / floating mode for focused container.
-bindsym $mod+space floating toggle 
+bindsym $mod+space floating toggle
 
 # Focus the parent container.
 bindsym $mod+a focus parent
