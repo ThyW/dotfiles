@@ -53,7 +53,7 @@ alias mmc='lanvidia multimc 2>/dev/null'
 alias xmc='nvim ~/.xmonad/xmonad.hs'
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias love='love-git'
-alias cswp='rm /home/zir/.local/share/nvim/swap/* && rm ~/.cache/nvim/log'
+alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
 alias nv='neovide'
 alias ngit='nvim +Neogit'
 @@ legionnaire
