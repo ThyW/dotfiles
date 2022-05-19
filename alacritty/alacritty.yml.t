@@ -42,7 +42,7 @@ env:
 
 font:
   normal:
-      family: "SFMono Nerd Font Mono"
+      family: "Iosevka Term"
 
   style: Regular
 
