@@ -13,7 +13,7 @@
 # echo -e "Welcome, \e[1;32m$USER\e[0m, to \e[1;33m$HOST\e[0m"
 
 PREVIOUS=""
-export HOSTNAME
+# export HOSTNAME
 
 export PATH="$PATH:~/.local/bin"
 export PATH="${HOME}/.cargo/bin:${PATH}"
@@ -55,7 +55,8 @@ alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias love='love-git'
 alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
 alias nv='neovide'
-alias ngit='nvim +Neogit'
+alias g='git'
+alias cconf='vi ~/clones/dotfiles/crubwm/config && der -f ~/clones/dotfiles/derfile -a'
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'
 @!

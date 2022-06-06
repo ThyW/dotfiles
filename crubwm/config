@@ -1,0 +1,69 @@
+# keybinds
+keybind "<Mod><enter>" execute "alacritty"
+keybind "<Mod>d" execute "dmenu_run"
+keybind "<Mod>1" goto "1"
+keybind "<Mod>2" goto "2"
+keybind "<Mod>3" goto "3"
+keybind "<Mod>4" goto "4"
+keybind "<Mod>5" goto "5"
+keybind "<Mod>6" goto "6"
+keybind "<Mod>7" goto "7"
+keybind "<Mod>8" goto "8"
+keybind "<Mod>9" goto "9"
+keybind "<Shift><Mod>1" move "1"
+keybind "<Shift><Mod>2" move "2"
+keybind "<Shift><Mod>3" move "3"
+keybind "<Shift><Mod>4" move "4"
+keybind "<Shift><Mod>5" move "5"
+keybind "<Shift><Mod>6" move "6"
+keybind "<Shift><Mod>7" move "7"
+keybind "<Shift><Mod>8" move "8"
+keybind "<Shift><Mod>9" move "9"
+keybind "<Mod>p" focus "previous"
+keybind "<Mod>n" focus "next"
+keybind "<Mod><Shift>p" swap "previous"
+keybind "<Mod><Shift>n" swap "next"
+
+keybind "<Mod><Shift>q" kill
+keybind "<Mod>i" execute "firefox-nightly"
+keybind "<Mod>h" change_layout "TilingEqualHorizontal"
+keybind "<Mod>v" change_layout "TilingEqualVertical"
+keybind "<Mod>m" change_layout "TilingMasterStack"
+keybind "<Mod>s" cycle_layout
+keybind "<Mod><space>" toggle_float
+
+keybind "<Mod><Print>" execute "flameshot gui"
+
+# options
+option "border_color" "#00ff00"
+option "window_name_position" "left"
+
+option "gap_top" true
+option "gap_bottom" true
+option "gap_left" true
+option "gap_right" true
+
+option "gap_top_size" 4
+option "gap_bottom_size" 4
+option "gap_left_size" 4
+option "gap_right_size" 4
+
+# hooks
+hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
+hook "startup" sync "xrandr --output eDP-1 --off"
+hook "startup" sync "xrandr --output HDMI-1 --primary"
+hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
+hook "startup" sync "xsetroot -solid '#111111'"
+hook "startup" async "dunst &"
+hook "startup" async "redshift -l 48:17 -t 3900:3900 &"
+
+# workspace settings
+workspace_setting 1 monitor "0"
+workspace_setting 2 monitor "1"
+workspace_setting 3 monitor "0"
+workspace_setting 4 monitor "1"
+workspace_setting 5 monitor "0"
+workspace_setting 6 monitor "1"
+workspace_setting 7 monitor "0"
+workspace_setting 8 monitor "1"
+workspace_setting 9 monitor "0"

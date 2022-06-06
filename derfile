@@ -71,3 +71,8 @@ apply_path = $outdir:/.config/
 parse_files = true
 recursive = true
 extensions = t
+
+[crubwm/config]
+hostnames = $hosts
+final_name = config
+apply_path = $outdir:/.config/crubwm/
