@@ -35,35 +35,8 @@ require "neorg".setup {
         }
       }
     },
-    -- These two modules are not supported yet.
-    -- ["core.esupports"] = { },
-    -- ["core.esupports.hop"] = { },
+    ["core.export"] = { config = {}},
+    ["core.export.markdown"] = {config = {}},
   },
-  --[[ logger = {
-	-- Should print the output to neovim while running
-	  use_console = true,
-
-	  -- Should highlighting be used in console (using echohl)
-	  highlights = true,
-
-	  -- Should write to a file
-	  use_file = false,
-
-	  -- Any messages above this level will be logged.
-	  level = "warn",
-
-	  -- Level configuration
-	  modes = {
-		{ name = "trace", hl = "Comment", },
-		{ name = "debug", hl = "Comment", },
-		{ name = "info",  hl = "None", },
-		{ name = "warn",  hl = "WarningMsg", },
-		{ name = "error", hl = "ErrorMsg", },
-		{ name = "fatal", hl = "ErrorMsg", },
-	  },
-
-	  -- Can limit the number of decimals displayed for floats
-	  float_precision = 0.01,
-    }, ]]
   requires = "nvim-lua/plenary.nvim"
 }
