@@ -58,7 +58,7 @@ font:
     #style: Bold Italic
 
 @@ legionnaire
-  size: 12.0
+  size: 11.0
 @!
 @@ terminator
   size: 10.0

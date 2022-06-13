@@ -71,6 +71,7 @@ return require("packer").startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-cmdline'
   --[[ Tabnine AI completion for the `cmp` completion framework.]]
   -- removed for now due to not being used
   -- use {'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'}
@@ -107,5 +108,15 @@ return require("packer").startup(function(use)
   use 'kdheepak/lazygit.nvim'
 
   use 'elkowar/yuck.vim'
-  use {'eraserhd/parinfer-rust', run = 'cargo build --release'}
+  use { 'eraserhd/parinfer-rust', run = 'cargo build --release' }
+
+  use {
+    'saecki/crates.nvim',
+    tag = 'v0.2.1',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('crates').setup()
+    end,
+  }
+  use 'kdheepak/cmp-latex-symbols'
 end)

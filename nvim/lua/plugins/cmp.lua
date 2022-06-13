@@ -6,41 +6,39 @@ end
 -- load friendly snippets
 local _ = require("luasnip.loaders.from_vscode").lazy_load()
 
--- remove tabnine configuration
---[[ local tabnine = require'cmp_tabnine.config'
-tabnine:setup({
-    max_lines = 1000;
-    max_num_results = 20;
-    sort = true;
-    run_on_every_keystroke = true;
-    snippet_placeholder = '..';
-}) ]]
-
-local nvim_cmp = require 'cmp'
+local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
-nvim_cmp.setup {
+cmp.setup.filetype('rmd',
+  { sources = cmp.config.sources({
+    { name = "latex_symbols" },
+    { name = "luasnip" },
+    { name = "buffer" }
+  })
+})
+
+cmp.setup {
   mapping = {
-    ["<c-u>"] = nvim_cmp.mapping.scroll_docs(-4),
-    ["<c-d>"] = nvim_cmp.mapping.scroll_docs(4),
-    ["<Cr>"] = nvim_cmp.mapping.confirm(),
-    ["<c-space>"] = nvim_cmp.mapping.confirm(),
-    ["<c-e>"] = nvim_cmp.mapping.close(),
-    ["<c-n>"] = nvim_cmp.mapping(function(fallback)
-      if nvim_cmp.visible() then
-        nvim_cmp.select_next_item()
+    ["<c-u>"] = cmp.mapping.scroll_docs(-4),
+    ["<c-d>"] = cmp.mapping.scroll_docs(4),
+    ["<Cr>"] = cmp.mapping.confirm(),
+    ["<c-space>"] = cmp.mapping.confirm(),
+    ["<c-c>"] = cmp.mapping.close(),
+    ["<c-n>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
       elseif has_words_before() then
-        nvim_cmp.complete()
+        cmp.complete()
       else
         fallback()
       end
     end, { "i", "s" }),
 
-    ["<c-p>"] = nvim_cmp.mapping(function(fallback)
-      if nvim_cmp.visible() then
-        nvim_cmp.select_prev_item()
+    ["<c-p>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
       elseif luasnip.jumpable(-1) then
         luasnip.jump(-1)
       else
@@ -49,15 +47,21 @@ nvim_cmp.setup {
     end, { "i", "s" }),
   },
 
+  cmdline = {
+    sources = {
+      { name = 'cmdline' }
+    }
+  },
+
   sources = {
     { name = "neorg" },
     { name = "luasnip" },
-    { name = "nvim_lua" },
     { name = "nvim_lsp" },
+    { name = "nvim_lua" },
     { name = "gh_issues" },
     { name = "path" },
-    { name = "buffer" }
-    -- {name = "cmp_tabnine"},
+    { name = "buffer" },
+    { name = "crates" },
   },
 
   snippet = {

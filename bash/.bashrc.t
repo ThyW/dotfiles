@@ -12,28 +12,16 @@
 # HOST=$(hostnamectl | awk 'NR==1{print $3}')
 # echo -e "Welcome, \e[1;32m$USER\e[0m, to \e[1;33m$HOST\e[0m"
 
-PREVIOUS=""
-# export HOSTNAME
-
 export PATH="$PATH:~/.local/bin"
 export PATH="${HOME}/.cargo/bin:${PATH}"
-export PATH="$PATH:~/ds-viewer/"
-export PATH="$PATH:~/appimages/"
 
 # alias ls='ls --color=auto'
-alias vykaz='python3 ~/.mail.py'
 alias suspend='sudo systemctl start suspend.target && i3lock -c 111111'
-alias wgstart='sudo systemctl start wg-quick@wg0'
 alias use-nvidia='optimus-manager --switch nvidia'
 alias use-intel='optimus-manager --switch intel'
 alias use-hybrid='optimus-manager --switch hybrid'
 alias lanvidia='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
-alias technic='/mnt/data/graalvm-ce-19.2.0.1/bin/java -jar ~/Downloads/TechnicLauncher.jar'
-alias spot='spotifyd && spt' 
-alias autosort='~/.sorter/autosort' 
 alias i3lock='i3lock -c 111111'
-alias rs='cd ~/programming/rust/'
-# alias vim='_run_vim() { sw neovide "$@"; }; _run_vim'
 alias ls='exa'
 alias vi='nvim'
 alias fzf='sk'
@@ -43,20 +31,15 @@ alias i3c='vi ~/clones/dotfiles/i3 && der -f ~/clones/dotfiles/derfile -a'
 alias ac='vi ~/clones/dotfiles/alacritty/alacritty.yml.t && der -f ~/clones/dotfiles/derfile -a'
 alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='der -f ~/clones/dotfiles/derfile -a'
-alias sc='cd ~/school/school20-21'
 alias mutt='neomutt'
 alias grep='rg'
 alias cdf='cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"'
 alias screencapture='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 recording.mp4'
-alias startx='startx'
-alias mmc='lanvidia multimc 2>/dev/null'
-alias xmc='nvim ~/.xmonad/xmonad.hs'
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
-alias love='love-git'
 alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
-alias nv='neovide'
 alias g='git'
 alias cconf='vi ~/clones/dotfiles/crubwm/config && der -f ~/clones/dotfiles/derfile -a'
+
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'
 @!
