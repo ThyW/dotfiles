@@ -14,7 +14,7 @@ exec --no-startup-id discord
 
 # Create a keyboard map for switching keyboard layouts.
 # exec --no-startup-id \
-# setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_k_toggle'
+# setxkbmap -layout us,sk -variant qwerty -option 'grp:lalt_k_toggle'
 
 # Start a notification daemon.
 exec --no-startup-id dunst
