@@ -15,7 +15,7 @@ cmp.setup.filetype('rmd',
     { name = "luasnip" },
     { name = "buffer" }
   })
-})
+  })
 
 cmp.setup {
   mapping = {
@@ -71,20 +71,36 @@ cmp.setup {
   },
 
   formatting = {
-    format = require 'lspkind'.cmp_format {
-      with_text = true,
-      menu = {
-        cmp_tabnine = "[TAB]",
-        buffer = "[BUF]",
-        nvim_lsp = "[LSP]",
-        nvim_lua = "[LUA]",
-        path = "[PATH]",
-        gh_issues = "[Issue]",
-      }
-    }
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      local kind = require 'lspkind'.cmp_format({
+        mode = "symbol_text",
+        maxwidth = 50,
+        menu = {
+          cmp_tabnine = "[]",
+          buffer = "[]",
+          nvim_lsp = "[]",
+          nvim_lua = "[]",
+          path = "[]",
+          gh_issues = "[]",
+        }
+      })(entry, vim_item)
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      kind.kind = " " .. strings[1] .. " "
+      return kind
+    end
   },
 
   experimental = {
     ghost_text = true
+  },
+
+  window = {
+    completion = {
+      border = "rounded",
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+      col_offset = -3,
+      side_padding = 0,
+    },
   },
 }

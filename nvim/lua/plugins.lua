@@ -107,9 +107,12 @@ return require("packer").startup(function(use)
   --[[Plugin for calling lazygit from within neovim]]
   use 'kdheepak/lazygit.nvim'
 
+  --[[Yuck language support]]
   use 'elkowar/yuck.vim'
+  --[[Parentheses inferance for LISP languages]]
   use { 'eraserhd/parinfer-rust', run = 'cargo build --release' }
 
+  --[[Autocompletion for adding rust crates into your Cargo.toml]]
   use {
     'saecki/crates.nvim',
     tag = 'v0.2.1',
@@ -118,5 +121,12 @@ return require("packer").startup(function(use)
       require('crates').setup()
     end,
   }
+  --[[Completion source for writing latex symbols.]]
   use 'kdheepak/cmp-latex-symbols'
+  --[[Highlight background colors.]]
+  use { 'norcalli/nvim-colorizer.lua', config = {
+    require("colorizer").setup({
+      "*",
+    })
+  } }
 end)

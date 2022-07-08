@@ -1,22 +1,25 @@
 require("telescope").setup {
   pickers = {
-    find_files = {
+    find_files                = {
       theme = "dropdown"
     },
     current_buffer_fuzzy_find = {
       theme = "dropdown"
     },
-    buffers = {
+    buffers                   = {
       theme = "dropdown"
     },
-    git_files = {
+    git_files                 = {
       theme = "dropdown"
     },
-    command_history = {
+    command_history           = {
       theme = "ivy"
     },
-    quickfix = {
+    quickfix                  = {
       theme = "dropdown"
+    },
+    spell_suggest             = {
+      theme = "cursor"
     }
   },
   extensions = {
@@ -47,4 +50,6 @@ set("<leader>fq", function()
 end)
 set("<leader>ft", function() require("telescope.builtin").treesitter() end)
 set("<leader>fp", function() require("telescope.builtin").builtin() end)
-set("<leader>flg", function() require("telescope.builtin").live_grep() end)
+set("<leader>fL", function() require("telescope.builtin").live_grep() end)
+set("<leader>f=", function() require("telescope.builtin").spell_suggest() end)
+set("<leader>fd", function() require("telescope.builtin").diagnostics() end)

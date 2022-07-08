@@ -33,37 +33,38 @@ keybind "<Mod>s" cycle_layout
 keybind "<Mod><space>" toggle_float
 
 keybind "<Mod><Print>" execute "flameshot gui"
+keybind "<Mod><Shift>r" reload_config
 
-# options
-option "border_color" "#00ff00"
-option "window_name_position" "left"
+# sets
+set "border_color" "#b16286"
+set "border_size" 3
 
-option "gap_top" true
-option "gap_bottom" true
-option "gap_left" true
-option "gap_right" true
+set "gap_top" true
+set "gap_bottom" true
+set "gap_left" true
+set "gap_right" true
 
-option "gap_top_size" 4
-option "gap_bottom_size" 4
-option "gap_left_size" 4
-option "gap_right_size" 4
+set "gap_top_size" 8
+set "gap_bottom_size" 8
+set "gap_left_size" 8
+set "gap_right_size" 8
 
 # hooks
-hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
-hook "startup" sync "xrandr --output eDP-1 --off"
-hook "startup" sync "xrandr --output HDMI-1 --primary"
-hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
-hook "startup" sync "xsetroot -solid '#111111'"
+# hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
+# hook "startup" sync "xrandr --output eDP-1 --off"
+# hook "startup" sync "xrandr --output HDMI-1 --primary"
+# hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
+hook "startup" sync "xsetroot -solid '#282828'"
 hook "startup" async "dunst &"
 hook "startup" async "redshift -l 48:17 -t 3900:3900 &"
 
 # workspace settings
-workspace_setting 1 monitor "0"
-workspace_setting 2 monitor "1"
-workspace_setting 3 monitor "0"
-workspace_setting 4 monitor "1"
-workspace_setting 5 monitor "0"
-workspace_setting 6 monitor "1"
-workspace_setting 7 monitor "0"
-workspace_setting 8 monitor "1"
-workspace_setting 9 monitor "0"
+worskpace_set 1 monitor "0"
+worskpace_set 2 monitor "1"
+worskpace_set 3 monitor "0"
+worskpace_set 4 monitor "1"
+worskpace_set 5 monitor "0"
+worskpace_set 6 monitor "1"
+worskpace_set 7 monitor "0"
+worskpace_set 8 monitor "1"
+worskpace_set 9 monitor "0"

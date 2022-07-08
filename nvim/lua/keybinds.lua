@@ -33,9 +33,9 @@ nmap("<leader>l", ":BufferLineCycleNext<CR>", { silent = true, noremap = true })
 -- Move to previous buffer.
 nmap("<leader>h", ":BufferLineCyclePrev<CR>", { silent = true, noremap = true })
 -- Switch buffer with the next buffer.
--- nmap("<leader><leader>l", ":BufferLineMoveNext<CR>", {silent = true, noremap = true})
+nmap("<leader><leader>l", ":BufferLineMoveNext<CR>", {silent = true, noremap = true})
 -- Switch buffer with the previous buffer.
--- nmap("<leader><leader>h", ":BufferLineMovePrev<CR>", {silent = true, noremap = true})
+nmap("<leader><leader>h", ":BufferLineMovePrev<CR>", {silent = true, noremap = true})
 
 -- Close a buffer.
 map("<leader>bd", ":bd<CR>", { silent = true })
@@ -48,12 +48,12 @@ map("<Down>", "<Nop>")
 map("<Left>", "<Nop>")
 map("<Right>", "<Nop>")
 
--- Move up and down 10 lines. This is something similar to <C-u> and <C-d>
+-- Move up and down 10 lines while keeping the cursor in the middle of the screen. This is something similar to <C-u> and <C-d>
 map("zk", "10kzz<CR>", { silent = true })
 map("zj", "10jzz<CR>", { silent = true })
 
--- 'jj' is just a have to
--- 'jk' is used with bash and its vi mode
+-- 'jj' is a must
+-- 'jk' is used in bash(vi mode)
 imap("jj", "<esc>")
 
 -- Toggle wrapping.
