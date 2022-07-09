@@ -33,9 +33,9 @@ nmap("<leader>l", ":BufferLineCycleNext<CR>", { silent = true, noremap = true })
 -- Move to previous buffer.
 nmap("<leader>h", ":BufferLineCyclePrev<CR>", { silent = true, noremap = true })
 -- Switch buffer with the next buffer.
-nmap("<leader><leader>l", ":BufferLineMoveNext<CR>", {silent = true, noremap = true})
+nmap("<leader><leader>l", ":BufferLineMoveNext<CR>", { silent = true, noremap = true })
 -- Switch buffer with the previous buffer.
-nmap("<leader><leader>h", ":BufferLineMovePrev<CR>", {silent = true, noremap = true})
+nmap("<leader><leader>h", ":BufferLineMovePrev<CR>", { silent = true, noremap = true })
 
 -- Close a buffer.
 map("<leader>bd", ":bd<CR>", { silent = true })
@@ -61,7 +61,8 @@ nmap("<leader>ow", function() require 'functions'.switch_wrap() end, { silent = 
 -- Toggle spellcheck.
 nmap("<leader>os", "<cmd>set spell! <bar> set spell?<cr>", { silent = true, noremap = true })
 -- Toggle 80 character colorcolumn.
-nmap("<leader>oc", ':execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>', { silent = true, noremap = true })
+nmap("<leader>oc", ':execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>',
+  { silent = true, noremap = true })
 -- Source the current Vim file.
 nmap("<leader>cs", "<cmd>source %<cr>", { noremap = true })
 
@@ -70,16 +71,17 @@ au("FileType", {
   pattern = "rmd",
   callback = function()
     vim.schedule(function()
-      map("<f4>", ":!echo<space>\"require(rmarkdown);<space>render(\'<c-r>%\')\"<space>|<space>R<space>--vanilla<enter>", { silent = true })
+      map("<f4>", ":!echo<space>\"require(rmarkdown);<space>render(\'<c-r>%\')\"<space>|<space>R<space>--vanilla<enter>"
+        , { silent = true })
     end)
   end })
 au("FileType",
   { pattern = "python",
-  callback = function()
-    vim.schedule(function()
-      map("<f5>", ":!python3 <c-r>%<CR>", { silent = true })
-    end)
-  end })
+    callback = function()
+      vim.schedule(function()
+        map("<f5>", ":!python3 <c-r>%<CR>", { silent = true })
+      end)
+    end })
 au("FileType", {
   pattern = "lua",
   callback = function()
@@ -110,3 +112,6 @@ nmap("<leader>td", function() require "functions".toggle_treesitter_debug() end,
 
 -- LazyGit
 nmap("<leader>gg", ':LazyGit<CR>', { silent = true, noremap = true })
+
+-- nvim colorizer
+nmap("<leader>oC", ":ColorizerToggle<CR>", { silent = true, noremap = true })

@@ -26,6 +26,18 @@ local on_attach = function(_, bufnr)
   buf_set_keymap('n', '<space>af', '<cmd>lua vim.lsp.buf.format( { async = true } )<CR>', opts)
 end
 
+--[[ local handlers = {
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.buf.hover, { border = "rounded" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.buf.signature_help, { border = "rounded" })
+} ]]
+
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = opts.border or "rounded"
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
+
 local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls' }
 
 -- lua setup

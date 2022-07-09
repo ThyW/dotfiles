@@ -60,8 +60,6 @@ oo.statusline = "<< %f >>%= %m %Y %c %l/%L"
 -- append the current spell checker language onto the end of status line.
 oo.statusline = oo.statusline .. "  LANG:" .. "%{luaeval('GetCurrentLang()')}"
 
-o.termguicolors = true
-
 c("filetype plugin indent on")
 c("syntax on")
 
