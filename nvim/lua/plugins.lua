@@ -47,7 +47,9 @@ return require("packer").startup(function(use)
   use 'vim-pandoc/vim-pandoc-syntax'
 
   --[[ More tools, helpers and extensions for writing Rust in Neovim.]]
-  use 'simrat39/rust-tools.nvim'
+  -- I stopped using this, because it didn't really achieve what I was looking for
+  -- my configuration can still be found in lua/plugins/rust-tools.lua
+  -- use 'simrat39/rust-tools.nvim'
 
   --[[ Automatically create and complete brackets, quotes and more.]]
   use 'windwp/nvim-autopairs'

@@ -6,8 +6,6 @@ require('plugins.bufferline')
 require('plugins.nvim-tree')
 -- ===Treesitter===
 require('plugins.treesitter')
--- === Rust Tools ===
-require('plugins.rust-tools')
 -- ===nvim_cmp===
 require('plugins.cmp')
 -- ===dressing.nvim===

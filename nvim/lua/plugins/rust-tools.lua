@@ -1,13 +1,17 @@
-require('rust-tools').setup {
+M = {
   tools = { -- rust-tools options
     autoSetHints = true,
     hover_with_actions = true,
+    runnables = {
+      use_telescope = true
+    },
     inlay_hints = {
-      only_current_line = true,
+      only_current_line = false,
       only_current_line_autocmd = "CursorHold",
       show_parameter_hints = true,
       parameter_hints_prefix = "<- ",
-      other_hints_prefix = "=> ",
+      other_hints_prefix = ":",
+      show_variable_name = true,
       max_len_align = false,
       max_len_align_padding = 1,
       right_align = false,
@@ -16,12 +20,7 @@ require('rust-tools').setup {
     },
 
     hover_actions = {
-      border = {
-        { "╭", "FloatBorder" }, { "─", "FloatBorder" },
-        { "╮", "FloatBorder" }, { "│", "FloatBorder" },
-        { "╯", "FloatBorder" }, { "─", "FloatBorder" },
-        { "╰", "FloatBorder" }, { "│", "FloatBorder" }
-      },
+      border = "rounded",
       auto_focus = false
     },
     crate_graph = {
@@ -31,6 +30,24 @@ require('rust-tools').setup {
     }
   },
   server = {
-    standalone = true
-  } -- rust-analyzer options
+    standalone = false,
+    settings = {
+      ["rust_analyzer"] = {
+        checkOnSave = {
+          enable = true,
+          command = "clippy"
+        },
+        procMacro = {
+          enable = true
+        },
+        completion = {
+          postfix = {
+            enable = false
+          }
+        }
+      }
+    }
+  }
 }
+
+return M
