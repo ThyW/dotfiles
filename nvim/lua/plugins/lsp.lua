@@ -112,6 +112,49 @@ for _, lsp in ipairs(servers) do
       capabilities = capabilities,
       filetypes = { "ncl", "nickel" },
     }
+
+  elseif lsp == "rust_analyzer" then
+    nvim_lsp[lsp].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      server = {
+        settings = {
+          procMacro = {
+            enable = true
+          },
+          checkOnSave = {
+            enable = true,
+            command = "clippy",
+          },
+          completion = {
+            postfix = {
+              enable = false
+            },
+            snippets = {
+              enable = false,
+              custom = {}
+            }
+          },
+          imports = {
+            prefix = "crate",
+          }
+        }
+      }
+    }
+  elseif lsp == "pyright" then
+    nvim_lsp[lsp].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      cmd = { "pyright-langserver", "--stdio" },
+      settings = {
+        python = {
+          formatting = {
+            provider = "black",
+            blackPath = "/home/zir/.local/bin/black"
+          }
+        }
+      }
+    }
   else
     nvim_lsp[lsp].setup {
       on_attach = on_attach,

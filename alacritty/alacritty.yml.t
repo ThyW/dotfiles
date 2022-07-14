@@ -42,8 +42,8 @@ env:
 
 font:
   normal:
-    #family: "SFMono Nerd Font Mono"
-    family: "Iosevka Term"
+    family: "SFMono Nerd Font Mono"
+    # family: "Iosevka Term"
 
 
   style: Regular
@@ -60,7 +60,7 @@ font:
     #style: Bold Italic
 
 @@ legionnaire
-  size: 13.1
+  size: 11.3
 @!
 @@ terminator
   size: 10.0
