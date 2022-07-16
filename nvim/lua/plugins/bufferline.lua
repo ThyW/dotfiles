@@ -6,7 +6,7 @@ require 'bufferline'.setup {
     diagnostics = "nvim_lsp",
     show_buffer_icons = true,
     always_show_bufferline = true,
-    separator_style = "slant",
+    separator_style = "thin",
     offsets = { { filetype = "NvimTree", text = "File Explorer" } }
   },
 

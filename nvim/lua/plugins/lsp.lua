@@ -146,6 +146,7 @@ for _, lsp in ipairs(servers) do
       on_attach = on_attach,
       capabilities = capabilities,
       cmd = { "pyright-langserver", "--stdio" },
+      -- does not work sadly :(
       settings = {
         python = {
           formatting = {

@@ -64,7 +64,7 @@ nmap("<leader>os", "<cmd>set spell! <bar> set spell?<cr>", { silent = true, nore
 nmap("<leader>oc", ':execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<cr>',
   { silent = true, noremap = true })
 -- Source the current Vim file.
--- nmap("<leader>cs", "<cmd>source %<cr>", { noremap = true })
+nmap("<leader>cs", "<cmd>source %<cr>", { noremap = true })
 
 -- Three autocommands for quick execution in rmarkdown, python and lua files.
 au("FileType", {

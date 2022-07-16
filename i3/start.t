@@ -39,7 +39,7 @@ move $ws1 to output HDMI-1-1 move $ws2 to output DP-1-1
 floating_modifier $mod
 
 # Set the font.
-font pango:Iosevka 9
+font pango:Jet Brains Mono 7
 
 # Set tabbed layout by default.
 workspace_layout default

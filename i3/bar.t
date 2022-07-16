@@ -1,7 +1,7 @@
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font pango:Iosevka Term 9
+    font pango:Jet Brains Mono 9
 
     position top
 

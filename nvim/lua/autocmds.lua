@@ -45,7 +45,6 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
     local stripped_path = string.gsub(path, "\n", "", nil)
     local cmd = "der -f " .. stripped_path .. "/derfile -a"
     vim.fn.system(cmd, nil)
-    vim.cmd [[source %]]
   end
 })
 
@@ -53,12 +52,13 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
 local python_formatting = api.nvim_create_augroup("PythonFormatting", {
   clear = true,
 })
+
 api.nvim_create_autocmd({ "BufWritePost" }, {
   group = python_formatting,
   pattern = { "*.py" },
   callback = function()
     local cur_file = vim.api.nvim_buf_get_name(0)
     vim.fn.system("black -l 80 -q " .. cur_file, nil)
-    vim.cmd[[edit %]]
+    vim.cmd("edit %")
   end
 })
