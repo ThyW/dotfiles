@@ -9,6 +9,8 @@ bind -n M-l select-pane -R
 
 bind -n M-n next-window
 bind -n M-p previous-window
+bind -n M-N swap-window -t +1\; next-window
+bind -n M-P swap-window -t -1\; previous-window
 
 bind-key v splitw -v -c "#{pane_current_path}"
 bind-key h splitw -h -c "#{pane_current_path}"

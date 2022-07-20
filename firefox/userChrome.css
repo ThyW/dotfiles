@@ -22,3 +22,7 @@
     background-color: white !important; /* Make the line white, remove this for default color */
     font-family: Iosevka;
 }
+
+#tabbrowser-tabs {
+    visibility: collapse !important;
+} 
