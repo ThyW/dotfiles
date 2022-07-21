@@ -8,6 +8,37 @@ local _ = require("luasnip.loaders.from_vscode").lazy_load()
 
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
+local lspkind = require'lspkind'
+
+lspkind.init{
+  symbol_map = {
+      Text = "",
+      Method = "",
+      Function = "",
+      Constructor = "",
+      Field = "ﰠ",
+      Variable = "",
+      Class = "פּ",
+      Interface = "",
+      Module = "",
+      Property = "ﰠ",
+      Unit = "塞",
+      Value = "",
+      Enum = "ﬥ",
+      Keyword = "",
+      Snippet = "",
+      Color = "",
+      File = "",
+      Reference = "",
+      Folder = "",
+      EnumMember = "了",
+      Constant = "",
+      Struct = "פּ",
+      Event = "",
+      Operator = "",
+      TypeParameter = ""
+    },
+}
 
 cmp.setup.filetype('rmd',
   { sources = cmp.config.sources({
@@ -76,12 +107,12 @@ cmp.setup {
         mode = "symbol_text",
         maxwidth = 50,
         menu = {
-          cmp_tabnine = "[]",
-          buffer = "[]",
-          nvim_lsp = "[]",
-          nvim_lua = "[]",
-          path = "[]",
-          gh_issues = "[]",
+          cmp_tabnine = "",
+          buffer = "",
+          nvim_lsp = "",
+          nvim_lua = "",
+          path = "",
+          gh_issues = "",
         }
       })(entry, vim_item)
       local strings = vim.split(kind.kind, "%s", { trimempty = true })
