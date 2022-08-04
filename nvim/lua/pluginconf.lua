@@ -24,3 +24,5 @@ require("plugins.presence")
 require("plugins.telescope")
 -- == Snippets ==
 require("plugins.snippets")
+-- == Zen-mode.nvim ==
+require("plugins.zen-mode")

@@ -39,6 +39,7 @@ alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
 alias g='git'
 alias cconf='vi ~/clones/dotfiles/crubwm/config && der -f ~/clones/dotfiles/derfile -a'
+alias dtd='vi ~/notes/daily_todo.norg'
 
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'

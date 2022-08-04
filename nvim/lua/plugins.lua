@@ -131,4 +131,6 @@ return require("packer").startup(function(use)
       "*",
     })
   } }
+  use { 'folke/zen-mode.nvim' }
+  use { 'simrat39/inlay-hints.nvim' }
 end)

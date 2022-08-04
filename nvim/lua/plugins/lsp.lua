@@ -1,4 +1,6 @@
 local nvim_lsp = require 'lspconfig'
+require("inlay-hints").setup({})
+local ih = require("inlay-hints")
 
 local on_attach = function(_, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -115,7 +117,11 @@ for _, lsp in ipairs(servers) do
 
   elseif lsp == "rust_analyzer" then
     nvim_lsp[lsp].setup {
-      on_attach = on_attach,
+      on_attach = function(c, b)
+        on_attach(c, b)
+        ih.on_attach(c, b)
+        ih.set_all()
+      end,
       capabilities = capabilities,
       server = {
         settings = {
