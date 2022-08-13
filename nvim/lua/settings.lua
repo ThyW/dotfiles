@@ -63,8 +63,25 @@ oo.statusline = oo.statusline .. "  LANG:" .. "%{luaeval('GetCurrentLang()')}"
 c("filetype plugin indent on")
 c("syntax on")
 
+require("gruvbox").setup {
+  overrides = {
+    TSKeyword = { italic = true, bold = true, fg = "#fb4934" },
+    TSKeywordFunction = { italic = true, bold = true, fg = "#fb4934" },
+    TSRepeat = { italic = true, bold = true, fg = "#fb4934" },
+    TSConditional = { italic = true, bold = true, fg = "#fb4934" },
+  }
+}
+
 oo.background = "dark"
 c("colorscheme gruvbox")
+
+--[[ vim.g.gruvbox_material_background = "medium"
+vim.g.gruvbox_material_foreground = "mix"
+vim.g.gruvbox_material_enable_bold = 1
+vim.g.gruvbox_material_enable_italic= 1
+vim.g.gruvbox_material_ui_contrast = "high"
+vim.g.gruvbox_material_statusline_style = "mix"
+c("colorscheme gruvbox-material") ]]
 
 local highlights = {
   "highlight SignColumn guibg=none",

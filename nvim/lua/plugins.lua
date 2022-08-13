@@ -24,7 +24,8 @@ return require("packer").startup(function(use)
   use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } }
 
   --[[ Surround parts of text with quotes, brackets and more!]]
-  use 'tpope/vim-surround'
+  -- use 'tpope/vim-surround'
+  use { 'kylechui/nvim-surround', config = {require('nvim-surround').setup() } }
 
   --[[ Syntax highligting. Tree-sitter is a great parsing library for parsing
     languages and great syntax highlighting.]]
@@ -42,9 +43,10 @@ return require("packer").startup(function(use)
 
   --[[ Rmarkdown, pandoc, latex and markdown and other note taking utilities.
     ]]
-  use 'vim-pandoc/vim-rmarkdown'
+  -- disabled for now, it was really intrusive and wasn't doing what it expected it to do.
+  --[[ use 'vim-pandoc/vim-rmarkdown'
   use 'vim-pandoc/vim-pandoc'
-  use 'vim-pandoc/vim-pandoc-syntax'
+  use 'vim-pandoc/vim-pandoc-syntax' ]]
 
   --[[ More tools, helpers and extensions for writing Rust in Neovim.]]
   -- I stopped using this, because it didn't really achieve what I was looking for
@@ -133,4 +135,6 @@ return require("packer").startup(function(use)
   } }
   use { 'folke/zen-mode.nvim' }
   use { 'simrat39/inlay-hints.nvim' }
+  use { 'luisiacc/gruvbox-baby', branch = 'main' }
+  use { "sainnhe/gruvbox-material" }
 end)

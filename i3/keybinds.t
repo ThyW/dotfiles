@@ -17,7 +17,7 @@ bindsym $mod+i exec firefox
 @!
 
 # Kill the currently focused window.
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+w kill
 
 # Start dmenu (a program launcher).
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Iosevka:8'

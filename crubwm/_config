@@ -1,0 +1,70 @@
+# keybinds
+keybind "<Mod><enter>" execute "alacritty"
+keybind "<Mod>d" execute "dmenu_run"
+keybind "<Mod>1" goto "1"
+keybind "<Mod>2" goto "2"
+keybind "<Mod>3" goto "3"
+keybind "<Mod>4" goto "4"
+keybind "<Mod>5" goto "5"
+keybind "<Mod>6" goto "6"
+keybind "<Mod>7" goto "7"
+keybind "<Mod>8" goto "8"
+keybind "<Mod>9" goto "9"
+keybind "<Shift><Mod>1" move "1"
+keybind "<Shift><Mod>2" move "2"
+keybind "<Shift><Mod>3" move "3"
+keybind "<Shift><Mod>4" move "4"
+keybind "<Shift><Mod>5" move "5"
+keybind "<Shift><Mod>6" move "6"
+keybind "<Shift><Mod>7" move "7"
+keybind "<Shift><Mod>8" move "8"
+keybind "<Shift><Mod>9" move "9"
+keybind "<Mod>p" focus "previous"
+keybind "<Mod>n" focus "next"
+keybind "<Mod><Shift>p" swap "previous"
+keybind "<Mod><Shift>n" swap "next"
+
+keybind "<Mod><Shift>q" kill
+keybind "<Mod>i" execute "firefox-nightly"
+keybind "<Mod>h" change_layout "TilingEqualHorizontal"
+keybind "<Mod>v" change_layout "TilingEqualVertical"
+keybind "<Mod>m" change_layout "TilingMasterStack"
+keybind "<Mod>s" cycle_layout
+keybind "<Mod><space>" toggle_float
+
+keybind "<Mod><Print>" execute "flameshot gui"
+keybind "<Mod><Shift>r" reload_config
+
+# sets
+set "border_color" "#b16286"
+set "border_size" 3
+
+set "gap_top" true
+set "gap_bottom" true
+set "gap_left" true
+set "gap_right" true
+
+set "gap_top_size" 8
+set "gap_bottom_size" 8
+set "gap_left_size" 8
+set "gap_right_size" 8
+
+# hooks
+hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
+hook "startup" sync "xrandr --output eDP-1 --off"
+hook "startup" sync "xrandr --output HDMI-1 --primary"
+hook "startup" sync "xrandr --output DP-1 --right-of HDMI-1"
+hook "startup" sync "xsetroot -solid '#282828'"
+hook "startup" async "dunst &"
+hook "startup" async "redshift -l 48:17 -t 3900:3900 &"
+
+# workspace settings
+worskpace_set 1 monitor "0"
+worskpace_set 2 monitor "1"
+worskpace_set 3 monitor "0"
+worskpace_set 4 monitor "1"
+worskpace_set 5 monitor "0"
+worskpace_set 6 monitor "1"
+worskpace_set 7 monitor "0"
+worskpace_set 8 monitor "1"
+worskpace_set 9 monitor "0"

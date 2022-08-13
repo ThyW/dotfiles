@@ -1,4 +1,5 @@
 local api = vim.api
+local o = vim.o
 
 local lua_format = api.nvim_create_augroup("LuaFormat", {
   clear = true
@@ -60,5 +61,18 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
     local cur_file = vim.api.nvim_buf_get_name(0)
     vim.fn.system("black -l 80 -q " .. cur_file, nil)
     vim.cmd("edit %")
+  end
+})
+
+local markdown_enter = api.nvim_create_augroup("MarkdownEnter", {
+  clear = true,
+})
+
+api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+  group = markdown_enter,
+  pattern = { "*.md" },
+  callback = function()
+    o.spell = true
+    o.wrap = true
   end
 })
