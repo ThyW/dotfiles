@@ -25,7 +25,7 @@ return require("packer").startup(function(use)
 
   --[[ Surround parts of text with quotes, brackets and more!]]
   -- use 'tpope/vim-surround'
-  use { 'kylechui/nvim-surround', config = {require('nvim-surround').setup() } }
+  use { 'kylechui/nvim-surround', config = { require('nvim-surround').setup() } }
 
   --[[ Syntax highligting. Tree-sitter is a great parsing library for parsing
     languages and great syntax highlighting.]]
@@ -66,7 +66,7 @@ return require("packer").startup(function(use)
   use 'b3nj5m1n/kommentary'
 
   --[[ Snippet engine and snippets for the `cmp` completion plugin.]]
-  use "L3MON4D3/LuaSnip"
+  use { "L3MON4D3/LuaSnip", branch = 'parse_from_ast' }
   use "rafamadriz/friendly-snippets"
 
   --[[ Completion framework written in Lua for Neovim.]]

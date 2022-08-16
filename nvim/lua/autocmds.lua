@@ -68,11 +68,20 @@ local markdown_enter = api.nvim_create_augroup("MarkdownEnter", {
   clear = true,
 })
 
-api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
   group = markdown_enter,
   pattern = { "*.md" },
   callback = function()
     o.spell = true
     o.wrap = true
+  end
+})
+
+api.nvim_create_autocmd({ "BufLeave" }, {
+  group = markdown_enter,
+  pattern = { "*.md" },
+  callback = function()
+    o.spell = false
+    o.wrap = false
   end
 })

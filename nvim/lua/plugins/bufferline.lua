@@ -12,16 +12,16 @@ require 'bufferline'.setup {
 
   highlights = {
     separator_selected = {
-      guifg = "#504945",
-      guibg = "none"
+      fg = "#504945",
+      bg = "none"
     },
     separator_visible = {
-      guifg = "#504945",
-      guibg = "none"
+      fg = "#504945",
+      bg = "none"
     },
     separator = {
-      guifg = "#504945",
-      guibg = "none"
+      fg = "#504945",
+      bg = "none"
     }
   }
 }

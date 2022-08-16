@@ -29,6 +29,7 @@ alias bconf='vi ~/clones/dotfiles/bash/.bashrc.t && der -f ~/clones/dotfiles/der
 alias vc=' vi ~/clones/dotfiles/nvim && der -f ~/clones/dotfiles/derfile -a'
 alias i3c='vi ~/clones/dotfiles/i3 && der -f ~/clones/dotfiles/derfile -a'
 alias ac='vi ~/clones/dotfiles/alacritty/alacritty.yml.t && der -f ~/clones/dotfiles/derfile -a'
+alias wconf='vi ~/clones/dotfiles/wezterm/wezterm.t.lua && der -f ~/clones/dotfiles/derfile -a'
 alias mute='pactl set-sink-volume 0 0%'
 alias synccfg='der -f ~/clones/dotfiles/derfile -a'
 alias mutt='neomutt'

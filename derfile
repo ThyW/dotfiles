@@ -76,3 +76,8 @@ extensions = t
 hostnames = $hosts
 final_name = config
 apply_path = $outdir:/.config/crubwm/
+
+[wezterm/wezterm.t.lua]
+hostnames = $hosts
+final_name = wezterm.lua
+apply_path = $outdir:/.config/wezterm/
