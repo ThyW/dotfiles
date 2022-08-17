@@ -137,8 +137,5 @@ return require("packer").startup(function(use)
   use { 'simrat39/inlay-hints.nvim' }
   use { 'luisiacc/gruvbox-baby', branch = 'main' }
   use { "sainnhe/gruvbox-material" }
-  use { 'lewis6991/gitsigns.nvim', branch = 'main',
-    config = function()
-      require("gitsigns").setup()
-    end }
+  use { 'lewis6991/gitsigns.nvim', branch = 'main' }
 end)
