@@ -17,6 +17,8 @@ style = "bold purple"
 [git_status]
 format = '([ \[$all_status$ahead_behind\]]($style))'
 style = "bold red"
+ahead = ""
+behind = ""
 
 [rust]
 format = ' rust [$version]($style)'

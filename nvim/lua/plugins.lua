@@ -54,7 +54,7 @@ return require("packer").startup(function(use)
   -- use 'simrat39/rust-tools.nvim'
 
   --[[ Automatically create and complete brackets, quotes and more.]]
-  use 'windwp/nvim-autopairs'
+  use { 'windwp/nvim-autopairs', branch = "master" }
 
   --[[ File explorer for Neovim writtten in Lua.]]
   use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
@@ -137,4 +137,8 @@ return require("packer").startup(function(use)
   use { 'simrat39/inlay-hints.nvim' }
   use { 'luisiacc/gruvbox-baby', branch = 'main' }
   use { "sainnhe/gruvbox-material" }
+  use { 'lewis6991/gitsigns.nvim', branch = 'main',
+    config = function()
+      require("gitsigns").setup()
+    end }
 end)

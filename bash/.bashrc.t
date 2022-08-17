@@ -39,6 +39,7 @@ alias screencapture='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0
 alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
 alias g='git'
+alias tconf='vi ~/clones/dotfiles/bash/.tmux.conf.t && synccfg'
 alias cconf='vi ~/clones/dotfiles/crubwm/config && der -f ~/clones/dotfiles/derfile -a'
 alias dtd='vi ~/notes/daily_todo.norg'
 
@@ -71,8 +72,8 @@ eval "$(starship init bash)"
 
 bind '"jk":vi-movement-mode'
 
-if [[ ! "$(tty)" = "/dev/tty1" ]]; then 
-    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-      exec tmux -u
-    fi 
-fi
+# if [[ ! "$(tty)" = "/dev/tty1" ]]; then 
+#     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#       exec tmux -u
+#     fi 
+# fi
