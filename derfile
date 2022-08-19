@@ -9,13 +9,13 @@ final_name = alacritty.yml
 apply_path = $outdir:/.config/alacritty/
 
 # .bashrc
-[bash/.bashrc.t]
+[bash/bashrc]
 hostnames = $hosts
 final_name = .bashrc
 apply_path = $outdir
 
 # .tmux.conf
-[bash/.tmux.conf.t]
+[bash/tmux.conf]
 hostnames = $hosts
 final_name = .tmux.conf
 apply_path = $outdir
@@ -81,3 +81,8 @@ apply_path = $outdir:/.config/crubwm/
 hostnames = $hosts
 final_name = wezterm.lua
 apply_path = $outdir:/.config/wezterm/
+
+[kitty/kitty.t.conf]
+hostnames = &hosts
+final_name = kitty.conf
+apply_path = $outdir:/.config/kitty/

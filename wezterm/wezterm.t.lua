@@ -107,7 +107,7 @@ local keybinds = {
 
 -- M.color_scheme = "Gruvbox dark, medium (base16)"
 M.font = w.font("JetBrainsMono Nerd Font")
-M.harfbuzz_features = { "calt=1", "clig=1", "liga=1" }
+M.harfbuzz_features = { "calt=1", "clig=0", "liga=0" }
 M.enable_tab_bar = true
 M.use_fancy_tab_bar = false
 M.tab_bar_at_bottom = true
@@ -118,7 +118,7 @@ M.color_schemes = {
 }
 M.color_scheme = "My Gruvbox"
 
--- M.default_prog = { "/bin/sh", "-c", "tmux", "-u" }
+M.default_prog = { "/bin/bash" }
 M.window_padding = {
   top = 0,
   bottom = 0,
@@ -129,5 +129,6 @@ M.window_padding = {
 M.leader = keybinds.leader
 M.keys = keybinds.keys
 M.tab_max_width = 40
+M.scrollback_lines = 3000
 
 return M
