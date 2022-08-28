@@ -66,7 +66,7 @@ return require("packer").startup(function(use)
   use 'b3nj5m1n/kommentary'
 
   --[[ Snippet engine and snippets for the `cmp` completion plugin.]]
-  use { "L3MON4D3/LuaSnip", branch = 'parse_from_ast' }
+  use { "L3MON4D3/LuaSnip", branch = 'master' }
   use "rafamadriz/friendly-snippets"
 
   --[[ Completion framework written in Lua for Neovim.]]
@@ -133,9 +133,18 @@ return require("packer").startup(function(use)
       "*",
     })
   } }
+  -- [[Distractionless writing.]]
   use { 'folke/zen-mode.nvim' }
+  -- [[Standalone package to provide inlay hint virtual text, currently unused.]]
   use { 'simrat39/inlay-hints.nvim' }
-  use { 'luisiacc/gruvbox-baby', branch = 'main' }
-  use { "sainnhe/gruvbox-material" }
+  -- [[Gruvbox colorschemes.]]
+  --[[ use { 'luisiacc/gruvbox-baby', branch = 'main' }
+  use { "sainnhe/gruvbox-material" } ]]
+  -- [[Signcolumn signs to provide git diagnostics.]]
   use { 'lewis6991/gitsigns.nvim', branch = 'main' }
+  -- [[Visual indentation lines.]]
+  use { 'lukas-reineke/indent-blankline.nvim' }
+
+  -- [[Language support for the Odin language.]]
+  use { 'Tetralux/odin.vim', branch = 'master' }
 end)

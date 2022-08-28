@@ -42,6 +42,7 @@ alias g='git'
 alias tconf='vi ~/clones/dotfiles/bash/.tmux.conf.t && synccfg'
 alias cconf='vi ~/clones/dotfiles/crubwm/config && der -f ~/clones/dotfiles/derfile -a'
 alias dtd='vi ~/notes/daily_todo.norg'
+alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles/derfile -a'
 
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'
@@ -72,8 +73,8 @@ eval "$(starship init bash)"
 
 bind '"jk":vi-movement-mode'
 
-# if [[ ! "$(tty)" = "/dev/tty1" ]]; then 
-#     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#       exec tmux -u
-#     fi 
-# fi
+if [[ ! "$(tty)" = "/dev/tty1" ]]; then 
+    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+      exec tmux -u
+    fi 
+fi
