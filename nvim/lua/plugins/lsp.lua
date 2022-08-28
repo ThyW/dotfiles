@@ -119,8 +119,8 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
       on_attach = function(c, b)
         on_attach(c, b)
-        ih.on_attach(c, b)
-        ih.set_all()
+        --[[ ih.on_attach(c, b)
+        ih.set_all() ]]
       end,
       capabilities = capabilities,
       server = {

@@ -25,7 +25,7 @@ alias i3lock='i3lock -c 111111'
 alias ls='exa'
 alias vi='nvim'
 alias fzf='sk'
-alias bconf='vi ~/clones/dotfiles/bash/.bashrc.t && der -f ~/clones/dotfiles/derfile -a && clear && source ~/.bashrc'
+alias bconf='vi ~/clones/dotfiles/bash/bashrc && der -f ~/clones/dotfiles/derfile -a && clear && source ~/.bashrc'
 alias vc=' vi ~/clones/dotfiles/nvim && der -f ~/clones/dotfiles/derfile -a'
 alias i3c='vi ~/clones/dotfiles/i3 && der -f ~/clones/dotfiles/derfile -a'
 alias ac='vi ~/clones/dotfiles/alacritty/alacritty.yml.t && der -f ~/clones/dotfiles/derfile -a'
@@ -42,7 +42,11 @@ alias g='git'
 alias tconf='vi ~/clones/dotfiles/bash/.tmux.conf.t && synccfg'
 alias cconf='vi ~/clones/dotfiles/crubwm/config && der -f ~/clones/dotfiles/derfile -a'
 alias dtd='vi ~/notes/daily_todo.norg'
+<<<<<<< HEAD:bash/.bashrc.t
 alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles/derfile -a'
+=======
+alias kconf='vi ~/clones/dotfiles/kitty/kittyt.conf && der -f ~/clones/dotfiles/derfile -a'
+>>>>>>> e831e6b7e96dad045fe3c447cc5480aa1eab4eb5:bash/bashrc
 
 @@ legionnaire
 alias todo='vi ~/neorg/todo.norg'

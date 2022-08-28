@@ -47,7 +47,7 @@ set $mod2 Mod1
 set $border 4
 
 # Terminal emulator
-set $term wezterm
+set $term kitty
 
 # Define names for default workspaces for which we configure key bindings later
 # on. We use variables to avoid repeating the names in multiple places.
