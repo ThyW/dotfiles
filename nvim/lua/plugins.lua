@@ -147,4 +147,7 @@ return require("packer").startup(function(use)
 
   -- [[Language support for the Odin language.]]
   use { 'Tetralux/odin.vim', branch = 'master' }
+
+  --[[Automatically create lists and indentation.]]
+  use { "gaoDean/autolist.nvim" }
 end)

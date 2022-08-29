@@ -28,3 +28,5 @@ require("plugins.snippets")
 require("plugins.zen-mode")
 -- == Gitsigns ==
 require("plugins.gitsigns")
+-- == Autolist ==
+require("plugins.autolist")

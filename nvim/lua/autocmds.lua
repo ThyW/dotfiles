@@ -85,3 +85,15 @@ api.nvim_create_autocmd({ "BufLeave" }, {
     o.wrap = false
   end
 })
+
+local derfile = api.nvim_create_augroup("Derfile", {
+  clear = true,
+})
+
+api.nvim_create_autocmd({"BufEnter"}, {
+  group = derfile,
+  pattern = {"derfile"},
+  callback = function()
+    vim.cmd("set ft=toml")
+  end
+})
