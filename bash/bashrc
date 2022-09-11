@@ -45,7 +45,7 @@ alias dtd='vi ~/notes/daily_todo.norg'
 alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles/derfile -a'
 
 @@ legionnaire
-alias todo='vi ~/neorg/todo.norg'
+alias todo='vi ~/todo/todo.txt'
 @!
 alias lg='lazygit'
 
@@ -78,3 +78,5 @@ if [[ ! "$(tty)" = "/dev/tty1" ]]; then
       exec tmux -u
     fi 
 fi
+
+[ -f "/home/zir/.ghcup/env" ] && source "/home/zir/.ghcup/env" # ghcup-env

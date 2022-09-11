@@ -110,6 +110,3 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Handle bar:
 bindsym $mod+o			bar mode toggle
 bindsym $mod+Shift+o		bar hidden_state toggle
-
-bindsym $mod+u exec "setxkbmap us"
-bindsym $mod+Shift+u exec "setxkbmap sk -variant qwerty"

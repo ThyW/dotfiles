@@ -44,7 +44,7 @@ final_name = i3
 apply_path = $outdir:/.config/
 parse_files = true
 recursive = true
-extensions = t
+extensions = t.conf
 
 [i3status-rust/config.toml]
 hostnames = $hosts
@@ -83,6 +83,11 @@ final_name = wezterm.lua
 apply_path = $outdir:/.config/wezterm/
 
 [kitty/kitty.t.conf]
-hostnames = &hosts
+hostnames = $hosts
 final_name = kitty.conf
 apply_path = $outdir:/.config/kitty/
+
+[services/syncthing.service]
+hostnames = $hosts
+final_name = syncthing.service
+apply_path = $outdir:/.config/systemd/user/

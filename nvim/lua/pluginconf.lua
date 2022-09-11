@@ -30,3 +30,5 @@ require("plugins.zen-mode")
 require("plugins.gitsigns")
 -- == Autolist ==
 require("plugins.autolist")
+-- == todo.txt
+require("plugins.todotxt")

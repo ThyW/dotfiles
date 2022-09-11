@@ -149,5 +149,8 @@ return require("packer").startup(function(use)
   use { 'Tetralux/odin.vim', branch = 'master' }
 
   --[[Automatically create lists and indentation.]]
-  use { "gaoDean/autolist.nvim" }
+  use { 'gaoDean/autolist.nvim' }
+  --[[Nice interface for todo.txt]]
+  -- use { 'arnarg/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' } }
+  use { '~/clones/todotxt.nvim/', requires = { 'MunifTanjim/nui.nvim' }, branch = 'vim-ui-input' }
 end)

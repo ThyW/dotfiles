@@ -22,6 +22,8 @@ exec --no-startup-id dunst
 # Start flameshot, a screen shotting utility.
 exec flameshot
 
+# Keyboard layout switching
+exec --no-startup-id setxkbmap -layout us,sk -option grp:alt_shift_toggle
 
 @@ legionnaire
 # Ensure monitors are set up the way I want them to be.

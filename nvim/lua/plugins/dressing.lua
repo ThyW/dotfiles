@@ -1,5 +1,6 @@
 require('dressing').setup({
   input = {
+    enabled = true,
     insert_only = false,
     default_prompt = "-> ",
     border = "rounded"

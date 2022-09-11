@@ -90,10 +90,25 @@ local derfile = api.nvim_create_augroup("Derfile", {
   clear = true,
 })
 
-api.nvim_create_autocmd({"BufEnter"}, {
+api.nvim_create_autocmd({ "BufEnter" }, {
   group = derfile,
-  pattern = {"derfile"},
+  pattern = { "derfile" },
   callback = function()
     vim.cmd("set ft=toml")
+  end
+})
+
+local haskell_spaces = api.nvim_create_augroup("HaskellSpaces", {
+  clear = true,
+})
+
+api.nvim_create_autocmd({ "BufEnter" }, {
+  group = haskell_spaces,
+  pattern = { "*.hs", "*.hsl" },
+  callback = function()
+    vim.cmd [[set tabstop=4]]
+    vim.cmd [[set shiftwidth=4]]
+    vim.cmd [[set softtabstop=4]]
+    vim.cmd [[set expandtab]]
   end
 })

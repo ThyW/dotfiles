@@ -1,5 +1,5 @@
 require("autolist").setup({
   generic = {
-    enable_file_types = {"markdown", "text", "norg"}
+    enable_file_types = {"markdown", "text", "rmd"}
   }
 })

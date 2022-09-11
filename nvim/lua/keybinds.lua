@@ -115,3 +115,7 @@ nmap("<leader>gg", ':LazyGit<CR>', { silent = true, noremap = true })
 
 -- nvim colorizer
 nmap("<leader>oC", ":ColorizerToggle<CR>", { silent = true, noremap = true })
+
+-- todotxt.nvim
+nmap("<leader>ot", ":ToDoTxtTasksToggle<CR>", {silent = true, noremap = true})
+nmap("<leader>otc", ":ToDoTxtCapture<CR>", {silent = true, noremap = true})
