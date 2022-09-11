@@ -112,3 +112,10 @@ api.nvim_create_autocmd({ "BufEnter" }, {
     vim.cmd [[set expandtab]]
   end
 })
+
+api.nvim_create_autocmd({"BufEnter"}, {
+  pattern = "*.i3config",
+  callback = function()
+    vim.cmd [[set ft=i3config]]
+  end
+})
