@@ -74,6 +74,10 @@ api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
   callback = function()
     o.spell = true
     o.wrap = true
+    vim.cmd [[set tabstop=2]]
+    vim.cmd [[set shiftwidth=2]]
+    vim.cmd [[set softtabstop=2]]
+    vim.cmd [[set expandtab]]
   end
 })
 

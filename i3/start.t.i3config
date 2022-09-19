@@ -12,6 +12,9 @@ exec --no-startup-id xsetroot -solid '$bg'
 # Always startup Discord :-).
 exec --no-startup-id discord
 
+# Xss lock
+exec --no-startup-id xss-lock -- i3lock -c 111111 &
+
 # Create a keyboard map for switching keyboard layouts.
 # exec --no-startup-id \
 # setxkbmap -layout us,sk -variant qwerty -option 'grp:lalt_k_toggle'

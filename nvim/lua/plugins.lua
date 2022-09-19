@@ -152,5 +152,5 @@ return require("packer").startup(function(use)
   use { 'gaoDean/autolist.nvim' }
   --[[Nice interface for todo.txt]]
   -- use { 'arnarg/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' } }
-  use { '~/clones/todotxt.nvim/', requires = { 'MunifTanjim/nui.nvim' }, branch = 'vim-ui-input' }
+  use { 'ThyW/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' }, branch = 'vim-ui-input' }
 end)

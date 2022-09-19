@@ -31,4 +31,4 @@ require("plugins.gitsigns")
 -- == Autolist ==
 require("plugins.autolist")
 -- == todo.txt
-require("plugins.todotxt")
+-- require("plugins.todotxt")
