@@ -44,7 +44,7 @@ final_name = i3
 apply_path = $outdir:/.config/
 parse_files = true
 recursive = true
-extensions = t.conf
+extensions = i3config
 
 [i3status-rust/config.toml]
 hostnames = $hosts

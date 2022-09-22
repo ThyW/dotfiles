@@ -1,7 +1,7 @@
 #!/bin/bash
 
-old_ext=t.conf
-new_ext=t.i3config
+old_ext=t.i3config
+new_ext=i3config
 
 for file in *.$old_ext
 do
