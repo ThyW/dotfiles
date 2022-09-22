@@ -90,6 +90,15 @@ au("FileType", {
     end)
   end })
 
+au("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.schedule(function()
+      map("<f4>", ":!pandoc % -o %.pdf<CR>"
+        , { silent = true })
+    end)
+  end })
+
 -- ToggleTerm manipulation.
 nmap("<C-t><C-t>", ":ToggleTerm<CR>", { noremap = true })
 nmap("<C-t><C-v>", ":ToggleTerm direction=vertical<CR>", { noremap = true })
