@@ -18,7 +18,6 @@ require 'nvim-tree'.setup {
   },
   view = {
     width = 30,
-    height = 30,
     mappings = {
       list = nt_list
     }

@@ -122,28 +122,32 @@ for _, lsp in ipairs(servers) do
         --[[ ih.on_attach(c, b)
         ih.set_all() ]]
       end,
+      cmd = {"rustup", "run", "nightly", "rust-analyzer"},
       capabilities = capabilities,
       server = {
         settings = {
-          procMacro = {
-            enable = true
-          },
-          checkOnSave = {
-            enable = true,
-            command = "clippy",
-          },
-          completion = {
-            postfix = {
-              enable = false
+          ["rust-analyzer"] = {
+            procMacro = {
+              enable = true
             },
-            snippets = {
-              enable = false,
-              custom = {}
+            checkOnSave = {
+              enable = true,
+              command = "clippy",
+            },
+            completion = {
+              postfix = {
+                enable = false
+              },
+              snippets = {
+                enable = false,
+                custom = {}
+              }
+            },
+            imports = {
+              prefix = "crate",
             }
-          },
-          imports = {
-            prefix = "crate",
           }
+
         }
       }
     }
