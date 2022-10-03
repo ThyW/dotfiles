@@ -40,13 +40,11 @@ alias rend='echo "require(rmarkdown); render('$@')" | R --vanilla'
 alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
 alias g='git'
 alias tconf='vi ~/clones/dotfiles/bash/.tmux.conf.t && synccfg'
-alias cconf='vi ~/clones/dotfiles/crubwm/config && der -f ~/clones/dotfiles/derfile -a'
+alias cconf='vi ~/clones/dotfiles/cwm/config && der -f ~/clones/dotfiles/derfile -a'
 alias dtd='vi ~/notes/daily_todo.norg'
 alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles/derfile -a'
 
-@@ legionnaire
 alias todo='vi ~/todo/todo.txt'
-@!
 alias lg='lazygit'
 
 ## Tmux aliases
