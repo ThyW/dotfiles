@@ -166,6 +166,16 @@ for _, lsp in ipairs(servers) do
         }
       }
     }
+  elseif lsp == "hls" then
+    nvim_lsp[lsp].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = {
+        haskell = {
+          formattingProvider = "ormolu"
+        }
+      }
+    }
   else
     nvim_lsp[lsp].setup {
       on_attach = on_attach,
