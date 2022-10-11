@@ -75,8 +75,8 @@ workspace $ws2 output DP-1
 # Assign windows to specific workspaces.
 assign [class="^discord$"] number 2
 
-# When a windows is activated, it request focus. We should comply with the
-# windows focus.
+# When a windows is activated, it request focus. We should grant that
+# window its requested focus.
 focus_on_window_activation focus
 
 # Change the title format for all windows.
