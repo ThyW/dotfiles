@@ -59,7 +59,7 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
   pattern = { "*.py" },
   callback = function()
     local cur_file = vim.api.nvim_buf_get_name(0)
-    vim.fn.system("black -l 80 -q " .. cur_file, nil)
+    vim.fn.system("black -l 79 -q " .. cur_file, nil)
     vim.cmd("edit %")
   end
 })

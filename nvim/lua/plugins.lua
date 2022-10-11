@@ -153,4 +153,7 @@ return require("packer").startup(function(use)
   --[[Nice interface for todo.txt]]
   -- use { 'arnarg/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' } }
   use { 'ThyW/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' }, branch = 'vim-ui-input' }
+
+  --[[A plugin for taking scientific notes and pretty math equations.]]
+  use 'jbyuki/nabla.nvim'
 end)
