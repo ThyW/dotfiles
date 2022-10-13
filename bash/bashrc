@@ -43,6 +43,7 @@ alias tconf='vi ~/clones/dotfiles/bash/.tmux.conf.t && synccfg'
 alias cconf='vi ~/clones/dotfiles/cwm/config && der -f ~/clones/dotfiles/derfile -a'
 alias dtd='vi ~/notes/daily_todo.norg'
 alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles/derfile -a'
+alias nrfeed='vi ~/clones/dotfiles/newsraft/feeds && der -f ~/clones/dotfiles/derfile -a'
 
 alias todo='vi ~/todo/todo.txt'
 alias lg='lazygit'

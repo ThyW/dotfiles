@@ -91,3 +91,8 @@ apply_path = $outdir:/.config/kitty/
 hostnames = $hosts
 final_name = syncthing.service
 apply_path = $outdir:/.config/systemd/user/
+
+[newsraft/feeds]
+hostnames = $hosts
+final_name = feeds
+apply_path = $outdir:/.config/newsraft/
