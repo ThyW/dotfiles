@@ -1,8 +1,8 @@
 local ls = require("luasnip")
 local s = ls.parser.parse_snippet
 
-ls.filetype_extend("markdown", { "latex" })
-ls.filetype_extend("rmarkdown", { "latex" })
+ls.filetype_extend("markdown", { "tex" })
+ls.filetype_extend("rmarkdown", { "tex" })
 
 ls.add_snippets("all", { s("shbang", "#!/usr/bin/env $0") }, {})
 ls.add_snippets("rust",
