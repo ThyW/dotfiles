@@ -1,6 +1,6 @@
 local nvim_lsp = require 'lspconfig'
-require("inlay-hints").setup({})
-local ih = require("inlay-hints")
+-- require("inlay-hints").setup({})
+-- local ih = require("inlay-hints")
 
 local on_attach = function(_, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -84,7 +84,7 @@ nvim_lsp['sumneko_lua'].setup {
 }
 
 for _, lsp in ipairs(servers) do
-  local capabilities = require 'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  local capabilities = require 'cmp_nvim_lsp'.default_capabilities(vim.lsp.protocol.make_client_capabilities())
   if lsp == "html" then
     local cps = capabilities
     cps.textDocument.completion.completionItem.snippetSupport = true
@@ -122,7 +122,7 @@ for _, lsp in ipairs(servers) do
         --[[ ih.on_attach(c, b)
         ih.set_all() ]]
       end,
-      cmd = {"rustup", "run", "nightly", "rust-analyzer"},
+      cmd = { "rustup", "run", "nightly", "rust-analyzer" },
       capabilities = capabilities,
       server = {
         settings = {
@@ -170,11 +170,11 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
       on_attach = on_attach,
       capabilities = capabilities,
-      settings = {
+      --[[ settings = {
         haskell = {
           formattingProvider = "ormolu"
         }
-      }
+      } ]]
     }
   else
     nvim_lsp[lsp].setup {
