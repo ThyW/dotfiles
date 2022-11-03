@@ -31,7 +31,7 @@ else
 
     --[[ Surround parts of text with quotes, brackets and more!]]
     -- use 'tpope/vim-surround'
-    use { 'kylechui/nvim-surround'}
+    use { 'kylechui/nvim-surround' }
 
     --[[ Syntax highligting. Tree-sitter is a great parsing library for parsing
       languages and great syntax highlighting.]]
@@ -155,5 +155,8 @@ else
 
     --[[A plugin for taking scientific notes and pretty math equations.]]
     use 'jbyuki/nabla.nvim'
+
+    --[[Amazing tools which assist one with writing Haskell]]
+    use { 'MrcJkb/haskell-tools.nvim' }
   end)
 end

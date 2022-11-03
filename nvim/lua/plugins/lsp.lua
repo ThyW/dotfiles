@@ -40,7 +40,7 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls', 'ols', 'hls' }
+local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls', 'ols' }
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
@@ -166,15 +166,11 @@ for _, lsp in ipairs(servers) do
         }
       }
     }
+  -- this is deprecated and i moved over to haskell-tools
   elseif lsp == "hls" then
     nvim_lsp[lsp].setup {
       on_attach = on_attach,
       capabilities = capabilities,
-      --[[ settings = {
-        haskell = {
-          formattingProvider = "ormolu"
-        }
-      } ]]
     }
   else
     nvim_lsp[lsp].setup {

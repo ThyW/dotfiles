@@ -78,4 +78,6 @@ if [[ ! "$(tty)" = "/dev/tty1" ]]; then
     fi 
 fi
 
+@@ legionnaire, terminator
 [ -f "/home/zir/.ghcup/env" ] && source "/home/zir/.ghcup/env" # ghcup-env
+@!

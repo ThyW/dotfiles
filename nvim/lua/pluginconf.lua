@@ -32,3 +32,4 @@ require("plugins.gitsigns")
 require("plugins.autolist")
 -- == todo.txt
 -- require("plugins.todotxt")
+require("plugins.haskell-tools")
