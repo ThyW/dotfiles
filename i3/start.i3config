@@ -38,6 +38,8 @@ exec --no-startup-id xrandr --output eDP-1-1 --off \
 && xrandr --output HDMI-1-1 --primary \
 && xrandr --output DP-1-1 --right-of HDMI-1-1 \
 move $ws1 to output HDMI-1-1 move $ws2 to output DP-1-1
+
+exec --no-startup-id ~/.fehbg
 @!
 
 # Use Mouse+$mod to drag floating windows to their wanted position
