@@ -166,7 +166,7 @@ for _, lsp in ipairs(servers) do
         }
       }
     }
-  -- this is deprecated and i moved over to haskell-tools
+    -- this is deprecated and i moved over to haskell-tools
   elseif lsp == "hls" then
     nvim_lsp[lsp].setup {
       on_attach = on_attach,
