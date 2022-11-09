@@ -54,6 +54,7 @@ cmp.setup.filetype('rmd',
   })
   })
 
+
 cmp.setup {
   mapping = {
     ["<c-u>"] = cmp.mapping.scroll_docs(-4),
@@ -82,12 +83,6 @@ cmp.setup {
         fallback()
       end
     end, { "i", "s" }),
-  },
-
-  cmdline = {
-    sources = {
-      { name = 'cmdline' }
-    }
   },
 
   sources = {
@@ -140,3 +135,14 @@ cmp.setup {
     },
   },
 }
+
+cmp.setup.cmdline(':', {
+  sources = {
+    { name = "cmdline" }
+  }
+})
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = "buffer" }
+  }
+})

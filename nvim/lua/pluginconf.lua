@@ -19,7 +19,7 @@ require('plugins.toggleterm')
 -- === Fidget.nvim ===
 require('plugins.fidget')
 -- === Presence.nvim ===
-require("plugins.presence")
+-- require("plugins.presence")
 -- === Telescope.nvim ===
 require("plugins.telescope")
 -- == Snippets ==
@@ -33,3 +33,5 @@ require("plugins.autolist")
 -- == todo.txt
 -- require("plugins.todotxt")
 require("plugins.haskell-tools")
+-- == nvim-surround
+require("plugins.surround")

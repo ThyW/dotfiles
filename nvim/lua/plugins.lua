@@ -19,8 +19,8 @@ else
     use 'rust-lang/rust.vim'
 
     --[[ Fuzzy finder and vim integration]]
-    use 'junegunn/fzf'
-    use 'junegunn/fzf.vim'
+    --[[ use 'junegunn/fzf'
+    use 'junegunn/fzf.vim' ]]
 
     --[[ Lua fuzzy finder with great overall integration]]
     use 'nvim-telescope/telescope.nvim'
@@ -30,7 +30,6 @@ else
     use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } }
 
     --[[ Surround parts of text with quotes, brackets and more!]]
-    -- use 'tpope/vim-surround'
     use { 'kylechui/nvim-surround' }
 
     --[[ Syntax highligting. Tree-sitter is a great parsing library for parsing
@@ -66,7 +65,7 @@ else
     use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
 
     --[[ Setup development environment for writing Neovim Lua plugins.]]
-    use 'folke/lua-dev.nvim'
+    -- use 'folke/lua-dev.nvim'
 
     --[[ Togglelabe comments for different programming languages.]]
     use 'b3nj5m1n/kommentary'
@@ -109,16 +108,16 @@ else
     use 'j-hui/fidget.nvim'
 
     --[[ Discrod Rich Presence for Neovim, written and configured using Lua.]]
-    use 'andweeb/presence.nvim'
+    -- use 'andweeb/presence.nvim'
 
     --[[ Syntax highlighting for the Nickel configuration language. ]]
-    use 'nickel-lang/vim-nickel'
+    -- use 'nickel-lang/vim-nickel'
 
     --[[Plugin for calling lazygit from within neovim]]
     use 'kdheepak/lazygit.nvim'
 
     --[[Yuck language support]]
-    use 'elkowar/yuck.vim'
+    -- use 'elkowar/yuck.vim'
     --[[Parentheses inferance for LISP languages]]
     use { 'eraserhd/parinfer-rust', run = 'cargo build --release' }
 
@@ -145,13 +144,13 @@ else
     use { 'lukas-reineke/indent-blankline.nvim' }
 
     -- [[Language support for the Odin language.]]
-    use { 'Tetralux/odin.vim', branch = 'master' }
+    -- use { 'Tetralux/odin.vim', branch = 'master' }
 
     --[[Automatically create lists and indentation.]]
     use { 'gaoDean/autolist.nvim' }
     --[[Nice interface for todo.txt]]
     -- use { 'arnarg/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' } }
-    use { 'ThyW/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' }, branch = 'vim-ui-input' }
+    -- use { 'ThyW/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' }, branch = 'vim-ui-input' }
 
     --[[A plugin for taking scientific notes and pretty math equations.]]
     use 'jbyuki/nabla.nvim'

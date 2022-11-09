@@ -56,9 +56,10 @@ o.laststatus = 3
 --   * %Y: language
 --   * %c: column
 --   * %l/%L: current line number / out of all lines
-oo.statusline = "<< %f >>%= %m %Y %c %l/%L words: %{luaeval('vim.fn.wordcount().words')}"
+oo.statusline = "<< %f >>%= %m %Y %c %l/%L "
 -- append the current spell checker language onto the end of status line.
-oo.statusline = oo.statusline .. "  LANG:" .. "%{luaeval('GetCurrentLang()')}"
+oo.statusline = oo.statusline .. " LANG:" .. "%{luaeval('GetCurrentLang()')}"
+oo.statusline = oo.statusline .. " WORDS:" .. "%{luaeval('vim.fn.wordcount().words')}" .. " "
 
 c("filetype plugin indent on")
 c("syntax on")
