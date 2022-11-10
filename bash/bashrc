@@ -66,6 +66,7 @@ export DISPLAY=:0.0;
 export I3SOCK="$XDG_RUNTIME_DIR/i3/ipc-socket.sock"
 
 set -o vi
+bind -x '"\C-l": clear'
 
 # eval "$(register-python-argcomplete pipx)"
 @@ legionnaire, terminator
@@ -75,7 +76,7 @@ eval "$(starship init bash)"
 bind '"jk":vi-movement-mode'
 
 if [[ ! "$(tty)" = "/dev/tty1" ]]; then 
-    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ -n $SSH_CONNECTION ]; then
       exec tmux -u
     fi 
 fi
