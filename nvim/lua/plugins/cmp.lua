@@ -104,7 +104,7 @@ cmp.setup {
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
-      local kind = require 'lspkind'.cmp_format({
+      local completion_item = require 'lspkind'.cmp_format({
         mode = "symbol_text",
         maxwidth = 50,
         menu = {
@@ -116,9 +116,16 @@ cmp.setup {
           gh_issues = "",
         }
       })(entry, vim_item)
-      local strings = vim.split(kind.kind, "%s", { trimempty = true })
-      kind.kind = " " .. strings[1] .. " "
-      return kind
+
+      local strings = vim.split(completion_item.kind, "%s", { trimempty = true })
+      completion_item.kind = " " .. strings[1] .. " "
+
+      local item = entry:get_completion_item()
+      if item.detail then
+        completion_item.menu = completion_item.menu .. " " .. item.detail
+      end
+
+      return completion_item
     end
   },
 
