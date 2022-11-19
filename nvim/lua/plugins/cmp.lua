@@ -106,7 +106,7 @@ cmp.setup {
     format = function(entry, vim_item)
       local completion_item = require 'lspkind'.cmp_format({
         mode = "symbol_text",
-        maxwidth = 50,
+        maxwidth = 60,
         menu = {
           cmp_tabnine = "",
           buffer = "",
@@ -144,11 +144,14 @@ cmp.setup {
 }
 
 cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = {
-    { name = "cmdline" }
+    { name = "cmdline" },
+    { name = "path" }
   }
 })
-cmp.setup.cmdline('/', {
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = {
     { name = "buffer" }
   }
