@@ -1,3 +1,5 @@
+-- == Mason.nvim ==
+require('plugins.mason')
 -- ===Nvim-Autopair===
 require('plugins.autopairs')
 -- === bufferline.nvim ===

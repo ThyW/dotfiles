@@ -96,3 +96,8 @@ apply_path = $outdir:/.config/systemd/user/
 hostnames = $hosts
 final_name = feeds
 apply_path = $outdir:/.config/newsraft/
+
+[hypr/hyprland.t.conf]
+hostnames = $hosts
+final_name = hyprland.conf
+apply_path = $outdir:/.config/hypr/

@@ -134,7 +134,8 @@ else
     -- [[Distractionless writing.]]
     use { 'folke/zen-mode.nvim' }
     -- [[Standalone package to provide inlay hint virtual text, currently unused.]]
-    use { 'simrat39/inlay-hints.nvim' }
+    -- use { 'simrat39/inlay-hints.nvim' }
+    use { 'lvimuser/lsp-inlayhints.nvim'}
     -- [[Gruvbox colorschemes.]]
     --[[ use { 'luisiacc/gruvbox-baby', branch = 'main' }
     use { "sainnhe/gruvbox-material" } ]]
@@ -157,5 +158,10 @@ else
 
     --[[Amazing tools which assist one with writing Haskell]]
     use { 'MrcJkb/haskell-tools.nvim' }
+
+    --[[Plugin which makes managing external tools like language servers, linters and formatters easy and simple.]]
+    use { "williamboman/mason.nvim" }
+    --[[Easy nvim lspconfig interop.]]
+    use { "williamboman/mason-lspconfig.nvim" }
   end)
 end

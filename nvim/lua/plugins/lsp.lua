@@ -1,6 +1,8 @@
 local nvim_lsp = require 'lspconfig'
 -- require("inlay-hints").setup({})
 -- local ih = require("inlay-hints")
+--[[SHOULD BE ABLE TO HANDLE VSCODE style hints, once the anti-conceal feature is merged]]
+-- require("lsp-inlayhints").setup()
 
 local on_attach = function(_, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -40,7 +42,7 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
-local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls', 'ols' }
+local servers = { 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls', 'ols', 'bashls' }
 
 -- lua setup
 local sumneko_path = '/usr/bin/lua-language-server'
@@ -162,6 +164,13 @@ for _, lsp in ipairs(servers) do
           formatting = {
             provider = "black",
             blackPath = "/home/zir/.local/bin/black"
+          },
+          analysis = {
+            typeCheckingMode = "basic",
+            inlayHints = {
+              variableTypes = true,
+              functionRetrunTypes = true
+            }
           }
         }
       }

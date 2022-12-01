@@ -47,6 +47,8 @@ alias nrfeed='vi ~/clones/dotfiles/newsraft/feeds && der -f ~/clones/dotfiles/de
 
 alias todo='vi ~/todo/todo.txt'
 alias lg='lazygit'
+alias hyprconf='vi ~/clones/dotfiles/hypr/hyprland.t.conf && der -f ~/clones/dotfiles/derfile -a'
+
 
 ## Tmux aliases
 alias splith='tmux splitw -h -p 50'
