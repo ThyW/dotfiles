@@ -137,3 +137,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     require("lsp-inlayhints").on_attach(client, bufnr, false)
   end,
 })
+
+local cbuff = vim.api.nvim_create_augroup("Cbuffer", {clear = true})
+vim.api.nvim_create_autocmd("BufEnter", {
+  group = cbuff,
+  pattern = {"*.c", "*.h"};
+  callback = function ()
+    vim.cmd [[set tabstop=2]]
+    vim.cmd [[set shiftwidth=2]]
+    vim.cmd [[set softtabstop=2]]
+    vim.cmd [[set expandtab]]
+  end
+})
