@@ -27,10 +27,12 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
   group = der_apply,
   pattern = { "/home/zir/clones/dotfiles/*" },
   callback = function()
+    vim.schedule(function()
     local path = vim.fn.system("git rev-parse --show-toplevel", nil)
     local stripped_path = string.gsub(path, "\n", "", nil)
     local cmd = "der -f " .. stripped_path .. "/derfile -a"
     vim.fn.system(cmd, nil)
+    end)
   end
 })
 
@@ -42,10 +44,15 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
   group = der_apply_lua,
   pattern = { "/home/zir/clones/dotfiles/*.lua" },
   callback = function()
-    local path = vim.fn.system("git rev-parse --show-toplevel", nil)
-    local stripped_path = string.gsub(path, "\n", "", nil)
-    local cmd = "der -f " .. stripped_path .. "/derfile -a"
-    vim.fn.system(cmd, nil)
+    vim.schedule(function ()
+      local path = vim.fn.system("git rev-parse --show-toplevel", nil)
+      local stripped_path = string.gsub(path, "\n", "", nil)
+      local cmd = "der -f " .. stripped_path .. "/derfile -a"
+      vim.fn.system(cmd, nil)
+      require("start").reload()
+
+      vim.cmd("edit %")
+  end)
   end
 })
 
@@ -117,7 +124,7 @@ api.nvim_create_autocmd({ "BufEnter" }, {
   end
 })
 
-api.nvim_create_autocmd({"BufEnter"}, {
+api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = "*.i3config",
   callback = function()
     vim.cmd [[set ft=i3config]]
@@ -138,11 +145,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-local cbuff = vim.api.nvim_create_augroup("Cbuffer", {clear = true})
+local cbuff = vim.api.nvim_create_augroup("Cbuffer", { clear = true })
 vim.api.nvim_create_autocmd("BufEnter", {
   group = cbuff,
-  pattern = {"*.c", "*.h"};
-  callback = function ()
+  pattern = { "*.c", "*.h" };
+  callback = function()
     vim.cmd [[set tabstop=2]]
     vim.cmd [[set shiftwidth=2]]
     vim.cmd [[set softtabstop=2]]
