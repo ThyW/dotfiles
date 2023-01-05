@@ -1,0 +1,45 @@
+let g:leader = " "
+
+filetype plugin on
+filetype indent on
+syntax on
+set encoding=utf8
+
+set updatetime=500
+set timeoutlen=500
+set signcolumn=yes
+set colorcolumn=80
+set showmode
+
+set noexpandtab
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+
+set autoindent
+set smartindent
+set copyindent
+set hlsearch
+
+set listchars=eol:$,tab:>-,space:•
+set list
+
+set splitright
+set splitbelow
+
+
+set nu
+set rnu
+
+noremap <leader>r :%s/<C-r><C-w>//gc<left><left><left>
+
+inoremap jj <Esc>
+noremap H ^
+noremap L $
+
+noremap zk 10kzz<CR>
+noremap zj 10jzz<CR>
+
+noremap <leader>bd :bd!<CR>
+noremap <leader>bl :bnext<CR>
+noremap <leader>bh :bprev<CR>

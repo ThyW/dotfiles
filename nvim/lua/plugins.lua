@@ -2,6 +2,8 @@ vim.cmd [[packadd packer.nvim]]
 
 local err, packer = pcall(require, "packer")
 
+packer.reset()
+
 if not err then
   print(packer)
   return
@@ -94,7 +96,7 @@ else
 
     --[[ Neorg a new org-mode like document editing, writing and organising
       mode for Noevim written in Lua.]]
-    use { "nvim-neorg/neorg", branch = "main" }
+    -- use { "nvim-neorg/neorg", branch = "main" }
 
     --[[ Fastest way to move through files with Noevim. Intuitive and simple to
       use.]]

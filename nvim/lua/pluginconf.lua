@@ -15,7 +15,7 @@ require('plugins.dressing')
 -- ===Lsp Config===
 require('plugins.lsp')
 -- === Neorg ===
-require('plugins.neorg')
+-- require('plugins.neorg')
 -- === ToggleTerm ===
 require('plugins.toggleterm')
 -- === Fidget.nvim ===

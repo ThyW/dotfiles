@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+set -e
+
+no_mypy=0
+
+if [[ $1 = "--nomp" ]]; then
+    no_mypy=1
+fi
+
+run_all ()
+{
+    printf " [+] Running tests...\n"
+    python "$arg"
+    printf " [+] Running flake8...\n"
+    flake8 "$arg" 
+    printf " [+] Running pycodestyle...\n"
+    pycodestyle "$arg"
+    printf " [+] Running mypy...\n"
+    mypy --strict "$arg"
+}
+
+run_no_mypy ()
+{
+    printf " [+] Running tests...\n"
+    python "$arg"
+    printf " [+] Running flake8...\n"
+    flake8 "$arg" 
+    printf " [+] Running pycodestyle...\n"
+    pycodestyle "$arg"
+}
+
+for arg in "$@"; do
+    if [[ $arg = -* ]]; then
+    	echo
+    else
+	printf "[%s]\n" "$arg"
+    	if [[ no_mypy -eq 1 ]]; then
+	    run_no_mypy
+	else
+	    run_all
+	fi
+    fi
+done

@@ -1,0 +1,74 @@
+#!/usr/bin/env python
+
+import os
+import time
+import sys
+
+
+class Error:
+    Numeric = 1
+    WrongArg = 2
+    Unknown = 3
+
+
+def error(code: int, *args) -> None:
+    s = " ".join(args)
+    match code:
+        case Error.Numeric:
+            print(f"Error: One or more values suppliled, namely: `{s}`, were not numeric!")
+        case Error.WrongArg:
+            print(f"Error: An inavlid argument was suppliled: {s}\nTry running with `--help` for a list of arguments.")
+        case Error.Unknown:
+            print(f"Error: An unknown error has occured. {s}")
+    exit(1)
+
+
+def helpfun():
+    print("""Send a notification after a specified amount of time.
+
+Usage:
+    timer -s <num> number of seconds to wait
+    timer -m <num> number of minutes to wait
+    timer -h <num> number of hours to wait
+    timer --help   print this help message""")
+    exit(0)
+
+
+def main() -> None:
+    secs = 0
+    msg = "Time is up"
+    opt, val = None, None
+    for i, ival in enumerate(sys.argv[1:]):
+        if i % 2 == 0:
+            opt = ival
+            if opt == "--help":
+                helpfun()
+        else:
+            val = ival
+            if opt == "-s":
+                if val.isdecimal():
+                    secs += int(val)
+                    continue
+                error(Error.Numeric, val)
+            if opt == "-m":
+                if val.isdecimal():
+                    secs += int(val) * 60
+                    continue
+                error(Error.Numeric, val)
+            if opt == "-h":
+                if val.isdecimal():
+                    secs += int(val) * (60 ** 2)
+                    continue
+                error(Error.Numeric, val)
+            if opt == "-msg":
+                msg = " ".join(sys.argv[i+1:])
+                break
+            else:
+                error(Error.WrongArg, opt)
+            opt, val = None, None
+    time.sleep(secs)
+    os.system(f"notify-send \"{msg}\"")
+
+
+if __name__ == "__main__":
+    main()

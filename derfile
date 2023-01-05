@@ -101,3 +101,16 @@ apply_path = $outdir:/.config/newsraft/
 hostnames = $hosts
 final_name = hyprland.conf
 apply_path = $outdir:/.config/hypr/
+
+[scripts]
+hostnames = $host
+final_name = my_scripts
+apply_path = $outdir:/.local/bin/
+parse_files = false
+recursive = true
+extensions = t
+
+[vim/vimrc]
+hostnames = $hosts
+final_name = .vimrc
+apply_path = $outdir
