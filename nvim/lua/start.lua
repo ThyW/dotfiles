@@ -3,10 +3,7 @@ M = {}
 
 M.load = function (first)
   require("autocmds")
-  local err, _ = pcall(require, "plugins")
-  if not err then
-    print("failed to load plugins.")
-  end
+  require('lazy-plugin')
   local settings
   err,  settings = pcall(require, "settings")
   if not err then
@@ -16,10 +13,6 @@ M.load = function (first)
   err, _ = pcall(require, "functions")
   if not err then
     print("failed to load user defined functions.")
-  end
-  err, _ = pcall(require, "pluginconf")
-  if not err then
-    print("failed to load plugin configurations.")
   end
   err, _ = pcall(require, "keybinds")
   if not err then

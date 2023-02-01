@@ -23,7 +23,7 @@ local der_apply = api.nvim_create_augroup("DerApply", {
   clear = true
 })
 
-api.nvim_create_autocmd({ "BufWritePost" }, {
+--[[api.nvim_create_autocmd({ "BufWritePost" }, {
   group = der_apply,
   pattern = { "/home/zir/clones/dotfiles/*" },
   callback = function()
@@ -34,13 +34,13 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
     vim.fn.system(cmd, nil)
     end)
   end
-})
+})]]
 
 local der_apply_lua = api.nvim_create_augroup("DerApply", {
   clear = true
 })
 
-api.nvim_create_autocmd({ "BufWritePost" }, {
+--[[ api.nvim_create_autocmd({ "BufWritePost" }, {
   group = der_apply_lua,
   pattern = { "/home/zir/clones/dotfiles/*.lua" },
   callback = function()
@@ -54,7 +54,7 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
       vim.cmd("edit %")
   end)
   end
-})
+})]]
 
 -- autocmd group for automatic python formatting on writing to a file
 local python_formatting = api.nvim_create_augroup("PythonFormatting", {
@@ -131,7 +131,7 @@ api.nvim_create_autocmd({ "BufEnter" }, {
   end
 })
 
-vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
+--[[ vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
 vim.api.nvim_create_autocmd("LspAttach", {
   group = "LspAttach_inlayhints",
   callback = function(args)
@@ -143,7 +143,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     require("lsp-inlayhints").on_attach(client, bufnr, false)
   end,
-})
+}) ]]
 
 local cbuff = vim.api.nvim_create_augroup("Cbuffer", { clear = true })
 vim.api.nvim_create_autocmd("BufEnter", {
