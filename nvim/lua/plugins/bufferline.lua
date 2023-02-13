@@ -22,6 +22,9 @@ require 'bufferline'.setup {
     separator = {
       fg = "#504945",
       bg = "none"
+    },
+    buffer = {
+      fg = "#ebdbb2"
     }
   }
 }

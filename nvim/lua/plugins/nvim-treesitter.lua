@@ -2,7 +2,7 @@ return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {'nvim-treesitter/playground', 'nvim-treesitter/nvim-treesitter-textobjects', 'nvim-treesitter/nvim-treesitter-refactor'},
   build = ":TSUpdate",
-  config = function () 
+  config = function ()
     local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
 
     parser_configs.norg = {
@@ -30,7 +30,7 @@ return {
     }
 
     require('nvim-treesitter.configs').setup {
-      ensure_installed = { "rust", "c", "cpp", "python", "php", "css", "html", "norg", "norg_meta", "norg_table", "latex", "bash", "lua", "vim" },
+      ensure_installed = { "rust", "c", "cpp", "python", "php", "css", "html", "norg", "norg_meta", "norg_table", "latex", "bash", "lua", "vim", "haskell" },
       highlight = {
         enable = true,
       },

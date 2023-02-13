@@ -52,7 +52,7 @@ table.insert(rtp, "lua/?.lua")
 table.insert(rtp, "lua/?/init.lua")
 
 
-nvim_lsp['sumneko_lua'].setup {
+nvim_lsp['lua_ls'].setup {
   on_attach = on_attach,
   flags = {
     debounce_text_changes = 150,
