@@ -34,7 +34,6 @@ end
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.buf.hover, { border = "rounded" }),
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.buf.signature_help, { border = "rounded" })
 } ]]
-
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   opts = opts or {}
@@ -53,36 +52,36 @@ table.insert(rtp, "lua/?/init.lua")
 
 
 nvim_lsp['lua_ls'].setup {
-  on_attach = on_attach,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  cmd = { sumneko_path };
-  settings = {
-    Lua = {
-      -- this is still not supported
-      format = {
-        enable = true,
-        defaultConfig = {
-          indent_style = "space",
-          indent_size = "2",
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
+    cmd = { sumneko_path },
+    settings = {
+        Lua = {
+            -- this is still not supported
+            format = {
+                enable = true,
+                defaultConfig = {
+                    indent_style = "space",
+                    indent_size = "2",
+                }
+            },
+            runtime = {
+                version = 'LuaJIT',
+                path = rtp,
+            },
+            diagnostics = {
+                globals = { 'vim' },
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = {
+                enable = false
+            },
         }
-      },
-      runtime = {
-        version = 'LuaJIT',
-        path = rtp,
-      },
-      diagnostics = {
-        globals = { 'vim' },
-      },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      telemetry = {
-        enable = false
-      },
     }
-  }
 }
 
 for _, lsp in ipairs(servers) do
@@ -91,103 +90,102 @@ for _, lsp in ipairs(servers) do
     local cps = capabilities
     cps.textDocument.completion.completionItem.snippetSupport = true
     nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      capabilities = cps,
-      cmd = { "vscode-html-language-server", "--stdio" },
-      filetypes = { "html", "htmldjango" },
-      init_options = {
-        configurationSection = { "html", "css", "javascript" },
-        embededLanguages = {
-          css = true,
-          javascript = true,
-        }
-      },
-      single_file_support = true,
+        on_attach = on_attach,
+        capabilities = cps,
+        cmd = { "vscode-html-language-server", "--stdio" },
+        filetypes = { "html", "htmldjango" },
+        init_options = {
+            configurationSection = { "html", "css", "javascript" },
+            embededLanguages = {
+                css = true,
+                javascript = true,
+            }
+        },
+        single_file_support = true,
     }
   elseif lsp == "phpactor" then
     nvim_lsp["phpactor"].setup {
-      on_attach = on_attach,
-      cmd = { "phpactor", "language-server" },
-      filetypes = { "php", "html" },
+        on_attach = on_attach,
+        cmd = { "phpactor", "language-server" },
+        filetypes = { "php", "html" },
     }
   elseif lsp == "nickel_ls" then
     nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-      filetypes = { "ncl", "nickel" },
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = { "ncl", "nickel" },
     }
-
   elseif lsp == "rust_analyzer" then
     nvim_lsp[lsp].setup {
-      on_attach = function(c, b)
-        on_attach(c, b)
-        --[[ ih.on_attach(c, b)
+        on_attach = function(c, b)
+          on_attach(c, b)
+          --[[ ih.on_attach(c, b)
         ih.set_all() ]]
-      end,
-      cmd = { "rustup", "run", "nightly", "rust-analyzer" },
-      capabilities = capabilities,
-      server = {
-        settings = {
-          ["rust-analyzer"] = {
-            procMacro = {
-              enable = true
-            },
-            checkOnSave = {
-              enable = true,
-              command = "clippy",
-            },
-            completion = {
-              postfix = {
-                enable = false
-              },
-              snippets = {
-                enable = false,
-                custom = {}
-              }
-            },
-            imports = {
-              prefix = "crate",
-            }
-          }
+        end,
+        cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+        capabilities = capabilities,
+        server = {
+            settings = {
+                ["rust-analyzer"] = {
+                    procMacro = {
+                        enable = true
+                    },
+                    checkOnSave = {
+                        enable = true,
+                        command = "clippy",
+                    },
+                    completion = {
+                        postfix = {
+                            enable = false
+                        },
+                        snippets = {
+                            enable = false,
+                            custom = {}
+                        }
+                    },
+                    imports = {
+                        prefix = "crate",
+                    }
+                }
 
+            }
         }
-      }
     }
   elseif lsp == "pyright" then
     nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-      cmd = { "pyright-langserver", "--stdio" },
-      -- does not work sadly :(
-      settings = {
-        python = {
-          formatting = {
-            provider = "black",
-            blackPath = "/home/zir/.local/bin/black"
-          },
-          analysis = {
-            typeCheckingMode = "basic",
-            inlayHints = {
-              variableTypes = true,
-              functionRetrunTypes = true
+        on_attach = on_attach,
+        capabilities = capabilities,
+        cmd = { "pyright-langserver", "--stdio" },
+        -- does not work sadly :(
+        settings = {
+            python = {
+                formatting = {
+                    provider = "black",
+                    blackPath = "/home/zir/.local/bin/black"
+                },
+                analysis = {
+                    typeCheckingMode = "basic",
+                    inlayHints = {
+                        variableTypes = true,
+                        functionRetrunTypes = true
+                    }
+                }
             }
-          }
         }
-      }
     }
     -- this is deprecated and i moved over to haskell-tools
   elseif lsp == "hls" then
     nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
+        on_attach = on_attach,
+        capabilities = capabilities,
     }
   else
     nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      capabilities = capabilities,
+        on_attach = on_attach,
+        flags = {
+            debounce_text_changes = 150,
+        },
+        capabilities = capabilities,
     }
   end
 end

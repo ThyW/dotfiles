@@ -224,15 +224,17 @@ return {
         lazy = false
     },
     -- [[Distractionless writing.]]
-    { 'folke/zen-mode.nvim',                 enabled = false },
+    { 'folke/zen-mode.nvim',          enabled = false },
     -- [[Standalone package to provide inlay hint virtual text, currently unused.]]
     -- { 'simrat39/inlay-hints.nvim' }
-    { 'lvimuser/lsp-inlayhints.nvim',        enabled = false },
+    { 'lvimuser/lsp-inlayhints.nvim', enabled = false },
     -- [[Gruvbox colorschemes.]]
     --[[ { 'luisiacc/gruvbox-baby', branch = 'main' }
   { "sainnhe/gruvbox-material" } ]]
     -- [[Signcolumn signs to provide git diagnostics.]]
-    { 'lewis6991/gitsigns.nvim',             branch = 'main' },
+    { 'lewis6991/gitsigns.nvim', branch = 'main', config = function()
+      require("plugins.gitsigns")
+    end },
     -- [[Visual indentation lines.]]
     { 'lukas-reineke/indent-blankline.nvim', lazy = false },
 
@@ -269,5 +271,5 @@ return {
         end,
         dependencies = { "williamboman/mason-lspconfig.nvim" }
     },
-    --[[Easy nvim lspconfig interop.]]
+    { "mfussenegger/nvim-jdtls" }
 }
