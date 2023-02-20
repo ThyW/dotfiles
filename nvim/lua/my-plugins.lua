@@ -6,8 +6,8 @@ return {
     -- vim.input UI wrapper
     'stevearc/dressing.nvim',
 
-    --[[ Rust Porgramming language support for vim. Adds things such as :Cbuild, and
-    :RustFmt and many others. ]]
+    --[[ Rust Porgramming language support for vim. Adds things 
+    -- such as :Cbuild, and :RustFmt and many others. ]]
     { 'rust-lang/rust.vim',                       ft = "rust" },
 
     --[[ Fuzzy finder and vim integration]]
@@ -22,47 +22,58 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
     --[[ Gruvbox colorscheme for nvim, written in Lua.]]
-    { "ellisonleao/gruvbox.nvim", lazy = false, priority = 1000, dependencies = { "rktjmp/lush.nvim" }, config = function()
-      require("gruvbox").setup {
-          overrides = {
-              TSKeyword = { italic = true, bold = true, fg = "#fb4934" },
-              TSKeywordFunction = { italic = true, bold = true, fg = "#fb4934" },
-              TSRepeat = { italic = true, bold = true, fg = "#fb4934" },
-              TSConditional = { italic = true, bold = true, fg = "#fb4934" },
+    { "ellisonleao/gruvbox.nvim", lazy = false,
+        priority = 1000,
+        dependencies = { "rktjmp/lush.nvim" },
+        config = function()
+          require("gruvbox").setup {
+              overrides = {
+                  TSKeyword = {
+                      italic = true,
+                      bold = true,
+                      fg = "#fb4934"
+                  },
+                  TSKeywordFunction = {
+                      italic = true,
+                      bold = true,
+                      fg = "#fb4934"
+                  },
+                  TSRepeat = {
+                      italic = true,
+                      bold = true,
+                      fg = "#fb4934"
+                  },
+                  TSConditional = { italic = true,
+                      bold = true,
+                      fg = "#fb4934"
+                  },
+              }
           }
-      }
 
-      vim.opt.background = "dark"
-      vim.cmd("colorscheme gruvbox")
+          vim.opt.background = "dark"
+          vim.cmd("colorscheme gruvbox")
 
-      --[[ vim.opt.background = "dark"
-      vim.cmd("colorscheme gruvbox") ]]
-      --[[ vim.g.gruvbox_material_background = "medium"
-    vim.g.gruvbox_material_foreground = "mix"
-    vim.g.gruvbox_material_enable_bold = 1
-    vim.g.gruvbox_material_enable_italic= 1
-    vim.g.gruvbox_material_ui_contrast = "high"
-    vim.g.gruvbox_material_statusline_style = "mix"
-    c("colorscheme gruvbox-material") ]]
-      local highlights = {
-          "highlight SignColumn guibg=none",
-          "highlight LineNr ctermfg=240",
-          "highlight CursorLineNr cterm=bold gui=bold guibg=none",
-          "highlight Pmenu ctermfg=red ctermbg=red cterm=bold guifg=#fabd2f guibg=#292929",
-          "highlight SpellBad ctermfg=red ctermbg=black cterm=underline ",
-          "highlight StatusLine ctermfg=black ctermbg=gray guibg=#efc169 guifg=#504945",
-          "highlight StatusLineNC guibg=#efc169 guifg=#3c3836",
-          "highlight ColorColumn ctermbg=none",
-          "highlight Conceal ctermbg=none",
-          "highlight LspDiagnosticsError ctermfg=red",
-          "highlight LspDiagnosticsWarning ctermfg=cyan",
-          "highlight LspDiagnosticsInformation ctermfg=grey",
-      }
+          local highlights = {
+              "highlight SignColumn guibg=none",
+              "highlight LineNr ctermfg=240",
+              "highlight CursorLineNr cterm=bold gui=bold guibg=none",
+              "highlight Pmenu ctermfg=red ctermbg=red" ..
+              "cterm=bold guifg=#fabd2f" .. "guibg=#292929",
+              "highlight SpellBad ctermfg=red ctermbg=black cterm=underline ",
+              "highlight StatusLine ctermfg=black" ..
+              "ctermbg=gray guibg=#efc169" .. "guifg=#504945",
+              "highlight StatusLineNC guibg=#efc169 guifg=#3c3836",
+              "highlight ColorColumn ctermbg=none",
+              "highlight Conceal ctermbg=none",
+              "highlight LspDiagnosticsError ctermfg=red",
+              "highlight LspDiagnosticsWarning ctermfg=cyan",
+              "highlight LspDiagnosticsInformation ctermfg=grey",
+          }
 
-      for _, v in ipairs(highlights) do
-        vim.cmd(v)
-      end
-    end },
+          for _, v in ipairs(highlights) do
+            vim.cmd(v)
+          end
+        end },
 
     --[[ Surround parts of text with quotes, brackets and more!]]
     { 'kylechui/nvim-surround', config = function()
@@ -83,14 +94,15 @@ return {
     ]]
     --[[ Rmarkdown, pandoc, latex and markdown and other note taking utilities.
     ]]
-    -- disabled for now, it was really intrusive and wasn't doing what it expected it to do.
+    -- disabled for now, it was really intrusive and wasn't doing what it
+    -- expected it to do.
     --[[ 'vim-pandoc/vim-rmarkdown'
   'vim-pandoc/vim-pandoc'
   'vim-pandoc/vim-pandoc-syntax' ]]
 
     --[[ More tools, helpers and extensions for writing Rust in Neovim.]]
-    -- I stopped using this, becait didn't really achieve what I was looking for
-    -- my configuration can still be found in lua/plugins/rust-tools.lua
+    -- I stopped using this, because didn't really achieve what I was looking
+    -- for my configuration can still be found in lua/plugins/rust-tools.lua
     -- 'simrat39/rust-tools.nvim'
 
     --[[ Automatically create and complete brackets, quotes and more.]]
@@ -132,7 +144,8 @@ return {
 
           ls.add_snippets("all", { s("shbang", "#!/usr/bin/env $0") }, {})
           ls.add_snippets("rust",
-              { s("ils", "if let Some($1) = $2 {\n    $3\n}"), s("pdbg", "#[cfg(debug_assertions)]\nprintln!(\"$1\");") },
+              { s("ils", "if let Some($1) = $2 {\n    $3\n}"),
+                  s("pdbg", "#[cfg(debug_assertions)]\nprintln!(\"$1\");") },
               {})
         end
 
@@ -151,7 +164,6 @@ return {
     'hrsh7th/cmp-cmdline',
     --[[ Tabnine AI completion for the `cmp` completion framework.]]
     -- removed for now due to not being used
-    -- {'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp'}
     'saadparwaiz1/cmp_luasnip',
     --[[ Vscode-like pictograms for the completion windows.]]
     "onsails/lspkind-nvim",
@@ -225,12 +237,7 @@ return {
     },
     -- [[Distractionless writing.]]
     { 'folke/zen-mode.nvim',          enabled = false },
-    -- [[Standalone package to provide inlay hint virtual text, currently unused.]]
-    -- { 'simrat39/inlay-hints.nvim' }
     { 'lvimuser/lsp-inlayhints.nvim', enabled = false },
-    -- [[Gruvbox colorschemes.]]
-    --[[ { 'luisiacc/gruvbox-baby', branch = 'main' }
-  { "sainnhe/gruvbox-material" } ]]
     -- [[Signcolumn signs to provide git diagnostics.]]
     { 'lewis6991/gitsigns.nvim', branch = 'main', config = function()
       require("plugins.gitsigns")
@@ -251,10 +258,6 @@ return {
           })
         end
     },
-    --[[Nice interface for todo.txt]]
-    -- { 'arnarg/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' } }
-    -- { 'ThyW/todotxt.nvim', requires = { 'MunifTanjim/nui.nvim' }, branch = 'vim-ui-input' }
-
     --[[A plugin for taking scientific notes and pretty math equations.]]
     'jbyuki/nabla.nvim',
 
@@ -263,7 +266,8 @@ return {
       require("plugins.haskell-tools")
     end },
 
-    --[[Plugin which makes managing external tools like language servers, linters and formatters easy and simple.]]
+    --[[Plugin which makes managing external tools like language servers,
+    -- linters and formatters easy and simple.]]
     { "williamboman/mason.nvim",
         config = function()
           require("mason").setup()
@@ -271,5 +275,17 @@ return {
         end,
         dependencies = { "williamboman/mason-lspconfig.nvim" }
     },
-    { "mfussenegger/nvim-jdtls" }
+    --[[Better interop with Java  language server.]]
+    { "mfussenegger/nvim-jdtls" },
+    { "m4xshen/smartcolumn.nvim",
+        config = function()
+          require("smartcolumn").setup(
+              {
+                  colorcolumn = 80,
+                  disabled_filetypes = { "help", "markdown", "tex" },
+                  limit_to_windows = true,
+              }
+          )
+        end,
+    }
 }
