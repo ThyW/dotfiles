@@ -43,3 +43,5 @@ noremap zj 10jzz<CR>
 noremap <leader>bd :bd!<CR>
 noremap <leader>bl :bnext<CR>
 noremap <leader>bh :bprev<CR>
+
+set clipboard=unnamedplus
