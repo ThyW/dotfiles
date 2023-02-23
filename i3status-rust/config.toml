@@ -1,28 +1,18 @@
+[theme]
 theme = "gruvbox-dark"
-icons = "none"
+
+[icons]
+icons = "material-nf"
 
 [[block]]
 block = "battery"
 interval = 30
-format = "{percentage}% {time} {power}W"
+format = "$icon $percentage.bar(width:8, max_value:8) ($percentage.eng(w:2))"
+full_format = "$icon $percentage.bar(width:8, max_value:8) (FULL)"
 
 [[block]]
 block = "memory"
-display_type = "memory"
-format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
-
-# [[block]]
-# block = "nvidia_gpu"
-# label = ""
-# show_memory = false
-# interval = 1
-
-# [[block]]
-# block = "btc"
-# interval = 10
-# currency = "EUR"
-# currency_list = ["EUR", "USD", "RUB", "AUD", "BRL", "CAD"]
+format = "$icon $mem_used.eng(prefix:M)/$mem_total.eng(prefix:M) ($mem_total_used_percents.eng(w:2)) "
 
 [[block]]
 block = "cpu"
@@ -30,8 +20,9 @@ interval = 1
 
 [[block]]
 block = "sound"
+format = "$icon $volume.bar(w:8) ($volume.eng(w:2))"
 
 [[block]]
 block = "time"
-interval = 60
-format = "%a %d/%m %R"
+interval = 30
+format = " $icon $timestamp.datetime(f:'%a %d/%m %R')"

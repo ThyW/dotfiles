@@ -1,9 +1,17 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  dependencies = {'nvim-treesitter/playground', 'nvim-treesitter/nvim-treesitter-textobjects', 'nvim-treesitter/nvim-treesitter-refactor'},
+  dependencies = { 'nvim-treesitter/playground', 'nvim-treesitter/nvim-treesitter-textobjects', 'nvim-treesitter/nvim-treesitter-refactor' },
   build = ":TSUpdate",
-  config = function ()
+  config = function()
     local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+
+    parser_configs.just = {
+      install_info = {
+        url = "https://github.com/IndianBoy42/tree-sitter-just",
+        files = { "src/parser.c", "src/scanner.cc" },
+        branch = "main",
+      },
+    }
 
     parser_configs.norg = {
       install_info = {
@@ -30,7 +38,7 @@ return {
     }
 
     require('nvim-treesitter.configs').setup {
-      ensure_installed = { "rust", "c", "cpp", "python", "php", "css", "html", "norg", "norg_meta", "norg_table", "latex", "bash", "lua", "vim", "haskell" },
+      ensure_installed = { "rust", "c", "cpp", "python", "php", "css", "html", "norg", "norg_meta", "norg_table", "latex", "bash", "lua", "vim", "haskell", "just", "java" },
       highlight = {
         enable = true,
       },
