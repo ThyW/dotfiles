@@ -52,6 +52,7 @@ alias cconf='vi ~/clones/dotfiles/cwm/config && der -f ~/clones/dotfiles/derfile
 alias dtd='vi ~/notes/daily_todo.norg'
 alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles/derfile -a'
 alias nrfeed='vi ~/clones/dotfiles/newsraft/feeds && der -f ~/clones/dotfiles/derfile -a'
+alias dots='cd ~/clones/dotfiles/ && vi . && der -a && cd -'
 
 alias todo='vi ~/todo/todo.txt'
 alias lg='lazygit'
