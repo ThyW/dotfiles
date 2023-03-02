@@ -7,12 +7,19 @@ icons = "material-nf"
 [[block]]
 block = "battery"
 interval = 30
-format = "$icon $percentage.bar(width:8, max_value:8) ($percentage.eng(w:2))"
-full_format = "$icon $percentage.bar(width:8, max_value:8) (FULL)"
+format = "$icon ($percentage.eng(w:2))"
+full_format = "$icon (FULL)"
+empty_format = "$icon (EMPTY)"
+not_charging_format = "$icon ~($percentage.eng(w:2))"
 
 [[block]]
 block = "memory"
 format = "$icon $mem_used.eng(prefix:M)/$mem_total.eng(prefix:M) ($mem_used_percents.eng(w:2)) "
+
+[[block]]
+block = "speedtest"
+interval = 300
+format = "^icon_net_down $speed_down ^icon_net_up $speed_up"
 
 [[block]]
 block = "cpu"
@@ -20,9 +27,23 @@ interval = 1
 
 [[block]]
 block = "sound"
-format = "$icon $volume.bar(w:8) ($volume.eng(w:2))"
+format = "$icon $volume.eng(w:2)"
+
+[[block]]
+block = "backlight"
+
+@@ terminator
+device = "acpi_video0"
+@!
+
+@@ legionnaire
+device = "intel_backlight"
+@!
+minimum = 1
+cycle = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+format = "$icon $brightness"
 
 [[block]]
 block = "time"
-interval = 30
+interval = 5
 format = " $icon $timestamp.datetime(f:'%a %d/%m %R')"
