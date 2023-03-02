@@ -1,5 +1,5 @@
 add_newline = false
-format = "$git_branch$git_status$lua$rust $directory$character"
+format = "$git_branch$git_status$lua$rust$c$cmake$java $directory$character"
 
 [directory]
 truncation_length = 3
@@ -19,6 +19,21 @@ format = '([ \[$all_status$ahead_behind\]]($style))'
 style = "bold red"
 ahead = ""
 behind = ""
+
+[c]
+format = ' [$symbol($version)]($style)'
+symbol = "\ue61e "
+version_format = "${major}.${minor}"
+style = "bold cyan"
+
+[cmake]
+format = " via [CMake]($style)"
+
+[java]
+format = " [$symbol ($version)]($style)"
+symbol = "\ue738"
+version_format = "${major}.${minor}"
+style = "bold cyan"
 
 [rust]
 format = ' rust [$version]($style)'
