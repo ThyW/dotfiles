@@ -62,6 +62,9 @@ bindsym $mod+s layout toggle
 # Toggle tiling / floating mode for focused container.
 bindsym $mod+space floating toggle
 
+# Switch focus between tiled and floating clients.
+bindsym $mod+shift+space focus mode_toggle
+
 # Focus the parent container.
 bindsym $mod+a focus parent
 
