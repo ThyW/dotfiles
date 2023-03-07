@@ -3,6 +3,8 @@
 # it easier for your eyes to function
 exec --no-startup-id redshift -l 48:17 -t 3900:3900
 
+exec --no-startup-id xrnadr --dpi 96
+
 # network manager applet for simple network management from i3-bar
 exec --no-startup-id nm-applet
 
