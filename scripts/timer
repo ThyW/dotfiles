@@ -30,6 +30,7 @@ Usage:
     timer -s <num> number of seconds to wait
     timer -m <num> number of minutes to wait
     timer -h <num> number of hours to wait
+    timer -msg     <message> a specific message
     timer --help   print this help message""")
     exit(0)
 

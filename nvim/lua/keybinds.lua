@@ -113,7 +113,7 @@ map("H", "^", { noremap = true })
 map("L", "$", { noremap = true })
 
 -- NvimTree toggle.
-nmap("<leader>of", function() require "nvim-tree".toggle(false, false) end, { silent = true, noremap = true })
+nmap("<leader>of", ":NvimTreeToggle<CR>", { silent = true, noremap = true })
 
 -- Switch spelling language.
 nmap("<leader>oS", function() require "functions".switch_spelling() end, { silent = true, noremap = true })
