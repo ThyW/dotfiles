@@ -108,7 +108,6 @@ final_name = my_scripts
 apply_path = $outdir:/.local/bin/
 parse_files = false
 recursive = true
-extensions = t
 
 [vim/vimrc]
 hostnames = $hosts

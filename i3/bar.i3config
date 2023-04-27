@@ -16,10 +16,6 @@ bar {
 
     height 18
 
-@@ legionnaire
-    tray_output HDMI-1
-@!
-
     colors {
         separator   #666666
         background  $bg

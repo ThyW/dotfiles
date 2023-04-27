@@ -31,7 +31,7 @@ require("plugins.zen-mode")
 -- == Gitsigns ==
 require("plugins.gitsigns")
 -- == Autolist ==
-require("plugins.autolist")
+-- require("plugins.autolist")
 -- == todo.txt
 -- require("plugins.todotxt")
 require("plugins.haskell-tools")

@@ -18,44 +18,6 @@ api.nvim_create_autocmd({ "BufEnter, BufWinEnter" }, {
   end
 })
 
--- hot config reloading for lua and other dotfiles
-local der_apply = api.nvim_create_augroup("DerApply", {
-  clear = true
-})
-
---[[api.nvim_create_autocmd({ "BufWritePost" }, {
-  group = der_apply,
-  pattern = { "/home/zir/clones/dotfiles/*" },
-  callback = function()
-    vim.schedule(function()
-    local path = vim.fn.system("git rev-parse --show-toplevel", nil)
-    local stripped_path = string.gsub(path, "\n", "", nil)
-    local cmd = "der -f " .. stripped_path .. "/derfile -a"
-    vim.fn.system(cmd, nil)
-    end)
-  end
-})]]
-
-local der_apply_lua = api.nvim_create_augroup("DerApply", {
-  clear = true
-})
-
---[[ api.nvim_create_autocmd({ "BufWritePost" }, {
-  group = der_apply_lua,
-  pattern = { "/home/zir/clones/dotfiles/*.lua" },
-  callback = function()
-    vim.schedule(function ()
-      local path = vim.fn.system("git rev-parse --show-toplevel", nil)
-      local stripped_path = string.gsub(path, "\n", "", nil)
-      local cmd = "der -f " .. stripped_path .. "/derfile -a"
-      vim.fn.system(cmd, nil)
-      require("start").reload()
-
-      vim.cmd("edit %")
-  end)
-  end
-})]]
-
 -- autocmd group for automatic python formatting on writing to a file
 local python_formatting = api.nvim_create_augroup("PythonFormatting", {
   clear = true,
@@ -150,6 +112,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   group = cbuff,
   pattern = { "*.c", "*.h" };
   callback = function()
+    vim.cmd [[set ft=c]]
     vim.cmd [[set tabstop=4]]
     vim.cmd [[set shiftwidth=4]]
     vim.cmd [[set softtabstop=4]]

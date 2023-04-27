@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if xrandr --query | grep 'HDMI-1 connected' && xrandr --query | grep 'DP-1 connected'; then 
+    xrandr --output eDP-1 --off;
+    xrandr --output HDMI-1 --primary;
+    xrandr --output DP-1 --right-of HDMI-1;
+else
+    xrandr --output eDP-1 --mode 1920x1080 --primary;
+    xrandr --output DP-1 --off
+    xrandr --output HDMI-1 --off
+fi
+
+# move $ws1 to output HDMI-1 move $ws2 to output DP-1;

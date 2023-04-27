@@ -3,6 +3,7 @@
 import os
 import time
 import sys
+import multiprocessing
 
 
 class Error:
@@ -23,6 +24,13 @@ def error(code: int, *args) -> None:
     exit(1)
 
 
+def run(secs: int, msg: str) -> None:
+    if os.fork() != 0:
+        return
+    time.sleep(secs)
+    os.system(f"notify-send \"{msg}\"")
+
+
 def helpfun():
     print("""Send a notification after a specified amount of time.
 
@@ -30,14 +38,14 @@ Usage:
     timer -s <num> number of seconds to wait
     timer -m <num> number of minutes to wait
     timer -h <num> number of hours to wait
-    timer -msg     <message> a specific message
+    timer --msg     <message> a specific message
     timer --help   print this help message""")
     exit(0)
 
 
 def main() -> None:
     secs = 0
-    msg = "Time is up"
+    msg = "Time is up."
     opt, val = None, None
     for i, ival in enumerate(sys.argv[1:]):
         if i % 2 == 0:
@@ -61,14 +69,16 @@ def main() -> None:
                     secs += int(val) * (60 ** 2)
                     continue
                 error(Error.Numeric, val)
-            if opt == "-msg":
+            if opt == "--msg":
                 msg = " ".join(sys.argv[i+1:])
                 break
             else:
                 error(Error.WrongArg, opt)
             opt, val = None, None
-    time.sleep(secs)
-    os.system(f"notify-send \"{msg}\"")
+    p = multiprocessing.Process(target=run, args=[secs, msg])
+    p.daemon = True
+    p.start()
+    p.join()
 
 
 if __name__ == "__main__":

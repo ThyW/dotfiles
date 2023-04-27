@@ -1,8 +1,7 @@
 local o = vim.opt
 local g = vim.g
-local c = vim.cmd
 local oo = vim.o
-
+local c = vim.cmd
 
 o.mouse = "a"
 o.cmdheight = 1
