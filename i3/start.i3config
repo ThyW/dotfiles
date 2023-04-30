@@ -32,7 +32,7 @@ exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option grp:alt_sh
 
 @@ legionnaire
 # Ensure monitors are set up the way I want them to be.
-exec --no-startup-id ~/.local/bin/my_scripts/monsetup
+exec --no-startup-id ~/.local/bin/my_scripts/monsetup -c
 exec --no-startup-id ~/.fehbg
 @!
 
