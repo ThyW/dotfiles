@@ -9,22 +9,4 @@ require 'bufferline'.setup {
     separator_style = "thin",
     offsets = { { filetype = "NvimTree", text = "File Explorer" } }
   },
-
-  highlights = {
-    separator_selected = {
-      fg = "#504945",
-      bg = "none"
-    },
-    separator_visible = {
-      fg = "#504945",
-      bg = "none"
-    },
-    separator = {
-      fg = "#504945",
-      bg = "none"
-    },
-    buffer = {
-      fg = "#ebdbb2"
-    }
-  }
 }

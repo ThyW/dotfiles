@@ -27,6 +27,10 @@ local au = function(event, opts)
   vim.api.nvim_create_autocmd(event, opts)
 end
 
+local ag = function(name, opts)
+  return vim.api.nvim_create_augroup(name, opts)
+end
+
 -- Buffer manipulation:
 -- Move to next buffer.
 nmap("<leader>l", ":BufferLineCycleNext<CR>", { silent = true, noremap = true })
@@ -67,37 +71,48 @@ nmap("<leader>oc", ':execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "
 nmap("<leader>cs", "<cmd>source %<cr>", { noremap = true })
 
 -- Three autocommands for quick execution in rmarkdown, python and lua files.
-au("FileType", {
-  pattern = "rmd",
+au("BufEnter", {
+  pattern = "*.rmd",
   callback = function()
     vim.schedule(function()
       map("<f4>", ":!echo<space>\"require(rmarkdown);<space>render(\'<c-r>%\')\"<space>|<space>R<space>--vanilla<enter>"
-        , { silent = true })
+      , { silent = true })
     end)
-  end })
-au("FileType",
-  { pattern = "python",
+  end,
+  group = ag("RmdBuildKeybind", { clear = true })
+})
+au("BufEnter",
+  {
+    group = ag("PythonRunKeybind", { clear = true }),
+    pattern = "*.py",
     callback = function()
       vim.schedule(function()
         map("<f5>", ":!python3 <c-r>%<CR>", { silent = true })
       end)
-    end })
-au("FileType", {
-  pattern = "lua",
+    end
+  })
+au("BufEnter", {
+  group = ag("LuaRunKeybind", { clear = true }),
+  pattern = "*.lua",
   callback = function()
     vim.schedule(function()
       nmap("<f5>", ":luafile %<CR>", { silent = true })
     end)
-  end })
+  end
+})
 
-au("FileType", {
-  pattern = "markdown",
+
+
+au("BufEnter", {
+  group = ag("MarkdownBuildKeybind", { clear = true}),
+  pattern = {"*.md", "*.MD"},
   callback = function()
     vim.schedule(function()
       map("<f4>", ":!pandoc % -o %.pdf<CR>"
-        , { silent = true })
+      , { silent = true })
     end)
-  end })
+  end
+})
 
 -- ToggleTerm manipulation.
 nmap("<C-t><C-t>", ":ToggleTerm<CR>", { noremap = true })
@@ -125,9 +140,5 @@ nmap("<leader>gg", ':LazyGit<CR>', { silent = true, noremap = true })
 -- nvim colorizer
 nmap("<leader>oC", ":ColorizerToggle<CR>", { silent = true, noremap = true })
 
--- todotxt.nvim
-nmap("<leader>ot", ":ToDoTxtTasksToggle<CR>", {silent = true, noremap = true})
-nmap("<leader>otc", ":ToDoTxtCapture<CR>", {silent = true, noremap = true})
-
 -- nobla.nvim
-nmap("<leader>e", ":lua require('nabla').popup()<CR>", {silent = true, noremap = true})
+nmap("<leader>e", ":lua require('nabla').popup()<CR>", { silent = true, noremap = true })

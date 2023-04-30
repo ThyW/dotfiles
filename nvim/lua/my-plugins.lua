@@ -329,5 +329,10 @@ return {
     config = function()
       require("flote").setup({})
     end
+  },
+  { "freitass/todo.txt-vim" },
+  { "kaarmu/typst.vim",
+    ft = 'typst',
+    lazy = false,
   }
 }
