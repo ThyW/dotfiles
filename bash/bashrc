@@ -80,7 +80,7 @@ set -o vi
 bind -x '"\C-l": clear'
 
 # eval "$(register-python-argcomplete pipx)"
-@@ legionnaire, terminator
+@@ legionnaire, terminator, pyromancer
 eval "$(starship init bash)"
 @!
 

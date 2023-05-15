@@ -40,7 +40,7 @@ exec --no-startup-id ~/.fehbg
 floating_modifier $mod
 
 # Set the font.
-font pango:Jet Brains Mono 7
+font pango:JetBrainsMono Nerd Font Mono 7
 
 # Set tabbed layout by default.
 workspace_layout default

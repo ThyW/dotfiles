@@ -11,7 +11,7 @@ bindsym $mod2+Return exec $term -t "floating"
 bindsym $mod+i exec firefox-nightly
 @!
 
-@@ terminator
+@@ terminator, pyromancer
 # Execute Firefox.
 bindsym $mod+i exec firefox
 @!
