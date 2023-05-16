@@ -18,6 +18,7 @@ export PATH="${PATH}:~/.cargo/bin"
 export PATH="${PATH}:~/.local/share/nvim/mason/bin"
 export PATH="${PATH}:/usr/bin/watcom/binl64"
 export PATH="${PATH}:/usr/bin/watcom/binl"
+export PATH="${PATH}:~/.local/share/JetBrains/Toolbox/scripts/"
 
 @@ legionnaire
 export PAGER="less"
