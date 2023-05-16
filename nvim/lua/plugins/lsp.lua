@@ -27,16 +27,16 @@ local on_attach = function(_, bufnr)
 end
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+local function hook(contents, syntax, opts, ...)
   opts = opts or {}
   opts.border = opts.border or "rounded"
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
+vim.lsp.util.open_floating_preview = hook
 
 local servers = { 'typst_lsp', 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls', 'ols', 'bashls' }
 
 -- lua setup
-local sumneko_path = '/usr/bin/lua-language-server'
 local rtp = vim.split(package.path, ';')
 
 table.insert(rtp, "lua/?.lua")
@@ -47,7 +47,7 @@ nvim_lsp['lua_ls'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { sumneko_path },
+  cmd = { "lua-language-server" },
   settings = {
     Lua = {
       -- this is still not supported
