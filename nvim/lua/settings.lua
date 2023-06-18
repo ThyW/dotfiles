@@ -3,6 +3,8 @@ local g = vim.g
 local oo = vim.o
 local c = vim.cmd
 
+vim.lsp.set_log_level("off")
+
 o.mouse = "a"
 o.cmdheight = 1
 o.updatetime = 500

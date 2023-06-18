@@ -38,7 +38,7 @@ return {
     }
 
     require('nvim-treesitter.configs').setup {
-      ensure_installed = { "rust", "c", "cpp", "python", "php", "css", "html", "norg", "norg_meta", "norg_table", "latex", "bash", "lua", "vim", "haskell", "just", "java" },
+      ensure_installed = { "rust", "c", "cpp", "python", "php", "css", "html", "norg", "norg_meta", "norg_table", "latex", "bash", "lua", "vim", "haskell", "just", "java", "zig" },
       highlight = {
         enable = true,
       },

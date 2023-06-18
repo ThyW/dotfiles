@@ -132,9 +132,8 @@ return {
 
   --[[ File explorer for Neovim writtten in Lua.]]
   {
-    'kyazdani42/nvim-tree.lua',
-    dependencies = 'kyazdani42/nvim-web-devicons',
-    lazy = false,
+    'nvim-tree/nvim-tree.lua',
+    dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
       require("plugins.nvim-tree")
     end
@@ -311,7 +310,7 @@ return {
   },
   --[[Better interop with Java  language server.]]
   { "mfussenegger/nvim-jdtls" },
-  {
+  --[[ {
     "m4xshen/smartcolumn.nvim",
     config = function()
       require("smartcolumn").setup(
@@ -323,7 +322,7 @@ return {
       )
     end,
     lazy = false,
-  },
+  }, ]]
   {
     "JellyApple102/flote.nvim",
     config = function()

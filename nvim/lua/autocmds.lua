@@ -120,7 +120,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end
 })
 
-local function open_nvim_tree(data)
+--[[ local function open_nvim_tree(data)
 
   -- buffer is a directory
   local directory = vim.fn.isdirectory(data.file) == 1
@@ -133,7 +133,7 @@ local function open_nvim_tree(data)
   vim.cmd.cd(data.file)
 
   -- open the tree
-  require("nvim-tree.api").tree.open()
+  -- require("nvim-tree.api").tree.open()
 end
 
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree }) ]]

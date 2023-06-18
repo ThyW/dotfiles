@@ -34,7 +34,17 @@ local function hook(contents, syntax, opts, ...)
 end
 vim.lsp.util.open_floating_preview = hook
 
-local servers = { 'typst_lsp', 'pyright', 'rust_analyzer', 'clangd', 'html', 'phpactor', 'nickel_ls', 'ols', 'bashls' }
+local servers = { 'typst_lsp',
+  'pyright',
+  'rust_analyzer',
+  'clangd',
+  'html',
+  'phpactor',
+  'nickel_ls',
+  'ols',
+  'bashls',
+  'zls',
+}
 
 -- lua setup
 local rtp = vim.split(package.path, ';')

@@ -1,5 +1,7 @@
 let g:leader = " "
 
+runtime! ftplugin/man.vim
+
 filetype plugin on
 filetype indent on
 syntax on
@@ -11,7 +13,7 @@ set signcolumn=yes
 set colorcolumn=80
 set showmode
 
-set noexpandtab
+set expandtab
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -21,27 +23,16 @@ set smartindent
 set copyindent
 set hlsearch
 
-set listchars=eol:$,tab:>-,space:•
+set listchars=eol:•
 set list
 
 set splitright
 set splitbelow
 
+colorscheme slate
 
 set nu
 set rnu
-
-noremap <leader>r :%s/<C-r><C-w>//gc<left><left><left>
-
-inoremap jj <Esc>
-noremap H ^
-noremap L $
-
-noremap zk 10kzz<CR>
-noremap zj 10jzz<CR>
-
-noremap <leader>bd :bd!<CR>
-noremap <leader>bl :bnext<CR>
-noremap <leader>bh :bprev<CR>
+set mouse=a
 
 set clipboard=unnamedplus

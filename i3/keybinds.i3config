@@ -6,15 +6,8 @@
 bindsym $mod+Return exec $term
 bindsym $mod2+Return exec $term -t "floating"
 
-@@ legionnaire
-# Execute Firefox-Nightly.
-bindsym $mod+i exec firefox-nightly
-@!
-
-@@ terminator, pyromancer
 # Execute Firefox.
 bindsym $mod+i exec firefox
-@!
 
 # Kill the currently focused window.
 bindsym $mod+Shift+w kill
