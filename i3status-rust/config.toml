@@ -5,6 +5,10 @@ theme = "gruvbox-dark"
 icons = "material-nf"
 
 [[block]]
+block = "music"
+format = "$icon $title - $artist [$prev $play $next]"
+
+[[block]]
 block = "battery"
 interval = 30
 format = "$icon ($percentage.eng(w:2))"
