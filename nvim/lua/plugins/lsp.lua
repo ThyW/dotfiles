@@ -49,6 +49,7 @@ local servers = { 'typst_lsp',
 -- lua setup
 local rtp = vim.split(package.path, ';')
 
+
 table.insert(rtp, "lua/?.lua")
 table.insert(rtp, "lua/?/init.lua")
 
@@ -111,6 +112,7 @@ for _, lsp in ipairs(servers) do
       filetypes = { "php", "html" },
     }
   elseif lsp == "rust_analyzer" then
+    vim.lsp.inlay_hint(0, true)
     nvim_lsp[lsp].setup {
       on_attach = function(c, b)
         on_attach(c, b)
