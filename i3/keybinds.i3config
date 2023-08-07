@@ -82,6 +82,12 @@ bindsym $mod+Ctrl+1 move workspace to output HDMI-1
 bindsym $mod+Ctrl+2 move workspace to output DP-1
 @!
 
+@@ pyromancer
+# Move workspace to monitor one and two.
+bindsym $mod+Ctrl+1 move workspace to output HDMI-1-4
+bindsym $mod+Ctrl+2 move workspace to output DP-1-4
+@!
+
 # Move focused container to a given workspace.
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2

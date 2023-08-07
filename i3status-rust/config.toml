@@ -7,6 +7,7 @@ icons = "material-nf"
 [[block]]
 block = "music"
 format = "$icon $title - $artist [$prev $play $next]"
+interface_name_exclude = ["firefox*"]
 
 [[block]]
 block = "battery"

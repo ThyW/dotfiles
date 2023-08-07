@@ -102,12 +102,26 @@ hostnames = $hosts
 final_name = hyprland.conf
 apply_path = $outdir:/.config/hypr/
 
-[scripts]
+[scripts/monsetup]
 hostnames = $host
-final_name = my_scripts
+final_name = monsetup
 apply_path = $outdir:/.local/bin/
 parse_files = false
-recursive = true
+recursive = false
+
+[scripts/pyb]
+hostnames = $host
+final_name = pyb
+apply_path = $outdir:/.local/bin/
+parse_files = false
+recursive = false
+
+[scripts/timer]
+hostnames = $host
+final_name = timer
+apply_path = $outdir:/.local/bin/
+parse_files = false
+recursive = false
 
 [vim/vimrc]
 hostnames = $hosts
