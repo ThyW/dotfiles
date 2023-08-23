@@ -28,14 +28,11 @@ exec --no-startup-id dunst
 exec flameshot
 
 # Keyboard layout switching
-exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option grp:alt_shift_toggle
-
-@@ legionnaire,pyromancer
-# Ensure monitors are set up the way I want them to be.
-exec --no-startup-id ~/.local/bin/my_scripts/monsetup -c
-@!
+exec --no-startup-id setxkbmap -layout us,sk -variant qwerty -option grp:alt_shift_toggle
 
 @@ legionnaire
+# Ensure monitors are set up the way I want them to be.
+exec --no-startup-id ~/.local/bin/my_scripts/monsetup -c
 exec --no-startup-id ~/.fehbg
 @!
 
