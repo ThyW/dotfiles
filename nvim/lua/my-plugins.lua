@@ -220,6 +220,7 @@ return {
     specification.]]
   {
     'j-hui/fidget.nvim',
+    branch = "legacy",
     lazy = false,
     config = function()
       require("plugins.fidget")
@@ -293,6 +294,7 @@ return {
   --[[Amazing tools which assist one with writing Haskell]]
   {
     'MrcJkb/haskell-tools.nvim',
+    branch = "1.x.x",
     config = function()
       require("plugins.haskell-tools")
     end
