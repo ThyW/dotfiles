@@ -93,6 +93,10 @@ if [[ ! "$(tty)" = "/dev/tty1" ]]; then
     fi 
 fi
 
-@@ legionnaire, terminator
+@@ legionnaire, terminator, pyromancer
 [ -f "/home/zir/.ghcup/env" ] && source "/home/zir/.ghcup/env" # ghcup-env
+@!
+
+@@ pyromancer
+export SSH_AUTH_SOCK="/run/user/1000/ssh-agent.socket"
 @!

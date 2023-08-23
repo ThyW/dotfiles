@@ -92,6 +92,11 @@ hostnames = $hosts
 final_name = syncthing.service
 apply_path = $outdir:/.config/systemd/user/
 
+[services/ssh-agent.service]
+hostnames = $hosts
+final_name = ssh-agent.service
+apply_path = $outdir:/.config/systemd/user/
+
 [newsraft/feeds]
 hostnames = $hosts
 final_name = feeds
