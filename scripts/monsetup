@@ -8,8 +8,7 @@ m_help() {
 }
 connected_displays=`xrandr | grep -w "connected" | awk '{ print $1 }'`
 
-case "$1" in
-    -c)
+connect() {
 	for each in $connected_displays; do
 	    case "$each" in
 		eDP*)
@@ -24,8 +23,9 @@ case "$1" in
 		    ;;
 	    esac
 	done
-	;;
-    -d)
+}
+
+disconnect() {
 	for each in $connected_displays; do
 	    case "$each" in
 		eDP*)
@@ -36,4 +36,24 @@ case "$1" in
 		    ;;
 	    esac
 	done
+}
+
+
+case "$1" in
+    -c)
+    	connect
+	;;
+    -d)
+    	disconnect
+	;;
+    -e)
+    	if [ "$MONITORS" = "yes" ]; then
+    	    connect
+    	else
+    	    exit 0
+	fi
+	;;
+    *)
+	m_help
+    ;;
 esac

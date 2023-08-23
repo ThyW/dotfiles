@@ -2,26 +2,19 @@
 
 import os
 import time
-import sys
 import multiprocessing
 
+import argparse
 
-class Error:
-    Numeric = 1
-    WrongArg = 2
-    Unknown = 3
-
-
-def error(code: int, *args) -> None:
-    s = " ".join(args)
-    match code:
-        case Error.Numeric:
-            print(f"Error: One or more values suppliled, namely: `{s}`, were not numeric!")
-        case Error.WrongArg:
-            print(f"Error: An inavlid argument was suppliled: {s}\nTry running with `--help` for a list of arguments.")
-        case Error.Unknown:
-            print(f"Error: An unknown error has occured. {s}")
-    exit(1)
+def parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser("timer",
+                                     description="timer app which sends desktop notifications",
+                                     add_help=True)
+    parser.add_argument("-H", "--hours", type=int, help="Number of hours.")
+    parser.add_argument("-m", "--minutes", type=int, help="Number of minutes.")
+    parser.add_argument("-s", "--seconds", type=int, help="Number of seconds.")
+    parser.add_argument("-M", "--message", help="Message to show when the timer is done.", default="Time is up!")
+    return parser
 
 
 def run(secs: int, msg: str) -> None:
@@ -31,51 +24,16 @@ def run(secs: int, msg: str) -> None:
     os.system(f"notify-send \"{msg}\"")
 
 
-def helpfun():
-    print("""Send a notification after a specified amount of time.
-
-Usage:
-    timer -s <num> number of seconds to wait
-    timer -m <num> number of minutes to wait
-    timer -h <num> number of hours to wait
-    timer --msg     <message> a specific message
-    timer --help   print this help message""")
-    exit(0)
-
-
 def main() -> None:
     secs = 0
-    msg = "Time is up."
-    opt, val = None, None
-    for i, ival in enumerate(sys.argv[1:]):
-        if i % 2 == 0:
-            opt = ival
-            if opt == "--help":
-                helpfun()
-        else:
-            val = ival
-            if opt == "-s":
-                if val.isdecimal():
-                    secs += int(val)
-                    continue
-                error(Error.Numeric, val)
-            if opt == "-m":
-                if val.isdecimal():
-                    secs += int(val) * 60
-                    continue
-                error(Error.Numeric, val)
-            if opt == "-h":
-                if val.isdecimal():
-                    secs += int(val) * (60 ** 2)
-                    continue
-                error(Error.Numeric, val)
-            if opt == "--msg":
-                msg = " ".join(sys.argv[i+1:])
-                break
-            else:
-                error(Error.WrongArg, opt)
-            opt, val = None, None
-    p = multiprocessing.Process(target=run, args=[secs, msg])
+    args = parser().parse_args()
+    if args.seconds is not None:
+        secs += args.seconds
+    if args.minutes is not None:
+        secs += args.minutes * 60
+    if args.hours is not None:
+        secs += args.hours * 60 * 60
+    p = multiprocessing.Process(target=run, args=[secs, args.message])
     p.daemon = True
     p.start()
     p.join()
