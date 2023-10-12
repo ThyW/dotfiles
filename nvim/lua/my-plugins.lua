@@ -10,10 +10,6 @@ return {
     -- such as :Cbuild, and :RustFmt and many others. ]]
   { 'rust-lang/rust.vim',                       ft = "rust" },
 
-  --[[ Fuzzy finder and vim integration]]
-  --[[ 'junegunn/fzf'
-  'junegunn/fzf.vim' ]]
-
   --[[ Lua fuzzy finder with great overall integration]]
   {
     'nvim-telescope/telescope.nvim',
@@ -100,6 +96,9 @@ return {
     config = function()
       require("plugins.lsp")
     end,
+    opts = {
+      inlay_hints = { enable = true }
+    },
     dependencies = { 'nvim-lua/lsp_extensions.nvim' }
   },
 
@@ -119,7 +118,7 @@ return {
   -- 'simrat39/rust-tools.nvim'
 
   --[[ Automatically create and complete brackets, quotes and more.]]
-  {
+  --[[ {
     'windwp/nvim-autopairs',
     branch = "master",
     lazy = false,
@@ -128,6 +127,14 @@ return {
         check_ts = true,
       }
     end
+  }, ]]
+  {
+      'altermo/ultimate-autopair.nvim',
+      event={'InsertEnter','CmdlineEnter'},
+      branch='v0.6',
+      opts={
+          --Config goes here
+      },
   },
 
   --[[ File explorer for Neovim writtten in Lua.]]
@@ -197,10 +204,12 @@ return {
 
   --[[ Neorg a new org-mode like document editing, writing and organising
     mode for Noevim written in Lua.]]
-  --[[ { "nvim-neorg/neorg", branch = "main", config = function()
-      -- i dont use it, so disable it because it just gets in the way
+  { "nvim-neorg/neorg", branch = "main", config = function()
       require("plugins.neorg")
-    end }, ]]
+    end,
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
 
   --[[ Fastest way to move through files with Noevim. Intuitive and simple to
     use.]]
@@ -335,5 +344,12 @@ return {
   { "kaarmu/typst.vim",
     ft = 'typst',
     lazy = false,
-  }
+  },
+  {
+      'chipsenkbeil/distant.nvim',
+      branch = 'v0.3',
+      config = function()
+          require('distant'):setup()
+      end
+  },
 }

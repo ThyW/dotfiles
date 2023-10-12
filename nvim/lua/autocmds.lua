@@ -7,7 +7,7 @@ local lua_format = api.nvim_create_augroup("LuaFormat", {
 
 -- this is a temporary solution for lua formatting
 -- once sumneko lsp supports their settings, this can be removed
-api.nvim_create_autocmd({ "BufEnter, BufWinEnter" }, {
+api.nvim_create_autocmd({ "BufEnter" }, {
   group = lua_format,
   pattern = { "*.lua" },
   callback = function()
@@ -37,7 +37,7 @@ local markdown_enter = api.nvim_create_augroup("MarkdownEnter", {
   clear = true,
 })
 
-api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+api.nvim_create_autocmd({ "BufEnter"}, {
   group = markdown_enter,
   pattern = { "*.md" },
   callback = function()

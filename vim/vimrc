@@ -23,13 +23,13 @@ set smartindent
 set copyindent
 set hlsearch
 
-set listchars=eol:•
+set listchars=eol:↵
 set list
 
 set splitright
 set splitbelow
 
-colorscheme slate
+colorscheme habamax
 
 set nu
 set rnu

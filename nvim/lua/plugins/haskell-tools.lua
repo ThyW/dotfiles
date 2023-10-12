@@ -33,8 +33,8 @@ local default_on_attach = function(_, bufnr)
   buf_set_keymap('n', '<leader>cl', '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
 end
 
-ht.setup({
+--[[ ht.setup({
   hls = {
     on_attach = default_on_attach,
   }
-})
+}) ]]

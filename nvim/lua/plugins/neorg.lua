@@ -1,9 +1,6 @@
 require "neorg".setup {
   load = {
     ["core.defaults"] = {},
-    --[[ ["core.norg.esupports.metagen"] = { config = {
-      type = "auto",
-    } }, ]]
     ["core.keybinds"] = {
       config = {
         default_keybinds = true,
@@ -15,37 +12,19 @@ require "neorg".setup {
         end
       }
     },
-    ["core.norg.completion"] = {
+    ["core.completion"] = {
       config = {
         engine = "nvim-cmp"
       }
     },
-    ["core.norg.concealer"] = {},
-    ["core.norg.dirman"] = {
+    ["core.concealer"] = {},
+    ["core.dirman"] = {
       config = {
         workspaces = {
-          my_workspace = "~/notes",
-          dashboard = "~/dashboard"
+          notes = "~/notes",
         }
       }
     },
-    --[[ ["core.gtd.base"] = {
-      config = {
-        workspace = "dashboard",
-        default_lists = {
-          inbox = "inbox.norg",
-        },
-        syntax = {
-          context = "#contexts",
-          start = "#time.start",
-          due = "#time.due",
-          waiting = "#waiting.for",
-        }
-      }
-    }, ]]
-    ["core.export"] = { config = {} },
-    ["core.export.markdown"] = { config = { extensions = "all" } },
-    -- ["core.presenter"] = { config = { zen_mode = "zen-mode" } },
   },
   requires = "nvim-lua/plenary.nvim"
 }

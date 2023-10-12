@@ -13,7 +13,7 @@ o.complete:append('kspell')
 o.shortmess:append('c')
 o.completeopt:append('menuone,noinsert,noselect')
 o.clipboard = 'unnamedplus'
-o.timeoutlen = 500
+o.timeoutlen = 1200
 o.wrap = false
 o.nu = true
 o.rnu = true

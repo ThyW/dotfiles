@@ -100,8 +100,8 @@ local function on_attach(bufnr)
         }
       }
     },
-    disable_netrw = true,
-    hijack_netrw = true,
+    disable_netrw = false,
+    hijack_netrw = false,
   }
 end
 

@@ -26,6 +26,11 @@ hostnames = $hosts
 final_name = .gitignore
 apply_path = $outdir
 
+[bash/ghci.conf]
+hostnames = $hosts
+final_name = .ghci
+apply_path = $outdir
+
 # starship.toml
 [bash/starship.toml]
 hostnames = $hosts

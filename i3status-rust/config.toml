@@ -50,5 +50,5 @@ format = "$icon $brightness"
 
 [[block]]
 block = "time"
-interval = 5
-format = " $icon $timestamp.datetime(f:'%a %d/%m %R')"
+interval = 1
+format = " $icon $timestamp.datetime(f:'%a %d/%m %R:%S')"

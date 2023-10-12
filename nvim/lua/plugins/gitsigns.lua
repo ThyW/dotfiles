@@ -16,6 +16,8 @@ gs.setup({
     lmap("n", "gr", gs.reset_hunk)
     lmap("n", "gR", gs.reset_buffer)
     lmap("n", "gb", gs.blame_line)
+    lmap("n", "gN", gs.next_hunk)
+    lmap("n", "gP", gs.prev_hunk)
     lmap("n", "gll", function()
       gs.setqflist("all", {open = false, use_location_list = true})
       bi.loclist({})

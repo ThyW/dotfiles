@@ -58,7 +58,6 @@ nvim_lsp['lua_ls'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { "lua-language-server" },
   settings = {
     Lua = {
       -- this is still not supported
@@ -82,6 +81,7 @@ nvim_lsp['lua_ls'].setup {
       telemetry = {
         enable = false
       },
+      hints = { enable = true }
     }
   }
 }
@@ -112,7 +112,7 @@ for _, lsp in ipairs(servers) do
       filetypes = { "php", "html" },
     }
   elseif lsp == "rust_analyzer" then
-    vim.lsp.inlay_hint(0, true)
+    -- vim.lsp.inlay_hint(0, true)
     nvim_lsp[lsp].setup {
       on_attach = function(c, b)
         on_attach(c, b)
@@ -153,7 +153,7 @@ for _, lsp in ipairs(servers) do
       cmd = { "pyright-langserver", "--stdio" },
       -- does not work sadly :(
       settings = {
-        python = {
+        Python = {
           formatting = {
             provider = "black",
             blackPath = "/home/zir/.local/bin/black"

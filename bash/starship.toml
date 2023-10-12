@@ -1,5 +1,5 @@
 add_newline = false
-format = "$git_branch$git_status$lua$rust$c$cmake$java $directory$character"
+format = "$git_branch$git_status$lua$rust$c$cmake$java $directory$status$character"
 
 [directory]
 truncation_length = 3
@@ -42,3 +42,6 @@ style = "bold cyan"
 [lua]
 format = ' lua [$version]($style)'
 style = "bold cyan"
+
+[status]
+disabled = false

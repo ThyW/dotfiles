@@ -19,9 +19,10 @@ export PATH="${PATH}:~/.local/share/nvim/mason/bin"
 export PATH="${PATH}:/usr/bin/watcom/binl64"
 export PATH="${PATH}:/usr/bin/watcom/binl"
 export PATH="${PATH}:~/.local/share/JetBrains/Toolbox/scripts/"
+export PATH="${PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
 
 @@ legionnaire
-export PAGER="less"
+export PAGER="most"
 @!
 
 # alias ls='ls --color=auto'
@@ -54,6 +55,7 @@ alias dtd='vi ~/notes/daily_todo.norg'
 alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles/derfile -a'
 alias nrfeed='vi ~/clones/dotfiles/newsraft/feeds && der -f ~/clones/dotfiles/derfile -a'
 alias dots='cd ~/clones/dotfiles/ && vi . && der -a && cd -'
+alias notes='(cd ~/notes && nvim +"Neorg workspace notes")'
 
 alias todo='vi ~/todo/todo.txt'
 alias lg='lazygit'
