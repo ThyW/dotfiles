@@ -308,4 +308,10 @@ return {
 			require("plugins.conform")
 		end,
 	},
+	{
+		"MunifTanjim/nougat.nvim",
+		config = function()
+			require("plugins.nougat")
+		end,
+	},
 }
