@@ -1,3 +1,3 @@
-require("todotxt-nvim").setup{
-  todo_file = "~/todo/todo.txt"
-}
+require("todotxt-nvim").setup({
+	todo_file = "~/todo/todo.txt",
+})

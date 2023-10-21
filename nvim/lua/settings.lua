@@ -8,16 +8,16 @@ vim.lsp.set_log_level("off")
 o.mouse = "a"
 o.cmdheight = 1
 o.updatetime = 500
-o.complete:remove({ 'i' })
-o.complete:append('kspell')
-o.shortmess:append('c')
-o.completeopt:append('menuone,noinsert,noselect')
-o.clipboard = 'unnamedplus'
+o.complete:remove({ "i" })
+o.complete:append("kspell")
+o.shortmess:append("c")
+o.completeopt:append("menuone,noinsert,noselect")
+o.clipboard = "unnamedplus"
 o.timeoutlen = 1200
 o.wrap = false
 o.nu = true
 o.rnu = true
-o.signcolumn = 'yes'
+o.signcolumn = "yes"
 o.showmode = false
 o.autoindent = true
 o.smartindent = true
@@ -45,7 +45,7 @@ o.guifont = "SFMono Nerd Font Mono:h11"
 o.splitright = true
 o.splitbelow = true
 function GetCurrentLang()
-  return oo.spelllang
+	return oo.spelllang
 end
 
 o.laststatus = 3

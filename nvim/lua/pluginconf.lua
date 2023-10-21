@@ -1,25 +1,25 @@
 -- == Mason.nvim ==
-require('plugins.mason')
+require("plugins.mason")
 -- ===Nvim-Autopair===
-require('plugins.autopairs')
+require("plugins.autopairs")
 -- === bufferline.nvim ===
-require('plugins.bufferline')
+require("plugins.bufferline")
 -- ===Nvim-Tree===
-require('plugins.nvim-tree')
+require("plugins.nvim-tree")
 -- ===Treesitter===
-require('plugins.treesitter')
+require("plugins.treesitter")
 -- ===nvim_cmp===
-require('plugins.cmp')
+require("plugins.cmp")
 -- ===dressing.nvim===
-require('plugins.dressing')
+require("plugins.dressing")
 -- ===Lsp Config===
-require('plugins.lsp')
+require("plugins.lsp")
 -- === Neorg ===
 -- require('plugins.neorg')
 -- === ToggleTerm ===
-require('plugins.toggleterm')
+require("plugins.toggleterm")
 -- === Fidget.nvim ===
-require('plugins.fidget')
+require("plugins.fidget")
 -- === Presence.nvim ===
 -- require("plugins.presence")
 -- === Telescope.nvim ===
