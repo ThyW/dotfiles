@@ -264,6 +264,23 @@ local diagnostic_count = stl:add_item(nut.buf.diagnostic_count({
 	},
 }))
 stl:add_item(paired_space(diagnostic_count))
+stl:add_item(sep.space())
+local spellang = stl:add_item(Item({
+	content = core.group({
+		"󰓆 ",
+		core.expression(function()
+			return "[" .. vim.o.spelllang .. "]"
+		end),
+	}),
+	hl = {
+		fg = color.yellow,
+		bg = color.bg1,
+	},
+	sep_left = sep.left_half_circle_solid(true),
+	sep_right = sep.right_half_circle_solid(true),
+}))
+stl:add_item(paired_space(spellang))
+stl:add_item(sep.space())
 stl:add_item(ruler)
 stl:add_item(sep.space())
 
