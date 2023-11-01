@@ -241,24 +241,27 @@ return {
 		end,
 	},
 	-- [[Visual indentation lines.]]
-	{
+	--[[ {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		opts = {},
 		config = function()
 			require("ibl").setup()
 		end,
-	},
+	}, ]]
 
 	--[[Automatically create lists and indentation.]]
 	{
 		"gaoDean/autolist.nvim",
+		ft = {
+			"markdown",
+			"text",
+			"tex",
+			"plaintex",
+			"norg",
+		},
 		config = function()
-			require("autolist").setup({
-				--[[ generic = {
-                  enable_file_types = { "markdown", "text", "rmd" }
-              } ]]
-			})
+			require("autolist").setup()
 		end,
 	},
 	--[[A plugin for taking scientific notes and pretty math equations.]]
