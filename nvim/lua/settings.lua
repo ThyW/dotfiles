@@ -24,6 +24,9 @@ o.smartindent = true
 o.copyindent = true
 o.hlsearch = true
 
+o.scrolloff = 12
+o.cursorline = true
+
 o.tabstop = 8
 o.softtabstop = 4
 o.shiftwidth = 4

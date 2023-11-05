@@ -299,11 +299,11 @@ return {
 		end,
 	},
 	{ "freitass/todo.txt-vim" },
-	{
+	--[[ {
 		"kaarmu/typst.vim",
 		ft = "typst",
 		lazy = false,
-	},
+	}, ]]
 	{
 		"chipsenkbeil/distant.nvim",
 		branch = "v0.3",
