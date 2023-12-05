@@ -5,11 +5,6 @@ return {
 	"nvim-lua/plenary.nvim",
 	-- vim.input UI wrapper
 	"stevearc/dressing.nvim",
-
-	--[[ Rust Porgramming language support for vim. Adds things
-    -- such as :Cbuild, and :RustFmt and many others. ]]
-	{ "rust-lang/rust.vim", ft = "rust" },
-
 	--[[ Lua fuzzy finder with great overall integration]]
 	{
 		"nvim-telescope/telescope.nvim",
@@ -88,24 +83,6 @@ return {
     languages and great syntax highlighting.]]
 	treesitter,
 
-	{
-		"altermo/ultimate-autopair.nvim",
-		event = { "InsertEnter", "CmdlineEnter" },
-		branch = "v0.6",
-		opts = {
-			--Config goes here
-		},
-	},
-
-	--[[ File explorer for Neovim writtten in Lua.]]
-	--[[ {
-    'nvim-tree/nvim-tree.lua',
-    dependencies = 'nvim-tree/nvim-web-devicons',
-    config = function()
-      require("plugins.nvim-tree")
-    end
-  }, ]]
-
 	--[[ Togglelabe comments for different programming languages.]]
 	{ "b3nj5m1n/kommentary", lazy = false },
 
@@ -143,10 +120,7 @@ return {
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-cmdline",
-	--[[ Tabnine AI completion for the `cmp` completion framework.]]
-	-- removed for now due to not being used
 	"saadparwaiz1/cmp_luasnip",
-	--[[ Vscode-like pictograms for the completion windows.]]
 	"onsails/lspkind-nvim",
 
 	--[[ Better way to show buffers and be able to click them and switch to
@@ -171,56 +145,19 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	--[[ Fastest way to move through files with Noevim. Intuitive and simple to
-    use.]]
-	"ggandor/lightspeed.nvim",
-
-	--[[ Create and manage floating terminals in Neovim.]]
-	{
-		"akinsho/toggleterm.nvim",
-		branch = "main",
-		lazy = false,
-		config = function()
-			require("plugins.toggleterm")
-		end,
-	},
-
 	--[[ Preview for language server which support the lsp-progress
     specification.]]
 	{
 		"j-hui/fidget.nvim",
-		branch = "legacy",
 		lazy = false,
 		config = function()
-			require("plugins.fidget")
+			require("fidget").setup({})
 		end,
 	},
-
-	--[[ Discrod Rich Presence for Neovim, written and configured using Lua.]]
-	-- 'andweeb/presence.nvim'
-
-	--[[ Syntax highlighting for the Nickel configuration language. ]]
-	-- 'nickel-lang/vim-nickel'
 
 	--[[Plugin for calling lazygit from within neovim]]
 	{ "kdheepak/lazygit.nvim", lazy = false },
 
-	--[[Yuck language support]]
-	-- 'elkowar/yuck.vim'
-	--[[Parentheses inferance for LISP languages]]
-	{ "eraserhd/parinfer-rust", build = "cargo build --release" },
-
-	--[[Autocompletion for adding rust crates into your Cargo.toml]]
-	{
-		"saecki/crates.nvim",
-		tag = "v0.2.1",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("crates").setup()
-		end,
-	},
-	--[[Completion source for writing latex symbols.]]
-	"kdheepak/cmp-latex-symbols",
 	--[[Highlight background colors.]]
 	{
 		"norcalli/nvim-colorizer.lua",
@@ -229,9 +166,10 @@ return {
 		end,
 		lazy = false,
 	},
+
 	-- [[Distractionless writing.]]
 	{ "folke/zen-mode.nvim", enabled = false },
-	{ "lvimuser/lsp-inlayhints.nvim", enabled = false },
+
 	-- [[Signcolumn signs to provide git diagnostics.]]
 	{
 		"lewis6991/gitsigns.nvim",
@@ -240,15 +178,6 @@ return {
 			require("plugins.gitsigns")
 		end,
 	},
-	-- [[Visual indentation lines.]]
-	--[[ {
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {},
-		config = function()
-			require("ibl").setup()
-		end,
-	}, ]]
 
 	--[[Automatically create lists and indentation.]]
 	{
@@ -262,17 +191,6 @@ return {
 		},
 		config = function()
 			require("autolist").setup()
-		end,
-	},
-	--[[A plugin for taking scientific notes and pretty math equations.]]
-	"jbyuki/nabla.nvim",
-
-	--[[Amazing tools which assist one with writing Haskell]]
-	{
-		"MrcJkb/haskell-tools.nvim",
-		branch = "1.x.x",
-		config = function()
-			require("plugins.haskell-tools")
 		end,
 	},
 
@@ -292,25 +210,7 @@ return {
 	},
 	--[[Better interop with Java  language server.]]
 	{ "mfussenegger/nvim-jdtls" },
-	{
-		"JellyApple102/flote.nvim",
-		config = function()
-			require("flote").setup({})
-		end,
-	},
-	{ "freitass/todo.txt-vim" },
-	--[[ {
-		"kaarmu/typst.vim",
-		ft = "typst",
-		lazy = false,
-	}, ]]
-	{
-		"chipsenkbeil/distant.nvim",
-		branch = "v0.3",
-		config = function()
-			require("distant"):setup()
-		end,
-	},
+	--[[formatter]]
 	{
 		"stevearc/conform.nvim",
 		opts = {},
@@ -318,6 +218,7 @@ return {
 			require("plugins.conform")
 		end,
 	},
+	--[[Status bar library]]
 	{
 		"MunifTanjim/nougat.nvim",
 		config = function()

@@ -34,7 +34,8 @@ o.expandtab = false
 
 oo.runtimepath = oo.runtimepath .. ",~/.vim/"
 
-o.listchars:append("space:·,eol:↵, ")
+-- o.listchars:append("space:·,eol:↵, ")
+o.listchars:append("eol:↵, ")
 o.list = true
 
 o.linebreak = true

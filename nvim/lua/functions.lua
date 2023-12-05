@@ -19,18 +19,32 @@ function M.switch_spelling()
 	end
 end
 
--- Switch the current text wrap, as well as maps j and k for better movement through the wrapped lines(see 'gj, gk').
-function M.switch_wrap()
-	if o.wrap then
-		o.wrap = false
-		kbs("n", "j", "j", { noremap = true, silent = true })
-		kbs("n", "k", "k", { noremap = true, silent = true })
-		print("Wrap: [OFF]")
-	else
-		o.wrap = true
+function M.wrap_keybinds(on)
+	if on then
 		kbs("n", "j", "gj", { noremap = true, silent = true })
 		kbs("n", "k", "gk", { noremap = true, silent = true })
-		print("Wrap: [ON]")
+	else
+		kbs("n", "j", "j", { noremap = true, silent = true })
+		kbs("n", "k", "k", { noremap = true, silent = true })
+	end
+end
+
+local wk = M.wrap_keybinds
+
+-- Switch the current text wrap, as well as maps j and k for better movement through the wrapped lines(see 'gj, gk').
+function M.switch_wrap(silent)
+	if o.wrap then
+		o.wrap = false
+		wk(false)
+		if not silent then
+			print("Wrap: [OFF]")
+		end
+	else
+		o.wrap = true
+		wk(true)
+		if not silent then
+			print("Wrap: [ON]")
+		end
 	end
 end
 

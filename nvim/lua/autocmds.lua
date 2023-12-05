@@ -1,6 +1,8 @@
 local api = vim.api
 local o = vim.o
 
+local funcs = require("functions")
+
 local lua_format = api.nvim_create_augroup("LuaFormat", {
 	clear = true,
 })
@@ -26,11 +28,12 @@ api.nvim_create_autocmd({ "BufEnter" }, {
 	group = markdown_enter,
 	pattern = { "*.md" },
 	callback = function()
-		o.spell = true
 		o.wrap = true
-		vim.cmd([[set tabstop=2]])
-		vim.cmd([[set shiftwidth=2]])
-		vim.cmd([[set softtabstop=2]])
+		funcs.wrap_keybinds(true)
+		o.spell = true
+		vim.cmd([[set tabstop=4]])
+		vim.cmd([[set shiftwidth=4]])
+		vim.cmd([[set softtabstop=4]])
 		vim.cmd([[set expandtab]])
 	end,
 })
@@ -41,6 +44,7 @@ api.nvim_create_autocmd({ "BufLeave" }, {
 	callback = function()
 		o.spell = false
 		o.wrap = false
+		funcs.wrap_keybinds(false)
 	end,
 })
 
@@ -97,6 +101,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	group = cbuff,
 	pattern = { "*.c", "*.h" },
 	callback = function()
+		vim.opt.scrolloff = 12
 		vim.cmd([[set ft=c]])
 		vim.cmd([[set tabstop=4]])
 		vim.cmd([[set shiftwidth=4]])
