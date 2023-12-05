@@ -18,8 +18,7 @@ exec --no-startup-id discord
 exec --no-startup-id xss-lock -- i3lock -c 111111 &
 
 # Create a keyboard map for switching keyboard layouts.
-# exec --no-startup-id \
-# setxkbmap -layout us,sk -variant qwerty -option 'grp:lalt_k_toggle'
+exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:lalt_lshift_toggle'
 
 # Start a notification daemon.
 exec --no-startup-id dunst

@@ -29,8 +29,6 @@ set list
 set splitright
 set splitbelow
 
-colorscheme habamax
-
 set nu
 set rnu
 set mouse=a
