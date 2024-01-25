@@ -3,6 +3,8 @@ local g = vim.g
 local oo = vim.o
 local c = vim.cmd
 
+vim.g.mapleader = " "
+
 vim.lsp.set_log_level("off")
 
 o.mouse = "a"
@@ -72,3 +74,6 @@ g.neovide_cursor_trail_length = 0
 
 c("filetype plugin indent on")
 c("syntax on")
+
+g.netrw_banner = 0
+g.netrw_mouse = 2

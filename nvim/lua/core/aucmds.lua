@@ -1,7 +1,7 @@
 local api = vim.api
 local o = vim.o
 
-local funcs = require("functions")
+local funcs = require("..core.lib.functions")
 
 local lua_format = api.nvim_create_augroup("LuaFormat", {
 	clear = true,
@@ -110,20 +110,13 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 
---[[ local function open_nvim_tree(data)
-
-  -- buffer is a directory
-  local directory = vim.fn.isdirectory(data.file) == 1
-
-  if not directory then
-    return
-  end
-
-  -- change to the directory
-  vim.cmd.cd(data.file)
-
-  -- open the tree
-  -- require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree }) ]]
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client and client.server_capabilities.inlayHintProvider then
+			vim.lsp.inlay_hint.enable(args.buf, true)
+		end
+		-- whatever other lsp config you want
+	end,
+})

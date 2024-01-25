@@ -10,7 +10,6 @@ set encoding=utf8
 set updatetime=500
 set timeoutlen=500
 set signcolumn=yes
-set colorcolumn=80
 set showmode
 
 set expandtab
@@ -24,7 +23,6 @@ set copyindent
 set hlsearch
 
 set listchars=eol:↵
-set list
 
 set splitright
 set splitbelow
@@ -32,5 +30,7 @@ set splitbelow
 set nu
 set rnu
 set mouse=a
+
+colorscheme zaibatsu
 
 set clipboard=unnamedplus

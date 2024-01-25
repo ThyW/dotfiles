@@ -5,6 +5,22 @@ theme = "gruvbox-dark"
 icons = "material-nf"
 
 [[block]]
+block = "menu"
+text = " 󰌌 "
+[[block.items]]
+display = " &gt; US &lt; "
+cmd = "setxkbmap -layout us"
+[[block.items]]
+display = " &gt; SK &lt; "
+cmd = "setxkbmap -layout sk -variant qwerty"
+
+[[block]]
+block = "keyboard_layout"
+driver = "setxkbmap"
+format = "$layout "
+interval = 5
+
+[[block]]
 block = "music"
 format = "$icon $title - $artist [$prev $play $next]"
 interface_name_exclude = ["firefox*"]

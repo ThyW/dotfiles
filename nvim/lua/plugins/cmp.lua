@@ -1,34 +1,30 @@
-local has_words_before = function()
+local function has_words_before()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
--- load friendly snippets
-local _ = require("luasnip.loaders.from_vscode").lazy_load()
+local M = {
+	"hrsh7th/nvim-cmp",
+	dependencies = {
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-cmdline",
+		"saadparwaiz1/cmp_luasnip",
+		"onsails/lspkind-nvim",
+	},
+	lazy = false,
+}
 
-local cmp = require("cmp")
--- local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
-local luasnip = require("luasnip")
-local lspkind = require("lspkind")
+M.config = function()
+	local cmp = require("cmp")
+	local luasnip = require("luasnip")
+	require("lspkind").init({})
 
---[[ cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
-) ]]
+	local setup = {}
 
-lspkind.init({})
-
-cmp.setup.filetype(
-	"rmd",
-	{ sources = cmp.config.sources({
-		{ name = "latex_symbols" },
-		{ name = "luasnip" },
-		{ name = "buffer" },
-	}) }
-)
-
-cmp.setup({
-	mapping = {
+	setup.mapping = {
 		["<c-u>"] = cmp.mapping.scroll_docs(-4),
 		["<c-d>"] = cmp.mapping.scroll_docs(4),
 		["<Cr>"] = cmp.mapping.confirm(),
@@ -45,6 +41,9 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
+		["<c-x>"] = cmp.mapping(function(_)
+			cmp.complete()
+		end, { "i", "s" }),
 
 		["<c-p>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
@@ -55,9 +54,9 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
-	},
+	}
 
-	sources = {
+	setup.sources = {
 		{ name = "neorg" },
 		{ name = "luasnip" },
 		{ name = "nvim_lsp" },
@@ -65,15 +64,14 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "buffer" },
 		{ name = "crates" },
-	},
-
-	snippet = {
+	}
+	setup.snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
 		end,
-	},
+	}
 
-	formatting = {
+	setup.formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
 			local completion_item = require("lspkind").cmp_format({
@@ -99,32 +97,41 @@ cmp.setup({
 
 			return completion_item
 		end,
-	},
+	}
 
-	experimental = {
+	setup.experimental = {
 		ghost_text = true,
-	},
+	}
 
-	window = {
+	setup.window = {
 		completion = {
 			border = "rounded",
 			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
 			col_offset = -3,
 			side_padding = 0,
 		},
-	},
-})
+	}
 
-cmp.setup.cmdline(":", {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = "cmdline" },
-		{ name = "path" },
-	},
-})
-cmp.setup.cmdline({ "/", "?" }, {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = "buffer" },
-	},
-})
+	setup.completion = {
+		autocomplete = false,
+	}
+
+	cmp.setup(setup)
+
+	cmp.setup.cmdline(":", {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = {
+			{ name = "cmdline" },
+			{ name = "path" },
+		},
+	})
+
+	cmp.setup.cmdline({ "/", "?" }, {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = {
+			{ name = "buffer" },
+		},
+	})
+end
+
+return M

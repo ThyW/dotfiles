@@ -1,7 +1,7 @@
 local o = vim.o
 local g = vim.g
-local kbs = vim.api.nvim_set_keymap
-local kbd = vim.api.nvim_del_keymap
+local set = vim.keymap.set
+local del = vim.keymap.del
 g.own_treesitter_debug = false
 
 M = {}
@@ -21,11 +21,11 @@ end
 
 function M.wrap_keybinds(on)
 	if on then
-		kbs("n", "j", "gj", { noremap = true, silent = true })
-		kbs("n", "k", "gk", { noremap = true, silent = true })
+		set("n", "j", "gj", { noremap = true, silent = true })
+		set("n", "k", "gk", { noremap = true, silent = true })
 	else
-		kbs("n", "j", "j", { noremap = true, silent = true })
-		kbs("n", "k", "k", { noremap = true, silent = true })
+		set("n", "j", "j", { noremap = true, silent = true })
+		set("n", "k", "k", { noremap = true, silent = true })
 	end
 end
 
@@ -56,13 +56,13 @@ function M.toggle_treesitter_debug()
 	if g.own_treesitter_debug then
 		print("treesitter debug: [OFF]")
 		g.own_treesitter_debug = false
-		kbd("n", "gtc")
-		kbd("n", "gtp")
+		del("n", "gtc")
+		del("n", "gtp")
 	else
 		g.own_treesitter_debug = true
 		print("treesitter debug: [ON]")
-		kbs("n", "gtc", ":TSHighlightCapturesUnderCursor<CR>", { noremap = true, silent = true })
-		kbs("n", "gtp", ":TSPlaygroundToggle<CR>", { noremap = true, silent = true })
+		set("n", "gtc", ":TSHighlightCapturesUnderCursor<CR>", { noremap = true, silent = true })
+		set("n", "gtp", ":TSPlaygroundToggle<CR>", { noremap = true, silent = true })
 	end
 end
 

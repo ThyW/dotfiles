@@ -13,4 +13,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("my-plugins")
+require("lazy").setup({
+	spec = _PLUGIN_TABLE,
+})

@@ -57,6 +57,8 @@ alias kconf='vi ~/clones/dotfiles/kitty/kitty.t.conf && der -f ~/clones/dotfiles
 alias nrfeed='vi ~/clones/dotfiles/newsraft/feeds && der -f ~/clones/dotfiles/derfile -a'
 alias dots='cd ~/clones/dotfiles/ && vi . && der -a && cd -'
 alias notes='(cd ~/notes && nvim +"Neorg workspace notes")'
+alias yank='xsel -ib'
+alias past='xsel -ob'
 
 alias todo='vi ~/todo/todo.txt'
 alias lg='lazygit'

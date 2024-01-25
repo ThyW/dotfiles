@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 
 M.lspconfig = require("lspconfig")
 
@@ -23,10 +23,10 @@ function M.on_attach(_, bufnr)
 	buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 	buf_set_keymap("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	buf_set_keymap("n", "<space>e", '<cmd>lua require"diagnostics".line_diagnostics()<CR>', opts)
-	buf_set_keymap("n", "[d", '<cmd>lua require"diagnostics".goto_prev()<CR>', opts)
-	buf_set_keymap("n", "]d", '<cmd>lua require"diagnostics".goto_next()<CR>', opts)
-	buf_set_keymap("n", "<space>q", '<cmd>lua require"diagnostics".location_list()<CR>', opts)
+	buf_set_keymap("n", "<space>e", '<cmd>lua require"..core.lib.diagnostics".line_diagnostics()<CR>', opts)
+	buf_set_keymap("n", "[d", '<cmd>lua require"..core.lib.diagnostics".goto_prev()<CR>', opts)
+	buf_set_keymap("n", "]d", '<cmd>lua require"..core.lib.diagnostics".goto_next()<CR>', opts)
+	buf_set_keymap("n", "<space>q", '<cmd>lua require"..core.lib.diagnostics".location_list()<CR>', opts)
 end
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
@@ -36,8 +36,6 @@ function M.hook(contents, syntax, opts, ...)
 	return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 vim.lsp.util.open_floating_preview = M.hook
-
--- lua setup
 
 M.rtp = vim.split(package.path, ";")
 table.insert(M.rtp, "lua/?.lua")
