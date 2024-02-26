@@ -70,6 +70,7 @@ M.config = function()
 			"just",
 			"java",
 			"zig",
+			"javascript",
 		},
 		highlight = {
 			enable = true,

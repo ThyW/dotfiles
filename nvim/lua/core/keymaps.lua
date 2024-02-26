@@ -34,7 +34,7 @@ keymap("i", "jj", "<esc>")
 
 -- Toggle wrapping.
 keymap("n", "<leader>ow", function()
-	require("functions").switch_wrap()
+	funcs.switch_wrap()
 end, { silent = true, noremap = true })
 -- Toggle spellcheck.
 keymap("n", "<leader>os", "<cmd>set spell! <bar> set spell?<cr>", { silent = true, noremap = true })
@@ -67,10 +67,10 @@ keymap("n", "<leader>of", ":Explore<CR>", { silent = true, noremap = true })
 
 -- Switch spelling language.
 keymap("n", "<leader>oS", function()
-	require("functions").switch_spelling()
+	funcs.switch_spelling()
 end, { silent = true, noremap = true })
 keymap("n", "<leader>td", function()
-	require("functions").toggle_treesitter_debug()
+	funcs.toggle_treesitter_debug()
 end, { silent = true, noremap = false })
 
 -- LazyGit

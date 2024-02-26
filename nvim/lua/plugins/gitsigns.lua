@@ -1,9 +1,6 @@
 local M = {
 	"lewis6991/gitsigns.nvim",
 	branch = "main",
-	config = function()
-		require("plugins.gitsigns")
-	end,
 }
 
 M.config = function()
