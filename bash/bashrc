@@ -94,11 +94,13 @@ eval "$(starship init bash)"
 
 bind '"jk":vi-movement-mode'
 
+@@ legionnaire, terminator, pyromancer
 if [[ ! "$(tty)" = "/dev/tty1" ]]; then 
     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ xterm ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ -n $SSH_CONNECTION ]; then
       exec tmux -u
     fi 
 fi
+@!
 
 @@ legionnaire, terminator, pyromancer
 [ -f "/home/zir/.ghcup/env" ] && source "/home/zir/.ghcup/env" # ghcup-env

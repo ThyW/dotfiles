@@ -27,7 +27,7 @@ M.config = function()
 			json = { "prettier" },
 			lua = { "stylua" },
 		},
-		format_on_save = format_opts,
+		-- format_on_save = format_opts,
 	})
 
 	vim.keymap.set({ "n", "v" }, "<leader>af", function()
