@@ -1,5 +1,5 @@
 add_newline = false
-format = "$git_branch$git_status$lua$rust$c$cmake$java $directory$status$character"
+format = "$git_branch$git_status$lua$rust$c$cmake$java $directory$status$battery$character"
 
 [directory]
 truncation_length = 3
@@ -45,3 +45,21 @@ style = "bold cyan"
 
 [status]
 disabled = false
+
+
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 50
+style = "cyan"
+
+[[battery.display]]
+threshold = 100
+style = "green"

@@ -12,6 +12,9 @@ M.config = function()
 
 	luasnip.filetype_extend("markdown", { "tex" })
 	luasnip.filetype_extend("rmarkdown", { "tex" })
+	luasnip.filetype_extend("javascript", { "html" })
+	luasnip.filetype_extend("typescript", { "html" })
+	luasnip.filetype_extend("typescriptreact", { "html" })
 
 	luasnip.add_snippets("all", { mk_snippet("shbang", "#!/usr/bin/env $0") }, {})
 	luasnip.add_snippets("rust", {

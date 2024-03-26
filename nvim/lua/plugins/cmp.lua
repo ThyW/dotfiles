@@ -27,7 +27,6 @@ M.config = function()
 	setup.mapping = {
 		["<c-u>"] = cmp.mapping.scroll_docs(-4),
 		["<c-d>"] = cmp.mapping.scroll_docs(4),
-		["<Cr>"] = cmp.mapping.confirm(),
 		["<c-space>"] = cmp.mapping.confirm(),
 		["<c-c>"] = cmp.mapping.close(),
 		["<c-n>"] = cmp.mapping(function(fallback)
@@ -41,6 +40,7 @@ M.config = function()
 				fallback()
 			end
 		end, { "i", "s" }),
+		["<c-e>"] = cmp.mapping.abort(),
 		["<c-x>"] = cmp.mapping(function(_)
 			cmp.complete()
 		end, { "i", "s" }),
@@ -80,7 +80,7 @@ M.config = function()
 				menu = {
 					cmp_tabnine = "",
 					buffer = "",
-					nvim_lsp = "",
+					-- nvim_lsp = "",
 					nvim_lua = "",
 					path = "",
 					gh_issues = "",
@@ -112,9 +112,9 @@ M.config = function()
 		},
 	}
 
-	setup.completion = {
+	--[[ setup.completion = {
 		autocomplete = false,
-	}
+	} ]]
 
 	cmp.setup(setup)
 

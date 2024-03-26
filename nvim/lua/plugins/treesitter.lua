@@ -71,6 +71,8 @@ M.config = function()
 			"java",
 			"zig",
 			"javascript",
+			"typescript",
+			"json",
 		},
 		highlight = {
 			enable = true,

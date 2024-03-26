@@ -137,3 +137,13 @@ recursive = false
 hostnames = $hosts
 final_name = .vimrc
 apply_path = $outdir
+
+[rio/config.toml]
+hostnames = $hosts
+final_name = config.toml
+apply_path = $outdir:/.config/rio/
+
+[rio/gruvbox.toml]
+hostnames = $hosts
+final_name = gruvbox.toml
+apply_path = $outdir:/.config/rio/themes/
