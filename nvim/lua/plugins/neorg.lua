@@ -1,9 +1,9 @@
 local M = {
-
 	"nvim-neorg/neorg",
-	branch = "main",
-	build = ":Neorg sync-parsers",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	after = ":Neorg sync-parsers",
+	dependencies = { "nvim-lua/plenary.nvim", "luarocks.nvim"  },
+	lazy = false,
+	version = "*",
 }
 
 M.config = function()

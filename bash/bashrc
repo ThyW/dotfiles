@@ -22,7 +22,7 @@ export PATH="${PATH}:/usr/bin/watcom/binl"
 export PATH="${PATH}:~/.local/share/JetBrains/Toolbox/scripts/"
 export PATH="${PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
 
-export PAGER="less"
+export PAGER="nvim +Man!"
 
 # alias ls='ls --color=auto'
 alias sus='sudo systemctl start suspend.target && i3lock -c 111111'

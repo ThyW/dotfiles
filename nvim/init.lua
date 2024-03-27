@@ -7,6 +7,7 @@ require("core.aucmds")
 require("core.settings")
 require("core.keymaps")
 
+plugin("plugins.luarocks")
 plugin("plugins.colorscheme")
 plugin("plugins.telescope")
 plugin("plugins.treesitter")
