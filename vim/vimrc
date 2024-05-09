@@ -31,6 +31,6 @@ set nu
 set rnu
 set mouse=a
 
-colorscheme zaibatsu
+colorscheme delek
 
 set clipboard=unnamedplus

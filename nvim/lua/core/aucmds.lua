@@ -82,20 +82,6 @@ api.nvim_create_autocmd({ "BufEnter" }, {
 	end,
 })
 
---[[ vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
-vim.api.nvim_create_autocmd("LspAttach", {
-  group = "LspAttach_inlayhints",
-  callback = function(args)
-    if not (args.data and args.data.client_id) then
-      return
-    end
-
-    local bufnr = args.buf
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-    require("lsp-inlayhints").on_attach(client, bufnr, false)
-  end,
-}) ]]
-
 local cbuff = vim.api.nvim_create_augroup("Cbuffer", { clear = true })
 vim.api.nvim_create_autocmd("BufEnter", {
 	group = cbuff,
@@ -115,8 +101,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local client = vim.lsp.get_client_by_id(args.data.client_id)
 		if client and client.server_capabilities.inlayHintProvider then
-			vim.lsp.inlay_hint.enable(args.buf, true)
+			vim.lsp.inlay_hint.enable(true, nil)
 		end
-		-- whatever other lsp config you want
 	end,
 })

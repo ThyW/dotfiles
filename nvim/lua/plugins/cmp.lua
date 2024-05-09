@@ -22,6 +22,9 @@ M.config = function()
 	local luasnip = require("luasnip")
 	require("lspkind").init({})
 
+	-- If you want insert `(` after select function or method item
+	local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 	local setup = {}
 
 	setup.mapping = {
@@ -65,10 +68,15 @@ M.config = function()
 		{ name = "buffer" },
 		{ name = "crates" },
 	}
+
 	setup.snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
 		end,
+	}
+
+	setup.view = {
+		follow_cursor = true,
 	}
 
 	setup.formatting = {
@@ -100,7 +108,7 @@ M.config = function()
 	}
 
 	setup.experimental = {
-		ghost_text = true,
+		ghost_text = false,
 	}
 
 	setup.window = {

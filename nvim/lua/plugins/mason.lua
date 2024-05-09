@@ -19,7 +19,7 @@ M.config = function()
 	require("mason-tool-installer").setup({
 		ensure_installed = {
 			"rust-analyzer",
-			"clang-format",
+			-- "clang-format",
 			"pyright",
 			"stylua",
 			"prettier",
