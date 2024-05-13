@@ -3,6 +3,4 @@ local M = {
 	lazy = false,
 }
 
-M.config = function() end
-
 return M

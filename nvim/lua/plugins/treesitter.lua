@@ -62,7 +62,6 @@ M.config = function()
 			"norg",
 			"norg_meta",
 			"norg_table",
-			"latex",
 			"bash",
 			"lua",
 			"vim",

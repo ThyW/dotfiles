@@ -4,6 +4,7 @@ local oo = vim.o
 local c = vim.cmd
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.lsp.set_log_level("off")
 

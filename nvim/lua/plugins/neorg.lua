@@ -1,7 +1,7 @@
 local M = {
 	"nvim-neorg/neorg",
 	after = ":Neorg sync-parsers",
-	dependencies = { "nvim-lua/plenary.nvim", "luarocks.nvim"  },
+	dependencies = { "nvim-lua/plenary.nvim", "luarocks.nvim" },
 	lazy = false,
 	version = "*",
 }

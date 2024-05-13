@@ -27,5 +27,6 @@ plugin("plugins.gen-nvim")
 plugin("plugins.plant-uml-syntax")
 plugin("plugins.prisma")
 plugin("plugins.autopairs")
+plugin("plugins.vimtex")
 
 require("plugins.lazy")

@@ -13,8 +13,8 @@ local M = {
 		"hrsh7th/cmp-cmdline",
 		"saadparwaiz1/cmp_luasnip",
 		"onsails/lspkind-nvim",
+		"micangl/cmp-vimtex",
 	},
-	lazy = false,
 }
 
 M.config = function()
@@ -61,6 +61,7 @@ M.config = function()
 
 	setup.sources = {
 		{ name = "neorg" },
+		{ name = "vimtex" },
 		{ name = "luasnip" },
 		{ name = "nvim_lsp" },
 		{ name = "gh_issues" },
