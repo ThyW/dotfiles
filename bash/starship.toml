@@ -45,8 +45,7 @@ style = "bold cyan"
 
 [status]
 disabled = false
-
-
+symbol = " "
 
 [[battery.display]]
 threshold = 20
