@@ -58,6 +58,8 @@ alias dots='cd ~/clones/dotfiles/ && vi . && der -a && cd -'
 alias notes='(cd ~/notes && nvim +"Neorg workspace notes")'
 alias yank='xsel -ib'
 alias past='xsel -ob'
+alias sudo='run0'
+alias sshadd='ssh-add ~/.ssh/id_ed25519-2024'
 
 alias todo='vi ~/todo/todo.txt'
 alias lg='lazygit'
