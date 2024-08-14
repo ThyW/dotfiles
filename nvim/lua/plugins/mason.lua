@@ -31,6 +31,7 @@ M.config = function()
 			"lua-language-server",
 			"rust-analyzer",
 			"typst-lsp",
+			"haskell-language-server",
 		},
 		run_on_start = false,
 	})

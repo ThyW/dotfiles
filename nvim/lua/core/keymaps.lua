@@ -63,7 +63,7 @@ keymap("", "L", "g_", { noremap = true })
 
 -- NvimTree toggle.
 -- nmap("<leader>of", ":NvimTreeToggle<CR>", { silent = true, noremap = true })
-keymap("n", "<leader>of", ":Explore<CR>", { silent = true, noremap = true })
+-- keymap("n", "<leader>of", ":Explore<CR>", { silent = true, noremap = true })
 
 -- Switch spelling language.
 keymap("n", "<leader>oS", function()

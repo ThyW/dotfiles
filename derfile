@@ -147,3 +147,8 @@ apply_path = $outdir:/.config/rio/
 hostnames = $hosts
 final_name = gruvbox.toml
 apply_path = $outdir:/.config/rio/themes/
+
+[lazygit/config.yml]
+hostnames = $hosts
+final_name = config.yml
+apply_path = $outdir:/.config/lazygit/

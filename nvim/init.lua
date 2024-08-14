@@ -28,5 +28,6 @@ plugin("plugins.plant-uml-syntax")
 plugin("plugins.prisma")
 plugin("plugins.autopairs")
 plugin("plugins.vimtex")
+plugin("plugins.oil")
 
 require("plugins.lazy")
