@@ -3,7 +3,7 @@ local module = {
 	lazy = false,
 	init = function()
 		vim.g.vimtex_view_method = "zathura_simple"
-		vim.cmd([[let g:vimtex_view_foward_search_on_start = 0]])
+		vim.g.vimtex_view_forward_search_on_start = false
 	end,
 }
 
