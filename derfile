@@ -152,3 +152,8 @@ apply_path = $outdir:/.config/rio/themes/
 hostnames = $hosts
 final_name = config.yml
 apply_path = $outdir:/.config/lazygit/
+
+[ghostty/config]
+hostnames = $hosts
+final_name = config
+apply_path = $outdir:/.config/ghostty/

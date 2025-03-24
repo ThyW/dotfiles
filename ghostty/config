@@ -1,0 +1,13 @@
+background = 282828
+
+font-family = Iosevka Nerd Font Mono
+font-feature = +clig
+adjust-cell-width = 10%
+font-size = 12
+grapheme-width-method = legacy
+freetype-load-flags = true
+
+theme = GruvboxDark
+# window-decoration = false
+gtk-titlebar = false
+confirm-close-surface = false
