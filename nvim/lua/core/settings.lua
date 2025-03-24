@@ -55,7 +55,7 @@ function GetCurrentLang()
 	return oo.spelllang
 end
 
---[[ o.laststatus = 3
+o.laststatus = 3
 -- Custom status line:
 -- (from the right):
 --   * %f: relative filename.
@@ -64,9 +64,9 @@ end
 --   * %Y: language
 --   * %c: column
 --   * %l/%L: current line number / out of all lines
-oo.statusline = "<< %f >>%= %m %Y %c %l/%L "
+-- oo.statusline = "<< %f >>%= %m %Y %c %l/%L "
 -- append the current spell checker language onto the end of status line.
-oo.statusline = oo.statusline .. " LANG:" .. "%{luaeval('GetCurrentLang()')}"
+--[[ oo.statusline = oo.statusline .. " LANG:" .. "%{luaeval('GetCurrentLang()')}"
 oo.statusline = oo.statusline .. " WORDS:" .. "%{luaeval('vim.fn.wordcount().words')}" .. " " ]]
 
 g.neovide_cursor_vfx_mode = "ripple"

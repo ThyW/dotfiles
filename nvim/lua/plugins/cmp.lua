@@ -20,6 +20,7 @@ local M = {
 M.config = function()
 	local cmp = require("cmp")
 	local luasnip = require("luasnip")
+	local compare = cmp.config.compare
 	require("lspkind").init({})
 
 	-- If you want insert `(` after select function or method item
@@ -60,6 +61,7 @@ M.config = function()
 	}
 
 	setup.sources = {
+		{ name = "jupynium", priority = 1000 },
 		{ name = "neorg" },
 		{ name = "vimtex" },
 		{ name = "luasnip" },
@@ -68,6 +70,15 @@ M.config = function()
 		{ name = "path" },
 		{ name = "buffer" },
 		{ name = "crates" },
+	}
+
+	setup.sorting = {
+		priority_weight = 1.0,
+		comparators = {
+			compare.score,
+			compare.recently_used,
+			compare.locality,
+		},
 	}
 
 	setup.snippet = {

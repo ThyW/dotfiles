@@ -27,6 +27,8 @@ function M.on_attach(_, bufnr)
 	buf_set_keymap("n", "[d", '<cmd>lua require"..core.lib.diagnostics".goto_prev()<CR>', opts)
 	buf_set_keymap("n", "]d", '<cmd>lua require"..core.lib.diagnostics".goto_next()<CR>', opts)
 	buf_set_keymap("n", "<space>q", '<cmd>lua require"..core.lib.diagnostics".location_list()<CR>', opts)
+
+	vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 end
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview

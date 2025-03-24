@@ -30,5 +30,6 @@ plugin("plugins.prisma")
 plugin("plugins.autopairs")
 plugin("plugins.vimtex")
 plugin("plugins.oil")
+plugin("plugins.jupynium")
 
 require("plugins.lazy")
