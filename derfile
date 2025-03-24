@@ -1,5 +1,5 @@
 # [https://github.com/ThyW/der/]
-$hosts = legionnaire, terminator,pyromancer
+$hosts = legionnaire,terminator,pyromancer,thief
 $outdir = env`HOME`
 
 # alacritty

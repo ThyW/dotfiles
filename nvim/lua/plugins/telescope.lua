@@ -3,7 +3,8 @@ local M = {
 	config = function()
 		require("plugins.telescope")
 	end,
-	dependencies = { "nvim-telescope/telescope-fzf-native.nvim" },
+	-- dependencies = { {"nvim-telescope/telescope-fzf-native.nvim", build = "make"} },
+	dependencies = { {'nvim-telescope/telescope-fzf-native.nvim', build = 'make' } }
 }
 
 M.config = function()
