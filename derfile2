@@ -39,13 +39,11 @@ entry {
     path = ./dunst/dunstrc
     apply_path = ~/.config/dunst/dunstrc
     template = yes
-    pre = "mkdir -p ~/.config/dunst"
 }
 
 
 
 entry {
-    pre = "mkdir -p ~/.config/i3"
     path = ./i3/
     apply_path = ~/.config/i3
     template = yes
@@ -79,7 +77,6 @@ entry {
     path = ./services/
     apply_path = ~/.config/systemd/user
     template = yes
-    pre = "mkdir -p ~/.config/systemd/user"
 }
 
 entry {
