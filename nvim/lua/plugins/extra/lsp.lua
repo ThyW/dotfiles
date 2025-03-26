@@ -10,6 +10,8 @@ function M.on_attach(_, bufnr)
 	-- Mappings.
 	local opts = { noremap = true, silent = true }
 
+	vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
@@ -27,8 +29,8 @@ function M.on_attach(_, bufnr)
 	buf_set_keymap("n", "[d", '<cmd>lua require"..core.lib.diagnostics".goto_prev()<CR>', opts)
 	buf_set_keymap("n", "]d", '<cmd>lua require"..core.lib.diagnostics".goto_next()<CR>', opts)
 	buf_set_keymap("n", "<space>q", '<cmd>lua require"..core.lib.diagnostics".location_list()<CR>', opts)
+	buf_set_keymap("n", "<space>it", '<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>', opts)
 
-	vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 end
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
