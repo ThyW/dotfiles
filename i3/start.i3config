@@ -23,11 +23,11 @@ exec flameshot
 # Keyboard layout switching
 exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option grp:alt_shift_toggle
 
-@@ legionnaire
+@@ 'legionnaire'
 # Ensure monitors are set up the way I want them to be.
 exec --no-startup-id ~/.local/bin/my_scripts/monsetup -c
 exec --no-startup-id ~/.fehbg
-@!
+@@
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -55,17 +55,17 @@ client.urgent		     $bg		$bg		$fg3		$bg		$bg
 client.placeholder	     $bg		$bg		$fg3		$bg		$bg
 client.background	     $bg
 
-@@ legionnaire
+@@ 'legionnaire'
 # Monitor and workspace setup.
 workspace $ws1 output HDMI-1
 workspace $ws2 output DP-1
-@!
+@@
 
-@@ pyromancer
+@@ 'pyromancer'
 # Monitor and workspace setup.
 workspace $ws1 output HDMI-1-4
 workspace $ws2 output DP-1-4
-@!
+@@
 
 # Assign windows to specific workspaces.
 assign [class="^discord$"] $ws2

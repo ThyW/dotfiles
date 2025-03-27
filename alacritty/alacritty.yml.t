@@ -60,12 +60,12 @@ font:
     #family: monospace
     #style: Bold Italic
 
-@@ legionnaire
+@@ 'legionnaire'
   size: 12
-@!
-@@ terminator
+@@
+@@ 'terminator'
   size: 10.0
-@!
+@@
 
   #offset:
   #  x: 0
