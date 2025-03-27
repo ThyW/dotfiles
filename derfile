@@ -1,159 +1,104 @@
-# [https://github.com/ThyW/der/]
-$hosts = legionnaire,terminator,pyromancer,thief
-$outdir = env`HOME`
+entry {
+    path = ./alacritty/alacritty.yml.t
+    apply_path = ~/.config/alacritty/alacritty.yml
+    template = yes
+}
 
-# alacritty
-[alacritty/alacritty.yml.t]
-hostnames = $hosts
-final_name = alacritty.yml
-apply_path = $outdir:/.config/alacritty/
+entry {
+    path = ./bash/bashrc
+    apply_path = ~/.bashrc
+    template = yes
+}
 
-# .bashrc
-[bash/bashrc]
-hostnames = $hosts
-final_name = .bashrc
-apply_path = $outdir
+entry {
+    path = ./bash/tmux.conf
+    apply_path = ~/.tmux.conf
+    template = yes
+}
 
-# .tmux.conf
-[bash/tmux.conf]
-hostnames = $hosts
-final_name = .tmux.conf
-apply_path = $outdir
+entry {
+    path = ./bash/.gitignore
+    apply_path = ~/.gitignore
+    template = yes
+}
 
-# .gitignore
-[bash/.gitignore]
-hostnames = $hosts
-final_name = .gitignore
-apply_path = $outdir
 
-[bash/ghci.conf]
-hostnames = $hosts
-final_name = .ghci
-apply_path = $outdir
+entry {
+    path = ./bash/ghci.conf
+    apply_path = ~/.ghci
+    template = yes
+}
 
-# starship.toml
-[bash/starship.toml]
-hostnames = $hosts
-final_name = starship.toml
-apply_path = $outdir:/.config/
+entry {
+    path = ./bash/starship.toml
+    apply_path = ~/.config/starship.toml
+    template = yes
+}
 
-# dunstrc
-[dunst/dunstrc]
-hostnames = $hosts
-final_name = dunstrc
-apply_path = $outdir:/.config/dunst/
+entry {
+    path = ./dunst/dunstrc
+    apply_path = ~/.config/dunst/dunstrc
+    template = yes
+}
 
-[i3]
-hostnames = $hosts
-final_name = i3
-apply_path = $outdir:/.config/
-parse_files = true
-recursive = true
-extensions = i3config
 
-[i3status-rust/config.toml]
-hostnames = $hosts
-final_name = config.toml
-apply_path = $outdir:/.config/i3status-rust/
 
-[nvim]
-hostnames = $host
-final_name = nvim
-apply_path = $outdir:/.config/
-parse_files = false
-recursive = true
-extensions = t
+entry {
+    path = ./i3/
+    apply_path = ~/.config/i3
+    template = yes
+}
 
-[redshift/redshift.conf]
-hostnames = $hosts
-final_name = redshift.conf
-apply_path = $outdir:/.config/redshift/
+entry { 
+    path = ./i3status-rust/config.toml
+    apply_path = ~/.config/i3status-rust/config.toml
+    template = yes
+}
 
-[eww]
-hostnames = $hosts
-final_name = eww
-apply_path = $outdir:/.config/
-parse_files = true
-recursive = true
-extensions = t
+entry {
+    path = ./nvim/
+    apply_path = ~/.config/nvim
+    template = no
+}
 
-[cwm/config]
-hostnames = $hosts
-final_name = config
-apply_path = $outdir:/.config/crubwm/
+entry { 
+    path = ./redshift/redshift.conf
+    apply_path = ~/.config/redshift/redshift.conf
+    template = yes
+}
 
-[wezterm/wezterm.t.lua]
-hostnames = $hosts
-final_name = wezterm.lua
-apply_path = $outdir:/.config/wezterm/
+entry {
+    path = ./kitty/kitty.t.conf
+    apply_path = ~/.config/kitty/kitty.conf
+    template = yes
+}
 
-[kitty/kitty.t.conf]
-hostnames = $hosts
-final_name = kitty.conf
-apply_path = $outdir:/.config/kitty/
+entry {
+    path = ./services/
+    apply_path = ~/.config/systemd/user
+    template = yes
+}
 
-[services/syncthing.service]
-hostnames = $hosts
-final_name = syncthing.service
-apply_path = $outdir:/.config/systemd/user/
+entry {
+    path = ./scripts
+    apply_path = ~/.local/bin/
+    template = yes
+}
 
-[services/ssh-agent.service]
-hostnames = $hosts
-final_name = ssh-agent.service
-apply_path = $outdir:/.config/systemd/user/
+entry {
+    path = ./vim/vimrc
+    apply_path = ~/.vimrc
+    template = yes
+}
 
-[newsraft/feeds]
-hostnames = $hosts
-final_name = feeds
-apply_path = $outdir:/.config/newsraft/
+entry {
+    path = ./lazygit/config.yml
+    apply_path = ~/.config/lazygit/config.yml
+    template = yes
+}
 
-[hypr/hyprland.t.conf]
-hostnames = $hosts
-final_name = hyprland.conf
-apply_path = $outdir:/.config/hypr/
-
-[scripts/monsetup]
-hostnames = $host
-final_name = monsetup
-apply_path = $outdir:/.local/bin/
-parse_files = false
-recursive = false
-
-[scripts/pyb]
-hostnames = $host
-final_name = pyb
-apply_path = $outdir:/.local/bin/
-parse_files = false
-recursive = false
-
-[scripts/timer]
-hostnames = $host
-final_name = timer
-apply_path = $outdir:/.local/bin/
-parse_files = false
-recursive = false
-
-[vim/vimrc]
-hostnames = $hosts
-final_name = .vimrc
-apply_path = $outdir
-
-[rio/config.toml]
-hostnames = $hosts
-final_name = config.toml
-apply_path = $outdir:/.config/rio/
-
-[rio/gruvbox.toml]
-hostnames = $hosts
-final_name = gruvbox.toml
-apply_path = $outdir:/.config/rio/themes/
-
-[lazygit/config.yml]
-hostnames = $hosts
-final_name = config.yml
-apply_path = $outdir:/.config/lazygit/
-
-[ghostty/config]
-hostnames = $hosts
-final_name = config
-apply_path = $outdir:/.config/ghostty/
+entry {
+    path = ./ghostty/config
+    apply_path = ~/.config/ghostty/config
+    template = true
+}
