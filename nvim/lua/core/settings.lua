@@ -55,7 +55,7 @@ function GetCurrentLang()
 	return oo.spelllang
 end
 
-o.laststatus = 3
+o.laststatus = 0
 -- Custom status line:
 -- (from the right):
 --   * %f: relative filename.
