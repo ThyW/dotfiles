@@ -31,5 +31,6 @@ plugin("plugins.autopairs")
 plugin("plugins.vimtex")
 plugin("plugins.oil")
 plugin("plugins.jupynium")
+plugin("plugins.whichkey")
 
 require("plugins.lazy")

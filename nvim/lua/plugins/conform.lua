@@ -32,7 +32,7 @@ M.config = function()
 
 	vim.keymap.set({ "n", "v" }, "<leader>af", function()
 		conform.format(format_opts)
-	end, nil)
+	end, { desc = "Format buffer", silent = false })
 end
 
 return M

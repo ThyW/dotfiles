@@ -132,10 +132,6 @@ M.config = function()
 		},
 	}
 
-	--[[ setup.completion = {
-		autocomplete = false,
-	} ]]
-
 	cmp.setup(setup)
 
 	cmp.setup.cmdline(":", {
