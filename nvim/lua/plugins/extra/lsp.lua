@@ -5,13 +5,13 @@ M.lspconfig = require("lspconfig")
 function M.on_attach(_, bufnr)
 	local function buf_set_keymap(mode, lhs, rhs, opts)
 		opts = opts or {}
-		opts.bufnr = bufnr
+		opts.buffer = bufnr
 		vim.keymap.set(mode, lhs, rhs, opts)
 	end
 
 	-- Mappings.
 	local function opts(desc)
-		return { noremap = true, silent = true, desc }
+		return { noremap = true, silent = true, desc = desc }
 	end
 
 	vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })

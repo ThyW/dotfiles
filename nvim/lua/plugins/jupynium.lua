@@ -7,6 +7,10 @@ local M = {
 				enable = true,
 				file_pattern = { "*.ju.*" },
 			},
+			auto_attach_to_server = {
+				enable = true,
+				file_pattern = { "*.ju.*" },
+			},
 			auto_start_sync = {
 				enable = true,
 				file_pattern = { "*.ju.*" },
