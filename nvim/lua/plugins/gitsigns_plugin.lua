@@ -7,11 +7,12 @@ M.config = function()
 	local gitsigns = require("gitsigns")
 
 	gitsigns.setup({
-		on_attach = function(bn)
-			local map = function(m, l, h, desc)
-				local opts = { silent = "true", noremap = "true", desc }
-				opts.buffer = bn
-				vim.keymap.set(m, l, h, opts)
+		debug_mode = true,
+		auto_attach = true,
+		on_attach = function(buf)
+			local map = function(m, l, r, desc)
+				local opts = { silent = "false", noremap = "true", desc = desc, buffer = buf }
+				vim.keymap.set(m, l, r, opts)
 			end
 
 			map("n", "<leader>gs", gitsigns.stage_hunk, "Stage hunk")

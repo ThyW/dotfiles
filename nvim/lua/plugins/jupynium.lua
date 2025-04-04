@@ -12,7 +12,7 @@ local M = {
 				file_pattern = { "*.ju.*" },
 			},
 			auto_start_sync = {
-				enable = true,
+				enable = false,
 				file_pattern = { "*.ju.*" },
 			},
 		})
