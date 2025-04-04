@@ -11,7 +11,7 @@ M.config = function()
 		auto_attach = true,
 		on_attach = function(buf)
 			local map = function(m, l, r, desc)
-				local opts = { silent = "false", noremap = "true", desc = desc, buffer = buf }
+				local opts = { silent = false, noremap = true, desc = desc, buffer = buf }
 				vim.keymap.set(m, l, r, opts)
 			end
 
@@ -24,7 +24,6 @@ M.config = function()
 				gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
 			end, "Reset selected hunk(s)")
 			map("n", "<leader>gS", gitsigns.stage_buffer, "Stage buffer")
-			map("n", "<leader>gu", gitsigns.undo_stage_hunk, "Undo stage hunk")
 			map("n", "<leader>gR", gitsigns.reset_buffer, "Reset buffer")
 			map("n", "<leader>gp", gitsigns.preview_hunk, "Preview hunk")
 			map("n", "<leader>gb", function()
@@ -35,7 +34,7 @@ M.config = function()
 			map("n", "<leader>gD", function()
 				gitsigns.diffthis("~")
 			end, "Special diff this")
-			map("n", "<leader>td", gitsigns.toggle_deleted, "Toggle deleted")
+			map("n", "<leader>td", gitsigns.preview_hunk_inline, "Toggle deleted")
 
 			-- Text object
 			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Inside hunk")
