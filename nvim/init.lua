@@ -32,5 +32,6 @@ plugin("plugins.vimtex")
 plugin("plugins.oil")
 plugin("plugins.jupynium")
 plugin("plugins.whichkey")
+plugin("plugins.todo_comments")
 
 require("plugins.lazy")
