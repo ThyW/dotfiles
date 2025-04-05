@@ -3,15 +3,14 @@ local M = {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {},
 	config = function()
-		require("todo-comments").setup({})
+		local comms = require("todo-comments")
+		comms.setup({})
 
-		vim.keymap.set("n", "]t", function()
-			require("todo-comments").jump_next()
-		end, { desc = "Next todo comment" })
+		vim.keymap.set("n", "]t", comms.jump_next, { desc = "Next todo comment" })
 
-		vim.keymap.set("n", "[t", function()
-			require("todo-comments").jump_prev()
-		end, { desc = "Previous todo comment" })
+		vim.keymap.set("n", "<leader>fT", "<cmd>TodoTelescope<CR>", { desc = "TScope todo comments" })
+
+		vim.keymap.set("n", "[t", comms.jump_prev, { desc = "Previous todo comment" })
 	end,
 }
 
