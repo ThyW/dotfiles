@@ -33,6 +33,7 @@ M.config = function()
 			"typst-lsp",
 			"zls",
 			"haskell-language-server",
+			"harper-ls",
 		},
 		run_on_start = false,
 	})
@@ -45,6 +46,44 @@ M.config = function()
 				flags = {
 					debounce_text_changes = 150,
 				},
+			})
+		end,
+		["harper_ls"] = function()
+			lspconfig["harper_ls"].setup({
+				filetypes = {
+					"c",
+					"cpp",
+					"cs", "gitcommit", "go", "html", "java", "javascript", "lua", "markdown", "nix", "python", "ruby", "rust",
+					"swift", "toml", "typescript", "typescriptreact", "haskell", "cmake", "typst", "php", "dart",
+				},
+				settings = {
+					["harper-ls"] = {
+						userDictPath = "",
+						fileDictPath = "",
+						linters = {
+							SpellCheck = true,
+							SpelledNumbers = false,
+							AnA = true,
+							SentenceCapitalization = true,
+							UnclosedQuotes = true,
+							WrongQuotes = false,
+							LongSentences = true,
+							RepeatedWords = true,
+							Spaces = true,
+							Matcher = true,
+							CorrectNumberSuffix = true
+						},
+						codeActions = {
+							ForceStable = false
+						},
+						markdown = {
+							IgnoreLinkTitle = false
+						},
+						diagnosticSeverity = "hint",
+						isolateEnglish = false,
+						dialect = "American",
+					}
+				}
 			})
 		end,
 		["lua_ls"] = function()
