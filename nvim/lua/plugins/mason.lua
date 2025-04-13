@@ -5,9 +5,7 @@ local M = {
 	end,
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		"neovim/nvim-lspconfig",
-		"nvim-lua/lsp_extensions.nvim",
 	},
 }
 
@@ -16,26 +14,17 @@ M.config = function()
 	local lspconfig = lsp_settings.lspconfig
 
 	require("mason").setup({})
-	require("mason-tool-installer").setup({
+	require("mason-lspconfig").setup({
 		ensure_installed = {
-			"rust-analyzer",
-			-- "clang-format",
-			"pyright",
-			"stylua",
-			"prettier",
-			"fourmolu",
-			"bash-language-server",
-			"black",
+			"basedpyright",
+			"bashls",
 			"clangd",
-			"jdtls",
-			"lua-language-server",
-			"rust-analyzer",
-			"typst-lsp",
+			"lua_ls",
+			"rust_analyzer",
 			"zls",
-			"haskell-language-server",
 			"harper-ls",
+			"hls",
 		},
-		run_on_start = false,
 	})
 
 	require("mason-lspconfig").setup_handlers({

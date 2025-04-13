@@ -1,5 +1,5 @@
 add_newline = false
-format = "$git_branch$git_status$lua$rust$c$cmake$java $directory$status$battery$character"
+format = "$git_branch$git_status$lua$rust$zig$c$cmake$java $directory$status$battery$character"
 
 [directory]
 truncation_length = 3
@@ -37,6 +37,10 @@ style = "bold cyan"
 
 [rust]
 format = ' rust [$version]($style)'
+style = "bold cyan"
+
+[zig]
+format = ' zig [$version]($style)'
 style = "bold cyan"
 
 [lua]

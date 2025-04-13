@@ -4,7 +4,7 @@ local M = {
 		require("plugins.telescope")
 	end,
 	-- dependencies = { {"nvim-telescope/telescope-fzf-native.nvim", build = "make"} },
-	dependencies = { {'nvim-telescope/telescope-fzf-native.nvim', build = 'make' } }
+	dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
 }
 
 M.config = function()
@@ -45,45 +45,45 @@ M.config = function()
 
 	telescope.load_extension("fzf")
 	local keymap = vim.keymap.set
-	local set = function(keys, action)
-		keymap("n", keys, action)
+	local set = function(keys, action, desc)
+		keymap("n", keys, action, { silent = true, desc = desc })
 	end
 
 	-- Keybinds
 	set("<leader>ff", function()
 		require("telescope.builtin").find_files()
-	end)
+	end, "TScope files")
 	set("<leader>fl", function()
 		require("telescope.builtin").current_buffer_fuzzy_find()
-	end)
+	end, "TScope fuzzy find")
 	set("<leader>fb", function()
 		require("telescope.builtin").buffers()
-	end)
+	end, "TScope buffers")
 	set("<leader>fg", function()
 		require("telescope.builtin").git_files()
-	end)
+	end, "TScope git files")
 	set("<leader>fh", function()
 		require("telescope.builtin").command_history()
-	end)
+	end, "TScope command history")
 	set("<leader>fq", function()
 		require("..core.lib.diagnostics").quickfix_list(false)
 		require("telescope.builtin").quickfix()
-	end)
+	end, "TScope quickfix")
 	set("<leader>ft", function()
 		require("telescope.builtin").treesitter()
-	end)
+	end, "TScope treesitter")
 	set("<leader>fp", function()
 		require("telescope.builtin").builtin()
-	end)
+	end, "TScope telescope pickers")
 	set("<leader>fL", function()
 		require("telescope.builtin").live_grep()
-	end)
+	end, "TScope live grep")
 	set("<leader>f=", function()
 		require("telescope.builtin").spell_suggest()
-	end)
+	end, "TScope spell suggest")
 	set("<leader>fd", function()
 		require("telescope.builtin").diagnostics()
-	end)
+	end, "TScope diagnostics")
 end
 
 return M

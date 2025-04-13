@@ -59,6 +59,7 @@ entry {
     path = ./nvim/
     apply_path = ~/.config/nvim
     template = no
+    backup = no
 }
 
 entry { 
@@ -83,6 +84,7 @@ entry {
     path = ./scripts
     apply_path = ~/.local/bin/
     template = yes
+    backup = no
 }
 
 entry {
