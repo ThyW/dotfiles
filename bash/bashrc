@@ -81,8 +81,10 @@ export EDITOR="nvim"
 @@ ('legionnaire' || 'pyromancer')
 export SSH_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export READER='zathura'
-export DISPLAY=:0.0;
+@@
+@@ 'legionnaire'
 export I3SOCK="$XDG_RUNTIME_DIR/i3/ipc-socket.sock"
+export DISPLAY=:0.0;
 @@
 
 set -o vi

@@ -9,4 +9,4 @@
 # i3 config file (v4) 
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!  
 
-include ~/.config/i3/vars
+include ~/.config/i3/vars.i3config

@@ -12,7 +12,9 @@ bar {
 
     strip_workspace_numbers no
 
+@@ ('legionnaire' || 'terminator')
     i3bar_command i3bar -t
+@@
 
     height 18
 

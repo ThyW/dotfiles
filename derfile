@@ -104,3 +104,16 @@ entry {
     apply_path = ~/.config/ghostty/config
     template = true
 }
+
+entry {
+    path = ./river/config
+    apply_path = ~/.config/river/init
+    template = true
+}
+
+entry {
+    path = ./kanshi/config
+    apply_path = ~/.config/kanshi/config
+    template = true
+    backup = false
+}

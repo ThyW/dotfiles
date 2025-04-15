@@ -1,0 +1,102 @@
+@@ 'pyromancer'
+#!/bin/bash
+# vim:ft=bash
+
+# Gruvbox colors.
+bg_var=0x282828
+purple=0xb16286
+
+# programs.
+term="kitty"
+notifs="dunst"
+
+## AUTOSTART
+riverctl spawn redshift -l 48:17 -t 3900:3900
+riverctl spawn nm-applet
+riverctl spawn $notifs
+riverctl spawn flameshot
+
+## KEYMAPS
+# Launching things.
+riverctl map normal Super Return spawn $term
+riverctl map normal Super I spawn firefox
+riverctl map normal Super D spawn dmenu_run -fn 'Iosevka:8'
+riverctl map normal Print spawn flameshot gui
+
+# Close things.
+riverctl map normal Super+Shift W close
+
+# Focus things.
+riverctl map normal Super H focus-view left
+riverctl map normal Super J focus-view down
+riverctl map normal Super K focus-view up
+riverctl map normal Super L focus-view right
+
+# Focus output things.
+riverctl map normal Super Period focus-output next
+riverctl map normal Super Comma focus-output previous
+
+# Sending things to different outputs.
+riverctl map normal Super+Shift Period send-to-output next
+riverctl map normal Super+Shift Comma send-to-output previous
+
+# Move things.
+riverctl map normal Super+Shift H swap left
+riverctl map normal Super+Shift J swap down
+riverctl map normal Super+Shift K swap up
+riverctl map normal Super+Shift L swap right
+
+# Toggle things.
+riverctl map normal Super F toggle-fullscreen
+riverctl map normal Super Space toggle-float
+
+# Epic pointer maps.
+riverctl map-pointer normal Super BTN_LEFT move-view
+riverctl map-pointer normal Super BTN_RIGHT resize-view
+riverctl map-pointer normal Super BTN_MIDDLE toggle-float
+
+# The goofiest tag/workspace setup.
+for i in $(seq 1 9); do
+    tags=$((1 << ($i - 1)))
+
+    riverctl map Super $i set-focused-tags $tags
+    riverctl map Super+Shift $i set-view-tags $tags
+    riverctl map Super+Control $i toggle-focused-tags $tags
+    riverctl map Super+Shift+Control $i toggle-view-tags $tags
+done
+
+# Focus and tagging view with all tags.
+all_tags=$(((1 << 32) - 1))
+riverctl map normal Super 0 set-focused-tags $all_tags
+riverctl map normal Super+Shift 0 set-view-tags $all_tags
+
+## Settings.
+# Attaching new clients.
+riverctl default-attach-mode below
+
+# Epic borders.
+riverctl border-width 3
+
+# Epic colors.
+riverctl background-color $bg_var
+riverctl border-color-focused $purple
+riverctl border-color-unfocused $bg_var
+
+# Repeat?
+riverctl set-repeat 25 500
+
+# Epic cursor warps.
+riverctl set-cursor-warp on-focus-change
+
+# Epic cursor focus.
+riverctl focus-follows-cursor always
+
+# Default layout.
+riverctl default-layout rivertile
+
+# Keyboard layouts.
+riverctl keyboard-layout us,sk -variant ,qwerty -options "grp:alt_shift_toggle"
+
+## Starting rivertile.
+rivertile -view-padding 0 -outer-padding 0 &
+@@

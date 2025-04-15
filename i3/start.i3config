@@ -1,5 +1,11 @@
 # This are all the commands, which execute every time time i3 starts.
 # Utility for adjusting screen color according to the time of day and makes
+@@ 'pyromancer'
+exec --no-startup-id gammastep -P -l 48:17 -t 3900:3900
+exec wp-paste -p -t text --watch clipman store -P --no-persist
+exec kanshi
+exec --no-startup-id swaybg -c 282828 -m solid_color
+@@
 # it easier for your eyes to function
 exec --no-startup-id redshift -l 48:17 -t 3900:3900
 
@@ -83,3 +89,7 @@ for_window [all] title_window_icon off
 
 # If the window title is set to floating, toggle float to for that window.
 for_window [title="floating"] floating toggle
+
+@@ 'pyromancer'
+# Output settings
+@@

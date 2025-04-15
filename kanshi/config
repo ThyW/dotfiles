@@ -1,0 +1,15 @@
+profile default {
+    output eDP-1 disable
+    output 'AOC 24G4 12VQBHA003849' {
+    	mode 1920x1080@180Hz
+    	position 0,0
+    	enable
+    }
+}
+
+profile nomad {
+    output eDP-1 {
+    	enable
+    	mode 1920x1080
+    }
+}

@@ -55,7 +55,7 @@ bindsym $mod+Shift+b border pixel 0
 bindsym $mod+b border pixel $border
 
 # Change container layout (stacked, tabbed, toggle split).
-bindsym $mod+s layout toggle
+bindsym $mod+s layout toggle split tabbed stacking
 
 # Toggle tiling / floating mode for focused container.
 bindsym $mod+space floating toggle
