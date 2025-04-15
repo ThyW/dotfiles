@@ -33,5 +33,7 @@ plugin("plugins.oil")
 plugin("plugins.jupynium")
 plugin("plugins.whichkey")
 plugin("plugins.todo_comments")
+plugin("plugins.zen-mode")
+plugin("plugins.whitespaces")
 
 require("plugins.lazy")

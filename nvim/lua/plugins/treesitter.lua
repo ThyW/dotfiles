@@ -75,6 +75,7 @@ M.config = function()
 		},
 		highlight = {
 			enable = true,
+			disable = { "tex" },
 		},
 		autopairs = { enable = true },
 		incremental_selection = {

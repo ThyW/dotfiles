@@ -22,7 +22,7 @@ M.config = function()
 			"lua_ls",
 			"rust_analyzer",
 			"zls",
-			"harper-ls",
+			"harper_ls",
 			"hls",
 		},
 	})
@@ -42,8 +42,27 @@ M.config = function()
 				filetypes = {
 					"c",
 					"cpp",
-					"cs", "gitcommit", "go", "html", "java", "javascript", "lua", "markdown", "nix", "python", "ruby", "rust",
-					"swift", "toml", "typescript", "typescriptreact", "haskell", "cmake", "typst", "php", "dart",
+					"cs",
+					"gitcommit",
+					"go",
+					"html",
+					"java",
+					"javascript",
+					"lua",
+					"markdown",
+					"nix",
+					"python",
+					"ruby",
+					"rust",
+					"swift",
+					"toml",
+					"typescript",
+					"typescriptreact",
+					"haskell",
+					"cmake",
+					"typst",
+					"php",
+					"dart",
 				},
 				settings = {
 					["harper-ls"] = {
@@ -60,19 +79,19 @@ M.config = function()
 							RepeatedWords = true,
 							Spaces = true,
 							Matcher = true,
-							CorrectNumberSuffix = true
+							CorrectNumberSuffix = true,
 						},
 						codeActions = {
-							ForceStable = false
+							ForceStable = false,
 						},
 						markdown = {
-							IgnoreLinkTitle = false
+							IgnoreLinkTitle = false,
 						},
 						diagnosticSeverity = "hint",
 						isolateEnglish = false,
 						dialect = "American",
-					}
-				}
+					},
+				},
 			})
 		end,
 		["lua_ls"] = function()
