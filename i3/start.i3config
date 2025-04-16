@@ -5,6 +5,11 @@ exec --no-startup-id gammastep -P -l 48:17 -t 3900:3900
 exec wp-paste -p -t text --watch clipman store -P --no-persist
 exec kanshi
 exec --no-startup-id swaybg -c 282828 -m solid_color
+exec --no-startup-id swayidle -w \
+    timeout 300 'swaylock -f -c 111111' \
+    timeout 600 'swaymsg "output * dmps off"' \
+	resume  'swaymsg "output * dmps off"' \
+    before-sleep 'swaylock -f -c 111111'
 @@
 # it easier for your eyes to function
 exec --no-startup-id redshift -l 48:17 -t 3900:3900

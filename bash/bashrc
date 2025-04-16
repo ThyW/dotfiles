@@ -25,18 +25,22 @@ export PATH="${PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
 export PAGER="nvim +Man!"
 
 # alias ls='ls --color=auto'
-alias sus='sudo systemctl start suspend.target && i3lock -c 111111'
 alias use-nvidia='optimus-manager --switch nvidia'
 alias use-intel='optimus-manager --switch intel'
 alias use-hybrid='optimus-manager --switch hybrid'
 alias lanvidia='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
-alias i3lock='i3lock -c 111111'
 alias ls='exa'
 alias vi='nvim'
+@@
+@@ !'pyromancer'
+alias i3lock='i3lock -c 111111'
+alias sus='sudo systemctl start suspend.target && i3lock -c 111111'
 @@
 @@ 'pyromancer'
 export PATH="${PATH}:$HOME/zig-linux-x86_64-0.14.0/"
 alias fzf='sk'
+alias sus='sudo systemctl start suspend.target && swaylock -c 111111'
+alias lock='swaylock -c 111111'
 @@
 @@ ('pyromancer' || 'thief')
 alias mute='pactl set-sink-volume 0 0%'
