@@ -23,13 +23,13 @@ function M.wrap_keybinds(on)
 	if on then
 		set("", "j", "gj", { noremap = true, silent = true })
 		set("", "k", "gk", { noremap = true, silent = true })
-		set("", "H", "^", { noremap = true, silent = true, desc = "goto start of line" })
-		set("", "L", "g_", { noremap = true, silent = true, desc = "goto end of line" })
+		set("", "H", "g^", { noremap = true, silent = true, desc = "goto start of line" })
+		set("", "L", "g$", { noremap = true, silent = true, desc = "goto end of line" })
 	else
 		set("", "j", "j", { noremap = true, silent = true })
 		set("", "k", "k", { noremap = true, silent = true })
-		set("", "H", "g^", { noremap = true, silent = true, desc = "goto start of line" })
-		set("", "L", "g$", { noremap = true, silent = true, desc = "goto end of line" })
+		set("", "H", "^", { noremap = true, silent = true, desc = "goto start of line" })
+		set("", "L", "$", { noremap = true, silent = true, desc = "goto end of line" })
 	end
 end
 

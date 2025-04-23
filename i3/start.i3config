@@ -10,6 +10,10 @@ exec --no-startup-id swayidle -w \
     timeout 600 'swaymsg "output * dmps off"' \
 	resume  'swaymsg "output * dmps off"' \
     before-sleep 'swaylock -f -c 111111'
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 @@
 # it easier for your eyes to function
 exec --no-startup-id redshift -l 48:17 -t 3900:3900
@@ -39,6 +43,11 @@ exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option grp:alt_sh
 exec --no-startup-id ~/.local/bin/my_scripts/monsetup -c
 exec --no-startup-id ~/.fehbg
 @@
+
+input type:keyboard {
+    xkb_layout us,sk(qwerty)
+    xkb_options grp:rctrl_toggle
+}
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

@@ -1,6 +1,7 @@
-vim.opt.wrap = true
-vim.opt.spell = true
+vim.o.spell = true
 
 vim.cmd("TSDisable highlight")
 vim.cmd("set expandtab")
--- vim.cmd("VimtexCompile")
+
+local f = require("core.lib.functions")
+f.switch_wrap(true)

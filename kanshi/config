@@ -1,5 +1,5 @@
 profile default {
-    output eDP-1 disable
+    output 'BOE 0x0792 Unknown' disable
     output 'AOC 24G4 12VQBHA003849' {
     	mode 1920x1080@180Hz
     	position 0,0
