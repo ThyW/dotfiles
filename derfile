@@ -1,6 +1,6 @@
 entry {
-    path = ./alacritty/alacritty.yml.t
-    apply_path = ~/.config/alacritty/alacritty.yml
+    path = ./alacritty/alacritty.toml
+    apply_path = ~/.config/alacritty/alacritty.toml
     template = yes
 }
 
@@ -49,7 +49,7 @@ entry {
     template = yes
 }
 
-entry { 
+entry {
     path = ./i3status-rust/config.toml
     apply_path = ~/.config/i3status-rust/config.toml
     template = yes
@@ -62,7 +62,7 @@ entry {
     backup = no
 }
 
-entry { 
+entry {
     path = ./redshift/redshift.conf
     apply_path = ~/.config/redshift/redshift.conf
     template = yes

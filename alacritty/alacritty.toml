@@ -1,0 +1,95 @@
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Space"
+mode = "Vi"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "Space"
+mode = "Vi"
+mods = "Control"
+
+[general]
+live_config_reload = true
+
+[terminal]
+
+[[colors.indexed_colors]]
+color = "#fe8019"
+index = 16
+
+[[colors.indexed_colors]]
+color = "#d65d0e"
+index = 17
+
+[[colors.indexed_colors]]
+color = "#3c3836"
+index = 18
+
+[[colors.indexed_colors]]
+color = "#504945"
+index = 19
+
+[[colors.indexed_colors]]
+color = "#bdae93"
+index = 20
+
+[[colors.indexed_colors]]
+color = "#ebdbb2"
+index = 21
+
+[[colors.indexed_colors]]
+color = "#2e2e2e"
+index = 22
+
+[[colors.indexed_colors]]
+color = "#282828"
+index = 235
+
+[colors.bright]
+black = "#928374"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[colors.normal]
+black = "#282828"
+blue = "#458588"
+cyan = "#689d6a"
+green = "#98971a"
+magenta = "#b16286"
+red = "#cc241d"
+white = "#a89984"
+yellow = "#d79921"
+
+[colors.primary]
+background = "#282828"
+foreground = "#ebdbb2"
+
+[cursor]
+style = "Block"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "Maple Mono NF"
+
+@@ 'thief'
+[terminal.shell]
+program = "wsl.exe ~ -d Ubuntu"
+@@
+
+[window]
+startup_mode = "Windowed"
+title = "Alacritty"
+
+[keyboard]

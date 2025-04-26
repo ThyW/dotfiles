@@ -12,6 +12,11 @@ env:
 # changing this so i know it changed
 # and more stuff changed
 
+@@ 'thief'
+shell:
+    program: wsl.exe ~ -d Ubuntu
+@@
+
 #window:
   #dimensions:
   #  columns: 0
