@@ -35,5 +35,7 @@ plugin("plugins.whichkey")
 plugin("plugins.todo_comments")
 plugin("plugins.zen-mode")
 plugin("plugins.whitespaces")
+plugin("plugins.dooing")
+plugin("plugins.lazydev")
 
 require("plugins.lazy")

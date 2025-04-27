@@ -70,6 +70,7 @@ M.config = function()
 		{ name = "path" },
 		{ name = "buffer" },
 		{ name = "crates" },
+		{ name = "lazydev",  group_index = 0 }
 	}
 
 	setup.sorting = {
