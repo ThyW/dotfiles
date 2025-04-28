@@ -13,3 +13,19 @@ profile nomad {
     	mode 1920x1080
     }
 }
+
+profile double {
+    output DP-5 {
+	mode 1920x1080@74.973Hz
+	position 1920,0
+	enable
+    }
+    output HDMI-A-4 {
+	mode 1920x1080@74.973Hz
+	position 0,0
+	enable
+    }
+    output eDP-1 {
+    	disable
+    }
+}
