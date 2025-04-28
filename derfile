@@ -117,3 +117,10 @@ entry {
     template = true
     backup = false
 }
+
+entry {
+    path = ./janitors/config.toml
+    apply_path = ~/.config/janitors/config.toml
+    template = true
+    backup = false
+}

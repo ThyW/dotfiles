@@ -1,0 +1,63 @@
+[[watch]]
+path = "~/Downloads"
+recursive_mode = "non-recursive"
+bucket_names = ["documents", "archives", "media", "unsorted"]
+
+[[bucket]]
+name = "documents"
+destination = "~/Downloads/documents"
+extension_filters = [
+    "pdf",
+    "md",
+    "txt",
+    "adoc",
+    "doc",
+    "docx",
+    "ppt",
+    "pptx",
+    "xlsx",
+    "csv",
+    "xml",
+    "tex",
+    "html",
+]
+name_filters = []
+priority = 1000
+action = "move"
+override_action = "rename"
+
+[[bucket]]
+name = "archives"
+destination = "~/Downloads/archives"
+extension_filters = ["zip", "rar"]
+name_filters = [".*\\.tar.*"]
+priority = 1000
+action = "move"
+override_action = "rename"
+
+[[bucket]]
+name = "media"
+destination = "~/Downloads/media"
+extension_filters = [
+    "gif",
+    "jpg",
+    "jpeg",
+    "mkv",
+    "mp3",
+    "mp4",
+    "png",
+    "webm",
+]
+name_filters = []
+priority = 1000
+action = "move"
+override_action = "rename"
+
+[[bucket]]
+name = "unsorted"
+destination = "~/Downloads/unsorted"
+extension_filters = []
+name_filters = [".*"]
+priority = 10
+action = "move"
+override_action = "rename"

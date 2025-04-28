@@ -1,0 +1,8 @@
+[Unit]
+Description=janitors cleaning daemon
+
+[Service]
+ExecStart=/home/zir/.local/bin/janitors
+
+[Install]
+WantedBy=default.target
