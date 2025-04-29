@@ -1,5 +1,6 @@
+@@ 'pyromancer'
 profile default {
-    output 'BOE 0x0792 Unknown' disable
+    output eDP-1 disable
     output 'AOC 24G4 12VQBHA003849' {
     	mode 1920x1080@180Hz
     	position 0,0
@@ -15,17 +16,28 @@ profile nomad {
 }
 
 profile double {
-    output DP-5 {
-	mode 1920x1080@74.973Hz
-	position 1920,0
-	enable
-    }
-    output HDMI-A-4 {
+    output 'Philips Consumer Electronics Company PHL 243V7 UK01943028329' {
 	mode 1920x1080@74.973Hz
 	position 0,0
+	enable
+    }
+    output 'Philips Consumer Electronics Company PHL 243V7 UK01943028328' {
+	mode 1920x1080@74.973Hz
+	position 1920,0
 	enable
     }
     output eDP-1 {
     	disable
     }
 }
+
+profile work {
+    output 'Dell Inc. DELL S2722DC 1F3TGD3' {
+    	mode 2560x1440@75Hz
+    	position 0,0
+    	enable
+    }
+    output eDP-1 disable
+}
+
+@@
