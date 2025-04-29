@@ -25,11 +25,15 @@ function M.wrap_keybinds(on)
 		set("", "k", "gk", { noremap = true, silent = true })
 		set("", "H", "g^", { noremap = true, silent = true, desc = "goto start of line" })
 		set("", "L", "g$", { noremap = true, silent = true, desc = "goto end of line" })
+		set("", "zk", "10gk", { noremap = true, silent = true, desc = "10 visual lines up" })
+		set("", "zj", "10gj", { noremap = true, silent = true, desc = "10 visual lines down" })
 	else
 		set("", "j", "j", { noremap = true, silent = true })
 		set("", "k", "k", { noremap = true, silent = true })
 		set("", "H", "^", { noremap = true, silent = true, desc = "goto start of line" })
 		set("", "L", "$", { noremap = true, silent = true, desc = "goto end of line" })
+		set("", "zk", "10k", { noremap = true, silent = true, desc = "10 lines up" })
+		set("", "zj", "10j", { noremap = true, silent = true, desc = "10 lines down" })
 	end
 end
 
