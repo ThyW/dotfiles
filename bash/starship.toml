@@ -1,5 +1,5 @@
 add_newline = false
-format = "$git_branch$git_status$lua$rust$zig$c$cmake$java $directory$status$battery$character"
+format = "$git_branch$git_status$lua$rust$zig$c$cmake$java$python $directory$status$battery$character"
 
 [directory]
 truncation_length = 3
@@ -7,7 +7,7 @@ truncate_to_repo = true
 style = "bold yellow"
 
 [character]
-success_symbol = "[→](bold cyan)" 
+success_symbol = "[→](bold cyan)"
 error_symbol = "[✗](bold red)"
 
 [git_branch]
@@ -46,6 +46,12 @@ style = "bold cyan"
 [lua]
 format = ' lua [$version]($style)'
 style = "bold cyan"
+
+[python]
+format = ' $symbol [$version (\($virtualenv)\)]($style)'
+symbol = 'python'
+style = "bold cyan"
+detect_extensions = []
 
 [status]
 disabled = false
