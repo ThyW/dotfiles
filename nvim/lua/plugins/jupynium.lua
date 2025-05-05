@@ -4,11 +4,11 @@ local M = {
 	config = function()
 		require("jupynium").setup({
 			auto_start_server = {
-				enable = true,
+				enable = false,
 				file_pattern = { "*.ju.*" },
 			},
 			auto_attach_to_server = {
-				enable = true,
+				enable = false,
 				file_pattern = { "*.ju.*" },
 			},
 			auto_start_sync = {
