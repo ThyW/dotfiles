@@ -81,6 +81,12 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
+bindsym $mod+n workspace next_on_output
+bindsym $mod+p workspace prev_on_output
+
+bindsym $mod+Shift+N workspace next
+bindsym $mod+Shift+P workspace prev
+
 @@ 'legionnaire'
 # Move workspace to monitor one and two.
 bindsym $mod+Ctrl+1 move workspace to output HDMI-1
