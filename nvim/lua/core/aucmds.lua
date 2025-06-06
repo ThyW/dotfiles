@@ -10,10 +10,10 @@ api.nvim_create_autocmd({ "BufEnter" }, {
 	group = lua_format,
 	pattern = { "*.lua" },
 	callback = function()
-		vim.cmd([[set tabstop=2]])
-		vim.cmd([[set shiftwidth=2]])
-		vim.cmd([[set softtabstop=2]])
-		vim.cmd([[set noexpandtab]])
+		vim.cmd("set tabstop=2")
+		vim.cmd("set shiftwidth=2")
+		vim.cmd("set softtabstop=2")
+		vim.cmd("set noexpandtab")
 	end,
 })
 
