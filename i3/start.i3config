@@ -4,7 +4,7 @@
 exec --no-startup-id gammastep -P -l 48:17 -t 3900:3900
 exec wp-paste -p -t text --watch clipman store -P --no-persist
 exec kanshi
-exec --no-startup-id swaybg -c 282828 -m solid_color
+exec --no-startup-id swaybg -i ~/Pictures/wallpapers/samurai.png -m fit
 exec --no-startup-id swayidle -w \
     timeout 300 'swaylock -f -c 111111' \
     timeout 600 'swaymsg "output * dmps off"' \
@@ -39,6 +39,7 @@ exec --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option grp:alt_sh
 # Ensure monitors are set up the way I want them to be.
 exec --no-startup-id ~/.local/bin/my_scripts/monsetup -c
 exec --no-startup-id ~/.fehbg
+exec --no-startup-id swaybg -c 282828 -m solid_color
 @@
 
 input type:keyboard {
@@ -85,7 +86,7 @@ workspace $ws2 output DP-1-4
 @@
 
 # Assign windows to specific workspaces.
-assign [class="^discord$"] $ws2
+# assign [class="^discord$"] $ws2
 
 # When a windows is activated, it request focus. We should grant that
 # window its requested focus.
