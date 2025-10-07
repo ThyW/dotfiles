@@ -37,5 +37,8 @@ plugin("plugins.zen-mode")
 plugin("plugins.whitespaces")
 plugin("plugins.dooing")
 plugin("plugins.lazydev")
+plugin("plugins.bigfile")
+plugin("plugins.r-nvim")
+plugin("plugins.cmp_r")
 
 require("plugins.lazy")
