@@ -1,0 +1,2 @@
+EDITOR('kitty nvim')
+edit mode async
