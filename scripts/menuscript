@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+remove_orphaned_packages() {
+    paru -Rns $(paru -Qdtq)
+}
+
+if [ -z "$@" ]; then
+    declare -F | sed 's/declare -f //'
+elif declare -f "$@" > /dev/null; then
+    "$@"
+else
+    exit 1
+fi
