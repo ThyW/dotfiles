@@ -48,7 +48,7 @@ format = ' lua [$version]($style)'
 style = "bold cyan"
 
 [python]
-format = ' $symbol [$version (\($virtualenv)\)]($style)'
+format = ' $symbol [$version \($virtualenv\)]($style)'
 symbol = 'python'
 style = "bold cyan"
 detect_extensions = []
