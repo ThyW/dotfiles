@@ -11,6 +11,11 @@ entry {
 }
 
 entry {
+    path = ./bash/octaverc
+    apply_path = ~/.octaverc
+    template = yes
+}
+entry {
     path = ./bash/tmux.conf
     apply_path = ~/.tmux.conf
     template = yes
