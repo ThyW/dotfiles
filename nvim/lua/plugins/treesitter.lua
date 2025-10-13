@@ -72,6 +72,9 @@ M.config = function()
 			"javascript",
 			"typescript",
 			"json",
+			"yaml",
+			"html",
+			"latex",
 		},
 		highlight = {
 			enable = true,

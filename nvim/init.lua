@@ -40,5 +40,7 @@ plugin("plugins.lazydev")
 plugin("plugins.bigfile")
 plugin("plugins.r-nvim")
 plugin("plugins.cmp_r")
+plugin("plugins.wiki")
+plugin("plugins.markdown")
 
 require("plugins.lazy")
