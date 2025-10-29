@@ -31,6 +31,7 @@ alias use-hybrid='optimus-manager --switch hybrid'
 alias lanvidia='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
 alias ls='exa'
 alias vi='nvim'
+alias nssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 @@
 @@ !'pyromancer'
 alias i3lock='i3lock -c 111111'

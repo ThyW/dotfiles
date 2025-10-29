@@ -22,6 +22,7 @@ exec --no-startup-id xrnadr --dpi 96
 
 # network manager applet for simple network management from i3-bar
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 
 # Set the X background to solid gruvbox background color. Gruvbox rocks!
 exec --no-startup-id xsetroot -solid '$bg'
