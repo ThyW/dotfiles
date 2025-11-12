@@ -39,7 +39,8 @@ M.config = function()
 		"latex",
 	})
 
-	-- Highlighting should be setup in FTPlugin/*filetype.lua
+	vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+	vim.bo.foldexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 
 	require("nvim-treesitter-textobjects").setup({
 		lookahead = true,
