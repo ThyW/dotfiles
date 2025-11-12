@@ -9,3 +9,6 @@ vim.cmd("set expandtab")
 local rm = require("render-markdown")
 
 rm.enable()
+
+-- enable tree-sitter highlighting
+vim.treesitter.start()

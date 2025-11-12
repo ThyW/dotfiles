@@ -1,7 +1,7 @@
 vim.o.spell = true
 
-vim.cmd("TSDisable highlight")
 vim.cmd("set expandtab")
+require("core.lib.functions").switch_wrap(true)
 
-local f = require("core.lib.functions")
-f.switch_wrap(true)
+-- do not use tree-sitter in TeX
+-- vim.treesitter.start()
