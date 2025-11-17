@@ -39,8 +39,8 @@ M.config = function()
 		"latex",
 	})
 
-	vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-	vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+	--[[ vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+	vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" ]]
 
 	require("nvim-treesitter-textobjects").setup({
 		lookahead = true,
