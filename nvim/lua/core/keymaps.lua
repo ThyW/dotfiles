@@ -15,9 +15,6 @@ keymap("n", "<leader><leader>l", ":BufferLineMoveNext<CR>", opts("move buffer ri
 -- Switch buffer with the previous buffer.
 keymap("n", "<leader><leader>h", ":BufferLineMovePrev<CR>", opts("move buffer left"))
 
--- Close a buffer.
-keymap("", "<leader>bd", ":bd<CR>", opts("delete buffer"))
--- Move to the last visited buffer.
 keymap("", "<leader><TAB>", "<c-^>", opts("goto last open buffer"))
 
 -- Unmap arrow keys.
