@@ -33,5 +33,6 @@ plugin("plugins.cmp_r")
 plugin("plugins.wiki")
 plugin("plugins.markdown")
 plugin("plugins.snacks")
+plugin("plugins.flash")
 
 require("plugins.lazy")
