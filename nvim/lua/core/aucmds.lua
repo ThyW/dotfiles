@@ -1,8 +1,13 @@
 local api = vim.api
+local funcs = require("..core.lib.functions")
 
 local lua_format = api.nvim_create_augroup("LuaFormat", {
 	clear = true,
 })
+
+api.nvim_create_user_command("EnableLsp", function()
+	funcs.enable_filetype_lsp()
+end, {})
 
 -- this is a temporary solution for lua formatting
 -- once sumneko lsp supports their settings, this can be removed

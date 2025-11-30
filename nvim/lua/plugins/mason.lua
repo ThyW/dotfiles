@@ -24,7 +24,12 @@ M.config = function()
 			"harper_ls",
 			"hls",
 		},
-		automatic_enable = true,
+		automatic_enable = {
+			"bashls",
+			"lua_ls",
+			"zls",
+			"rust_analyzer",
+		},
 	})
 
 	vim.lsp.config("*", {

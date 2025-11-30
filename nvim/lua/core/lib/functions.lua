@@ -74,4 +74,26 @@ function M.toggle_treesitter_debug()
 	end
 end
 
+function M.enable_filetype_lsp()
+	local ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
+	local ok, mason_lsp = pcall(require, "mason-lspconfig")
+	if not ok then
+		return
+	end
+	local mappings = mason_lsp.get_mappings()
+	local installed = mason_lsp.get_installed_servers()
+	local ft_mappings = mappings["filetypes"]
+	local available_clients = ft_mappings[ft]
+	if available_clients == nil then
+		return
+	end
+	local to_run = {}
+	for _, lsp in ipairs(available_clients) do
+		if vim.tbl_contains(installed, lsp) then
+			table.insert(to_run, lsp)
+		end
+	end
+	vim.lsp.enable(to_run)
+end
+
 return M
