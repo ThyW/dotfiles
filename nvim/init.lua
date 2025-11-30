@@ -30,7 +30,7 @@ plugin("plugins.whitespaces")
 plugin("plugins.lazydev")
 plugin("plugins.r-nvim")
 plugin("plugins.wiki")
-plugin("plugins.markdown")
+-- plugin("plugins.markdown")
 plugin("plugins.snacks")
 plugin("plugins.flash")
 
