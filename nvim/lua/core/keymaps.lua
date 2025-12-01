@@ -1,9 +1,22 @@
 local keymap = vim.keymap.set
 
-local funcs = require("..core.lib.functions")
-
 local function opts(desc, callback)
 	return { silent = true, noremap = true, desc = desc, callback or nil }
+end
+
+local ok, funcs = pcall(require, "..core.lib.functions")
+if ok then
+	keymap("n", "<leader>ow", function()
+		funcs.switch_wrap()
+	end, opts("toggle text wrapping"))
+
+	-- Switch spelling language.
+	keymap("n", "<leader>oS", function()
+		funcs.switch_spelling()
+	end, opts("switch spelling language"))
+	keymap("n", "<leader>td", function()
+		funcs.toggle_treesitter_debug()
+	end, opts("toggle treesitter debug"))
 end
 
 -- Buffer manipulation
@@ -32,9 +45,6 @@ keymap("", "zj", "10jzz<CR>", opts("move 10 lines DOWN"))
 keymap("i", "jj", "<esc>")
 
 -- Toggle wrapping.
-keymap("n", "<leader>ow", function()
-	funcs.switch_wrap()
-end, opts("toggle text wrapping"))
 -- Toggle spellcheck.
 keymap("n", "<leader>os", "<cmd>set spell! <bar> set spell?<cr>", opts("toggle spell checking"))
 -- Toggle 80 character colorcolumn.
@@ -53,14 +63,6 @@ keymap("n", "<leader>r", ":%s/<C-r><C-w>//gc<left><left><left>", opts("rename wo
 -- Better line moving.
 keymap("", "H", "^", opts("goto start of line"))
 keymap("", "L", "g_", opts("goto start of text"))
-
--- Switch spelling language.
-keymap("n", "<leader>oS", function()
-	funcs.switch_spelling()
-end, opts("switch spelling language"))
-keymap("n", "<leader>td", function()
-	funcs.toggle_treesitter_debug()
-end, opts("toggle treesitter debug"))
 
 -- nvim colorizer
 keymap("n", "<leader>oC", ":ColorizerToggle<CR>", opts("toggle colorizer"))

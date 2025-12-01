@@ -18,13 +18,31 @@ local M = {
 }
 
 M.config = function()
-	local cmp = require("cmp")
-	local luasnip = require("luasnip")
+	local ok, cmp = pcall(require, "cmp")
+	if not ok then
+		vim.notify("Could not load plugin: nvim-cmp")
+		return
+	end
+	local ok, luasnip = pcall(require, "luasnip")
+	if not ok then
+		vim.notify("Could not load plugin: luasnip")
+		return
+	end
 	local compare = cmp.config.compare
-	require("lspkind").init({})
+	local ok, lspkind = pcall(require, "lspkind")
+	if not ok then
+		vim.notify("Could not load plugin: lspkind")
+		return
+	end
+	lspkind.init({})
 
 	-- If you want insert `(` after select function or method item
-	local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+	local ok, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
+	if not ok then
+		vim.notify("Could not load plugin: nvim-autopairs.completion.cmp")
+		return
+	end
+
 	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 	local setup = {}
 
@@ -96,7 +114,7 @@ M.config = function()
 	setup.formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
-			local completion_item = require("lspkind").cmp_format({
+			local completion_item = lspkind.cmp_format({
 				mode = "symbol_text",
 				maxwidth = 60,
 				menu = {

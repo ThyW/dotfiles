@@ -9,11 +9,17 @@ local M = {
 }
 
 M.config = function()
-	require("nvim-treesitter").setup({
+	local ok, ts = pcall(require, "nvim-treesitter")
+	if not ok then
+		vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+		return
+	end
+
+	ts.setup({
 		install_dir = vim.fn.stdpath("data") .. "/site",
 	})
 
-	require("nvim-treesitter").install({
+	ts.install({
 		"rust",
 		"c",
 		"cpp",
@@ -42,7 +48,12 @@ M.config = function()
 	--[[ vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 	vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" ]]
 
-	require("nvim-treesitter-textobjects").setup({
+	local ok, tsto = pcall(require, "nvim-treesitter-textobjects")
+	if not ok then
+		vim.notify("Could not load plugin: nvim-treesitter-textobjects", vim.log.levels.ERROR)
+		return
+	end
+	tsto.setup({
 		lookahead = true,
 		selection_modes = {
 			["@parameter.outer"] = "v",

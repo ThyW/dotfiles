@@ -121,6 +121,14 @@ local M = {
 			function()
 				Snacks.picker.help({ layout = { preset = "ivy" } })
 			end,
+			desc = "find in help",
+		},
+		{
+			"<leader>fT",
+			function()
+				Snacks.picker.todo_comments()
+			end,
+			desc = "find TODO comments",
 		},
 		{
 			"<leader>oz",

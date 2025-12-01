@@ -4,7 +4,11 @@ local M = {
 }
 
 M.config = function()
-	local conform = require("conform")
+	local ok, conform = pcall(require, "conform")
+	if not ok then
+		vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+		return
+	end
 
 	local format_opts = {
 		lsp_fallback = true,

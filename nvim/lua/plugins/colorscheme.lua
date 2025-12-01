@@ -6,7 +6,13 @@ local M = {
 }
 
 M.config = function()
-	require("gruvbox").setup()
+	local ok, gruvbox = pcall(require, "gruvbox")
+	if not ok then
+		vim.notify("Could not load plugin: " .. M[1])
+		return
+	end
+
+	gruvbox.setup()
 
 	vim.opt.background = "dark"
 	vim.cmd("colorscheme gruvbox")

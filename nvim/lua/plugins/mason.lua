@@ -10,10 +10,24 @@ local M = {
 }
 
 M.config = function()
-	local lsp_settings = require("..plugins.extra.lsp")
+	local ok, lsp_settings = pcall(require, "..plugins.extra.lsp")
+	if not ok then
+		vim.notify("Could not load  ..plugins.extra.lsp", vim.log.levels.ERROR)
+		return
+	end
 
-	require("mason").setup({})
-	require("mason-lspconfig").setup({
+	local ok, mason = pcall(require, "mason")
+	if not ok then
+		vim.notify("Could not load: " .. M[1], vim.log.levels.ERROR)
+		return
+	end
+	mason.setup({})
+	local ok, mason_lspconfig = pcall(require, "mason-lspconfig")
+	if not ok then
+		vim.notify("Could not load: mason-lspconfig", vim.log.levels.ERROR)
+		return
+	end
+	mason_lspconfig.setup({
 		ensure_installed = {
 			"basedpyright",
 			"bashls",
@@ -24,7 +38,12 @@ M.config = function()
 			"harper_ls",
 			"hls",
 		},
-		automatic_enable = true,
+		automatic_enable = {
+			"bashls",
+			"lua_ls",
+			"zls",
+			"rust_analyzer",
+		},
 	})
 
 	vim.lsp.config("*", {

@@ -2,7 +2,12 @@ local M = {
 	"kiyoon/jupynium.nvim",
 	build = "uv pip install . --python=$HOME/.virtualenvs/jupynium/bin/python",
 	config = function()
-		require("jupynium").setup({
+		local ok, jupynium = pcall(require, "jupynium")
+		if not ok then
+			vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+			return
+		end
+		jupynium.setup({
 			auto_start_server = {
 				enable = false,
 				file_pattern = { "*.ju.*" },

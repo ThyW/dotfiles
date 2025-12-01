@@ -3,12 +3,14 @@ local M = {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {},
 	config = function()
-		local comms = require("todo-comments")
+		local ok, comms = pcall(require, "todo-comments")
+		if not ok then
+			vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+			return
+		end
 		comms.setup({})
 
 		vim.keymap.set("n", "]t", comms.jump_next, { desc = "Next todo comment" })
-
-		vim.keymap.set("n", "<leader>fT", "<cmd>TodoTelescope<CR>", { desc = "TScope todo comments" })
 
 		vim.keymap.set("n", "[t", comms.jump_prev, { desc = "Previous todo comment" })
 	end,

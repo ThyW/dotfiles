@@ -46,8 +46,6 @@ entry {
     template = yes
 }
 
-
-
 entry {
     path = ./i3/
     apply_path = ~/.config/i3
@@ -65,6 +63,8 @@ entry {
     apply_path = ~/.config/nvim
     template = no
     backup = no
+    exclude_remove = [spell/, lazy-lock.json];
+    remove = true
 }
 
 entry {
