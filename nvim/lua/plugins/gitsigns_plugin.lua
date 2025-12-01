@@ -4,7 +4,11 @@ local M = {
 }
 
 M.config = function()
-	local gitsigns = require("gitsigns")
+	local ok, gitsigns = pcall(require, "gitsigns")
+	if not ok then
+		vim.notify("Could not load plugin: " .. M[1])
+		return
+	end
 
 	gitsigns.setup({
 		debug_mode = true,

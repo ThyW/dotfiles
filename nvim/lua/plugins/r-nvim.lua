@@ -40,7 +40,12 @@ local M = {
 			opts.auto_start = "on startup"
 			opts.objbr_auto_start = true
 		end
-		require("r").setup(opts)
+		local ok, r = pcall(require, "r")
+		if not ok then
+			vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+			return
+		end
+		r.setup(opts)
 	end,
 }
 

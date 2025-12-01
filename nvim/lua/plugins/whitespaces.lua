@@ -1,7 +1,12 @@
 local M = {
 	"johnfrankmorgan/whitespace.nvim",
 	config = function()
-		require("whitespace-nvim").setup({
+		local ok, whitespace = pcall(require, "whitespace-nvim")
+		if not ok then
+			vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+			return
+		end
+		whitespace.setup({
 			-- configuration options and their defaults
 
 			-- `highlight` configures which highlight is used to display
@@ -24,7 +29,7 @@ local M = {
 		vim.keymap.set(
 			"n",
 			"<leader>t",
-			require("whitespace-nvim").trim,
+			whitespace.trim,
 			{ silent = true, noremap = true, desc = "Trim trailing whitespaces" }
 		)
 	end,

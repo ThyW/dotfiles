@@ -5,7 +5,12 @@ local M = {
 }
 
 M.config = function()
-	require("oil").setup({
+	local ok, oil = pcall(require, "oil")
+	if not ok then
+		vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+		return
+	end
+	oil.setup({
 		-- This needs to be disabled when installing a new `spelllang`.
 		--
 		-- 1. change this to false, reload config and check that `netrw`

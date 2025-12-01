@@ -4,7 +4,13 @@ local M = {
 }
 
 M.config = function()
-	require("bufferline").setup({
+	local ok, bufferline = pcall(require, "bufferline")
+	if not ok then
+		vim.notify("Could not load plugin: " .. M[1])
+		return
+	end
+
+	bufferline.setup({
 		options = {
 			numbers = "buffer_id",
 			close_command = "bdelete! %d",

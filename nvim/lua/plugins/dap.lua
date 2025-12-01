@@ -107,7 +107,12 @@ local M = {
 			},
 		}
 
-		require("nvim-dap-virtual-text").setup({})
+		local ok, dap_virt_text = pcall(require, "nvim-dap-virtual-text")
+		if not ok then
+			vim.notify("Could not load plugin: nvim-dap-virtual-text")
+			return
+		end
+		dap_virt_text.setup({})
 
 		-- Toggle nvim-dap-view
 		keymap("n", "<leader>dv", ":DapViewToggle<cr>", opts("Toggle nvim-dap-view"))

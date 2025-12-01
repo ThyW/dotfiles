@@ -5,8 +5,18 @@ local M = {
 }
 
 M.config = function()
-	local luasnip = require("luasnip")
-	require("luasnip.loaders.from_vscode").lazy_load()
+	local ok, luasnip = pcall(require, "luasnip")
+	if not ok then
+		vim.notify("Could not load plugin: " .. M[1], vim.log.levels.ERROR)
+		return
+	end
+
+	local ok, loader = pcall(require, "luasnip.loaders.from_vscode")
+	if not ok then
+		vim.notify("Could not find vscode loader for luasnip", vim.log.levels.ERROR)
+		return
+	end
+	loader.lazy_load()
 	local mk_snippet = luasnip.parser.parse_snippet
 	local i = luasnip.insert_node
 	local t = luasnip.text_node
