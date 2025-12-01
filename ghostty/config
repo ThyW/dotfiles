@@ -1,16 +1,16 @@
 @@ 'thief'
 background = 282828
 
-font-family = Maple Mono NF
+font-family = "JetBrainsMono Nerd Font Mono"
 font-feature = +clig
 # adjust-cell-width = 10%
-font-size = 9
+font-size = 10
 grapheme-width-method = legacy
 # freetype-load-flags = true
 
 theme = Gruvbox Dark
 window-decoration = true
-gtk-titlebar = true
+gtk-titlebar = false
 confirm-close-surface = false
 @@
 @@ !'thief'
