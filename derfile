@@ -83,6 +83,7 @@ entry {
     path = ./services/
     apply_path = ~/.config/systemd/user
     template = yes
+    post = "systemctl --user daemon-reload"
 }
 
 entry {
