@@ -6,22 +6,30 @@ import multiprocessing
 
 import argparse
 
+
 def parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser("timer",
-                                     description="timer app which sends desktop notifications",
-                                     add_help=True)
-    parser.add_argument("-H", "--hours", type=int, help="Number of hours.")
-    parser.add_argument("-m", "--minutes", type=int, help="Number of minutes.")
-    parser.add_argument("-s", "--seconds", type=int, help="Number of seconds.")
-    parser.add_argument("-M", "--message", help="Message to show when the timer is done.", default="Time is up!")
+    parser = argparse.ArgumentParser(
+        "timer",
+        description="timer app which sends desktop notifications",
+        add_help=True,
+    )
+    _ = parser.add_argument("-H", "--hours", type=int, help="Number of hours.")
+    _ = parser.add_argument("-m", "--minutes", type=int, help="Number of minutes.")
+    _ = parser.add_argument("-s", "--seconds", type=int, help="Number of seconds.")
+    _ = parser.add_argument(
+        "-M",
+        "--message",
+        help="Message to show when the timer is done.",
+        default="Time is up!",
+    )
     return parser
 
 
-def run(secs: int, msg: str) -> None:
-    if os.fork() != 0:
-        return
+def run(secs: int, msg: str) -> int:
+    if (res := os.fork()) != 0:
+        return res
     time.sleep(secs)
-    os.system(f"notify-send \"{msg}\"")
+    return os.system(f'notify-send "{msg}"')
 
 
 def main() -> None:

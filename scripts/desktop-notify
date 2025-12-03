@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+tmg -H $1 -m $2 -s $3 -R "notify-send -a tmg -u critical 'timer finished' '$4'"
