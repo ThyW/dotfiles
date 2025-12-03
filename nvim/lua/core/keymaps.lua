@@ -30,6 +30,8 @@ keymap("n", "<leader><leader>h", ":BufferLineMovePrev<CR>", opts("move buffer le
 
 keymap("", "<leader><TAB>", "<c-^>", opts("goto last open buffer"))
 
+keymap("n", "<leader>bd", ":bd!<cr>", opts("delete current buffer"))
+
 -- Unmap arrow keys.
 keymap("", "<Up>", "<Nop>")
 keymap("", "<Down>", "<Nop>")

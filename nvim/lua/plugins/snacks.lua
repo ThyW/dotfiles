@@ -39,13 +39,13 @@ local M = {
 		zen = { enabled = true },
 	},
 	keys = {
-		{
+		--[[ {
 			"<leader>bd",
 			function()
 				Snacks.bufdelete.delete()
 			end,
 			desc = "delete current buffer",
-		},
+		}, ]]
 		{
 			"<leader>bD",
 			function()
@@ -129,6 +129,13 @@ local M = {
 				Snacks.picker.todo_comments()
 			end,
 			desc = "find TODO comments",
+		},
+		{
+			"<leader>fM",
+			function()
+				Snacks.picker.man()
+			end,
+			desc = "find a man page",
 		},
 		{
 			"<leader>oz",
