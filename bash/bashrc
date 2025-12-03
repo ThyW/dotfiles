@@ -58,7 +58,7 @@ alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
 alias g='git'
 alias tconf='vi ~/clones/dotfiles/bash/.tmux.conf.t && synccfg'
 alias dtd='vi ~/notes/daily_todo.norg'
-alias dots='cd ~/clones/dotfiles/ && vi . && der2 -avs && cd -'
+alias dots='cd ~/clones/dotfiles/ && vi . && der2 -avRs && cd -'
 alias notes='(cd ~/notes && nvim +"Neorg workspace notes")'
 alias wiki='(cd ~/wiki/ && nvim +"WikiIndex")'
 @@
