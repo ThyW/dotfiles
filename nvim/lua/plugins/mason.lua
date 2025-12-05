@@ -75,9 +75,10 @@ M.config = function()
 			"typescriptreact",
 			"haskell",
 			"cmake",
-			-- "typst",
+			"typst",
 			"php",
 			"dart",
+			"groff",
 		},
 		settings = {
 			["harper-ls"] = {
