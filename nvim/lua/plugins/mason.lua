@@ -48,12 +48,13 @@ M.config = function()
 
 	vim.lsp.config("*", {
 		on_attach = lsp_settings.on_attach,
-		capabilities = lsp_settings.capabilities,
+		capabilities = lsp_settings.capabilities(),
 		flags = {
 			debounce_text_changes = 150,
 		},
 	})
 	vim.lsp.config("harper_ls", {
+		capabilities = lsp_settings.capabilities(),
 		filetypes = {
 			"c",
 			"cpp",
@@ -111,6 +112,7 @@ M.config = function()
 	})
 	vim.lsp.config("lua_ls", {
 		on_attach = lsp_settings.on_attach,
+		capabilities = lsp_settings.capabilities(),
 		flags = {
 			debounce_text_changes = 150,
 		},
@@ -144,7 +146,7 @@ M.config = function()
 	vim.lsp.config("rust_analyzer", {
 		on_attach = lsp_settings.on_attach,
 		cmd = { "rustup", "run", "nightly", "rust-analyzer" },
-		capabilities = lsp_settings.capabilities,
+		capabilities = lsp_settings.capabilities(),
 		server = {
 			settings = {
 				-- yes
@@ -174,7 +176,7 @@ M.config = function()
 	})
 	vim.lsp.config("pyright", {
 		on_attach = lsp_settings.on_attach,
-		capabilities = lsp_settings.capabilities,
+		capabilities = lsp_settings.capabilities(),
 		cmd = { "pyright-langserver", "--stdio" },
 		server = {
 			settings = {

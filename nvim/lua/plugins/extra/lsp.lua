@@ -60,6 +60,8 @@ M.rtp = vim.split(package.path, ";")
 table.insert(M.rtp, "lua/?.lua")
 table.insert(M.rtp, "lua/?/init.lua")
 
-M.capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+M.capabilities = function()
+	return require("cmp_nvim_lsp").default_capabilities()
+end
 
 return M

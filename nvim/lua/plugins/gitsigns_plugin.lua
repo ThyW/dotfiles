@@ -42,6 +42,20 @@ M.config = function()
 
 			-- Text object
 			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Inside hunk")
+
+			-- fast moving between hunks
+			map("n", "]h", function()
+				gitsigns.nav_hunk("next")
+			end, "Move to next hunk")
+			map("n", "[h", function()
+				gitsigns.nav_hunk("prev")
+			end, "Move to previous hunk")
+			map("n", "]H", function()
+				gitsigns.nav_hunk("last")
+			end, "Move to next hunk")
+			map("n", "[H", function()
+				gitsigns.nav_hunk("first")
+			end, "Move to previous hunk")
 		end,
 	})
 end
