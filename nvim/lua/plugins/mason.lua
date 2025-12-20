@@ -29,7 +29,6 @@ M.config = function()
 	end
 	mason_lspconfig.setup({
 		ensure_installed = {
-			"basedpyright",
 			"bashls",
 			"clangd",
 			"lua_ls",
@@ -43,6 +42,8 @@ M.config = function()
 			"lua_ls",
 			"zls",
 			"rust_analyzer",
+			"ty",
+			"clangd",
 		},
 	})
 
@@ -52,6 +53,13 @@ M.config = function()
 		flags = {
 			debounce_text_changes = 150,
 		},
+	})
+
+	vim.lsp.config("ty", {
+		on_attach = lsp_settings.on_attach,
+		capabilities = lsp_settings.capabilities(),
+		filetypes = { "python" },
+		root_markers = { "ty.toml", "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
 	})
 	vim.lsp.config("harper_ls", {
 		capabilities = lsp_settings.capabilities(),
