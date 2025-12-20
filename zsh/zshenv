@@ -7,6 +7,9 @@ path+=(/usr/bin/watcom/binl64)
 path+=(/usr/bin/watcom/binl)
 path+=(~/.local/share/JetBrains/Toolbox/scripts/)
 path+=(/usr/local/texlive/2023/bin/x86_64-linux)
+@@ 'thief'
+path+=(~/clones/fzf/bin/)
+@@
 
 export PAGER="nvim +Man!"
 export EDITOR="nvim"
