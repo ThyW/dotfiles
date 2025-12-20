@@ -130,3 +130,17 @@ entry {
     template = true
     backup = false
 }
+
+entry {
+    path = ./zsh/zshenv
+    apply_path = ~/.zshenv
+    template = true
+    backup = false
+}
+
+entry {
+    path = ./zsh/zshrc
+    apply_path = ~/.zshrc
+    template = true
+    backup = false
+}

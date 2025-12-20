@@ -1,0 +1,13 @@
+typeset -U path PATH
+path+=(~/.local/bin)
+path+=(~/.local/bin/my_scripts)
+path+=(~/.cargo/bin)
+path+=(~/.local/share/nvim/mason/bin)
+path+=(/usr/bin/watcom/binl64)
+path+=(/usr/bin/watcom/binl)
+path+=(~/.local/share/JetBrains/Toolbox/scripts/)
+path+=(/usr/local/texlive/2023/bin/x86_64-linux)
+
+export PAGER="nvim +Man!"
+export EDITOR="nvim"
+export ZSH="$HOME/.oh-my-zsh/"
