@@ -151,6 +151,20 @@ local M = {
 			end,
 			desc = "toggle zen zoom",
 		},
+		{
+			"<leader>.",
+			function()
+				Snacks.scratch()
+			end,
+			desc = "Toggle scratch buffer",
+		},
+		{
+			"<leader>S",
+			function()
+				Snacks.scratch.select()
+			end,
+			desc = "Select Scratch Buffer",
+		},
 	},
 	init = function()
 		vim.api.nvim_create_autocmd("LspProgress", {
