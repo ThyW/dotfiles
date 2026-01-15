@@ -1,7 +1,8 @@
 local M = {
 	"R-nvim/R.nvim",
 	-- Only required if you also set defaults.lazy = true
-	lazy = false,
+	lazy = true,
+	filetype = "markdown",
 	-- R.nvim is still young and we may make some breaking changes from time
 	-- to time (but also bug fixes all the time). If configuration stability
 	-- is a high priority for you, pin to the latest minor version, but unpin
@@ -18,8 +19,8 @@ local M = {
 			R_args = { "--quiet", "--no-save" },
 			min_editor_width = 72,
 			rconsole_width = 78,
-			objbr_mappings = { -- Object browser keymap
-				c = "class", -- Call R functions
+			objbr_mappings = {                            -- Object browser keymap
+				c = "class",                                -- Call R functions
 				["<localleader>gg"] = "head({object}, n = 15)", -- Use {object} notation to write arbitrary R code.
 				v = function()
 					-- Run lua functions
@@ -32,6 +33,9 @@ local M = {
 				"RSPlot",
 				"RSaveClose",
 			},
+			defaults = {
+				lazy = true,
+			}
 		}
 		-- Check if the environment variable "R_AUTO_START" exists.
 		-- If using fish shell, you could put in your config.fish:
