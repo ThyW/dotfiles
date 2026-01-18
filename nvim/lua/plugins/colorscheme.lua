@@ -1,19 +1,11 @@
 local M = {
-	"ellisonleao/gruvbox.nvim",
+	"motaz-shokry/gruvbox.nvim",
 	lazy = false,
 	priority = 1000,
 	dependencies = { "rktjmp/lush.nvim" },
 }
 
 M.config = function()
-	local ok, gruvbox = pcall(require, "gruvbox")
-	if not ok then
-		vim.notify("Could not load plugin: " .. M[1])
-		return
-	end
-
-	gruvbox.setup()
-
 	vim.opt.background = "dark"
 	vim.cmd("colorscheme gruvbox")
 
