@@ -5,6 +5,10 @@ runtime! ftplugin/man.vim
 filetype plugin on
 filetype indent on
 syntax on
+
+colorscheme retrobox
+set background=dark
+
 set encoding=utf8
 
 set updatetime=500
