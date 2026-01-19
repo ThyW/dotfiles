@@ -138,6 +138,20 @@ local M = {
 			desc = "find a man page",
 		},
 		{
+			"<leader>ft",
+			function()
+				Snacks.picker.treesitter()
+			end,
+			desc = "find git files",
+		},
+		{
+			"<leader>fh",
+			function()
+				Snacks.picker.command_history({ layout = { preset = "ivy" } })
+			end,
+			desc = "find in command history",
+		},
+		{
 			"<leader>oz",
 			function()
 				Snacks.zen.zen()
@@ -150,6 +164,20 @@ local M = {
 				Snacks.zen.zoom()
 			end,
 			desc = "toggle zen zoom",
+		},
+		{
+			"<leader>.",
+			function()
+				Snacks.scratch()
+			end,
+			desc = "Toggle scratch buffer",
+		},
+		{
+			"<leader>S",
+			function()
+				Snacks.scratch.select()
+			end,
+			desc = "Select Scratch Buffer",
 		},
 	},
 	init = function()

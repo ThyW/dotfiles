@@ -99,8 +99,14 @@ M.config = function()
 	vim.keymap.set({ "n", "x", "o" }, "]s", function()
 		require("nvim-treesitter-textobjects.move").goto_next_start("@local.scope", "locals")
 	end)
+	vim.keymap.set({ "n", "x", "o" }, "[s", function()
+		require("nvim-treesitter-textobjects.move").goto_previous_start("@local.scope", "locals")
+	end)
 	vim.keymap.set({ "n", "x", "o" }, "]z", function()
 		require("nvim-treesitter-textobjects.move").goto_next_start("@fold", "folds")
+	end)
+	vim.keymap.set({ "n", "x", "o" }, "[z", function()
+		require("nvim-treesitter-textobjects.move").goto_previous_start("@fold", "folds")
 	end)
 
 	vim.keymap.set({ "n", "x", "o" }, "]M", function()
@@ -133,13 +139,14 @@ M.config = function()
 		require("nvim-treesitter-textobjects.move").goto_previous("@conditional.outer", "textobjects")
 	end)
 
+	-- aliased by Snacks.nvim
 	local ts_repeat_move = require("nvim-treesitter-textobjects.repeatable_move")
 	vim.keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move)
 	vim.keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_opposite)
-	vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f_expr, { expr = true })
-	vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F_expr, { expr = true })
-	vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t_expr, { expr = true })
-	vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T_expr, { expr = true })
+	-- vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f_expr, { expr = true })
+	-- vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F_expr, { expr = true })
+	-- vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t_expr, { expr = true })
+	-- vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T_expr, { expr = true })
 end
 
 return M
