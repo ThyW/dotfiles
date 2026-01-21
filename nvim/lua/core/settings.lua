@@ -8,7 +8,7 @@ vim.g.maplocalleader = " "
 
 vim.lsp.set_log_level("off")
 
-o.textwidth = 120
+-- o.textwidth = 120
 o.mouse = "a"
 o.cmdheight = 1
 o.updatetime = 500

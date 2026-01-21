@@ -1,12 +1,4 @@
-local M = {
-	"motaz-shokry/gruvbox.nvim",
-	lazy = false,
-	priority = 1000,
-	dependencies = { "rktjmp/lush.nvim" },
-}
-
-M.config = function()
-	vim.opt.background = "dark"
+local patch_colors = function()
 	vim.cmd("colorscheme gruvbox")
 
 	local highlights = {
@@ -27,6 +19,20 @@ M.config = function()
 	for _, v in ipairs(highlights) do
 		vim.cmd(v)
 	end
+end
+
+local M = {
+	"motaz-shokry/gruvbox.nvim",
+	lazy = false,
+	priority = 1000,
+	dependencies = { "rktjmp/lush.nvim" },
+}
+
+M.config = function()
+	vim.opt.background = "dark"
+	vim.opt.termguicolors = true
+
+	patch_colors()
 end
 
 return M
