@@ -42,8 +42,6 @@ compinit
 
 # alisases
 @@ 'pyromancer'
-export PATH="${PATH}:$HOME/zig-linux-x86_64-0.14.0/"
-alias fzf='sk'
 alias sus='sudo systemctl start suspend.target && swaylock -c 111111'
 alias lock='swaylock -c 111111'
 alias yank='wl-copy'
@@ -62,6 +60,7 @@ alias cswp='rm ~/.local/state/nvim/swap/* && rm ~/.local/state/nvim/log'
 alias g='git'
 alias dots='cd ~/clones/dotfiles/ && vi . && der2 -avRs && cd -'
 alias wiki='(cd ~/wiki/ && nvim +"WikiIndex")'
+alias Man='nvim +"lua Snacks.picker.man()"'
 @@ !'pyromancer'
 alias yank='xsel -ib'
 alias past='xsel -ob'
