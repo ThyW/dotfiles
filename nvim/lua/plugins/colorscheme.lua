@@ -1,6 +1,11 @@
-local patch_colors = function()
-	vim.cmd("colorscheme gruvbox")
+local M = {
+	"ellisonleao/gruvbox.nvim",
+	lazy = false,
+	priority = 1000,
+	dependencies = { "rktjmp/lush.nvim" },
+}
 
+local patch_colors = function()
 	local highlights = {
 		"highlight SignColumn guibg=none",
 		"highlight LineNr ctermfg=240",
@@ -21,17 +26,12 @@ local patch_colors = function()
 	end
 end
 
-local M = {
-	"motaz-shokry/gruvbox.nvim",
-	lazy = false,
-	priority = 1000,
-	dependencies = { "rktjmp/lush.nvim" },
-}
-
 M.config = function()
+	vim.cmd("colorscheme gruvbox")
 	vim.opt.background = "dark"
 	vim.opt.termguicolors = true
 
+	-- vim.opt.background = "dark"
 	patch_colors()
 end
 
