@@ -1,5 +1,5 @@
 add_newline = false
-format = "$jobs$git_branch$git_status$lua$rust$zig$c$cmake$java$python $directory$status$battery$character"
+format = "$jobs$mise$git_branch$git_status$lua$rust$zig$c$cmake$java$python $directory$status$battery$character"
 
 [directory]
 truncation_length = 3
