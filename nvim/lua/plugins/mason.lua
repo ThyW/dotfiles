@@ -35,7 +35,6 @@ M.config = function()
 			"rust_analyzer",
 			"zls",
 			"harper_ls",
-			"hls",
 		},
 		automatic_enable = {
 			"bashls",
