@@ -142,7 +142,7 @@ local M = {
 			function()
 				Snacks.picker.treesitter()
 			end,
-			desc = "find git files",
+			desc = "find symbols using treesitter",
 		},
 		{
 			"<leader>fh",
