@@ -31,6 +31,7 @@ plugin("plugins.flash")
 plugin("plugins.vimtex")
 plugin("plugins.jupynium")
 plugin("plugins.r-nvim")
-plugin("plugins.copilot")
+plugin("plugins.sidekick")
+plugin("plugins.java-nvim")
 
 require("plugins.lazy")
