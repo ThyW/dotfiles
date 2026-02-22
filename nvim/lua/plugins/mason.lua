@@ -16,13 +16,14 @@ M.config = function()
 		return
 	end
 
-	local ok, mason = pcall(require, "mason")
+	local mason, mason_lspconfig
+	ok, mason = pcall(require, "mason")
 	if not ok then
 		vim.notify("Could not load: " .. M[1], vim.log.levels.ERROR)
 		return
 	end
 	mason.setup({})
-	local ok, mason_lspconfig = pcall(require, "mason-lspconfig")
+	ok, mason_lspconfig = pcall(require, "mason-lspconfig")
 	if not ok then
 		vim.notify("Could not load: mason-lspconfig", vim.log.levels.ERROR)
 		return
@@ -36,6 +37,7 @@ M.config = function()
 			"zls",
 			"harper_ls",
 			"copilot",
+			"gopls",
 		},
 		automatic_enable = true,
 	})

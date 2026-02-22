@@ -20,7 +20,6 @@ M.config = function()
 		formatters_by_ft = {
 			python = { "black" },
 			c = { "clang-format" },
-			haskell = { "hindent" },
 			javascript = { "prettier" },
 			typescript = { "prettier" },
 			typescriptreact = { "prettier" },
