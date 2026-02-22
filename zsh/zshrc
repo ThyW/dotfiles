@@ -9,6 +9,7 @@ plugins=(
     vi-mode
     zsh-interactive-cd
     sudo
+    ssh-agent
 )
 
 source $ZSH/oh-my-zsh.sh
