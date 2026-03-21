@@ -36,7 +36,6 @@ M.config = function()
 			"rust_analyzer",
 			"zls",
 			"harper_ls",
-			"copilot",
 			"gopls",
 		},
 		automatic_enable = true,
