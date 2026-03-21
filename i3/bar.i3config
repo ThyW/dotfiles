@@ -1,7 +1,7 @@
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font pango:Maple Mono NFMono 10
+    font pango:Maple Mono NFMono 8
 
     position top
 
@@ -16,7 +16,7 @@ bar {
     i3bar_command i3bar -t
 @@
 
-    height 18
+    height 15
 
     colors {
         separator   #666666

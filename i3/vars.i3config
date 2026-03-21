@@ -44,7 +44,7 @@ set $mod Mod4
 set $mod2 Mod1
 
 # Pixel width of window borders.
-set $border 4
+set $border 2
 
 # Terminal emulator
 set $term kitty

@@ -18,7 +18,7 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # it easier for your eyes to function
 exec --no-startup-id redshift -l 48:17 -t 3900:3900
 
-exec --no-startup-id xrnadr --dpi 96
+# exec --no-startup-id xrnadr --dpi 96
 
 # network manager applet for simple network management from i3-bar
 exec --no-startup-id nm-applet
@@ -54,7 +54,7 @@ input type:keyboard {
 floating_modifier $mod
 
 # Set the font.
-font pango:JetBrainsMono Nerd Font Mono 7
+font pango:JetBrainsMono Nerd Font Mono 6
 
 # Set tabbed layout by default.
 workspace_layout default
