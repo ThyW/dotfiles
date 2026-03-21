@@ -1,7 +1,7 @@
 [[watch]]
 path = "~/Downloads"
 recursive_mode = "non-recursive"
-bucket_names = ["documents", "archives", "media", "unsorted"]
+bucket_names = ["documents", "archives", "media", "unsorted", "ignore"]
 
 [[bucket]]
 name = "documents"
@@ -60,4 +60,13 @@ extension_filters = []
 name_filters = [".*"]
 priority = 10
 action = "move"
+override_action = "rename"
+
+[[bucket]]
+name = "ignore"
+destination = "~/Downloads/ignore"
+extension_filters = ["part"]
+name_filters = []
+priority = 10000
+action = "ignore"
 override_action = "rename"
