@@ -144,3 +144,10 @@ entry {
     template = true
     backup = false
 }
+
+entry {
+    path = ./waybar/
+    apply_path = ~/.config/waybar/
+    template = true
+    backup = false
+}
