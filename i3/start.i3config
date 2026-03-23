@@ -44,7 +44,8 @@ exec --no-startup-id swaybg -c 282828 -m solid_color
 @@
 
 input type:keyboard {
-    xkb_layout us,sk(qwerty)
+    xkb_layout us,sk
+    xkb_variant ,qwerty
     xkb_options grp:rctrl_toggle
     repeat_delay 270
     repeat_rate 30
