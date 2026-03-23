@@ -63,14 +63,16 @@
 	"spacing": 5,
     },
     "clock": {
-	"interval": 30,
-	"format": "{0:%d-%m-%Y %H:%M}"
+	"interval": 1,
+	"format": "{0:%d-%m-%Y %H:%M:%S}"
     },
     "cpu": {
+    	"interval": 3,
 	"format": "{usage}% ",
-	"tooltip": false
+	"tooltip": true,
     },
     "memory": {
+    	"interval": 3,
 	"format": "{}% "
     },
     "backlight": {
