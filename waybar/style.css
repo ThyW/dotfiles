@@ -24,6 +24,7 @@ tooltip {
 }
 
 #language,
+#backlight,
 #clock,
 #tray,
 #cpu,
@@ -76,6 +77,7 @@ tooltip {
 }
 
 #language,
+#backlight,
 #cpu,
 #memory,
 #clock,
@@ -95,7 +97,11 @@ tooltip {
   color: #c14a4a;
 }
 
-#battery.warning,
+#battery.warning {
+  background-color: #ddc7a1;
+  border: 2px solid #c7ab7a;
+  color: #e78a4e;
+}
 #battery.critical,
 #battery.urgent {
   background-color: #ddc7a1;
