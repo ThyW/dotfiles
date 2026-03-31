@@ -11,7 +11,8 @@ set $fg #ebdbb2
 set $fg0 #fbf1c7
 set $fg2 #d5c4a1
 set $fg3 #bdae93
-set $gg4 #a89984
+set $fg4 #a89984
+set $fg5 #ddc7a1
 
 set $gray #928374
 set $lightgray #a89984
