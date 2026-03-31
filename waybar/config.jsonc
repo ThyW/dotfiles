@@ -4,8 +4,15 @@
 	"spacing": 0,
 	"height": 10,
 
+	"expand-center": false,
+	"fixed-center": true,
+
 	"modules-left": [
 		"sway/workspaces"
+	],
+
+	"modules-center": [
+	    "mpris"
 	],
 
 
@@ -71,6 +78,15 @@
 	"memory": {
 		"interval": 3,
 		"format": "{}% "
+	},
+	"mpris": {
+	    "format": "{title}  {status_icon}  {artist}",
+	    "ignored-players": ["firefox"],
+	    "status-icons": {
+	    	"paused": "⏸",
+	    	"playing": "-",
+	    	"stopped": "",
+	    },
 	},
 	"backlight": {
 		"format": "{percent}% {icon}",

@@ -31,6 +31,7 @@ tooltip {
 #memory,
 #battery,
 #network,
+#mpris,
 #pulseaudio {
   margin: 6px 6px 6px 0px;
   padding: 2px 8px;
@@ -84,6 +85,7 @@ tooltip {
 #network,
 #tray,
 #clock,
+#mpris,
 #pulseaudio {
   background-color: #ddc7a1;
   border: 2px solid #c7ab7a;
