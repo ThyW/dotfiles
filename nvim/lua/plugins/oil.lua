@@ -1,7 +1,7 @@
 local M = {
-	"stevearc/oil.nvim",
+	src = "stevearc/oil.nvim",
 	opts = {},
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { { src = "nvim-tree/nvim-web-devicons"} },
 }
 
 M.config = function()

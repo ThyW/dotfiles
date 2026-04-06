@@ -1,8 +1,8 @@
 local M = {
-	"ellisonleao/gruvbox.nvim",
+	src = "ellisonleao/gruvbox.nvim",
 	lazy = false,
 	priority = 1000,
-	dependencies = { "rktjmp/lush.nvim" },
+	dependencies = { {src = "rktjmp/lush.nvim" } },
 }
 
 local patch_colors = function()

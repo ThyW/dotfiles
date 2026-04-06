@@ -1,6 +1,5 @@
 local M = {
-	"stevearc/conform.nvim",
-	opts = {},
+	src = "stevearc/conform.nvim",
 }
 
 M.config = function()

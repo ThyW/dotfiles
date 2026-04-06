@@ -1,6 +1,6 @@
 local M = {
-	"lewis6991/gitsigns.nvim",
-	branch = "main",
+	src = "lewis6991/gitsigns.nvim",
+	version = "main",
 }
 
 M.config = function()

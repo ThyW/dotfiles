@@ -1,7 +1,9 @@
 local M = {
-	"folke/which-key.nvim",
+	src = "folke/which-key.nvim",
 	event = "VeryLazy",
-	opts = {},
+	config = function()
+		require("which-key").setup()
+	end
 }
 
 return M

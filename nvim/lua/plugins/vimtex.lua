@@ -1,7 +1,7 @@
 local module = {
-	"lervag/vimtex",
+	src = "lervag/vimtex",
 	lazy = false,
-	init = function()
+	config = function()
 		vim.g.vimtex_view_method = "zathura_simple"
 		vim.g.vimtex_view_forward_search_on_start = false
 	end,

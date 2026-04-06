@@ -1,5 +1,5 @@
 local M = {
-	"kiyoon/jupynium.nvim",
+	src = "kiyoon/jupynium.nvim",
 	build = "uv pip install . --python=$HOME/.virtualenvs/jupynium/bin/python",
 	config = function()
 		local ok, jupynium = pcall(require, "jupynium")

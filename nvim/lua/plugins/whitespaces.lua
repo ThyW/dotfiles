@@ -1,5 +1,5 @@
 local M = {
-	"johnfrankmorgan/whitespace.nvim",
+	src = "johnfrankmorgan/whitespace.nvim",
 	config = function()
 		local ok, whitespace = pcall(require, "whitespace-nvim")
 		if not ok then

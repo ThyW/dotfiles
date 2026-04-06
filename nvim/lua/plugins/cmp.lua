@@ -4,16 +4,16 @@ local function has_words_before()
 end
 
 local M = {
-	"hrsh7th/nvim-cmp",
+	src = "hrsh7th/nvim-cmp",
 	dependencies = {
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
-		"hrsh7th/cmp-nvim-lua",
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-cmdline",
-		"saadparwaiz1/cmp_luasnip",
-		"onsails/lspkind-nvim",
-		"micangl/cmp-vimtex",
+		{src = "hrsh7th/cmp-buffer"},
+		{src = "hrsh7th/cmp-path"},
+		{src = "hrsh7th/cmp-nvim-lua"},
+		{src = "hrsh7th/cmp-nvim-lsp"},
+		{src = "hrsh7th/cmp-cmdline"},
+		{src = "saadparwaiz1/cmp_luasnip"},
+		{src = "onsails/lspkind-nvim"},
+		{src = "micangl/cmp-vimtex"},
 	},
 }
 

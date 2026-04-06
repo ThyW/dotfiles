@@ -1,11 +1,11 @@
 local M = {
-	"williamboman/mason.nvim",
+	src = "williamboman/mason.nvim",
 	config = function()
 		require("plugins.mason")
 	end,
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
+		{src = "williamboman/mason-lspconfig.nvim"},
+		{src = "neovim/nvim-lspconfig"},
 	},
 }
 

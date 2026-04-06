@@ -1,7 +1,8 @@
 local M = {
-	"folke/lazydev.nvim",
-	ft = "lua",
-	opts = {}
+	src = "folke/lazydev.nvim",
+	config = function()
+		require("lazydev").setup()
+	end,
 }
 
 return M

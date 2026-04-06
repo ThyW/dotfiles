@@ -1,5 +1,5 @@
 local M = {
-	"norcalli/nvim-colorizer.lua",
+	src = "norcalli/nvim-colorizer.lua",
 }
 
 M.config = function()

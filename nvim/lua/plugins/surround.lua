@@ -1,5 +1,5 @@
 local M = {
-	"kylechui/nvim-surround",
+	src = "kylechui/nvim-surround",
 }
 
 M.config = function()

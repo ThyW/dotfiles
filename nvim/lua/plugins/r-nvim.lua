@@ -1,5 +1,5 @@
 local M = {
-	"R-nvim/R.nvim",
+	src = "R-nvim/R.nvim",
 	-- Only required if you also set defaults.lazy = true
 	lazy = true,
 	filetype = "markdown",

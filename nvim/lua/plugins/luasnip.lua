@@ -1,6 +1,6 @@
 local M = {
-	"L3MON4D3/LuaSnip",
-	dependencies = { "rafamadriz/friendly-snippets" },
+	src = "L3MON4D3/LuaSnip",
+	dependencies = { src = "rafamadriz/friendly-snippets" },
 	branch = "master",
 }
 

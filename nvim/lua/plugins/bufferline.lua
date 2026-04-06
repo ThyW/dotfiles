@@ -1,6 +1,6 @@
 local M = {
-	"akinsho/bufferline.nvim",
-	branch = "main",
+	src = "akinsho/bufferline.nvim",
+	version = "main",
 }
 
 M.config = function()

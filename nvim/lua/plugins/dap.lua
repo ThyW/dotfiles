@@ -1,9 +1,9 @@
 local M = {
-	"mfussenegger/nvim-dap",
+	src = "mfussenegger/nvim-dap",
 	dependencies = {
-		"mfussenegger/nvim-dap-python",
-		"theHamsta/nvim-dap-virtual-text",
-		"https://github.com/igorlfs/nvim-dap-view",
+		{src = "mfussenegger/nvim-dap-python" },
+		{src = "theHamsta/nvim-dap-virtual-text"},
+		{src = "https://github.com/igorlfs/nvim-dap-view"},
 	},
 	config = function()
 		local keymap = vim.keymap.set

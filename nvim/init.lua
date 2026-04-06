@@ -1,7 +1,5 @@
--- structure inspiration taken from:
--- https://github.com/LunarVim/Launch.nvim/
-
-require("core.spec")
+local plug = require("core.plug")
+local plugin = plug.plugin
 
 require("core.aucmds")
 require("core.settings")
@@ -33,4 +31,4 @@ plugin("plugins.jupynium")
 plugin("plugins.r-nvim")
 plugin("plugins.java-nvim")
 
-require("plugins.lazy")
+plug.load()

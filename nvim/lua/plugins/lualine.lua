@@ -1,6 +1,6 @@
 local M = {
-	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	src = "nvim-lualine/lualine.nvim",
+	dependencies = { {src = "nvim-tree/nvim-web-devicons" } },
 }
 
 M.config = function()
