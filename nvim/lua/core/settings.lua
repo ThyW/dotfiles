@@ -79,3 +79,5 @@ c("syntax on")
 
 g.netrw_banner = 0
 g.netrw_mouse = 2
+
+require("vim._core.ui2").enable()
