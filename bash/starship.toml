@@ -7,7 +7,7 @@ truncate_to_repo = true
 style = "bold yellow"
 
 [character]
-success_symbol = "[→](bold cyan)"
+success_symbol = "[⟩](bold cyan)"
 error_symbol = "[✗](bold red)"
 
 [git_branch]
