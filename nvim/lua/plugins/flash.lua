@@ -28,6 +28,7 @@ local M = {
 			end
 			vim.keymap.set("n", key[1], key[2], opt)
 		end
+		require("flash").setup({})
 	end,
 }
 
