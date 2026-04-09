@@ -32,12 +32,14 @@ profile double {
 }
 
 profile work {
-    output 'Dell Inc. DELL S2722DC 1F3TGD3' {
-    	mode 2560x1440@75Hz
+    output 'AOC 2475WR F17H7QA000628' {
+    	mode 1920x1200@59.950Hz
     	position 0,0
     	enable
     }
-    output eDP-1 disable
+    output eDP-1 {
+    	position 0,1200
+    }
 }
 
 profile double_home {
