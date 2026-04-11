@@ -14,9 +14,6 @@ if ok then
 	keymap("n", "<leader>oS", function()
 		funcs.switch_spelling()
 	end, opts("switch spelling language"))
-	keymap("n", "<leader>td", function()
-		funcs.toggle_treesitter_debug()
-	end, opts("toggle treesitter debug"))
 end
 
 -- Buffer manipulation
@@ -68,3 +65,6 @@ keymap("", "L", "g_", opts("goto start of text"))
 
 -- nvim colorizer
 keymap("n", "<leader>oC", ":ColorizerToggle<CR>", opts("toggle colorizer"))
+
+-- undo-tree
+keymap("n", "<leader>u", ":Undotree", opts("Open undo-tree"))
