@@ -12,6 +12,7 @@ path+=(~/clones/fzf/bin/)
 path+=(/snap/bin/)
 @@
 
+export GIT_PAGER="cat"
 export PAGER="nvim +Man!"
 export EDITOR="nvim"
 export ZSH="$HOME/.oh-my-zsh/"
