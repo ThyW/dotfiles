@@ -7,6 +7,7 @@ local M = {
 
 local patch_colors = function()
 	local highlights = {
+		"highlight Comment guifg=#fabd2f",
 		"highlight SignColumn guibg=none",
 		"highlight LineNr ctermfg=240",
 		"highlight CursorLineNr cterm=bold gui=bold guibg=none",
