@@ -1,7 +1,7 @@
 local M = {
 	src = "L3MON4D3/LuaSnip",
-	dependencies = { src = "rafamadriz/friendly-snippets" },
-	branch = "master",
+	dependencies = { { src = "rafamadriz/friendly-snippets", version = "main" } },
+	version = "v2.5.0",
 }
 
 M.config = function()
