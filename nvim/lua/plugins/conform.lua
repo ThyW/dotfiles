@@ -10,9 +10,8 @@ M.config = function()
 	end
 
 	local format_opts = {
+		timeout_ms = 1000,
 		lsp_fallback = true,
-		timeout_ms = 500,
-		async = false,
 	}
 
 	conform.setup({
@@ -29,7 +28,10 @@ M.config = function()
 			json = { "prettier" },
 			lua = { "stylua" },
 		},
-		format_on_save = format_opts,
+		-- format_on_save = format_opts,
+		format_after_save = {
+			lsp_fallback = true,
+		},
 	})
 
 	vim.keymap.set({ "n", "v" }, "<leader>af", function()

@@ -33,7 +33,7 @@ end
 local function pack_add_spec(spec)
 	if spec.dependencies then
 		for _, dep in ipairs(spec.dependencies) do
-			vim.pack.add({ src = normalize_src(dep.src), version = dep.version })
+			vim.pack.add({ { src = normalize_src(dep.src), version = dep.version } })
 		end
 	end
 	if spec.src then
