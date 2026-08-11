@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+main() {
+    case "$1" in
+    	mul)
+    	    ssh -M -S /tmp/"$2".sock -fN "$2"
+    	;;
+    	con)
+    	    ssh -S /tmp/"$2".sock "$2"
+    	;;
+    	stop)
+    	    ssh -O stop -S /tmp/"$2".sock "$2"
+    	;;
+    	*)
+    	    echo "unknown command; use mul, con, or stop"
+    	    exit 1
+    	;;
+    esac
+}
+
+main "$@"
