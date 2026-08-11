@@ -1,5 +1,9 @@
 # This are all the commands, which execute every time time i3 starts.
 # Utility for adjusting screen color according to the time of day and makes
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE SWAYSOCK
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE SWAYSOCK
+exec systemctl --user start sway-session.target
+
 @@ 'pyromancer'
 exec --no-startup-id gammastep -P -l 48:17 -t 3900:3900
 exec wp-paste -p -t text --watch clipman store -P --no-persist

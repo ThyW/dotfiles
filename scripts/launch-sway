@@ -10,4 +10,4 @@ export MOZ_ENABLE_WAYLAND=1
 
 systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
 
-exec sway
+exec sway --unsupported-gpu
